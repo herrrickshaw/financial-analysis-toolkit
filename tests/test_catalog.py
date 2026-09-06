@@ -8,7 +8,7 @@ def test_build_catalog(tmp_path):
     assert cat["counts"]["damodaran:public"] >= 55
     assert cat["counts"]["asimplemodel:public"] == 8
     srcs = {e["source"] for e in cat["entries"]}
-    assert srcs == {"cfi", "damodaran", "asimplemodel", "exinfm"}
+    assert {"cfi", "damodaran", "asimplemodel", "exinfm", "macabacus"} <= srcs
     assert all(e["url"] for e in cat["entries"] if e["access"] != "cfi-paid")
     md = catalog.to_markdown(cat)
     assert "fcffginzu" in md and "Damodaran" in md
