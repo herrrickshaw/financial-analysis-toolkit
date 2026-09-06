@@ -1,0 +1,4084 @@
+{
+ "generated": "2026-09-06",
+ "sources": {
+  "damodaran": {
+   "publisher": "Aswath Damodaran, NYU Stern",
+   "home": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm",
+   "access": "public"
+  },
+  "asimplemodel": {
+   "publisher": "A Simple Model",
+   "home": "https://www.asimplemodel.com/resources/quick-references/free-downloads",
+   "access": "public"
+  },
+  "exinfm": {
+   "publisher": "Excellence in Financial Management (exinfm.com)",
+   "home": "https://exinfm.com/free_spreadsheets.html",
+   "access": "public"
+  },
+  "cfi": {
+   "publisher": "Corporate Finance Institute",
+   "home": "https://corporatefinanceinstitute.com/resources/templates/",
+   "access": "login"
+  }
+ },
+ "entries": [
+  {
+   "id": "cfi/3-Statement-Compact-Complete",
+   "source": "cfi",
+   "title": "3-Statement Compact (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/3-Statement-Model-Complete",
+   "source": "cfi",
+   "title": "3-Statement Model (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounting-Fact-Sheet",
+   "source": "cfi",
+   "title": "Accounting Fact Sheet",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8eb4fb4f-ac16-44d1-9aab-d3fc879a991c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounting-for-Business-Combinations-and-Other-Equity-Investments",
+   "source": "cfi",
+   "title": "Accounting for Business Combinations and Other Equity Investments",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounting-for-Diluted-Shares-Earnings-per-Share",
+   "source": "cfi",
+   "title": "Accounting for Diluted Shares & Earnings per Share",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounting-for-Inventory",
+   "source": "cfi",
+   "title": "Accounting for Inventory",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounting-for-Leases",
+   "source": "cfi",
+   "title": "Accounting for Leases",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounts-Payable-Turnover-Ratio-Template",
+   "source": "cfi",
+   "title": "Accounts Payable Turnover Ratio Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounts-Receivable-Aging-Report-Template",
+   "source": "cfi",
+   "title": "Accounts Receivable Aging Report Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/20f24d01-ff15-45e4-ba57-8b36878c45f9",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accounts-Receivable-Turnover-Ratio-Template",
+   "source": "cfi",
+   "title": "Accounts Receivable Turnover Ratio Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Accumulated-Depreciation-Template",
+   "source": "cfi",
+   "title": "Accumulated Depreciation Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e3dad1ff-0657-4320-aef2-6e134d4dd595",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Active-Listening-Diagnostic",
+   "source": "cfi",
+   "title": "Active Listening Diagnostic",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Activity-Based-Costing-Template",
+   "source": "cfi",
+   "title": "Activity Based Costing Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a5f57e78-775d-479f-8c37-5254408ad3d6",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Additional-Paid-in-Capital-Template",
+   "source": "cfi",
+   "title": "Additional Paid-in Capital Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/4440ee71-4e4b-4851-af82-3a99d2473367",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Adjusted-EBITDA",
+   "source": "cfi",
+   "title": "Adjusted EBITDA",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/487bea2a-fd5a-4e1c-b290-a2f8ef9034ab",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Adjusted-Present-Value",
+   "source": "cfi",
+   "title": "Adjusted Present Value",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8f91205d-0e95-4458-be95-d9106f1abdac",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Advanced-All-in-One-Financial-Model-Template",
+   "source": "cfi",
+   "title": "Advanced All in One Financial Model Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Alpha-Calculator",
+   "source": "cfi",
+   "title": "Alpha Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/296c05a2-0bc2-4571-b23b-82cadb7f819f",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Amortization-Schedule-Template",
+   "source": "cfi",
+   "title": "Amortization Schedule Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8abc237c-9e87-414b-8d8c-2332e990c94d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/AMZN-Financial-Model",
+   "source": "cfi",
+   "title": "AMZN Financial Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Annual-Income-Calculator",
+   "source": "cfi",
+   "title": "Annual Income Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/d2c6b56d-55f2-4391-b956-d63c24431e5d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Appraisal-Checklist",
+   "source": "cfi",
+   "title": "Appraisal Checklist",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Asset-Turnover-Template",
+   "source": "cfi",
+   "title": "Asset Turnover Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Audit-a-Financial-Model-with-Macabacus",
+   "source": "cfi",
+   "title": "Audit a Financial Model with Macabacus",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5d360ed2-a1f9-4f89-9b94-8b09d91ce2de",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Audit-a-Financial-Model-with-Macabacus-2",
+   "source": "cfi",
+   "title": "Audit a Financial Model with Macabacus (2)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/d7d1eed6-31cd-4d52-9b46-0f04651050c0",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Audit-and-Balance-a-3-Statement-Model",
+   "source": "cfi",
+   "title": "Audit and Balance a 3-Statement Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/AutoSum-Example",
+   "source": "cfi",
+   "title": "AutoSum Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/b9217520-b083-4d93-ba3b-8d457e8185b6",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Balance-Sheet-Current-Assets-Template",
+   "source": "cfi",
+   "title": "Balance-Sheet-Current-Assets-Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/44d42b5c-a9ce-4e7c-ab22-4adbb254171b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Balance-Sheet-Current-Liabilities-Template",
+   "source": "cfi",
+   "title": "Balance-Sheet-Current-Liabilities-Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/04903f2e-3d22-4493-a4a1-f926690a776e",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Balance-Sheet-Template",
+   "source": "cfi",
+   "title": "Balance-Sheet-Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a4acb733-42c8-408e-b9fc-4f7daf3eb3ee",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Bank-and-FIG-Financial-Model-Template",
+   "source": "cfi",
+   "title": "Bank and FIG Financial Model Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Bank-Financial-Analysis",
+   "source": "cfi",
+   "title": "Bank Financial Analysis",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Bank-of-America-and-Barclays-Ratios",
+   "source": "cfi",
+   "title": "Bank of America and Barclays Ratios",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Bank-Ratio-Calculator",
+   "source": "cfi",
+   "title": "Bank Ratio Calculator",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Bank-Reconciliation-Statement",
+   "source": "cfi",
+   "title": "Bank Reconciliation Statement",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/02f0cee3-a527-40a6-909b-743f9ab12072",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Benchmarking-Analysis",
+   "source": "cfi",
+   "title": "Benchmarking Analysis",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Beneish-M-Score-Template",
+   "source": "cfi",
+   "title": "Beneish M-Score Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/3b158ab3-06e3-4c3c-a373-2385ffaebdf6",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Beta-Calculator",
+   "source": "cfi",
+   "title": "Beta Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/7a2ded95-8ab0-4f54-807d-c1de40bcd860",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Black-Scholes-Calculator",
+   "source": "cfi",
+   "title": "Black Scholes Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/cda85900-3eda-4f7c-9a21-aeb42668fc37",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Bullet-Chart-Template",
+   "source": "cfi",
+   "title": "Bullet Chart Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/c6924934-b7e4-4a31-8523-ecf9dd80bca3",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Burn-Rate-Template",
+   "source": "cfi",
+   "title": "Burn Rate Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/38db0be3-8000-4500-b573-90ad2f03628c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Business-Letter-Format-Template",
+   "source": "cfi",
+   "title": "Business Letter Format Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/65dab29a-a6d8-4ab1-8c1b-ff1fd28b5ffd",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Business-Valuation-Exercises-Complete",
+   "source": "cfi",
+   "title": "Business Valuation Exercises (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Business-Valuation-Model-Complete",
+   "source": "cfi",
+   "title": "Business Valuation Model (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/BV-vs-MV-of-Equity-Template",
+   "source": "cfi",
+   "title": "BV vs MV of Equity Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5706bae0-a7f9-4dd3-b02f-fa9cf9f5eab7",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CAGR-Calculator",
+   "source": "cfi",
+   "title": "CAGR Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a8e5b84b-2c50-4bd1-94e3-585b2dda1781",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Calculating-Net-Interest-Income",
+   "source": "cfi",
+   "title": "Calculating Net Interest Income",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Calculating-Risk-Weighted-Assets",
+   "source": "cfi",
+   "title": "Calculating Risk Weighted Assets",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cap-Rate-and-NOI",
+   "source": "cfi",
+   "title": "Cap Rate and NOI",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CapEx-Formula",
+   "source": "cfi",
+   "title": "CapEx Formula",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a02ec75a-628c-47e6-abd7-1992a6899dc7",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Capital-Adequacy-Ratio-CAR-Calculator",
+   "source": "cfi",
+   "title": "Capital Adequacy Ratio (CAR) Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/c5c57cd3-a3b9-4ea0-b92d-549c47c1f91c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Capital-Asset-Pricing-Model-CAPM-Formula",
+   "source": "cfi",
+   "title": "Capital Asset Pricing Model (CAPM) Formula",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/fd208f5d-c26f-45df-bf20-97e9e9cd96ab",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Capital-Gains-Yield-Calculator",
+   "source": "cfi",
+   "title": "Capital Gains Yield Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/bd7e4872-4f84-45c0-8bd6-8a5ab71d7c89",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Capital-Intensity-Ratio-Template",
+   "source": "cfi",
+   "title": "Capital Intensity Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/111a338e-11bf-44f6-9ee2-28c8196afed2",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Capital-Investment-Model",
+   "source": "cfi",
+   "title": "Capital Investment Model",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/6380d95b-5e8f-4081-8c31-dbdaa7416558",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Capital-Investment-Template",
+   "source": "cfi",
+   "title": "Capital Investment Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/7c6c1a68-c577-4354-af1c-87a78950ce57",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Capitalization-Table-Template",
+   "source": "cfi",
+   "title": "Capitalization Table Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5fe54919-b82a-4d00-8f73-dda450b375c1",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cash-Budget-Template",
+   "source": "cfi",
+   "title": "Cash Budget Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ce0e1d58-0088-4900-9fab-4fcc9515f4fe",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cash-Conversion-Ratio-Template",
+   "source": "cfi",
+   "title": "Cash Conversion Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f5ede962-f247-4d72-9746-8861cd95c07b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cash-EPS",
+   "source": "cfi",
+   "title": "Cash EPS",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a19189f6-d5b0-416c-a40c-f6c45c549753",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cash-Flow-Reconciliation",
+   "source": "cfi",
+   "title": "Cash Flow Reconciliation",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/58b03965-7c1b-4c8a-b541-4c3408ac59f3",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cash-Flow-Statement",
+   "source": "cfi",
+   "title": "Cash Flow Statement",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/4433beb8-90a5-4c69-86a4-6fdc5cbbd35e",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cash-Ratio-Template",
+   "source": "cfi",
+   "title": "Cash Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/4752bd45-60dd-4574-a4bc-069632b93276",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cash-to-Accrual-Complete",
+   "source": "cfi",
+   "title": "Cash to Accrual (Complete)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/2d358d08-9ec1-4bb5-b2d5-c5a772941cc0",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Accounting-eBook",
+   "source": "cfi",
+   "title": "CFI Accounting eBook",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/479445c6-20e8-40fb-88a6-de7141380dc8",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Advanced-Excel-Formulas-Functions",
+   "source": "cfi",
+   "title": "CFI Advanced Excel Formulas & Functions",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Essential-Guide-to-Breaking-into-FP-A",
+   "source": "cfi",
+   "title": "CFI Essential Guide to Breaking into FP&A",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/bc06d2d5-1aef-41a5-8230-e57f4a33957c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Excel-eBook",
+   "source": "cfi",
+   "title": "CFI Excel eBook",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Financial-Analysis-Glossary",
+   "source": "cfi",
+   "title": "CFI Financial Analysis Glossary",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/d52e1a93-6e5b-4751-89b0-441596693427",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Financial-Modeling-Guidelines",
+   "source": "cfi",
+   "title": "CFI Financial Modeling Guidelines",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/dc5373c1-f61b-411f-8451-8227cae064cd",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Financial-Ratios-Definitive-Guide",
+   "source": "cfi",
+   "title": "CFI Financial Ratios Definitive Guide",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a8f9cd21-e20e-4c9e-948c-ac97312e58e0",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Investment-Banking-Cover-Letter-Template",
+   "source": "cfi",
+   "title": "CFI Investment Banking Cover Letter Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e69d87c5-d6d0-4602-a486-2b623b5ccabd",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Investment-Banking-Pitch-Book",
+   "source": "cfi",
+   "title": "CFI Investment Banking Pitch Book",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CFI-Investment-Banking-Resume-Template",
+   "source": "cfi",
+   "title": "CFI Investment Banking Resume Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/aadc1010-ba21-45f0-b783-dfb41e400c69",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Charts-and-Graphs-Template",
+   "source": "cfi",
+   "title": "Charts and Graphs Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/962b5921-93df-4be2-a3a6-3874f81ad967",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Clean-Cover-Letter-Template",
+   "source": "cfi",
+   "title": "Clean Cover Letter Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f2883f94-898b-4805-974f-8d7ab8500f0c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Clean-Resignation-Letter-Template",
+   "source": "cfi",
+   "title": "Clean Resignation Letter Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8169169d-7a25-4cb6-8b2b-64e352465dea",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Coaching-for-Workplace-Performance-Assessment",
+   "source": "cfi",
+   "title": "Coaching for Workplace Performance Assessment",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cohort-Analysis",
+   "source": "cfi",
+   "title": "Cohort Analysis",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Collateralized-Mortgage-Obligations-CMO-Models",
+   "source": "cfi",
+   "title": "Collateralized Mortgage Obligations (CMO) Models",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Common-Size-Analysis",
+   "source": "cfi",
+   "title": "Common Size Analysis",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/11750bf7-375e-4ca8-a511-731ca63c0b6f",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Communication-Styles-Diagnostic",
+   "source": "cfi",
+   "title": "Communication Styles Diagnostic",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Compact-Comps-Complete",
+   "source": "cfi",
+   "title": "Compact Comps (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Compact-LBO-Model-Complete",
+   "source": "cfi",
+   "title": "Compact LBO Model (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Comparable-Company-Analysis",
+   "source": "cfi",
+   "title": "Comparable Company Analysis",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/53341e93-b695-4606-86e2-e91bd5f33630",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Comparable-Valuation-Fundamentals",
+   "source": "cfi",
+   "title": "Comparable Valuation Fundamentals",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Competitive-Forces-Model",
+   "source": "cfi",
+   "title": "Competitive Forces Model",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f1ad42d0-e3b2-40a4-a0cb-e95f949eff6a",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Compound-Monthly-Growth-Rate-CMGR",
+   "source": "cfi",
+   "title": "Compound Monthly Growth Rate (CMGR)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e12b1f33-ba7d-4b87-86bb-e54c7481a716",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Confidential-Information-Memorandum-Template",
+   "source": "cfi",
+   "title": "Confidential Information Memorandum Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Conflict-Styles-Questionnaire",
+   "source": "cfi",
+   "title": "Conflict Styles Questionnaire",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Consolidation-model",
+   "source": "cfi",
+   "title": "Consolidation model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Contribution-Margin-Ratio",
+   "source": "cfi",
+   "title": "Contribution Margin Ratio",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/41884bd1-155a-4a6d-a1e8-96a0cf6cd04a",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Corporate-Finance-Fundamentals-Capital-Financing",
+   "source": "cfi",
+   "title": "Corporate Finance Fundamentals: Capital Financing",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Corporate-Finance-Fundamentals-Capital-Investment",
+   "source": "cfi",
+   "title": "Corporate Finance Fundamentals: Capital Investment",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Corporate-Finance-Fundamentals-Capital-Return",
+   "source": "cfi",
+   "title": "Corporate Finance Fundamentals: Capital Return",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cost-Behavior-Analysis",
+   "source": "cfi",
+   "title": "Cost Behavior Analysis",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/925f808c-a80e-4526-9573-297320f93bc7",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cost-of-Debt-Template",
+   "source": "cfi",
+   "title": "Cost of Debt Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/9f5b460b-e8ee-4bb8-8d67-0a76361ab69b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cost-of-Goods-Manufactured",
+   "source": "cfi",
+   "title": "Cost of Goods Manufactured",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/4b073373-af24-438b-8402-e92ed0b2ecdc",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cost-of-Goods-Sold",
+   "source": "cfi",
+   "title": "Cost of Goods Sold",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/06cdc867-3667-4ab0-a65f-8c15cbafe935",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cost-of-Preferred-Stock-Calculator",
+   "source": "cfi",
+   "title": "Cost of Preferred Stock Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/16d630ec-6983-45b3-a940-67463d317dad",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Cost-Volume-Profit-Analysis-Template",
+   "source": "cfi",
+   "title": "Cost Volume Profit Analysis Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5ac31511-288d-4771-a475-9eaa9192535e",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/COUNTIFS-Template",
+   "source": "cfi",
+   "title": "COUNTIFS Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/12617ef0-77fe-4d78-b489-f9f99a3e9122",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Coupon-Rate",
+   "source": "cfi",
+   "title": "Coupon Rate",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/1515e64d-19cd-4ff6-88c3-2b9abfe9d911",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/COVARIANCE-P-Template",
+   "source": "cfi",
+   "title": "COVARIANCE.P Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/9c16884b-980e-4afc-a4ce-7fe470dd6e8e",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Creative-Cover-Letter",
+   "source": "cfi",
+   "title": "Creative Cover Letter",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/7992912a-122a-4e9b-b88c-77582383b72b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Crossover-Rate",
+   "source": "cfi",
+   "title": "Crossover Rate",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e1f56465-fb1c-4ae9-bded-545111cc91be",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/CUMIPMT-Template",
+   "source": "cfi",
+   "title": "CUMIPMT Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/3d2080ac-e09d-4f0a-ba59-0f605df73331",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Current-Ratio-Template",
+   "source": "cfi",
+   "title": "Current Ratio Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Dashboard-and-Data-Visualization-Template",
+   "source": "cfi",
+   "title": "Dashboard and Data Visualization Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Dashboard-Template-2",
+   "source": "cfi",
+   "title": "Dashboard Template 2",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Days-Inventory-Outstanding-Template",
+   "source": "cfi",
+   "title": "Days Inventory Outstanding Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Days-Sales-Outstanding",
+   "source": "cfi",
+   "title": "Days Sales Outstanding",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/DCF-Model",
+   "source": "cfi",
+   "title": "DCF Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/DCF-Valuation-Compact-Complete",
+   "source": "cfi",
+   "title": "DCF Valuation Compact (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/DCF-Valuation-Model-Complete",
+   "source": "cfi",
+   "title": "DCF Valuation Model (Complete)",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Debt-Asset-Ratio",
+   "source": "cfi",
+   "title": "Debt Asset Ratio",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e876bb24-4450-461b-80f3-371cbd0173b6",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Debt-Capacity-Model",
+   "source": "cfi",
+   "title": "Debt Capacity Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Debt-Equity-Ratio",
+   "source": "cfi",
+   "title": "Debt Equity Ratio",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Debt-Service-Coverage-Ratio",
+   "source": "cfi",
+   "title": "Debt Service Coverage Ratio",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5cbfb4ef-3033-47ac-bdc6-7907d046a06b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Degree-of-Leverage-Analysis",
+   "source": "cfi",
+   "title": "Degree of Leverage Analysis",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Depreciation-Methods",
+   "source": "cfi",
+   "title": "Depreciation-Methods",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Detailed-Comps-Table-Excel-Template",
+   "source": "cfi",
+   "title": "Detailed Comps Table Excel Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Detailed-LBO-Model-Complete-Private-Equity-Leveraged-Buyout-Analysis",
+   "source": "cfi",
+   "title": "Detailed LBO Model Complete Private Equity Leveraged Buyout Analysis",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Diluted-EPS-Formula",
+   "source": "cfi",
+   "title": "Diluted EPS Formula",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5893aa77-aa80-4bd0-a57b-c55999838648",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Dilution-Example",
+   "source": "cfi",
+   "title": "Dilution Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f5c8a339-694b-456b-bd8e-53c3638d2454",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Directional-Trading-Strategies",
+   "source": "cfi",
+   "title": "Directional Trading Strategies",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Dividend-Coverage-and-Payout",
+   "source": "cfi",
+   "title": "Dividend Coverage and Payout",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/d51e3fbf-8dff-4601-aa55-138f2a6c2db3",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Dividend-Discount-Model",
+   "source": "cfi",
+   "title": "Dividend Discount Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Double-Declining-Balance-Depreciation-Template",
+   "source": "cfi",
+   "title": "Double Declining Balance Depreciation Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/89225935-636c-467c-8928-af8c077977fe",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Earnings-Per-Share",
+   "source": "cfi",
+   "title": "Earnings Per Share",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e12e80f8-7045-4e0f-a08f-a31748ea6e2d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/EBIT-Example",
+   "source": "cfi",
+   "title": "EBIT Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/2aba35bd-3a25-47ee-8bb7-c2290c8741be",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/EBIT-vs-EBITDA",
+   "source": "cfi",
+   "title": "EBIT vs EBITDA",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/194dfd0c-1a6e-4c28-9617-5fd2d19ecea8",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/EBITDA-Multiple",
+   "source": "cfi",
+   "title": "EBITDA Multiple",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/db8975c9-4c58-4fe5-a06f-ece0538c4bb2",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/EBITDA-Template",
+   "source": "cfi",
+   "title": "EBITDA Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/cb836225-1240-4a9d-921a-d3b60a4554dd",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/EBT-Example",
+   "source": "cfi",
+   "title": "EBT Example",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/ECM-Deals-Committee-Memo-Template",
+   "source": "cfi",
+   "title": "ECM Deals Committee Memo Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/619f9c3a-0235-4d67-8129-f12a65f5f84a",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/eCommerce-Model",
+   "source": "cfi",
+   "title": "eCommerce Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Economic-Order-Quantity",
+   "source": "cfi",
+   "title": "Economic Order Quantity",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/fe8c73fe-7d5f-4f4d-ac22-00e41af52abd",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Economic-Value-Added-EVA-Template",
+   "source": "cfi",
+   "title": "Economic Value Added (EVA) Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e0aaa081-3e92-4829-a000-e5f576d77ca7",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Effective-Annual-Interest-Rate-Calculator",
+   "source": "cfi",
+   "title": "Effective Annual Interest Rate Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/632c8db4-aecd-435c-9485-cfbdedccbf3d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Efficient-Frontier-and-CAL-Template",
+   "source": "cfi",
+   "title": "Efficient Frontier and CAL Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Energy-Industry-Comps-Template",
+   "source": "cfi",
+   "title": "Energy Industry Comps Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Enterprise-Value-to-EBITDA",
+   "source": "cfi",
+   "title": "Enterprise Value to EBITDA",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/2be6888d-2256-430c-a772-45f00b07f5e3",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Enterprise-Value-vs-Equity-Value-Calculator",
+   "source": "cfi",
+   "title": "Enterprise Value vs Equity Value Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/0e9eb000-74d4-4fb1-8e2a-b20c83377320",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Equity-Beta-and-Asset-Beta-Conversion",
+   "source": "cfi",
+   "title": "Equity Beta and Asset Beta Conversion",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/e7940557-824d-4235-adbf-a5a473b012a0",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/ETF-Allocator-Model",
+   "source": "cfi",
+   "title": "ETF Allocator Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/EV-to-Revenue-Calculator",
+   "source": "cfi",
+   "title": "EV to Revenue Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f4e81503-37e7-4bb2-a214-489f58540aa2",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Excel-for-Finance-Functions",
+   "source": "cfi",
+   "title": "Excel for Finance Functions",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Excel-Fundamentals-Formulas-for-Finance",
+   "source": "cfi",
+   "title": "Excel Fundamentals - Formulas for Finance",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ca8f3830-9d74-4d8b-a640-8369f5c7df7b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Excel-Fundamentals-Formulas-for-Finance-Summary",
+   "source": "cfi",
+   "title": "Excel Fundamentals - Formulas for Finance (Summary)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/981cef37-b2b2-473a-bd49-2568457f99e3",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Excel-Fundamentals-Quick-Start-Guide-Summary",
+   "source": "cfi",
+   "title": "Excel Fundamentals - Quick Start Guide (Summary)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/aa718c79-b29e-493e-996e-0b73418f534a",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Excel-Fundamentals-Quick-Start-Guide-Analysis",
+   "source": "cfi",
+   "title": "Excel Fundamentals - Quick Start Guide Analysis",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5f8decba-e7de-470c-84a6-85a8b427f7a5",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Excel-shortcuts-Mac",
+   "source": "cfi",
+   "title": "Excel shortcuts - Mac",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/6797dce2-50ad-4915-be4e-5354239571b5",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Excel-shortcuts-PC",
+   "source": "cfi",
+   "title": "Excel shortcuts - PC",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/12bd9155-262c-4377-a606-d6cbee7be3fa",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Exchange-Ratio-Template",
+   "source": "cfi",
+   "title": "Exchange Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8b037a68-32f4-48a8-a2e9-afe45e0a170a",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Expected-Return-Example",
+   "source": "cfi",
+   "title": "Expected Return Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/7399d321-4302-402b-938e-a791610cf044",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/FCFF-vs-FCFE-Reconciliation-Template",
+   "source": "cfi",
+   "title": "FCFF vs FCFE Reconciliation Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/FFO-Example",
+   "source": "cfi",
+   "title": "FFO Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f2b28b3a-dcbc-49f2-aeeb-92f179950605",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Financial-Analysis-Fundamentals-Template",
+   "source": "cfi",
+   "title": "Financial Analysis Fundamentals Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Financial-Analysis-Glossary",
+   "source": "cfi",
+   "title": "Financial Analysis Glossary",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f730ee28-ae19-4d93-9fab-85bc89308d94",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Financial-Institution-Dividend-Discount-Model",
+   "source": "cfi",
+   "title": "Financial Institution Dividend Discount Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Financial-Modeling-Fundamentals-Glossary",
+   "source": "cfi",
+   "title": "Financial Modeling Fundamentals Glossary",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/c566eb8c-0d4f-4ac5-b7b1-2820de4b8d55",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Financial-Projection-Template",
+   "source": "cfi",
+   "title": "Financial Projection Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Fixed-Asset-Turnover-Template",
+   "source": "cfi",
+   "title": "Fixed Asset Turnover Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/53a41b70-4219-424d-aca4-ec189992fad2",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Fixed-Charge-Coverage-Ratio-Template",
+   "source": "cfi",
+   "title": "Fixed Charge Coverage Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/1f3ae2c7-7d4a-426a-8fa9-3d913ec8b6b9",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Football-Field-Chart",
+   "source": "cfi",
+   "title": "Football Field Chart",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/1e454111-9d86-4eea-85c9-db373478fa97",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Forecasting-Template",
+   "source": "cfi",
+   "title": "Forecasting Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Format-a-Financial-Model-with-Macabacus-Summary",
+   "source": "cfi",
+   "title": "Format a Financial Model with Macabacus Summary",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/48bf0a3e-75c1-40b8-94d8-87d678700034",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Format-a-Financial-Model-with-Macabacus-Summary-2",
+   "source": "cfi",
+   "title": "Format a Financial Model with Macabacus Summary (2)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f1dd906c-412b-41a7-a77a-f558203397fa",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Forward-Price-Earnings-PE-Ratio",
+   "source": "cfi",
+   "title": "Forward Price Earnings (PE) Ratio",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/2b39c05a-04db-4964-8d76-747ca456a6bb",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/FP-A-3-Statement-Model",
+   "source": "cfi",
+   "title": "FP&A 3-Statement Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/FP-A-Budgeting-and-Forecasting-Model",
+   "source": "cfi",
+   "title": "FP&A Budgeting and Forecasting Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/FP-A-Monthly-Rollforward-Template",
+   "source": "cfi",
+   "title": "FP&A Monthly Rollforward Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Free-Cash-Flow-FCF-Example",
+   "source": "cfi",
+   "title": "Free Cash Flow (FCF) Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/9afc5ecb-5b2b-4ab8-bf85-8ff51ad53de5",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Future-Value-Calculator",
+   "source": "cfi",
+   "title": "Future Value Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ef46f2ff-0bd2-4863-9381-bcfaf64e8798",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Gantt-Chart-Template",
+   "source": "cfi",
+   "title": "Gantt Chart Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f84a1371-576f-482a-9707-9847ee308b75",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/General-Cover-Letter-Template",
+   "source": "cfi",
+   "title": "General Cover Letter Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/9abbd9cf-8c09-442e-ab83-257a7ef7f111",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Geometric-Mean-Example",
+   "source": "cfi",
+   "title": "Geometric Mean Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5b864c3c-d476-436a-a619-d803b15d745c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Giving-Feedback",
+   "source": "cfi",
+   "title": "Giving Feedback",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Goal-Seek-and-Solver",
+   "source": "cfi",
+   "title": "Goal Seek and Solver",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Gross-Rent-Multiplier-Calculator",
+   "source": "cfi",
+   "title": "Gross Rent Multiplier Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/090379d5-29bd-47f7-b3dd-94eaac8f2f51",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/H-Model-Template",
+   "source": "cfi",
+   "title": "H-Model Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/d1095344-9074-43f7-820f-2d1e6ef30901",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/HELOC-Calculator",
+   "source": "cfi",
+   "title": "HELOC Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8eadf399-6a80-4ee6-9a7a-457d0e354eab",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Hybrid-Team-Self-Reflection",
+   "source": "cfi",
+   "title": "Hybrid Team Self-Reflection",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Income-Statement-P-L-and-Profit-Margins",
+   "source": "cfi",
+   "title": "Income Statement (P&L) and Profit Margins",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a1ab5909-2878-423f-8579-a99e5fb5d457",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Individual-Equity-Allocation-Model",
+   "source": "cfi",
+   "title": "Individual Equity Allocation Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Insurance-Company-Financial-Analysis-Allstate",
+   "source": "cfi",
+   "title": "Insurance Company Financial Analysis: Allstate",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Insurance-Company-Financial-Analysis-Progressive",
+   "source": "cfi",
+   "title": "Insurance Company Financial Analysis: Progressive",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/InsurTech-Pricer-Model",
+   "source": "cfi",
+   "title": "InsurTech Pricer Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Interest-Calculator",
+   "source": "cfi",
+   "title": "Interest Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f6d332f9-e683-4476-bd1f-8c24069a51ed",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Interest-Coverage-Ratio-Template",
+   "source": "cfi",
+   "title": "Interest Coverage Ratio Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Interest-Rate-Parity-IRP-Calculator",
+   "source": "cfi",
+   "title": "Interest Rate Parity (IRP) Calculator",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Intrinsic-Value-Example",
+   "source": "cfi",
+   "title": "Intrinsic Value Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/16168420-f6d7-437a-aa70-b8bd608fd7f5",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Intro-to-3-Statement-Modeling-Model",
+   "source": "cfi",
+   "title": "Intro to 3-Statement Modeling Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Intro-to-Leveraged-Buyouts",
+   "source": "cfi",
+   "title": "Intro to Leveraged Buyouts",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Intro-to-Mergers-Acquisitions",
+   "source": "cfi",
+   "title": "Intro to Mergers & Acquisitions",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Introduction-to-Bank-Valuation-Examples",
+   "source": "cfi",
+   "title": "Introduction to Bank Valuation Examples",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Inventory-Turnover-Calculator",
+   "source": "cfi",
+   "title": "Inventory Turnover Calculator",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Investment-Banking-Manual-CFI-2019",
+   "source": "cfi",
+   "title": "Investment Banking Manual CFI 2019",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Investor-Pitch-Deck-Template",
+   "source": "cfi",
+   "title": "Investor Pitch Deck Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Journal-Entries-Template",
+   "source": "cfi",
+   "title": "Journal Entries Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/eee8a2db-cd8f-4938-ab3e-b7de0c7071e0",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Justified-Price-to-Earnings-Ratio",
+   "source": "cfi",
+   "title": "Justified Price to Earnings Ratio",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/77cdbacf-14a8-4bbd-84e5-ac64665e4775",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/LBO-Model",
+   "source": "cfi",
+   "title": "LBO Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Letter-of-Intent-Template",
+   "source": "cfi",
+   "title": "Letter of Intent Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/c97bc537-2722-410e-aca4-4e941c03e0ec",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Levelized-Cost-of-Energy-Template",
+   "source": "cfi",
+   "title": "Levelized Cost of Energy Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/fd7c3732-e63c-4e5c-918d-55df1d95e998",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Leverage-and-Liquidity-Ratios",
+   "source": "cfi",
+   "title": "Leverage and Liquidity Ratios",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Leverage-Ratios",
+   "source": "cfi",
+   "title": "Leverage Ratios",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Leveraged-Finance-Example",
+   "source": "cfi",
+   "title": "Leveraged Finance Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/c8ca9139-4e02-4a98-b438-7d11cf537e22",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Line-Cover-Letter-Template",
+   "source": "cfi",
+   "title": "Line Cover Letter Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ca24446d-3681-4956-8ff9-6fd93964dd62",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Liquidation-Value-Template",
+   "source": "cfi",
+   "title": "Liquidation Value Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/9b8d07e8-a56e-4b26-a5fe-67e6dc6560f7",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Loan-Payment-Calculator",
+   "source": "cfi",
+   "title": "Loan Payment Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/7b68d727-cf8a-4be4-bcfb-c3e0f8533048",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/LTM-Revenue-Example",
+   "source": "cfi",
+   "title": "LTM Revenue Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/28971c58-3a73-4975-841f-e8272d5a2911",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/LTV-CAC-Ratio",
+   "source": "cfi",
+   "title": "LTV CAC Ratio",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/M-A-Model",
+   "source": "cfi",
+   "title": "M&A Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Macabacus-Quick-Start-Guide",
+   "source": "cfi",
+   "title": "Macabacus Quick Start Guide",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/94b2b4ee-6441-4cf1-be14-88b1b880c8d9",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Macabacus-Quick-Start-Guide-2",
+   "source": "cfi",
+   "title": "Macabacus Quick Start Guide (2)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/aea71dd5-c7d7-4f4f-9f2a-7b4b714a64e8",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Making-Effective-Business-Decisions-Template",
+   "source": "cfi",
+   "title": "Making Effective Business Decisions Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Managing-Relationships-at-Work",
+   "source": "cfi",
+   "title": "Managing Relationships at Work",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Margin-of-Safety-Example",
+   "source": "cfi",
+   "title": "Margin of Safety Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/c13c37f4-7892-4fe8-84eb-1fd5c98420fe",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Marginal-Cost-Calculator",
+   "source": "cfi",
+   "title": "Marginal Cost Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a7229fd3-72b2-4b43-87b7-34802c9d0a07",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Market-Capitalization-Template",
+   "source": "cfi",
+   "title": "Market Capitalization Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/099d59de-4b41-4a70-ba4a-88eecfd39311",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Market-Risk-Fundamentals",
+   "source": "cfi",
+   "title": "Market Risk Fundamentals",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Market-Risk-Premium-Template",
+   "source": "cfi",
+   "title": "Market Risk Premium Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/1bb78725-16e7-4c23-9cb1-beddf04c4ca1",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Market-to-Book-Price-to-Book-Ratio-Template",
+   "source": "cfi",
+   "title": "Market to Book Price to Book Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/84b217c6-7db6-41f4-87ce-a01f3a065802",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Market-Value-of-Debt-Template",
+   "source": "cfi",
+   "title": "Market Value of Debt Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/16f67b40-c537-425f-9b1e-2a4d604930d6",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Markup-Calculator",
+   "source": "cfi",
+   "title": "Markup Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/aaba1ac8-0dc5-4f00-9f5f-0765da470ceb",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/MAX-Template",
+   "source": "cfi",
+   "title": "MAX Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/b4129f74-f3fb-45e5-9111-9200c26e4f7d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Mining-Model",
+   "source": "cfi",
+   "title": "Mining Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Monthly-Cash-Flow-Model",
+   "source": "cfi",
+   "title": "Monthly Cash Flow Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Moving-Averages-Template",
+   "source": "cfi",
+   "title": "Moving Averages Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/b65dd42f-852b-44f9-ae7d-744659924dc5",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Multi-Criteria-Analysis-Balance-Scorecard",
+   "source": "cfi",
+   "title": "Multi-Criteria Analysis Balance Scorecard",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/76f4a550-0739-4d72-bb7f-8bd495871bcf",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/NDA-Confidentiality-Agreement-Sample",
+   "source": "cfi",
+   "title": "NDA Confidentiality Agreement Sample",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Net-Debt-Calulator",
+   "source": "cfi",
+   "title": "Net Debt Calulator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f4be79ba-19ee-416d-91d0-57222b823804",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Net-Debt-EBITDA-Ratio-Template",
+   "source": "cfi",
+   "title": "Net Debt EBITDA Ratio Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Net-Identifiable-Assets-Template",
+   "source": "cfi",
+   "title": "Net Identifiable Assets Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/41d4496d-34bb-48a8-b927-9793baeefd7e",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Net-Present-Value-Template",
+   "source": "cfi",
+   "title": "Net Present Value Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/55d356e5-e4dd-4a37-9d1d-e773f2c31547",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Net-Working-Capital-Template",
+   "source": "cfi",
+   "title": "Net Working Capital Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a5da699b-1193-4a55-ac9b-6b281b3ff94c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Net-Working-Capital-Template-2",
+   "source": "cfi",
+   "title": "Net Working Capital Template (2)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/43b36612-97cd-4954-83d0-de6bce324536",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Non-directional-Trading-Strategies",
+   "source": "cfi",
+   "title": "Non-directional Trading Strategies",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/NOPAT-Template",
+   "source": "cfi",
+   "title": "NOPAT Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Normalizing-Income-Statements",
+   "source": "cfi",
+   "title": "Normalizing Income Statements",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/NORMDIST-Template",
+   "source": "cfi",
+   "title": "NORMDIST Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/34a2d010-552d-49e2-a1e1-48be26077e3d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/NPV-XNPV-Example",
+   "source": "cfi",
+   "title": "NPV-XNPV Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/b2259f2d-a74e-4804-8070-147657278817",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/NVDA-Moving-Average-Algorithmic-Trading-Model",
+   "source": "cfi",
+   "title": "NVDA Moving Average Algorithmic Trading Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Operating-Budget-Template",
+   "source": "cfi",
+   "title": "Operating Budget Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Operating-Cash-Flow-Ratio-Template",
+   "source": "cfi",
+   "title": "Operating Cash Flow Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/31962b6a-917b-4589-af2b-79b4884f81b9",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Operating-Margin-Template",
+   "source": "cfi",
+   "title": "Operating Margin Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/56ee7eed-b5d9-41db-b148-40a4759257a1",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Operational-Modeling",
+   "source": "cfi",
+   "title": "Operational Modeling",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Option-Profit-Loss-Graph-Maker",
+   "source": "cfi",
+   "title": "Option Profit Loss Graph Maker",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Options-Strategy-Modeler",
+   "source": "cfi",
+   "title": "Options Strategy Modeler",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/OR-Template",
+   "source": "cfi",
+   "title": "OR Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/dca56ff3-e7f7-402c-b3d2-8d4736b5ddac",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Payback-Period-Template",
+   "source": "cfi",
+   "title": "Payback Period Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/513e262d-9f5b-4c7c-ba03-5ad8b774d1a8",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Percentage-Change-Calculator",
+   "source": "cfi",
+   "title": "Percentage Change Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/2a23095f-c029-4b52-92cc-89c8bf0b0e3f",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Perpetuity-Calculator",
+   "source": "cfi",
+   "title": "Perpetuity Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/4ce45a20-acd5-4713-85e4-6047dcf737a6",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Personal-Financial-Statement",
+   "source": "cfi",
+   "title": "Personal Financial Statement",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5b4d42f3-3450-447a-ba28-dd2851dd7a58",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Pharmaceuticals-Industry-Comps-Template",
+   "source": "cfi",
+   "title": "Pharmaceuticals Industry Comps Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/1f4e57da-0ada-406b-a719-cfac2e936735",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Pitchbook-Template",
+   "source": "cfi",
+   "title": "Pitchbook Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/PPE-Schedule",
+   "source": "cfi",
+   "title": "PPE Schedule",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ddb34003-7f3e-4e97-9e39-6e931bdc343c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Pre-Money-Post-Money-Valuation-Analysis-Template",
+   "source": "cfi",
+   "title": "Pre-Money Post-Money Valuation Analysis Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/bda0ce1f-7169-4c64-8490-59e2ed94ca51",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Present-Value-of-Growth-Opportunities-PVGO-Template",
+   "source": "cfi",
+   "title": "Present Value of Growth Opportunities (PVGO) Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/4e2246fb-c703-4426-ac73-3ac490562102",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Price-Earnings-P-E-Ratio-Template",
+   "source": "cfi",
+   "title": "Price Earnings (P/E) Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/fc864ce3-2c7f-4b23-bc6a-4692ea58e906",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Price-Earnings-Growth-PEG-ratio",
+   "source": "cfi",
+   "title": "Price Earnings Growth (PEG) ratio",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/756c46fd-4191-468b-81b1-b6efcc57ba4b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Price-Per-Square-Foot-Calculator",
+   "source": "cfi",
+   "title": "Price Per Square Foot Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/b52cb15b-fa5a-45f9-bf67-86e92b9e615a",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Product-Costs-Template",
+   "source": "cfi",
+   "title": "Product Costs Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/95192578-792e-4427-9725-2feac84ae106",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Profit-and-Loss-Statement",
+   "source": "cfi",
+   "title": "Profit and Loss Statement",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ae0764ef-3ad6-4208-821f-c5e9bafac5bc",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Profitability-Index",
+   "source": "cfi",
+   "title": "Profitability Index",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/6dad8139-fc1e-4a4f-8732-2b59f239b8ef",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Proforma-Earnings-Per-Share-Template",
+   "source": "cfi",
+   "title": "Proforma Earnings Per Share Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8f5336bd-929f-41a1-9914-a250c1a4902d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Project-Budget-Template",
+   "source": "cfi",
+   "title": "Project Budget Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ac3712f1-7a28-415e-83d5-da2daddec2b0",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Purchase-Price-Allocation-M-A-Accounting-Examples",
+   "source": "cfi",
+   "title": "Purchase Price Allocation & M&A Accounting Examples",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Put-Call-Parity-Calculator",
+   "source": "cfi",
+   "title": "Put Call Parity Calculator",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Quick-Ratio-Example",
+   "source": "cfi",
+   "title": "Quick Ratio Example",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Real-Estate-Financial-Modeling-Course",
+   "source": "cfi",
+   "title": "Real Estate Financial Modeling Course",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/REIT-Financial-Model-Template",
+   "source": "cfi",
+   "title": "REIT Financial Model Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Renewable-Energy-Solar-Financial-Model",
+   "source": "cfi",
+   "title": "Renewable Energy Solar Financial Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Research-and-Development-Capitalization",
+   "source": "cfi",
+   "title": "Research and Development Capitalization",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ed1a186e-b9ba-4b13-ac04-a568a6c21352",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Restructuring-Model-Template",
+   "source": "cfi",
+   "title": "Restructuring Model Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Retail-Industry-Comps-Template",
+   "source": "cfi",
+   "title": "Retail Industry Comps Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/b5b0245e-dec9-4cc9-a9d6-1049643452af",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Retention-Ratio-Template",
+   "source": "cfi",
+   "title": "Retention Ratio Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/4a89246d-0748-404f-8104-3eb03cc2d599",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Return-on-Assets-Formula",
+   "source": "cfi",
+   "title": "Return on Assets Formula",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Return-on-Equity",
+   "source": "cfi",
+   "title": "Return on Equity",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Return-on-Investment-ROI",
+   "source": "cfi",
+   "title": "Return on Investment (ROI)",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/775b3471-eb56-49e7-8be2-a06277ee921b",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Revenue-Run-Rate",
+   "source": "cfi",
+   "title": "Revenue Run Rate",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/3141e9c5-8ff2-4629-93ff-5069c4c06c7e",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Revenue-Variance-Analysis",
+   "source": "cfi",
+   "title": "Revenue Variance Analysis",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/df6564d1-7e5b-4cbf-a899-93a0d388afc3",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Robo-Advisor-Model",
+   "source": "cfi",
+   "title": "Robo-Advisor Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/ROIC-Template",
+   "source": "cfi",
+   "title": "ROIC Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/b1b04c42-87af-40fc-b07f-85749430b262",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/ROUNDUP-Template",
+   "source": "cfi",
+   "title": "ROUNDUP Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f68ca9b3-501b-4da8-951b-111560599cd5",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Rule-of-40-Calculator",
+   "source": "cfi",
+   "title": "Rule of 40 Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/ce387097-3f59-414d-9c27-e54dd19b7f76",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/SaaS-Model",
+   "source": "cfi",
+   "title": "SaaS Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Sales-Tax-Decalculator",
+   "source": "cfi",
+   "title": "Sales Tax Decalculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/7a68b1c5-3994-4c60-936f-61c1812f177c",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Scenario-Sensitivity-Analysis-Model",
+   "source": "cfi",
+   "title": "Scenario & Sensitivity Analysis Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/SEARCH-Template",
+   "source": "cfi",
+   "title": "SEARCH Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f34c36ac-8b37-422d-96d4-ed5ec73a49e8",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Sensitivity-Analysis-Table",
+   "source": "cfi",
+   "title": "Sensitivity Analysis Table",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/5e20e6d7-7fbe-49df-9907-1dae1209e717",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Sharpe-Ratio-Calculator",
+   "source": "cfi",
+   "title": "Sharpe Ratio Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/324dafd0-6fa2-4257-8f66-1c819f3f6b47",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Sheet-Name-Formula-Template",
+   "source": "cfi",
+   "title": "Sheet Name Formula Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/debd4d14-8e9c-476b-bd2d-c699eee8fa91",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Simplified-Robo-Advisor-Model",
+   "source": "cfi",
+   "title": "Simplified Robo-Advisor Model",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/SME-Lending-Owner-s-Net-Worth-Adjustment-Template",
+   "source": "cfi",
+   "title": "SME Lending - Owner's Net Worth Adjustment Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/81c2c71c-577c-41d9-94d8-2b808c590375",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Startup-Investor-Pitch-Deck-Template",
+   "source": "cfi",
+   "title": "Startup Investor Pitch Deck Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Straight-Line-Depreciation",
+   "source": "cfi",
+   "title": "Straight Line Depreciation",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/cec44a52-bcb3-44d5-b0f9-5667b06e374f",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Straight-Line-Depreciation-Template",
+   "source": "cfi",
+   "title": "Straight Line Depreciation Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/52567d70-1d08-499d-87c0-361842069de1",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/SUBTOTAL-Template",
+   "source": "cfi",
+   "title": "SUBTOTAL Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a8303733-9248-4fc0-8abd-665050ea4ba1",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Target-Costing-Example",
+   "source": "cfi",
+   "title": "Target Costing Example",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/193ce097-5353-44fc-b033-63c19f14ad64",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Tax-Shield-Template",
+   "source": "cfi",
+   "title": "Tax-Shield Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/bf34de59-14ae-4f50-b658-1bfd3238859e",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Team-Development-Diagnostic",
+   "source": "cfi",
+   "title": "Team Development Diagnostic",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Term-Sheet-Template",
+   "source": "cfi",
+   "title": "Term Sheet Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/00838c1c-f190-4c79-bf75-056f9046519f",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/TMT-Financial-Model-Template",
+   "source": "cfi",
+   "title": "TMT Financial Model Template",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Trading-Comps",
+   "source": "cfi",
+   "title": "Trading Comps",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Transaction-Comps",
+   "source": "cfi",
+   "title": "Transaction Comps",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Treasury-Stock-Method-Calculator",
+   "source": "cfi",
+   "title": "Treasury Stock Method Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8f6082a4-61a0-4033-856e-0484b6bc6d91",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Trend-Analysis",
+   "source": "cfi",
+   "title": "Trend Analysis",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Unlevered-Cost-of-Capital-Template",
+   "source": "cfi",
+   "title": "Unlevered Cost of Capital Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/1fa473bd-4baf-4761-a532-feedf3f56118",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Unlevered-Free-Cash-Flow-Template",
+   "source": "cfi",
+   "title": "Unlevered Free Cash Flow Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/8a3a01a9-0501-48dd-91ce-a8de347c1b09",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Valuation-Model-Comps-Precedents-Football-Field",
+   "source": "cfi",
+   "title": "Valuation Model Comps Precedents Football Field",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/11fce233-6f1b-4b6e-b41d-516f9bfde3f9",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Variance-Analysis",
+   "source": "cfi",
+   "title": "Variance Analysis",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/76573425-2781-425b-933d-93bdcaced932",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Variance-Formula",
+   "source": "cfi",
+   "title": "Variance Formula",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/aa0a2d3a-40eb-427c-8d68-01e15d2c11db",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Variance-Waterfall-Chart",
+   "source": "cfi",
+   "title": "Variance Waterfall Chart",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/d9f90564-643f-4583-bae3-bb8467b3d2dc",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Waterfall-Chart-Template",
+   "source": "cfi",
+   "title": "Waterfall Chart Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/fea22fa3-e7cb-4dc7-8eb7-37feb7251b8d",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Weighted-Average-Cost-of-Capital-WACC-Calculator",
+   "source": "cfi",
+   "title": "Weighted Average Cost of Capital (WACC) Calculator",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/762878d3-834e-4b54-a5e0-44407ea21666",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Weighted-Average-Shares-Outstanding-Template",
+   "source": "cfi",
+   "title": "Weighted Average Shares Outstanding Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/0015a88c-e55c-4352-9a66-5268a7cb5fef",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Working-Capital-Cycle",
+   "source": "cfi",
+   "title": "Working Capital Cycle",
+   "url": null,
+   "access": "cfi-paid",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Working-Capital-Cycle-Template",
+   "source": "cfi",
+   "title": "Working Capital Cycle Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/77dca0cf-efc3-4c70-86a0-5c4d38625842",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/XIRR-vs-IRR-Template",
+   "source": "cfi",
+   "title": "XIRR vs IRR Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/114ec9a3-ea2e-44d9-8fe7-cec278f356f3",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Year-over-Year-YoY-Analysis",
+   "source": "cfi",
+   "title": "Year over Year (YoY) Analysis",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/f46df61b-881f-41ce-b4e2-25336e489a87",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "cfi/Year-to-Date-YTD-Template",
+   "source": "cfi",
+   "title": "Year to Date YTD Template",
+   "url": "https://api.corporatefinanceinstitute.com/api/files/a39a43d2-1667-4033-9c97-28347d12b6e7",
+   "access": "cfi-login",
+   "filename": null,
+   "size": null,
+   "verified_status": null
+  },
+  {
+   "id": "damodaran/capbudg",
+   "source": "damodaran",
+   "title": "capbudg",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+   "access": "public",
+   "filename": "capbudg.xls",
+   "size": 30720,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/risk",
+   "source": "damodaran",
+   "title": "risk",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/risk.xls",
+   "access": "public",
+   "filename": "risk.xls",
+   "size": 40960,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/levbeta",
+   "source": "damodaran",
+   "title": "levbeta",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+   "access": "public",
+   "filename": "levbeta.xls",
+   "size": 24064,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/oplease",
+   "source": "damodaran",
+   "title": "oplease",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/oplease.xls",
+   "access": "public",
+   "filename": "oplease.xls",
+   "size": 26624,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/ratings",
+   "source": "damodaran",
+   "title": "ratings",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+   "access": "public",
+   "filename": "ratings.xls",
+   "size": 48640,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/apv",
+   "source": "damodaran",
+   "title": "apv",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+   "access": "public",
+   "filename": "apv.xls",
+   "size": 132608,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/capstru",
+   "source": "damodaran",
+   "title": "capstru",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+   "access": "public",
+   "filename": "capstru.xlsx",
+   "size": 100960,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/returncalculator",
+   "source": "damodaran",
+   "title": "returncalculator",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/returncalculator.xls",
+   "access": "public",
+   "filename": "returncalculator.xls",
+   "size": 62976,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/dividends",
+   "source": "damodaran",
+   "title": "dividends",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/dividends.xls",
+   "access": "public",
+   "filename": "dividends.xls",
+   "size": 91648,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/buybacks",
+   "source": "damodaran",
+   "title": "buybacks",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/buybacks.xls",
+   "access": "public",
+   "filename": "buybacks.xls",
+   "size": 63488,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/wacccalc",
+   "source": "damodaran",
+   "title": "wacccalc",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+   "access": "public",
+   "filename": "wacccalc.xls",
+   "size": 248832,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/cpxest",
+   "source": "damodaran",
+   "title": "cpxest",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/cpxest.xls",
+   "access": "public",
+   "filename": "cpxest.xls",
+   "size": 31744,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/implprem",
+   "source": "damodaran",
+   "title": "implprem",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem.xls",
+   "access": "public",
+   "filename": "implprem.xls",
+   "size": 35840,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcfevsddm",
+   "source": "damodaran",
+   "title": "fcfevsddm",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+   "access": "public",
+   "filename": "fcfevsddm.xls",
+   "size": 35328,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcffvsfcfe",
+   "source": "damodaran",
+   "title": "fcffvsfcfe",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffvsfcfe.xls",
+   "access": "public",
+   "filename": "fcffvsfcfe.xls",
+   "size": 15872,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcffeva",
+   "source": "damodaran",
+   "title": "fcffeva",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffeva.xls",
+   "access": "public",
+   "filename": "fcffeva.xls",
+   "size": 38912,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/model",
+   "source": "damodaran",
+   "title": "model",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/model.xls",
+   "access": "public",
+   "filename": "model.xls",
+   "size": 22528,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/higrowth",
+   "source": "damodaran",
+   "title": "higrowth",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/higrowth.xls",
+   "access": "public",
+   "filename": "higrowth.xls",
+   "size": 139776,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/divginzu",
+   "source": "damodaran",
+   "title": "divginzu",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls",
+   "access": "public",
+   "filename": "divginzu.xls",
+   "size": 236032,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcfeginzu",
+   "source": "damodaran",
+   "title": "fcfeginzu",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+   "access": "public",
+   "filename": "fcfeginzu.xls",
+   "size": 240128,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcffsimpleginzu",
+   "source": "damodaran",
+   "title": "fcffsimpleginzu",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzu.xlsx",
+   "access": "public",
+   "filename": "fcffsimpleginzu.xlsx",
+   "size": 287995,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcffginzu",
+   "source": "damodaran",
+   "title": "fcffginzu",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffginzu.xlsx",
+   "access": "public",
+   "filename": "fcffginzu.xlsx",
+   "size": 172200,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/synergyvaluation",
+   "source": "damodaran",
+   "title": "synergyvaluation",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls",
+   "access": "public",
+   "filename": "synergyvaluation.xls",
+   "size": 24064,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/controlvalue",
+   "source": "damodaran",
+   "title": "controlvalue",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/controlvalue.xls",
+   "access": "public",
+   "filename": "controlvalue.xls",
+   "size": 72704,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/liqdisc",
+   "source": "damodaran",
+   "title": "liqdisc",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/liqdisc.xls",
+   "access": "public",
+   "filename": "liqdisc.xls",
+   "size": 28672,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/distress",
+   "source": "damodaran",
+   "title": "distress",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/distress.xls",
+   "access": "public",
+   "filename": "distress.xls",
+   "size": 13824,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/ddmst",
+   "source": "damodaran",
+   "title": "ddmst",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls",
+   "access": "public",
+   "filename": "ddmst.xls",
+   "size": 14336,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/ddm2st",
+   "source": "damodaran",
+   "title": "ddm2st",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls",
+   "access": "public",
+   "filename": "ddm2st.xls",
+   "size": 23040,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/ddm3st",
+   "source": "damodaran",
+   "title": "ddm3st",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls",
+   "access": "public",
+   "filename": "ddm3st.xls",
+   "size": 28160,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcfest",
+   "source": "damodaran",
+   "title": "fcfest",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+   "access": "public",
+   "filename": "fcfest.xls",
+   "size": 36864,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcfe2st",
+   "source": "damodaran",
+   "title": "fcfe2st",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+   "access": "public",
+   "filename": "fcfe2st.xls",
+   "size": 28160,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcfe3st",
+   "source": "damodaran",
+   "title": "fcfe3st",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+   "access": "public",
+   "filename": "fcfe3st.xls",
+   "size": 43008,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcffst",
+   "source": "damodaran",
+   "title": "fcffst",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffst.xls",
+   "access": "public",
+   "filename": "fcffst.xls",
+   "size": 19456,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcff2st",
+   "source": "damodaran",
+   "title": "fcff2st",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+   "access": "public",
+   "filename": "fcff2st.xls",
+   "size": 49152,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcff3st",
+   "source": "damodaran",
+   "title": "fcff3st",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff3st.xls",
+   "access": "public",
+   "filename": "fcff3st.xls",
+   "size": 36352,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcffgen",
+   "source": "damodaran",
+   "title": "fcffgen",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffgen.xls",
+   "access": "public",
+   "filename": "fcffgen.xls",
+   "size": 67584,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/evavaln",
+   "source": "damodaran",
+   "title": "evavaln",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/evavaln.xls",
+   "access": "public",
+   "filename": "evavaln.xls",
+   "size": 39424,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/eqexret",
+   "source": "damodaran",
+   "title": "eqexret",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+   "access": "public",
+   "filename": "eqexret.xls",
+   "size": 45568,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/fcffneg",
+   "source": "damodaran",
+   "title": "fcffneg",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcffneg.xls",
+   "access": "public",
+   "filename": "fcffneg.xls",
+   "size": 62976,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/revgrowth",
+   "source": "damodaran",
+   "title": "revgrowth",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/revgrowth.xls",
+   "access": "public",
+   "filename": "revgrowth.xls",
+   "size": 8704,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/eqmult",
+   "source": "damodaran",
+   "title": "eqmult",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqmult.xls",
+   "access": "public",
+   "filename": "eqmult.xls",
+   "size": 59904,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/firmmult",
+   "source": "damodaran",
+   "title": "firmmult",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/firmmult.xls",
+   "access": "public",
+   "filename": "firmmult.xls",
+   "size": 48128,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/lboval",
+   "source": "damodaran",
+   "title": "lboval",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/lboval.xls",
+   "access": "public",
+   "filename": "lboval.xls",
+   "size": 41511,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/reval",
+   "source": "damodaran",
+   "title": "reval",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/reval.xls",
+   "access": "public",
+   "filename": "reval.xls",
+   "size": 29696,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/valenh",
+   "source": "damodaran",
+   "title": "valenh",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls",
+   "access": "public",
+   "filename": "valenh.xls",
+   "size": 15872,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/cfroi",
+   "source": "damodaran",
+   "title": "cfroi",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls",
+   "access": "public",
+   "filename": "cfroi.xls",
+   "size": 11776,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/optst",
+   "source": "damodaran",
+   "title": "optst",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/optst.xls",
+   "access": "public",
+   "filename": "optst.xls",
+   "size": 25600,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/optlt",
+   "source": "damodaran",
+   "title": "optlt",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/optlt.xls",
+   "access": "public",
+   "filename": "optlt.xls",
+   "size": 45056,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/warrant",
+   "source": "damodaran",
+   "title": "warrant",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls",
+   "access": "public",
+   "filename": "warrant.xls",
+   "size": 26624,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/expand",
+   "source": "damodaran",
+   "title": "expand",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/expand.xls",
+   "access": "public",
+   "filename": "expand.xls",
+   "size": 12800,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/delay",
+   "source": "damodaran",
+   "title": "delay",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/delay.xls",
+   "access": "public",
+   "filename": "delay.xls",
+   "size": 10752,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/abandon",
+   "source": "damodaran",
+   "title": "abandon",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/abandon.xls",
+   "access": "public",
+   "filename": "abandon.xls",
+   "size": 13312,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/equity",
+   "source": "damodaran",
+   "title": "equity",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/equity.xls",
+   "access": "public",
+   "filename": "equity.xls",
+   "size": 58368,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/natres",
+   "source": "damodaran",
+   "title": "natres",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/natres.xls",
+   "access": "public",
+   "filename": "natres.xls",
+   "size": 19456,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/project",
+   "source": "damodaran",
+   "title": "project",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/project.xls",
+   "access": "public",
+   "filename": "project.xls",
+   "size": 15872,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/betas",
+   "source": "damodaran",
+   "title": "betas",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+   "access": "public",
+   "filename": "betas.xls",
+   "size": 82432,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/wacc",
+   "source": "damodaran",
+   "title": "wacc",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+   "access": "public",
+   "filename": "wacc.xls",
+   "size": 77312,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/ctryprem",
+   "source": "damodaran",
+   "title": "ctryprem",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xlsx",
+   "access": "public",
+   "filename": "ctryprem.xlsx",
+   "size": 379527,
+   "verified_status": "200"
+  },
+  {
+   "id": "damodaran/ERPbymonth",
+   "source": "damodaran",
+   "title": "ERPbymonth",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPbymonth.xlsx",
+   "access": "public",
+   "filename": "ERPbymonth.xlsx",
+   "size": 47357,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/IFS-Simple-Three-Statement-Model",
+   "source": "asimplemodel",
+   "title": "IFS_Simple Three Statement Model",
+   "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+   "access": "public",
+   "filename": "IFS_Simple Three Statement Model.xlsx",
+   "size": 24324,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/IFS-Dividends-Introduction",
+   "source": "asimplemodel",
+   "title": "IFS Dividends Introduction",
+   "url": "https://portal.asimplemodel.com/assets/files/IFS%20Dividends%20Introduction.xlsx",
+   "access": "public",
+   "filename": "IFS Dividends Introduction.xlsx",
+   "size": 41932,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/IFS-PPE-Schedule",
+   "source": "asimplemodel",
+   "title": "IFS_PPE Schedule",
+   "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+   "access": "public",
+   "filename": "IFS_PPE Schedule.xlsx",
+   "size": 26470,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/DCF-A-Basic-Discounted-Cash-Flow-Model",
+   "source": "asimplemodel",
+   "title": "DCF_A Basic Discounted Cash Flow Model",
+   "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+   "access": "public",
+   "filename": "DCF_A Basic Discounted Cash Flow Model.xlsx",
+   "size": 12888,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/DCF-Discounted-Cash-Flow-Model",
+   "source": "asimplemodel",
+   "title": "DCF_Discounted Cash Flow Model",
+   "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+   "access": "public",
+   "filename": "DCF_Discounted Cash Flow Model.xlsx",
+   "size": 57599,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/DCF-MidYear-Convention",
+   "source": "asimplemodel",
+   "title": "DCF_MidYear Convention",
+   "url": "https://portal.asimplemodel.com/assets/files/DCF_MidYear%20Convention.xlsx",
+   "access": "public",
+   "filename": "DCF_MidYear Convention.xlsx",
+   "size": 29875,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/LBO-Simple-LBO-Scenarios-and-Data-Tables",
+   "source": "asimplemodel",
+   "title": "LBO_Simple LBO Scenarios and Data Tables",
+   "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+   "access": "public",
+   "filename": "LBO_Simple LBO Scenarios and Data Tables.xlsx",
+   "size": 47222,
+   "verified_status": "200"
+  },
+  {
+   "id": "asimplemodel/LBO-II-Common-Preferred",
+   "source": "asimplemodel",
+   "title": "LBO II Common_Preferred",
+   "url": "https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx",
+   "access": "public",
+   "filename": "LBO II Common_Preferred.xlsx",
+   "size": 126857,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/fcffst",
+   "source": "exinfm",
+   "title": "fcffst",
+   "url": "https://exinfm.com/excel%20files/fcffst.xls",
+   "access": "public",
+   "filename": "fcffst.xls",
+   "size": 19456,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/Financial-Projections-Model-v6-8-4",
+   "source": "exinfm",
+   "title": "Financial Projections Model v6.8.4",
+   "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+   "access": "public",
+   "filename": "Financial Projections Model v6.8.4.xls",
+   "size": 805888,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/LBO-DCF-Model",
+   "source": "exinfm",
+   "title": "LBO_DCF_Model",
+   "url": "https://exinfm.com/excel%20files/LBO_DCF_Model.xls",
+   "access": "public",
+   "filename": "LBO_DCF_Model.xls",
+   "size": 370688,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/LBO-Model-Template",
+   "source": "exinfm",
+   "title": "LBO Model Template",
+   "url": "https://exinfm.com/excel%20files/LBO%20Model%20Template.xls",
+   "access": "public",
+   "filename": "LBO Model Template.xls",
+   "size": 369152,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/statmnts",
+   "source": "exinfm",
+   "title": "statmnts",
+   "url": "https://exinfm.com/excel%20files/statmnts.xls",
+   "access": "public",
+   "filename": "statmnts.xls",
+   "size": 69632,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/Ratio-Tree",
+   "source": "exinfm",
+   "title": "Ratio_Tree",
+   "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+   "access": "public",
+   "filename": "Ratio_Tree.xls",
+   "size": 46592,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/betawacc",
+   "source": "exinfm",
+   "title": "betawacc",
+   "url": "https://exinfm.com/excel%20files/betawacc.xls",
+   "access": "public",
+   "filename": "betawacc.xls",
+   "size": 35840,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/npv-irr",
+   "source": "exinfm",
+   "title": "npv_irr",
+   "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+   "access": "public",
+   "filename": "npv_irr.xls",
+   "size": 51200,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/Comparable-Companies-NON-FDS",
+   "source": "exinfm",
+   "title": "Comparable Companies (NON-FDS)",
+   "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+   "access": "public",
+   "filename": "Comparable Companies (NON-FDS).xls",
+   "size": 1378816,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/Combination-Template",
+   "source": "exinfm",
+   "title": "Combination Template",
+   "url": "https://exinfm.com/excel%20files/Combination%20Template.xls",
+   "access": "public",
+   "filename": "Combination Template.xls",
+   "size": 845824,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/Box-IPO-Financial-Model",
+   "source": "exinfm",
+   "title": "Box IPO Financial Model",
+   "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+   "access": "public",
+   "filename": "Box IPO Financial Model.xls",
+   "size": 229376,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/cash-flow-model",
+   "source": "exinfm",
+   "title": "cash_flow_model",
+   "url": "https://exinfm.com/excel%20files/cash_flow_model.xls",
+   "access": "public",
+   "filename": "cash_flow_model.xls",
+   "size": 52224,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/EVA-Example",
+   "source": "exinfm",
+   "title": "EVA Example",
+   "url": "https://exinfm.com/excel%20files/EVA%20Example.xls",
+   "access": "public",
+   "filename": "EVA Example.xls",
+   "size": 170496,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/Financial-model-1",
+   "source": "exinfm",
+   "title": "Financial_model_1",
+   "url": "https://exinfm.com/excel%20files/Financial_model_1.xls",
+   "access": "public",
+   "filename": "Financial_model_1.xls",
+   "size": 688128,
+   "verified_status": "200"
+  },
+  {
+   "id": "exinfm/capstruc",
+   "source": "exinfm",
+   "title": "capstruc",
+   "url": "https://exinfm.com/excel%20files/capstruc.xls",
+   "access": "public",
+   "filename": "capstruc.xls",
+   "size": 39936,
+   "verified_status": "200"
+  }
+ ],
+ "counts": {
+  "cfi:cfi-paid": 127,
+  "cfi:cfi-login": 196,
+  "damodaran:public": 59,
+  "asimplemodel:public": 8,
+  "exinfm:public": 15
+ }
+}

@@ -1,0 +1,82 @@
+damodaran|capbudg.xls|https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls|200|30720|application/vnd.ms-excel
+damodaran|risk.xls|https://pages.stern.nyu.edu/~adamodar/pc/risk.xls|200|40960|application/vnd.ms-excel
+damodaran|levbeta.xls|https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls|200|24064|application/vnd.ms-excel
+damodaran|oplease.xls|https://pages.stern.nyu.edu/~adamodar/pc/oplease.xls|200|26624|application/vnd.ms-excel
+damodaran|ratings.xls|https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls|200|48640|application/vnd.ms-excel
+damodaran|apv.xls|https://pages.stern.nyu.edu/~adamodar/pc/apv.xls|200|132608|application/vnd.ms-excel
+damodaran|capstru.xlsx|https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx|200|100960|application/vnd.openxmlformats
+damodaran|returncalculator.xls|https://pages.stern.nyu.edu/~adamodar/pc/returncalculator.xls|200|62976|application/vnd.ms-excel
+damodaran|dividends.xls|https://pages.stern.nyu.edu/~adamodar/pc/dividends.xls|200|91648|application/vnd.ms-excel
+damodaran|buybacks.xls|https://pages.stern.nyu.edu/~adamodar/pc/buybacks.xls|200|63488|application/vnd.ms-excel
+damodaran|wacccalc.xls|https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls|200|248832|application/vnd.ms-excel
+damodaran|cpxest.xls|https://pages.stern.nyu.edu/~adamodar/pc/cpxest.xls|200|31744|application/vnd.ms-excel
+damodaran|implprem.xls|https://pages.stern.nyu.edu/~adamodar/pc/implprem.xls|200|35840|application/vnd.ms-excel
+damodaran|fcfevsddm.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls|200|35328|application/vnd.ms-excel
+damodaran|fcffvsfcfe.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcffvsfcfe.xls|200|15872|application/vnd.ms-excel
+damodaran|fcffeva.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcffeva.xls|200|38912|application/vnd.ms-excel
+damodaran|model.xls|https://pages.stern.nyu.edu/~adamodar/pc/model.xls|200|22528|application/vnd.ms-excel
+damodaran|higrowth.xls|https://pages.stern.nyu.edu/~adamodar/pc/higrowth.xls|200|139776|application/vnd.ms-excel
+damodaran|divginzu.xls|https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls|200|236032|application/vnd.ms-excel
+damodaran|fcfeginzu.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls|200|240128|application/vnd.ms-excel
+damodaran|fcffsimpleginzu.xlsx|https://pages.stern.nyu.edu/~adamodar/pc/fcffsimpleginzu.xlsx|200|287995|application/vnd.openxmlformats
+damodaran|fcffginzu.xlsx|https://pages.stern.nyu.edu/~adamodar/pc/fcffginzu.xlsx|200|172200|application/vnd.openxmlformats
+damodaran|synergyvaluation.xls|https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls|200|24064|application/vnd.ms-excel
+damodaran|controlvalue.xls|https://pages.stern.nyu.edu/~adamodar/pc/controlvalue.xls|200|72704|application/vnd.ms-excel
+damodaran|liqdisc.xls|https://pages.stern.nyu.edu/~adamodar/pc/liqdisc.xls|200|28672|application/vnd.ms-excel
+damodaran|distress.xls|https://pages.stern.nyu.edu/~adamodar/pc/distress.xls|200|13824|application/vnd.ms-excel
+damodaran|ddmst.xls|https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls|200|14336|application/vnd.ms-excel
+damodaran|ddm2st.xls|https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls|200|23040|application/vnd.ms-excel
+damodaran|ddm3st.xls|https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls|200|28160|application/vnd.ms-excel
+damodaran|fcfest.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls|200|36864|application/vnd.ms-excel
+damodaran|fcfe2st.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls|200|28160|application/vnd.ms-excel
+damodaran|fcfe3st.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls|200|43008|application/vnd.ms-excel
+damodaran|fcffst.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcffst.xls|200|19456|application/vnd.ms-excel
+damodaran|fcff2st.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls|200|49152|application/vnd.ms-excel
+damodaran|fcff3st.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcff3st.xls|200|36352|application/vnd.ms-excel
+damodaran|fcffgen.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcffgen.xls|200|67584|application/vnd.ms-excel
+damodaran|evavaln.xls|https://pages.stern.nyu.edu/~adamodar/pc/evavaln.xls|200|39424|application/vnd.ms-excel
+damodaran|eqexret.xls|https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls|200|45568|application/vnd.ms-excel
+damodaran|fcffneg.xls|https://pages.stern.nyu.edu/~adamodar/pc/fcffneg.xls|200|62976|application/vnd.ms-excel
+damodaran|revgrowth.xls|https://pages.stern.nyu.edu/~adamodar/pc/revgrowth.xls|200|8704|application/vnd.ms-excel
+damodaran|eqmult.xls|https://pages.stern.nyu.edu/~adamodar/pc/eqmult.xls|200|59904|application/vnd.ms-excel
+damodaran|firmmult.xls|https://pages.stern.nyu.edu/~adamodar/pc/firmmult.xls|200|48128|application/vnd.ms-excel
+damodaran|lboval.xls|https://pages.stern.nyu.edu/~adamodar/pc/lboval.xls|200|41511|application/vnd.ms-excel
+damodaran|reval.xls|https://pages.stern.nyu.edu/~adamodar/pc/reval.xls|200|29696|application/vnd.ms-excel
+damodaran|valenh.xls|https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls|200|15872|application/vnd.ms-excel
+damodaran|cfroi.xls|https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls|200|11776|application/vnd.ms-excel
+damodaran|optst.xls|https://pages.stern.nyu.edu/~adamodar/pc/optst.xls|200|25600|application/vnd.ms-excel
+damodaran|optlt.xls|https://pages.stern.nyu.edu/~adamodar/pc/optlt.xls|200|45056|application/vnd.ms-excel
+damodaran|warrant.xls|https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls|200|26624|application/vnd.ms-excel
+damodaran|expand.xls|https://pages.stern.nyu.edu/~adamodar/pc/expand.xls|200|12800|application/vnd.ms-excel
+damodaran|delay.xls|https://pages.stern.nyu.edu/~adamodar/pc/delay.xls|200|10752|application/vnd.ms-excel
+damodaran|abandon.xls|https://pages.stern.nyu.edu/~adamodar/pc/abandon.xls|200|13312|application/vnd.ms-excel
+damodaran|equity.xls|https://pages.stern.nyu.edu/~adamodar/pc/equity.xls|200|58368|application/vnd.ms-excel
+damodaran|natres.xls|https://pages.stern.nyu.edu/~adamodar/pc/natres.xls|200|19456|application/vnd.ms-excel
+damodaran|project.xls|https://pages.stern.nyu.edu/~adamodar/pc/project.xls|200|15872|application/vnd.ms-excel
+damodaran|betas.xls|https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls|200|82432|application/vnd.ms-excel
+damodaran|wacc.xls|https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls|200|77312|application/vnd.ms-excel
+damodaran|ctryprem.xlsx|https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xlsx|200|379527|application/vnd.openxmlformats
+damodaran|ERPbymonth.xlsx|https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPbymonth.xlsx|200|47357|application/vnd.openxmlformats
+asimplemodel|IFS_Simple Three Statement Model.xlsx|https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx|200|24324|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+asimplemodel|IFS Dividends Introduction.xlsx|https://portal.asimplemodel.com/assets/files/IFS%20Dividends%20Introduction.xlsx|200|41932|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+asimplemodel|IFS_PPE Schedule.xlsx|https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx|200|26470|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+asimplemodel|DCF_A Basic Discounted Cash Flow Model.xlsx|https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx|200|12888|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+asimplemodel|DCF_Discounted Cash Flow Model.xlsx|https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx|200|57599|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+asimplemodel|DCF_MidYear Convention.xlsx|https://portal.asimplemodel.com/assets/files/DCF_MidYear%20Convention.xlsx|200|29875|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+asimplemodel|LBO_Simple LBO Scenarios and Data Tables.xlsx|https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx|200|47222|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+asimplemodel|LBO II Common_Preferred.xlsx|https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx|200|126857|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+exinfm|fcffst.xls|https://exinfm.com/excel%20files/fcffst.xls|200|19456|application/vnd.ms-excel
+exinfm|Financial Projections Model v6.8.4.xls|https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls|200|805888|application/vnd.ms-excel
+exinfm|LBO_DCF_Model.xls|https://exinfm.com/excel%20files/LBO_DCF_Model.xls|200|370688|application/vnd.ms-excel
+exinfm|LBO Model Template.xls|https://exinfm.com/excel%20files/LBO%20Model%20Template.xls|200|369152|application/vnd.ms-excel
+exinfm|statmnts.xls|https://exinfm.com/excel%20files/statmnts.xls|200|69632|application/vnd.ms-excel
+exinfm|Ratio_Tree.xls|https://exinfm.com/excel%20files/Ratio_Tree.xls|200|46592|application/vnd.ms-excel
+exinfm|betawacc.xls|https://exinfm.com/excel%20files/betawacc.xls|200|35840|application/vnd.ms-excel
+exinfm|npv_irr.xls|https://exinfm.com/excel%20files/npv_irr.xls|200|51200|application/vnd.ms-excel
+exinfm|Comparable Companies (NON-FDS).xls|https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls|200|1378816|application/vnd.ms-excel
+exinfm|Combination Template.xls|https://exinfm.com/excel%20files/Combination%20Template.xls|200|845824|application/vnd.ms-excel
+exinfm|Box IPO Financial Model.xls|https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls|200|229376|application/vnd.ms-excel
+exinfm|cash_flow_model.xls|https://exinfm.com/excel%20files/cash_flow_model.xls|200|52224|application/vnd.ms-excel
+exinfm|EVA Example.xls|https://exinfm.com/excel%20files/EVA%20Example.xls|200|170496|application/vnd.ms-excel
+exinfm|Financial_model_1.xls|https://exinfm.com/excel%20files/Financial_model_1.xls|200|688128|application/vnd.ms-excel
+exinfm|capstruc.xls|https://exinfm.com/excel%20files/capstruc.xls|200|39936|application/vnd.ms-excel

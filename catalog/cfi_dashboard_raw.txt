@@ -1,0 +1,323 @@
+3-Statement Compact (Complete)|Unlock|
+3-Statement Model (Complete)|Unlock|
+Accounting Fact Sheet|Download|https://api.corporatefinanceinstitute.com/api/files/8eb4fb4f-ac16-44d1-9aab-d3fc879a991c
+Accounting for Business Combinations and Other Equity Investments|Unlock|
+Accounting for Diluted Shares & Earnings per Share|Unlock|
+Accounting for Inventory|Unlock|
+Accounting for Leases|Unlock|
+Accounts Payable Turnover Ratio Template|Unlock|
+Accounts Receivable Aging Report Template|Download|https://api.corporatefinanceinstitute.com/api/files/20f24d01-ff15-45e4-ba57-8b36878c45f9
+Accounts Receivable Turnover Ratio Template|Unlock|
+Accumulated Depreciation Template|Download|https://api.corporatefinanceinstitute.com/api/files/e3dad1ff-0657-4320-aef2-6e134d4dd595
+Active Listening Diagnostic|Unlock|
+Activity Based Costing Template|Download|https://api.corporatefinanceinstitute.com/api/files/a5f57e78-775d-479f-8c37-5254408ad3d6
+Additional Paid-in Capital Template|Download|https://api.corporatefinanceinstitute.com/api/files/4440ee71-4e4b-4851-af82-3a99d2473367
+Adjusted EBITDA|Download|https://api.corporatefinanceinstitute.com/api/files/487bea2a-fd5a-4e1c-b290-a2f8ef9034ab
+Adjusted Present Value|Download|https://api.corporatefinanceinstitute.com/api/files/8f91205d-0e95-4458-be95-d9106f1abdac
+Advanced All in One Financial Model Template|Unlock|
+Alpha Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/296c05a2-0bc2-4571-b23b-82cadb7f819f
+Amortization Schedule Template|Download|https://api.corporatefinanceinstitute.com/api/files/8abc237c-9e87-414b-8d8c-2332e990c94d
+AMZN Financial Model|Unlock|
+Annual Income Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/d2c6b56d-55f2-4391-b956-d63c24431e5d
+Appraisal Checklist|Unlock|
+Asset Turnover Template|Unlock|
+Audit a Financial Model with Macabacus|Download|https://api.corporatefinanceinstitute.com/api/files/5d360ed2-a1f9-4f89-9b94-8b09d91ce2de
+Audit a Financial Model with Macabacus (2)|Download|https://api.corporatefinanceinstitute.com/api/files/d7d1eed6-31cd-4d52-9b46-0f04651050c0
+Audit and Balance a 3-Statement Model|Unlock|
+AutoSum Example|Download|https://api.corporatefinanceinstitute.com/api/files/b9217520-b083-4d93-ba3b-8d457e8185b6
+Balance-Sheet-Current-Assets-Template|Download|https://api.corporatefinanceinstitute.com/api/files/44d42b5c-a9ce-4e7c-ab22-4adbb254171b
+Balance-Sheet-Current-Liabilities-Template|Download|https://api.corporatefinanceinstitute.com/api/files/04903f2e-3d22-4493-a4a1-f926690a776e
+Balance-Sheet-Template|Download|https://api.corporatefinanceinstitute.com/api/files/a4acb733-42c8-408e-b9fc-4f7daf3eb3ee
+Bank and FIG Financial Model Template|Unlock|
+Bank Financial Analysis|Unlock|
+Bank of America and Barclays Ratios|Unlock|
+Bank Ratio Calculator|Unlock|
+Bank Reconciliation Statement|Download|https://api.corporatefinanceinstitute.com/api/files/02f0cee3-a527-40a6-909b-743f9ab12072
+Benchmarking Analysis|Unlock|
+Beneish M-Score Template|Download|https://api.corporatefinanceinstitute.com/api/files/3b158ab3-06e3-4c3c-a373-2385ffaebdf6
+Beta Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/7a2ded95-8ab0-4f54-807d-c1de40bcd860
+Black Scholes Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/cda85900-3eda-4f7c-9a21-aeb42668fc37
+Bullet Chart Template|Download|https://api.corporatefinanceinstitute.com/api/files/c6924934-b7e4-4a31-8523-ecf9dd80bca3
+Burn Rate Template|Download|https://api.corporatefinanceinstitute.com/api/files/38db0be3-8000-4500-b573-90ad2f03628c
+Business Letter Format Template|Download|https://api.corporatefinanceinstitute.com/api/files/65dab29a-a6d8-4ab1-8c1b-ff1fd28b5ffd
+Business Valuation Exercises (Complete)|Unlock|
+Business Valuation Model (Complete)|Unlock|
+BV vs MV of Equity Template|Download|https://api.corporatefinanceinstitute.com/api/files/5706bae0-a7f9-4dd3-b02f-fa9cf9f5eab7
+CAGR Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/a8e5b84b-2c50-4bd1-94e3-585b2dda1781
+Calculating Net Interest Income|Unlock|
+Calculating Risk Weighted Assets|Unlock|
+Cap Rate and NOI|Unlock|
+CapEx Formula|Download|https://api.corporatefinanceinstitute.com/api/files/a02ec75a-628c-47e6-abd7-1992a6899dc7
+Capital Adequacy Ratio (CAR) Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/c5c57cd3-a3b9-4ea0-b92d-549c47c1f91c
+Capital Asset Pricing Model (CAPM) Formula|Download|https://api.corporatefinanceinstitute.com/api/files/fd208f5d-c26f-45df-bf20-97e9e9cd96ab
+Capital Gains Yield Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/bd7e4872-4f84-45c0-8bd6-8a5ab71d7c89
+Capital Intensity Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/111a338e-11bf-44f6-9ee2-28c8196afed2
+Capital Investment Model|Download|https://api.corporatefinanceinstitute.com/api/files/6380d95b-5e8f-4081-8c31-dbdaa7416558
+Capital Investment Template|Download|https://api.corporatefinanceinstitute.com/api/files/7c6c1a68-c577-4354-af1c-87a78950ce57
+Capitalization Table Template|Download|https://api.corporatefinanceinstitute.com/api/files/5fe54919-b82a-4d00-8f73-dda450b375c1
+Cash Budget Template|Download|https://api.corporatefinanceinstitute.com/api/files/ce0e1d58-0088-4900-9fab-4fcc9515f4fe
+Cash Conversion Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/f5ede962-f247-4d72-9746-8861cd95c07b
+Cash EPS|Download|https://api.corporatefinanceinstitute.com/api/files/a19189f6-d5b0-416c-a40c-f6c45c549753
+Cash Flow Reconciliation|Download|https://api.corporatefinanceinstitute.com/api/files/58b03965-7c1b-4c8a-b541-4c3408ac59f3
+Cash Flow Statement|Download|https://api.corporatefinanceinstitute.com/api/files/4433beb8-90a5-4c69-86a4-6fdc5cbbd35e
+Cash Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/4752bd45-60dd-4574-a4bc-069632b93276
+Cash to Accrual (Complete)|Download|https://api.corporatefinanceinstitute.com/api/files/2d358d08-9ec1-4bb5-b2d5-c5a772941cc0
+CFI Accounting eBook|Download|https://api.corporatefinanceinstitute.com/api/files/479445c6-20e8-40fb-88a6-de7141380dc8
+CFI Advanced Excel Formulas & Functions|Unlock|
+CFI Essential Guide to Breaking into FP&A|Download|https://api.corporatefinanceinstitute.com/api/files/bc06d2d5-1aef-41a5-8230-e57f4a33957c
+CFI Excel eBook|Unlock|
+CFI Financial Analysis Glossary|Download|https://api.corporatefinanceinstitute.com/api/files/d52e1a93-6e5b-4751-89b0-441596693427
+CFI Financial Modeling Guidelines|Download|https://api.corporatefinanceinstitute.com/api/files/dc5373c1-f61b-411f-8451-8227cae064cd
+CFI Financial Ratios Definitive Guide|Download|https://api.corporatefinanceinstitute.com/api/files/a8f9cd21-e20e-4c9e-948c-ac97312e58e0
+CFI Investment Banking Cover Letter Template|Download|https://api.corporatefinanceinstitute.com/api/files/e69d87c5-d6d0-4602-a486-2b623b5ccabd
+CFI Investment Banking Pitch Book|Unlock|
+CFI Investment Banking Resume Template|Download|https://api.corporatefinanceinstitute.com/api/files/aadc1010-ba21-45f0-b783-dfb41e400c69
+Charts and Graphs Template|Download|https://api.corporatefinanceinstitute.com/api/files/962b5921-93df-4be2-a3a6-3874f81ad967
+Clean Cover Letter Template|Download|https://api.corporatefinanceinstitute.com/api/files/f2883f94-898b-4805-974f-8d7ab8500f0c
+Clean Resignation Letter Template|Download|https://api.corporatefinanceinstitute.com/api/files/8169169d-7a25-4cb6-8b2b-64e352465dea
+Coaching for Workplace Performance Assessment|Unlock|
+Cohort Analysis|Unlock|
+Collateralized Mortgage Obligations (CMO) Models|Unlock|
+Common Size Analysis|Download|https://api.corporatefinanceinstitute.com/api/files/11750bf7-375e-4ca8-a511-731ca63c0b6f
+Communication Styles Diagnostic|Unlock|
+Compact Comps (Complete)|Unlock|
+Compact LBO Model (Complete)|Unlock|
+Comparable Company Analysis|Download|https://api.corporatefinanceinstitute.com/api/files/53341e93-b695-4606-86e2-e91bd5f33630
+Comparable Valuation Fundamentals|Unlock|
+Competitive Forces Model|Download|https://api.corporatefinanceinstitute.com/api/files/f1ad42d0-e3b2-40a4-a0cb-e95f949eff6a
+Compound Monthly Growth Rate (CMGR)|Download|https://api.corporatefinanceinstitute.com/api/files/e12b1f33-ba7d-4b87-86bb-e54c7481a716
+Confidential Information Memorandum Template|Unlock|
+Conflict Styles Questionnaire|Unlock|
+Consolidation model|Unlock|
+Contribution Margin Ratio|Download|https://api.corporatefinanceinstitute.com/api/files/41884bd1-155a-4a6d-a1e8-96a0cf6cd04a
+Corporate Finance Fundamentals: Capital Financing|Unlock|
+Corporate Finance Fundamentals: Capital Investment|Unlock|
+Corporate Finance Fundamentals: Capital Return|Unlock|
+Cost Behavior Analysis|Download|https://api.corporatefinanceinstitute.com/api/files/925f808c-a80e-4526-9573-297320f93bc7
+Cost of Debt Template|Download|https://api.corporatefinanceinstitute.com/api/files/9f5b460b-e8ee-4bb8-8d67-0a76361ab69b
+Cost of Goods Manufactured|Download|https://api.corporatefinanceinstitute.com/api/files/4b073373-af24-438b-8402-e92ed0b2ecdc
+Cost of Goods Sold|Download|https://api.corporatefinanceinstitute.com/api/files/06cdc867-3667-4ab0-a65f-8c15cbafe935
+Cost of Preferred Stock Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/16d630ec-6983-45b3-a940-67463d317dad
+Cost Volume Profit Analysis Template|Download|https://api.corporatefinanceinstitute.com/api/files/5ac31511-288d-4771-a475-9eaa9192535e
+COUNTIFS Template|Download|https://api.corporatefinanceinstitute.com/api/files/12617ef0-77fe-4d78-b489-f9f99a3e9122
+Coupon Rate|Download|https://api.corporatefinanceinstitute.com/api/files/1515e64d-19cd-4ff6-88c3-2b9abfe9d911
+COVARIANCE.P Template|Download|https://api.corporatefinanceinstitute.com/api/files/9c16884b-980e-4afc-a4ce-7fe470dd6e8e
+Creative Cover Letter|Download|https://api.corporatefinanceinstitute.com/api/files/7992912a-122a-4e9b-b88c-77582383b72b
+Crossover Rate|Download|https://api.corporatefinanceinstitute.com/api/files/e1f56465-fb1c-4ae9-bded-545111cc91be
+CUMIPMT Template|Download|https://api.corporatefinanceinstitute.com/api/files/3d2080ac-e09d-4f0a-ba59-0f605df73331
+Current Ratio Template|Unlock|
+Dashboard and Data Visualization Template|Unlock|
+Dashboard Template 2|Unlock|
+Days Inventory Outstanding Template|Unlock|
+Days Sales Outstanding|Unlock|
+DCF Model|Unlock|
+DCF Valuation Compact (Complete)|Unlock|
+DCF Valuation Model (Complete)|Unlock|
+Debt Asset Ratio|Download|https://api.corporatefinanceinstitute.com/api/files/e876bb24-4450-461b-80f3-371cbd0173b6
+Debt Capacity Model|Unlock|
+Debt Equity Ratio|Unlock|
+Debt Service Coverage Ratio|Download|https://api.corporatefinanceinstitute.com/api/files/5cbfb4ef-3033-47ac-bdc6-7907d046a06b
+Degree of Leverage Analysis|Unlock|
+Depreciation-Methods|Unlock|
+Detailed Comps Table Excel Template|Unlock|
+Detailed LBO Model Complete Private Equity Leveraged Buyout Analysis|Unlock|
+Diluted EPS Formula|Download|https://api.corporatefinanceinstitute.com/api/files/5893aa77-aa80-4bd0-a57b-c55999838648
+Dilution Example|Download|https://api.corporatefinanceinstitute.com/api/files/f5c8a339-694b-456b-bd8e-53c3638d2454
+Directional Trading Strategies|Unlock|
+Dividend Coverage and Payout|Download|https://api.corporatefinanceinstitute.com/api/files/d51e3fbf-8dff-4601-aa55-138f2a6c2db3
+Dividend Discount Model|Unlock|
+Double Declining Balance Depreciation Template|Download|https://api.corporatefinanceinstitute.com/api/files/89225935-636c-467c-8928-af8c077977fe
+Earnings Per Share|Download|https://api.corporatefinanceinstitute.com/api/files/e12e80f8-7045-4e0f-a08f-a31748ea6e2d
+EBIT Example|Download|https://api.corporatefinanceinstitute.com/api/files/2aba35bd-3a25-47ee-8bb7-c2290c8741be
+EBIT vs EBITDA|Download|https://api.corporatefinanceinstitute.com/api/files/194dfd0c-1a6e-4c28-9617-5fd2d19ecea8
+EBITDA Multiple|Download|https://api.corporatefinanceinstitute.com/api/files/db8975c9-4c58-4fe5-a06f-ece0538c4bb2
+EBITDA Template|Download|https://api.corporatefinanceinstitute.com/api/files/cb836225-1240-4a9d-921a-d3b60a4554dd
+EBT Example|Unlock|
+ECM Deals Committee Memo Template|Download|https://api.corporatefinanceinstitute.com/api/files/619f9c3a-0235-4d67-8129-f12a65f5f84a
+eCommerce Model|Unlock|
+Economic Order Quantity|Download|https://api.corporatefinanceinstitute.com/api/files/fe8c73fe-7d5f-4f4d-ac22-00e41af52abd
+Economic Value Added (EVA) Template|Download|https://api.corporatefinanceinstitute.com/api/files/e0aaa081-3e92-4829-a000-e5f576d77ca7
+Effective Annual Interest Rate Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/632c8db4-aecd-435c-9485-cfbdedccbf3d
+Efficient Frontier and CAL Template|Unlock|
+Energy Industry Comps Template|Unlock|
+Enterprise Value to EBITDA|Download|https://api.corporatefinanceinstitute.com/api/files/2be6888d-2256-430c-a772-45f00b07f5e3
+Enterprise Value vs Equity Value Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/0e9eb000-74d4-4fb1-8e2a-b20c83377320
+Equity Beta and Asset Beta Conversion|Download|https://api.corporatefinanceinstitute.com/api/files/e7940557-824d-4235-adbf-a5a473b012a0
+ETF Allocator Model|Unlock|
+EV to Revenue Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/f4e81503-37e7-4bb2-a214-489f58540aa2
+Excel for Finance Functions|Unlock|
+Excel Fundamentals - Formulas for Finance|Download|https://api.corporatefinanceinstitute.com/api/files/ca8f3830-9d74-4d8b-a640-8369f5c7df7b
+Excel Fundamentals - Formulas for Finance (Summary)|Download|https://api.corporatefinanceinstitute.com/api/files/981cef37-b2b2-473a-bd49-2568457f99e3
+Excel Fundamentals - Quick Start Guide (Summary)|Download|https://api.corporatefinanceinstitute.com/api/files/aa718c79-b29e-493e-996e-0b73418f534a
+Excel Fundamentals - Quick Start Guide Analysis|Download|https://api.corporatefinanceinstitute.com/api/files/5f8decba-e7de-470c-84a6-85a8b427f7a5
+Excel shortcuts - Mac|Download|https://api.corporatefinanceinstitute.com/api/files/6797dce2-50ad-4915-be4e-5354239571b5
+Excel shortcuts - PC|Download|https://api.corporatefinanceinstitute.com/api/files/12bd9155-262c-4377-a606-d6cbee7be3fa
+Exchange Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/8b037a68-32f4-48a8-a2e9-afe45e0a170a
+Expected Return Example|Download|https://api.corporatefinanceinstitute.com/api/files/7399d321-4302-402b-938e-a791610cf044
+FCFF vs FCFE Reconciliation Template|Unlock|
+FFO Example|Download|https://api.corporatefinanceinstitute.com/api/files/f2b28b3a-dcbc-49f2-aeeb-92f179950605
+Financial Analysis Fundamentals Template|Unlock|
+Financial Analysis Glossary|Download|https://api.corporatefinanceinstitute.com/api/files/f730ee28-ae19-4d93-9fab-85bc89308d94
+Financial Institution Dividend Discount Model|Unlock|
+Financial Modeling Fundamentals Glossary|Download|https://api.corporatefinanceinstitute.com/api/files/c566eb8c-0d4f-4ac5-b7b1-2820de4b8d55
+Financial Projection Template|Unlock|
+Fixed Asset Turnover Template|Download|https://api.corporatefinanceinstitute.com/api/files/53a41b70-4219-424d-aca4-ec189992fad2
+Fixed Charge Coverage Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/1f3ae2c7-7d4a-426a-8fa9-3d913ec8b6b9
+Football Field Chart|Download|https://api.corporatefinanceinstitute.com/api/files/1e454111-9d86-4eea-85c9-db373478fa97
+Forecasting Template|Unlock|
+Format a Financial Model with Macabacus Summary|Download|https://api.corporatefinanceinstitute.com/api/files/48bf0a3e-75c1-40b8-94d8-87d678700034
+Format a Financial Model with Macabacus Summary (2)|Download|https://api.corporatefinanceinstitute.com/api/files/f1dd906c-412b-41a7-a77a-f558203397fa
+Forward Price Earnings (PE) Ratio|Download|https://api.corporatefinanceinstitute.com/api/files/2b39c05a-04db-4964-8d76-747ca456a6bb
+FP&A 3-Statement Model|Unlock|
+FP&A Budgeting and Forecasting Model|Unlock|
+FP&A Monthly Rollforward Template|Unlock|
+Free Cash Flow (FCF) Example|Download|https://api.corporatefinanceinstitute.com/api/files/9afc5ecb-5b2b-4ab8-bf85-8ff51ad53de5
+Future Value Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/ef46f2ff-0bd2-4863-9381-bcfaf64e8798
+Gantt Chart Template|Download|https://api.corporatefinanceinstitute.com/api/files/f84a1371-576f-482a-9707-9847ee308b75
+General Cover Letter Template|Download|https://api.corporatefinanceinstitute.com/api/files/9abbd9cf-8c09-442e-ab83-257a7ef7f111
+Geometric Mean Example|Download|https://api.corporatefinanceinstitute.com/api/files/5b864c3c-d476-436a-a619-d803b15d745c
+Giving Feedback|Unlock|
+Goal Seek and Solver|Unlock|
+Gross Rent Multiplier Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/090379d5-29bd-47f7-b3dd-94eaac8f2f51
+H-Model Template|Download|https://api.corporatefinanceinstitute.com/api/files/d1095344-9074-43f7-820f-2d1e6ef30901
+HELOC Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/8eadf399-6a80-4ee6-9a7a-457d0e354eab
+Hybrid Team Self-Reflection|Unlock|
+Income Statement (P&L) and Profit Margins|Download|https://api.corporatefinanceinstitute.com/api/files/a1ab5909-2878-423f-8579-a99e5fb5d457
+Individual Equity Allocation Model|Unlock|
+Insurance Company Financial Analysis: Allstate|Unlock|
+Insurance Company Financial Analysis: Progressive|Unlock|
+InsurTech Pricer Model|Unlock|
+Interest Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/f6d332f9-e683-4476-bd1f-8c24069a51ed
+Interest Coverage Ratio Template|Unlock|
+Interest Rate Parity (IRP) Calculator|Unlock|
+Intrinsic Value Example|Download|https://api.corporatefinanceinstitute.com/api/files/16168420-f6d7-437a-aa70-b8bd608fd7f5
+Intro to 3-Statement Modeling Model|Unlock|
+Intro to Leveraged Buyouts|Unlock|
+Intro to Mergers & Acquisitions|Unlock|
+Introduction to Bank Valuation Examples|Unlock|
+Inventory Turnover Calculator|Unlock|
+Investment Banking Manual CFI 2019|Unlock|
+Investor Pitch Deck Template|Unlock|
+Journal Entries Template|Download|https://api.corporatefinanceinstitute.com/api/files/eee8a2db-cd8f-4938-ab3e-b7de0c7071e0
+Justified Price to Earnings Ratio|Download|https://api.corporatefinanceinstitute.com/api/files/77cdbacf-14a8-4bbd-84e5-ac64665e4775
+LBO Model|Unlock|
+Letter of Intent Template|Download|https://api.corporatefinanceinstitute.com/api/files/c97bc537-2722-410e-aca4-4e941c03e0ec
+Levelized Cost of Energy Template|Download|https://api.corporatefinanceinstitute.com/api/files/fd7c3732-e63c-4e5c-918d-55df1d95e998
+Leverage and Liquidity Ratios|Unlock|
+Leverage Ratios|Unlock|
+Leveraged Finance Example|Download|https://api.corporatefinanceinstitute.com/api/files/c8ca9139-4e02-4a98-b438-7d11cf537e22
+Line Cover Letter Template|Download|https://api.corporatefinanceinstitute.com/api/files/ca24446d-3681-4956-8ff9-6fd93964dd62
+Liquidation Value Template|Download|https://api.corporatefinanceinstitute.com/api/files/9b8d07e8-a56e-4b26-a5fe-67e6dc6560f7
+Loan Payment Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/7b68d727-cf8a-4be4-bcfb-c3e0f8533048
+LTM Revenue Example|Download|https://api.corporatefinanceinstitute.com/api/files/28971c58-3a73-4975-841f-e8272d5a2911
+LTV CAC Ratio|Unlock|
+M&A Model|Unlock|
+Macabacus Quick Start Guide|Download|https://api.corporatefinanceinstitute.com/api/files/94b2b4ee-6441-4cf1-be14-88b1b880c8d9
+Macabacus Quick Start Guide (2)|Download|https://api.corporatefinanceinstitute.com/api/files/aea71dd5-c7d7-4f4f-9f2a-7b4b714a64e8
+Making Effective Business Decisions Template|Unlock|
+Managing Relationships at Work|Unlock|
+Margin of Safety Example|Download|https://api.corporatefinanceinstitute.com/api/files/c13c37f4-7892-4fe8-84eb-1fd5c98420fe
+Marginal Cost Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/a7229fd3-72b2-4b43-87b7-34802c9d0a07
+Market Capitalization Template|Download|https://api.corporatefinanceinstitute.com/api/files/099d59de-4b41-4a70-ba4a-88eecfd39311
+Market Risk Fundamentals|Unlock|
+Market Risk Premium Template|Download|https://api.corporatefinanceinstitute.com/api/files/1bb78725-16e7-4c23-9cb1-beddf04c4ca1
+Market to Book Price to Book Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/84b217c6-7db6-41f4-87ce-a01f3a065802
+Market Value of Debt Template|Download|https://api.corporatefinanceinstitute.com/api/files/16f67b40-c537-425f-9b1e-2a4d604930d6
+Markup Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/aaba1ac8-0dc5-4f00-9f5f-0765da470ceb
+MAX Template|Download|https://api.corporatefinanceinstitute.com/api/files/b4129f74-f3fb-45e5-9111-9200c26e4f7d
+Mining Model|Unlock|
+Monthly Cash Flow Model|Unlock|
+Moving Averages Template|Download|https://api.corporatefinanceinstitute.com/api/files/b65dd42f-852b-44f9-ae7d-744659924dc5
+Multi-Criteria Analysis Balance Scorecard|Download|https://api.corporatefinanceinstitute.com/api/files/76f4a550-0739-4d72-bb7f-8bd495871bcf
+NDA Confidentiality Agreement Sample|Unlock|
+Net Debt Calulator|Download|https://api.corporatefinanceinstitute.com/api/files/f4be79ba-19ee-416d-91d0-57222b823804
+Net Debt EBITDA Ratio Template|Unlock|
+Net Identifiable Assets Template|Download|https://api.corporatefinanceinstitute.com/api/files/41d4496d-34bb-48a8-b927-9793baeefd7e
+Net Present Value Template|Download|https://api.corporatefinanceinstitute.com/api/files/55d356e5-e4dd-4a37-9d1d-e773f2c31547
+Net Working Capital Template|Download|https://api.corporatefinanceinstitute.com/api/files/a5da699b-1193-4a55-ac9b-6b281b3ff94c
+Net Working Capital Template (2)|Download|https://api.corporatefinanceinstitute.com/api/files/43b36612-97cd-4954-83d0-de6bce324536
+Non-directional Trading Strategies|Unlock|
+NOPAT Template|Unlock|
+Normalizing Income Statements|Unlock|
+NORMDIST Template|Download|https://api.corporatefinanceinstitute.com/api/files/34a2d010-552d-49e2-a1e1-48be26077e3d
+NPV-XNPV Example|Download|https://api.corporatefinanceinstitute.com/api/files/b2259f2d-a74e-4804-8070-147657278817
+NVDA Moving Average Algorithmic Trading Model|Unlock|
+Operating Budget Template|Unlock|
+Operating Cash Flow Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/31962b6a-917b-4589-af2b-79b4884f81b9
+Operating Margin Template|Download|https://api.corporatefinanceinstitute.com/api/files/56ee7eed-b5d9-41db-b148-40a4759257a1
+Operational Modeling|Unlock|
+Option Profit Loss Graph Maker|Unlock|
+Options Strategy Modeler|Unlock|
+OR Template|Download|https://api.corporatefinanceinstitute.com/api/files/dca56ff3-e7f7-402c-b3d2-8d4736b5ddac
+Payback Period Template|Download|https://api.corporatefinanceinstitute.com/api/files/513e262d-9f5b-4c7c-ba03-5ad8b774d1a8
+Percentage Change Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/2a23095f-c029-4b52-92cc-89c8bf0b0e3f
+Perpetuity Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/4ce45a20-acd5-4713-85e4-6047dcf737a6
+Personal Financial Statement|Download|https://api.corporatefinanceinstitute.com/api/files/5b4d42f3-3450-447a-ba28-dd2851dd7a58
+Pharmaceuticals Industry Comps Template|Download|https://api.corporatefinanceinstitute.com/api/files/1f4e57da-0ada-406b-a719-cfac2e936735
+Pitchbook Template|Unlock|
+PPE Schedule|Download|https://api.corporatefinanceinstitute.com/api/files/ddb34003-7f3e-4e97-9e39-6e931bdc343c
+Pre-Money Post-Money Valuation Analysis Template|Download|https://api.corporatefinanceinstitute.com/api/files/bda0ce1f-7169-4c64-8490-59e2ed94ca51
+Present Value of Growth Opportunities (PVGO) Template|Download|https://api.corporatefinanceinstitute.com/api/files/4e2246fb-c703-4426-ac73-3ac490562102
+Price Earnings (P/E) Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/fc864ce3-2c7f-4b23-bc6a-4692ea58e906
+Price Earnings Growth (PEG) ratio|Download|https://api.corporatefinanceinstitute.com/api/files/756c46fd-4191-468b-81b1-b6efcc57ba4b
+Price Per Square Foot Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/b52cb15b-fa5a-45f9-bf67-86e92b9e615a
+Product Costs Template|Download|https://api.corporatefinanceinstitute.com/api/files/95192578-792e-4427-9725-2feac84ae106
+Profit and Loss Statement|Download|https://api.corporatefinanceinstitute.com/api/files/ae0764ef-3ad6-4208-821f-c5e9bafac5bc
+Profitability Index|Download|https://api.corporatefinanceinstitute.com/api/files/6dad8139-fc1e-4a4f-8732-2b59f239b8ef
+Proforma Earnings Per Share Template|Download|https://api.corporatefinanceinstitute.com/api/files/8f5336bd-929f-41a1-9914-a250c1a4902d
+Project Budget Template|Download|https://api.corporatefinanceinstitute.com/api/files/ac3712f1-7a28-415e-83d5-da2daddec2b0
+Purchase Price Allocation & M&A Accounting Examples|Unlock|
+Put Call Parity Calculator|Unlock|
+Quick Ratio Example|Unlock|
+Real Estate Financial Modeling Course|Unlock|
+REIT Financial Model Template|Unlock|
+Renewable Energy Solar Financial Model|Unlock|
+Research and Development Capitalization|Download|https://api.corporatefinanceinstitute.com/api/files/ed1a186e-b9ba-4b13-ac04-a568a6c21352
+Restructuring Model Template|Unlock|
+Retail Industry Comps Template|Download|https://api.corporatefinanceinstitute.com/api/files/b5b0245e-dec9-4cc9-a9d6-1049643452af
+Retention Ratio Template|Download|https://api.corporatefinanceinstitute.com/api/files/4a89246d-0748-404f-8104-3eb03cc2d599
+Return on Assets Formula|Unlock|
+Return on Equity|Unlock|
+Return on Investment (ROI)|Download|https://api.corporatefinanceinstitute.com/api/files/775b3471-eb56-49e7-8be2-a06277ee921b
+Revenue Run Rate|Download|https://api.corporatefinanceinstitute.com/api/files/3141e9c5-8ff2-4629-93ff-5069c4c06c7e
+Revenue Variance Analysis|Download|https://api.corporatefinanceinstitute.com/api/files/df6564d1-7e5b-4cbf-a899-93a0d388afc3
+Robo-Advisor Model|Unlock|
+ROIC Template|Download|https://api.corporatefinanceinstitute.com/api/files/b1b04c42-87af-40fc-b07f-85749430b262
+ROUNDUP Template|Download|https://api.corporatefinanceinstitute.com/api/files/f68ca9b3-501b-4da8-951b-111560599cd5
+Rule of 40 Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/ce387097-3f59-414d-9c27-e54dd19b7f76
+SaaS Model|Unlock|
+Sales Tax Decalculator|Download|https://api.corporatefinanceinstitute.com/api/files/7a68b1c5-3994-4c60-936f-61c1812f177c
+Scenario & Sensitivity Analysis Model|Unlock|
+SEARCH Template|Download|https://api.corporatefinanceinstitute.com/api/files/f34c36ac-8b37-422d-96d4-ed5ec73a49e8
+Sensitivity Analysis Table|Download|https://api.corporatefinanceinstitute.com/api/files/5e20e6d7-7fbe-49df-9907-1dae1209e717
+Sharpe Ratio Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/324dafd0-6fa2-4257-8f66-1c819f3f6b47
+Sheet Name Formula Template|Download|https://api.corporatefinanceinstitute.com/api/files/debd4d14-8e9c-476b-bd2d-c699eee8fa91
+Simplified Robo-Advisor Model|Unlock|
+SME Lending - Owner's Net Worth Adjustment Template|Download|https://api.corporatefinanceinstitute.com/api/files/81c2c71c-577c-41d9-94d8-2b808c590375
+Startup Investor Pitch Deck Template|Unlock|
+Straight Line Depreciation|Download|https://api.corporatefinanceinstitute.com/api/files/cec44a52-bcb3-44d5-b0f9-5667b06e374f
+Straight Line Depreciation Template|Download|https://api.corporatefinanceinstitute.com/api/files/52567d70-1d08-499d-87c0-361842069de1
+SUBTOTAL Template|Download|https://api.corporatefinanceinstitute.com/api/files/a8303733-9248-4fc0-8abd-665050ea4ba1
+Target Costing Example|Download|https://api.corporatefinanceinstitute.com/api/files/193ce097-5353-44fc-b033-63c19f14ad64
+Tax-Shield Template|Download|https://api.corporatefinanceinstitute.com/api/files/bf34de59-14ae-4f50-b658-1bfd3238859e
+Team Development Diagnostic|Unlock|
+Term Sheet Template|Download|https://api.corporatefinanceinstitute.com/api/files/00838c1c-f190-4c79-bf75-056f9046519f
+TMT Financial Model Template|Unlock|
+Trading Comps|Unlock|
+Transaction Comps|Unlock|
+Treasury Stock Method Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/8f6082a4-61a0-4033-856e-0484b6bc6d91
+Trend Analysis|Unlock|
+Unlevered Cost of Capital Template|Download|https://api.corporatefinanceinstitute.com/api/files/1fa473bd-4baf-4761-a532-feedf3f56118
+Unlevered Free Cash Flow Template|Download|https://api.corporatefinanceinstitute.com/api/files/8a3a01a9-0501-48dd-91ce-a8de347c1b09
+Valuation Model Comps Precedents Football Field|Download|https://api.corporatefinanceinstitute.com/api/files/11fce233-6f1b-4b6e-b41d-516f9bfde3f9
+Variance Analysis|Download|https://api.corporatefinanceinstitute.com/api/files/76573425-2781-425b-933d-93bdcaced932
+Variance Formula|Download|https://api.corporatefinanceinstitute.com/api/files/aa0a2d3a-40eb-427c-8d68-01e15d2c11db
+Variance Waterfall Chart|Download|https://api.corporatefinanceinstitute.com/api/files/d9f90564-643f-4583-bae3-bb8467b3d2dc
+Waterfall Chart Template|Download|https://api.corporatefinanceinstitute.com/api/files/fea22fa3-e7cb-4dc7-8eb7-37feb7251b8d
+Weighted Average Cost of Capital (WACC) Calculator|Download|https://api.corporatefinanceinstitute.com/api/files/762878d3-834e-4b54-a5e0-44407ea21666
+Weighted Average Shares Outstanding Template|Download|https://api.corporatefinanceinstitute.com/api/files/0015a88c-e55c-4352-9a66-5268a7cb5fef
+Working Capital Cycle|Unlock|
+Working Capital Cycle Template|Download|https://api.corporatefinanceinstitute.com/api/files/77dca0cf-efc3-4c70-86a0-5c4d38625842
+XIRR vs IRR Template|Download|https://api.corporatefinanceinstitute.com/api/files/114ec9a3-ea2e-44d9-8fe7-cec278f356f3
+Year over Year (YoY) Analysis|Download|https://api.corporatefinanceinstitute.com/api/files/f46df61b-881f-41ce-b4e2-25336e489a87
+Year to Date YTD Template|Download|https://api.corporatefinanceinstitute.com/api/files/a39a43d2-1667-4033-9c97-28347d12b6e7
