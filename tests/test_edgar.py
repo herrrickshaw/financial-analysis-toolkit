@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import pytest
 from finmodel import edgar
 
 
@@ -37,6 +38,21 @@ def test_annual_tag_precedence_and_restatement():
     assert list(c["years"]) == ["2023-12-31"] and "_tags" not in c["years"]["2023-12-31"]
     is_, bs = edgar.to_ratio_inputs(rows["2023-12-31"])
     assert is_["net_income"] == 11 and bs["debt"] == 45
+
+
+def test_diluted_shares_falls_back_to_net_income_over_eps():
+    # Exxon Mobil's recent 10-Ks report basic shares and diluted EPS but no explicit diluted-share-count tag.
+    f = facts(fact("Revenues", 1000, "2025-12-31", "2025-01-01"), fact("NetIncomeLoss", 100, "2025-12-31", "2025-01-01"),
+              fact("EarningsPerShareDiluted", 2.5, "2025-12-31", "2025-01-01", unit="USD/shares"),
+              fact("WeightedAverageNumberOfSharesOutstandingBasic", 39, "2025-12-31", "2025-01-01", unit="shares"))
+    rows = edgar.annual(f)
+    assert rows["2025-12-31"]["diluted_shares"] == pytest.approx(40.0)   # 100 / 2.5, not the 39 basic count
+    assert rows["2025-12-31"]["_tags"]["diluted_shares"].startswith("derived")
+    # a filer that DOES report diluted shares directly keeps the reported value, not the derived one
+    f2 = facts(fact("Revenues", 1000, "2025-12-31", "2025-01-01"), fact("NetIncomeLoss", 100, "2025-12-31", "2025-01-01"),
+               fact("EarningsPerShareDiluted", 2.5, "2025-12-31", "2025-01-01", unit="USD/shares"),
+               fact("WeightedAverageNumberOfDilutedSharesOutstanding", 41, "2025-12-31", "2025-01-01", unit="shares"))
+    assert edgar.annual(f2)["2025-12-31"]["diluted_shares"] == 41
 
 
 def test_committed_extracts_are_consistent():

@@ -161,6 +161,14 @@ def run():
         print(f"  {it['method']:55} {it['low']:8.2f} - {it['high']:8.2f}")
 
 
+def _oxford_join(items):
+    items = list(items)
+    if not items: return "no method"
+    if len(items) == 1: return items[0]
+    if len(items) == 2: return f"{items[0]} and {items[1]}"
+    return ", ".join(items[:-1]) + f" and {items[-1]}"
+
+
 def write_doc(out):
     px = out["price"]; ff = out["football_field"]
     md = ["# Checking the CFI football-field template against real Steel Dynamics (STLD) numbers", "",
@@ -181,7 +189,7 @@ def write_doc(out):
             inside = "price is below this range"; price_below.append(it)
         md.append(f"| {it['method']} | {it['low']:.2f} | {it['high']:.2f} | {inside} |")
     below_highs = ", ".join(f"{it['high']:.2f}" for it in price_above)
-    md += ["", f"Only {' and '.join(brackets) if brackets else 'no method'} bracket{'s' if len(brackets) == 1 else ''} the "
+    md += ["", f"Only {_oxford_join(brackets)} bracket{'s' if len(brackets) == 1 else ''} the "
            f"actual price. The trailing-multiple trading comps bracket it only because 2025 was a trough-earnings year "
            f"industry-wide (the same distortion documented in `docs/VALIDATION_REAL_DATA.md` — depressed LTM EBITDA "
            f"inflates EV/EBITDA), which happens to pull the range wide enough to catch the price rather than because the "

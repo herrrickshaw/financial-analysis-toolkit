@@ -116,6 +116,11 @@ def annual(facts: Dict[str, Any], tags: Dict[str, Sequence[str]] = TAGS, forms: 
             d["operating_income"] = d["pretax_income"] + d.get("interest_expense", 0) - d.get("interest_income", 0); d.setdefault("_tags", {})["operating_income"] = "derived: pretax + interest expense − interest income"
         if "operating_income" in d and "da" in d:
             d["ebitda"] = d["operating_income"] + d["da"]
+        if not d.get("diluted_shares") and d.get("net_income") and d.get("eps_diluted"):
+            # some filers (e.g. Exxon Mobil in recent 10-Ks) report basic shares plus diluted EPS but no
+            # WeightedAverageNumberOfDilutedSharesOutstanding tag; back it out from EPS = NI / diluted shares.
+            # A small approximation when NCI or preferred dividends separate NI from the EPS numerator.
+            d["diluted_shares"] = d["net_income"] / d["eps_diluted"]; d.setdefault("_tags", {})["diluted_shares"] = "derived: net_income / eps_diluted"
         if "cash" in d:
             d["net_debt"] = d.get("debt_total", 0) - d["cash"] - d.get("short_term_investments", 0)
     return dict(sorted(out.items()))
