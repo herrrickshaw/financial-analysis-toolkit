@@ -61,4 +61,12 @@ def test_cli_cycle(tmp_path, capsys):
     root = Path(__file__).resolve().parent.parent
     main(["cycle", str(root / "data" / "edgar" / "STLD.json"), "--sector", "steel", "--json-out", str(tmp_path / "c.json")])
     out = capsys.readouterr().out
-    assert "trough" in out and "Data-driven DCF margin targets" in out and (tmp_path / "c.json").exists()
+    assert "trough" in out and "Data-driven scenario targets" in out and (tmp_path / "c.json").exists()
+
+
+def test_cli_cycle_field_override_for_banking(capsys):
+    from finmodel.cli import main
+    root = Path(__file__).resolve().parent.parent
+    main(["cycle", str(root / "data" / "edgar" / "USB.json"), "--sector", "banking", "--field", "net_income", "--revenue-field", "equity"])
+    out = capsys.readouterr().out
+    assert "net_income/equity" in out and "Banks / financial institutions" in out

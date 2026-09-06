@@ -48,6 +48,22 @@ SECTOR_PROFILES: Dict[str, SectorProfile] = {
         "EBIT margin ranged -7.1% to +20.4% for Chevron over FY2018–2025 (data/edgar/CVX.json) — it swings sign "
         "entirely with a commodity price the company does not set; the two precedent-deal targets in "
         "docs/FOOTBALL_FIELD_CVX.md (Pioneer FY2022, Marathon Oil FY2023) both sit near the 2022 price-spike peak."),
+    "banking": SectorProfile("Banks / financial institutions", "moderate", 8, 1.05, -0.20, 0.20,
+        "ROE (net_income/equity, NOT operating_income/revenue — see the WARNING below) ranged 9.3%-14.5% for US "
+        "Bancorp over FY2018-2025 (data/edgar/USB.json), with a real, credit-cycle-driven trough in FY2020 (COVID "
+        "loan-loss reserve build) and a reserve-release peak in FY2021 — a genuine cycle, but driven by credit "
+        "losses, not a commodity price. WARNING: `field`/`revenue_field` MUST be overridden to "
+        "`net_income`/`equity` (i.e. ROE) for any bank — this module's default `operating_income`/`revenue` is "
+        "not merely imprecise for a bank, it is MEANINGLESS: verified on real EDGAR data for 7 large US banks "
+        "(docs/FOOTBALL_FIELD_USB.md) that the standard XBRL revenue/operating-income tags this module's "
+        "`edgar.annual()` extracts for an industrial company are absent, partial, or inconsistent for a bank — "
+        "one real filer showed 'operating income' exceeding 'revenue', another showed net income exceeding "
+        "'revenue', because a bank's core economics (net interest income = interest income − interest expense, "
+        "plus fee income) don't map onto a cost-of-goods-sold income statement at all. Comps for a bank should use "
+        "P/B, P/TBV or P/E (all equity-numerator multiples — see finmodel.comps), never EV/EBITDA (bank 'debt' is "
+        "mostly customer deposits funding the loan book, not financing debt, so 'enterprise value' itself is not "
+        "a meaningful concept); a bank's DCF-equivalent should be a residual-income / excess-return model on ROE "
+        "vs. cost of equity (finmodel.residual_income), not an unlevered free-cash-flow DCF."),
     "software": SectorProfile("Enterprise technology / software", "low", 8, 1.15, -0.15, 0.15,
         "EBIT margin ranged 20.8%–27.6% for Cisco over FY2020–2026 (data/edgar/CSCO.json) — a genuinely tight, "
         "low-cyclicality RANGE relative to steel/oil & gas (tighter thresholds reflect that). But tight range is not "

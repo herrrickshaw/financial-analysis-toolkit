@@ -130,3 +130,27 @@ def test_csco_own_margin_has_tight_range_but_a_real_gentle_trend_on_real_data():
     d = sectors.cycle_diagnostics(_real_history("CSCO"), periods=8, sector="software")
     assert d["flag"] == "near normal"   # the sector's tighter ±15% thresholds still call FY2026 unremarkable
     assert d["trend"]["trend_strength"] == "strong" and d["trend"]["direction"] == "declining"
+
+
+# ---- regression: the real EDGAR data behind the fourth (banking) football-field check
+def test_usb_roe_cycle_shows_real_covid_trough_on_real_data():
+    h = _real_history("USB")
+    trough = sectors.cycle_diagnostics(h, periods=8, sector="banking", field="net_income", revenue_field="equity", as_of="2020-12-31")
+    assert trough["fiscal_year"] == "2020-12-31" and "trough" in trough["flag"]
+    # 2021's reserve-release rebound is real and visible in the margin history (the max ROE year over FY2018-2025),
+    # even though as_of="2021-12-31" alone doesn't cross the peak threshold — with only 4 trailing years available
+    # at that point, +6.5% deviation from a small-sample median isn't the same statistical situation as steel's or
+    # oil & gas's peak/trough years, which had a full 8-year trailing window to compare against. `flag` only ever
+    # evaluates the latest/as-of year, not a retrospective scan of history — this checks the retrospective fact
+    # directly instead.
+    full = sectors.cycle_diagnostics(h, periods=8, sector="banking", field="net_income", revenue_field="equity")
+    assert max(full["margin_history"], key=full["margin_history"].get) == "2021-12-31"
+
+
+def test_default_field_is_meaningless_for_a_bank_on_real_data():
+    # the point SECTOR_PROFILES["banking"]'s note makes: operating_income/revenue for a real bank filer is not
+    # merely imprecise, EBIT can exceed "revenue" outright because the tags don't capture a bank's real income
+    # statement structure — confirms the warning is grounded in an actual observed filer, not a hypothetical.
+    h = _real_history("STI")
+    fy2018 = h["2018-12-31"]
+    assert fy2018["operating_income"] > fy2018["revenue"]

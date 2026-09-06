@@ -232,9 +232,11 @@ Analysis*, *Valuation Model – Comps, Precedents, Football Field*, *Pharmaceuti
 template — comps + precedents + DCF + 52-week range together — checked against a real company's actual price,
 `python scripts/football_field_stld.py` (`docs/FOOTBALL_FIELD_STLD.md`, steel),
 `python scripts/football_field_cvx.py` (`docs/FOOTBALL_FIELD_CVX.md`, oil & gas — a different sector, a genuinely
-different result), and `python scripts/football_field_csco.py` (`docs/FOOTBALL_FIELD_CSCO.md`, enterprise
-technology — a third, much lower-cyclicality sector). §5 of each document also checks the sector-tuning in
-`finmodel.sectors` below.
+different result), `python scripts/football_field_csco.py` (`docs/FOOTBALL_FIELD_CSCO.md`, enterprise
+technology — a third, much lower-cyclicality sector), and `python scripts/football_field_usb.py`
+(`docs/FOOTBALL_FIELD_USB.md`, banking — a fourth sector where the template's own EV/EBITDA framework doesn't
+apply at all, and the right fix is different multiples entirely, not just different assumptions). §5 of each
+document also checks the sector-tuning in `finmodel.sectors` below.
 
 ---
 
@@ -289,18 +291,52 @@ year happens to fall. `finmodel.sectors` formalizes the fix directly from that f
 - `sector_beta(sector)` — an illustrative, Damodaran-style unlevered beta by sector, a starting point when a
   company-specific beta isn't available.
 
-Three sectors (`"steel"`, `"oil_gas"`, `"software"`) are tuned against real multi-year data so far, each with a
-`SECTOR_PROFILE` entry documenting exactly what real range justified its thresholds; every other sector falls back
-to a clearly labelled `"default"` rather than a fabricated industry assumption. All three football-field docs' §5
-rebuild their full football field with this normalization and compare it to the raw run: at STLD it didn't close
-the gap (the whole peer set shares the same trough, so normalizing both sides of the trade moves them together);
-at Chevron it did change the answer (only the precedent-deal *targets* were cycle-distorted, not Chevron itself,
-so correcting just that one input pushed the precedent-implied range past the price); at Cisco the script had to
-add the trend guard mid-way through, because Salesforce's peer data would otherwise have been normalized straight
-into a misleading number — and even Cisco's own tight-range margin turned out to carry a real (if gentle) trend,
-which is not the same statistical property as a wide cyclical range.
+Every function above takes `field`/`revenue_field` parameters (default `"operating_income"`/`"revenue"`, an EBIT
+margin) that can be pointed at any other ratio — the banking check (`docs/FOOTBALL_FIELD_USB.md`) uses
+`field="net_income", revenue_field="equity"` to get ROE cyclicality instead, because a bank's standard
+revenue/EBIT tags turned out to be meaningless (see §8c-ii below): the same module, a different ratio.
 
-**Try it.** `finmodel cycle data/edgar/STLD.json --sector steel`.
+Four sectors (`"steel"`, `"oil_gas"`, `"software"`, `"banking"`) are tuned against real multi-year data so far, each
+with a `SECTOR_PROFILE` entry documenting exactly what real range justified its thresholds; every other sector
+falls back to a clearly labelled `"default"` rather than a fabricated industry assumption. All four football-field
+docs' §5 rebuild part or all of their football field with this normalization and compare it to the raw run: at
+STLD it didn't close the gap (the whole peer set shares the same trough, so normalizing both sides of the trade
+moves them together); at Chevron it did change the answer (only the precedent-deal *targets* were cycle-distorted,
+not Chevron itself, so correcting just that one input pushed the precedent-implied range past the price); at Cisco
+the script had to add the trend guard mid-way through, because Salesforce's peer data would otherwise have been
+normalized straight into a misleading number — and even Cisco's own tight-range margin turned out to carry a real
+(if gentle) trend, which is not the same statistical property as a wide cyclical range; at US Bancorp the module
+was pointed at ROE instead of EBIT margin entirely, and correctly found a real, credit-cycle-driven trough in
+FY2020 (the COVID loan-loss reserve build) using a completely different underlying mechanism from a commodity
+price cycle.
+
+**Try it.** `finmodel cycle data/edgar/STLD.json --sector steel`; for a bank,
+`finmodel cycle data/edgar/USB.json --sector banking --field net_income --revenue-field equity`.
+
+## 8c-ii. Bank-appropriate valuation: P/B, P/TBV and residual income  (`docs/FOOTBALL_FIELD_USB.md`)
+
+**What it is.** The fourth football-field check (US Bancorp) leads with a negative finding, not a positive one:
+`finmodel.edgar`'s revenue/operating-income extraction is built for an industrial income statement and gives
+nonsense for a real bank filer — SunTrust's own FY2018 10-K shows "operating income" ($4,638M) *exceeding*
+"revenue" ($3,226M), because a bank's core economics (net interest income = interest income − interest expense,
+plus fee income) don't map onto a cost-of-goods-sold structure at all. "Enterprise value" fares no better: a
+bank's balance-sheet "debt" is overwhelmingly customer deposits funding the loan book, not financing debt, so
+`equity + debt − cash` is not a meaningful number.
+
+The fix isn't a new engine — it's choosing the right multiples and the right DCF-equivalent, both of which
+`finmodel.comps` and `finmodel.residual_income` already support generically:
+
+- **Comps and precedents**: P/B, P/TBV, P/E — all equity-numerator multiples (`("equity", "book_value")` etc. in
+  `finmodel.comps`'s multiples mapping), no EV, no EBITDA. Tangible book value = equity − goodwill − intangibles.
+- **DCF-equivalent**: residual income (net income − cost of equity × book value), the textbook-correct approach
+  for a bank, using `finmodel.residual_income` with the cost of equity (not the full debt-weighted WACC — see
+  `finmodel wacc examples/wacc_usb.json`, which passes `debt=0` for exactly this reason).
+
+**Learn it.** CFA Level II bank-valuation readings; Damodaran's "valuing financial service firms" chapter
+(*Investment Valuation*); Investopedia's *Price-to-Book Ratio* and *Residual Income* entries.
+
+**Try it.** `python scripts/football_field_usb.py` — real precedent deals (BB&T/SunTrust, Huntington/TCF) both
+priced near or below tangible book value, the opposite of the control-premium-heavy tech and steel precedents.
 
 ## 8d. Residual income and EVA valuation  (`finmodel.residual_income`)
 
