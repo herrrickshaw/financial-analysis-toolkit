@@ -90,6 +90,17 @@ CATEGORIES: Dict[str, Dict[str, Any]] = {
 }
 
 
+_STOP = {"template", "model", "the", "and", "of", "a", "for", "to", "complete", "example", "analysis", "excel", "financial"}
+
+
+def _relevant(title: str, url: str) -> bool:
+    """Keep a scraped page only when its slug shares a meaningful word with the title."""
+    words = set(re.findall(r"[a-z0-9]+", title.lower())) - _STOP
+    slug = set(url.rstrip("/").rsplit("/", 1)[-1].split("-"))
+    hits = words & slug
+    return bool(hits) and (len(hits) >= 2 or len(words) <= 2 or any(len(w) > 4 for w in hits))
+
+
 def categorise(title: str) -> str:
     t = title.lower()
     for name, spec in CATEGORIES.items():
@@ -107,7 +118,9 @@ def build(catalog_dir: Path = CATALOG_DIR) -> Dict[str, Any]:
         if e["source"] != "cfi" or e["access"] != "cfi-paid":
             continue
         c = categorise(e["title"]); spec = CATEGORIES.get(c, {})
-        r = raw.get(e["title"], {})
+        r = dict(raw.get(e["title"], {}))
+        if r.get("url") and not _relevant(e["title"], r["url"]):
+            r = {}                                   # generic search fallback, not this template's page
         desc = (r.get("description") or "").strip()
         items.append({"title": e["title"], "category": c, "cfi_page": r.get("url"), "cfi_description": desc,
                       "cfi_sections": r.get("headings", [])[:8], "what_it_does": spec.get("does", ""),
