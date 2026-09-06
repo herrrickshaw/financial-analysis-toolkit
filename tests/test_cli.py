@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+import pytest
 from finmodel.cli import main
 
 EX = Path(__file__).resolve().parent.parent / "examples"
@@ -30,3 +31,26 @@ def test_cli_comps_scores_costing(tmp_path, capsys):
     main(["costing", str(root / "examples" / "costing_university.json")]); assert "HHI" in capsys.readouterr().out
     main(["charts", "comps", str(root / "examples" / "comps_stld.json"), "-o", str(tmp_path / "ch.html")])
     html = (tmp_path / "ch.html").read_text(); assert "Football field" in html and "<svg" in html
+
+
+def test_cli_wacc_residual_income_sotp(tmp_path, capsys):
+    from finmodel.cli import main
+    root = Path(__file__).resolve().parent.parent
+    main(["wacc", str(root / "examples" / "wacc_stld.json"), "--json-out", str(tmp_path / "w.json")])
+    out = capsys.readouterr().out
+    assert "WACC" in out and (tmp_path / "w.json").exists()
+    main(["residual-income", str(root / "examples" / "residual_income_stld.json")])
+    assert "Residual income" in capsys.readouterr().out
+    main(["sotp", str(root / "examples" / "sotp_conglomerate.json")])
+    assert "Equity value" in capsys.readouterr().out
+
+
+AUDIT_FILE = Path(__file__).resolve().parent.parent / "downloads" / "asimplemodel" / "DCF_A Basic Discounted Cash Flow Model.xlsx"
+
+
+@pytest.mark.skipif(not AUDIT_FILE.exists(), reason="downloaded template not on this machine")
+def test_cli_audit(tmp_path, capsys):
+    from finmodel.cli import main
+    main(["audit", str(AUDIT_FILE), "--json-out", str(tmp_path / "a.json"), "--markdown-out", str(tmp_path / "a.md")])
+    out = capsys.readouterr().out
+    assert "sheets" in out and (tmp_path / "a.json").exists() and "Workbook audit" in (tmp_path / "a.md").read_text()

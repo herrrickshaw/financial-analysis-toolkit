@@ -24,7 +24,7 @@ re-implemented in dependency-free Python and reconciled to the spreadsheets cell
 ```bash
 git clone https://github.com/herrrickshaw/financial-analysis-toolkit && cd financial-analysis-toolkit
 pip install -e ".[test]"          # only openpyxl is required at runtime
-pytest -q                         # 53 tests; the LibreOffice recalc test auto-skips if soffice is absent
+pytest -q                         # 64 tests; the LibreOffice recalc test auto-skips if soffice is absent
 ```
 
 ## Quick start
@@ -40,6 +40,10 @@ finmodel comps examples/comps_stld.json --xlsx out/comps.xlsx            # tradi
 finmodel scores examples/scores_stld.json                                # Altman Z, Piotroski F, Beneish M
 finmodel costing examples/costing_university.json                        # EUA-style resource allocation, full costing, income diversification
 finmodel edgar 1022671 --user-agent "me name@example.com" --years 5      # SEC EDGAR annual statements for a CIK (Steel Dynamics)
+finmodel wacc examples/wacc_stld.json                                    # CAPM cost of equity, synthetic-rating cost of debt, WACC
+finmodel residual-income examples/residual_income_stld.json              # residual-income (EBO) / EVA equity valuation
+finmodel sotp examples/sotp_conglomerate.json                            # sum-of-the-parts across segments
+finmodel audit downloads/macabacus/merger-model.xlsx --recompute         # error values, hard-coded plugs, inconsistent formulas, recompute check
 finmodel transpile downloads/macabacus/merger-model.xlsx -o out/py       # 15,323 formulas -> Python, 100% match to cached values
 finmodel charts lbo examples/lbo_asm.json -o out/charts_lbo.html         # chart template -> HTML report
 finmodel glossary "cash sweep"                                           # definition, formula, GAAP vs IFRS, toolkit pointer
@@ -129,8 +133,8 @@ educational templates.
 ## Layout
 
 ```
-finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
-examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo, ASM LBO, BIWS merger, STLD comps, STLD scores, university costing)
+finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, audit, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
+examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo, ASM LBO, BIWS merger, STLD comps, STLD scores, university costing, STLD WACC, STLD residual income, conglomerate SOTP)
 data/              glossary.json, edgar/ (compact SEC company-facts extracts for the case studies)
 scripts/           comps_validation.py, ma_case_study.py (regenerate the real-data docs)
 catalog/           source lists (cfi_dashboard_raw.txt, open_sources_verified.txt) -> catalog.json / catalog.md
@@ -140,7 +144,4 @@ tests/             pytest suite (reconciliation, identities, LibreOffice recalc,
 
 ## Roadmap
 
-- Residual-income / EVA valuation and sum-of-the-parts (see `docs/GAP_ANALYSIS.md`)
-- Damodaran-style WACC / synthetic-rating inputs feeding `dcf.DCFInputs`; mid-year convention
-- Monthly roll-forward of the projection (the CFI base-year sheets are monthly)
-- Workbook hard-code / error scan on top of `xlcalc.verify`
+- Monthly roll-forward of the projection engine (currently the base year is monthly, forecast years are annual) — scoped out for now: the 300-line `projection.run()` is reconciled cell-for-cell to a CFI template, and re-architecting every schedule (working-capital days, PP&E, debt) to monthly granularity risks a silent error in a financial calculation without a matching monthly template to reconcile against; worth doing once one is sourced.

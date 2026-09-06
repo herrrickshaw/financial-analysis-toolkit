@@ -241,6 +241,54 @@ def cmd_edgar(a):
         print(f"  {fy}  revenue {r.get('revenue', 0)/1e6:>12,.0f}m  EBIT {r.get('operating_income', 0)/1e6:>10,.0f}m  NI {r.get('net_income', 0)/1e6:>10,.0f}m  diluted EPS {r.get('eps_diluted', 0):>7.2f}  cash {r.get('cash', 0)/1e6:>10,.0f}m  debt {r.get('debt_total', 0)/1e6:>10,.0f}m")
 
 
+def cmd_wacc(a):
+    from . import wacc as W
+    res = W.from_dict(_load_json(a.inputs))
+    if "bottom_up_beta" in res:
+        b = res["bottom_up_beta"]
+        print(f"Bottom-up beta: peer unlevered {['%.3f' % x for x in b['peer_unlevered_betas']]}, average {b['average_unlevered_beta']:.3f}, relevered {b['relevered_beta']:.3f}")
+    w = res["wacc"]
+    print(f"Cost of equity {w['cost_of_equity']:.2%}, cost of debt pre-tax {w['cost_of_debt_pretax']:.2%} / after-tax {w['cost_of_debt_aftertax']:.2%}"
+          + (f" (synthetic rating {w['synthetic_rating']['rating']}, coverage {w['synthetic_rating']['interest_coverage']:.2f}x)" if w["synthetic_rating"] else ""))
+    print(f"Weights: equity {w['weights']['equity']:.1%}, debt {w['weights']['debt']:.1%}, preferred {w['weights']['preferred']:.1%}  →  WACC {w['wacc']:.2%}")
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+
+
+def cmd_residual_income(a):
+    from . import residual_income as RI
+    res = RI.from_dict(_load_json(a.inputs))
+    if "residual_income" in res:
+        r = res["residual_income"]
+        print(f"Residual income: {['%.2f' % x for x in r['residual_income']]}  →  equity value {r['equity_value']:,.2f}" + (f", per share {r['value_per_share']:.2f}" if "value_per_share" in r else ""))
+    if "eva" in res:
+        e = res["eva"]
+        print(f"EVA: {['%.2f' % x for x in e['eva']]}  →  firm value {e['firm_value']:,.2f}, equity value {e['equity_value']:,.2f}" + (f", per share {e['value_per_share']:.2f}" if "value_per_share" in e else ""))
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+
+
+def cmd_sotp(a):
+    from . import sotp as S
+    res = S.from_dict(_load_json(a.inputs))
+    for r in res["segments"]:
+        print(f"  {r['segment']:20} {r['metric_name']:8} {r['metric']:>12,.1f} × {r['multiple']:6.2f} = {r['gross_value']:>14,.1f}  ({r['ownership']:.0%} owned → {r['attributable_value']:>14,.1f}, {r['share_of_gross']:.1%} of sum)")
+    print(f"Gross EV {res['gross_enterprise_value']:,.1f}  corporate costs {res['capitalised_corporate_costs']:,.1f}  discount {res['conglomerate_discount']:,.1f}  EV {res['enterprise_value']:,.1f}")
+    print(f"Equity value {res['equity_value']:,.1f}" + (f"  per share {res['value_per_share']:.2f}" if "value_per_share" in res else ""))
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+
+
+def cmd_audit(a):
+    from . import audit as A
+    res = A.audit(a.file, recompute=a.recompute)
+    print(f"{res['file']}: {res['sheets']} sheets, {res['cells']:,} cells, {res['formulas']:,} formulas")
+    print(f"By severity: {res['by_severity']}")
+    print(f"By kind: {res['counts']}")
+    if res.get("recompute"): print(f"Recompute: {res['recompute']}")
+    if a.markdown_out: Path(a.markdown_out).write_text(A.to_markdown(res))
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+    for f in res["findings"][: a.show]:
+        print(f"  [{f['severity']}] {f['sheet']}!{f['cell']} {f['kind']}: {f['message']}")
+
+
 def cmd_charts(a):
     from . import charts
     d = _load_json(a.inputs)
@@ -321,6 +369,10 @@ def main(argv=None):
     sc = sp.add_parser("scores", help="Altman Z, Piotroski F, Beneish M from two fiscal years of statement data"); sc.add_argument("inputs"); sc.add_argument("--json-out"); sc.set_defaults(fn=cmd_scores)
     co = sp.add_parser("costing", help="EUA-style resource allocation, cost allocation and income diversification"); co.add_argument("inputs"); co.add_argument("--json-out"); co.set_defaults(fn=cmd_costing)
     ed = sp.add_parser("edgar", help="pull annual statements for a CIK from SEC EDGAR company facts"); ed.add_argument("cik"); ed.add_argument("--user-agent", required=True, help="e.g. 'my-tool name@example.com' (SEC requires a contact)"); ed.add_argument("--years", type=int, default=8); ed.add_argument("--cache-dir"); ed.add_argument("--json-out"); ed.set_defaults(fn=cmd_edgar)
+    wc = sp.add_parser("wacc", help="CAPM cost of equity, synthetic-rating cost of debt, bottom-up beta and WACC"); wc.add_argument("inputs"); wc.add_argument("--json-out"); wc.set_defaults(fn=cmd_wacc)
+    ri = sp.add_parser("residual-income", help="residual-income (EBO) equity valuation and/or EVA firm valuation"); ri.add_argument("inputs"); ri.add_argument("--json-out"); ri.set_defaults(fn=cmd_residual_income)
+    so = sp.add_parser("sotp", help="sum-of-the-parts valuation across segments"); so.add_argument("inputs"); so.add_argument("--json-out"); so.set_defaults(fn=cmd_sotp)
+    au = sp.add_parser("audit", help="workbook audit: error values, hard-coded plugs, inconsistent formulas, links, hidden sheets"); au.add_argument("file"); au.add_argument("--recompute", action="store_true", help="also verify every formula against its cached value (finmodel.xlcalc)"); au.add_argument("--show", type=int, default=20); au.add_argument("--json-out"); au.add_argument("--markdown-out"); au.set_defaults(fn=cmd_audit)
     ch = sp.add_parser("charts", help="render the chart template for an engine's inputs to a self-contained HTML report"); ch.add_argument("engine", choices=["three_statement", "dcf", "lbo", "merger", "projection", "comps"]); ch.add_argument("inputs"); ch.add_argument("-o", "--out", default="out/charts.html"); ch.add_argument("--title"); ch.set_defaults(fn=cmd_charts)
     gl = sp.add_parser("glossary", help="look up a financial term (definition, formula, GAAP vs IFRS note)"); gl.add_argument("query", nargs="+"); gl.add_argument("--deep", action="store_true"); gl.add_argument("--limit", type=int, default=5); gl.set_defaults(fn=cmd_glossary)
     m = sp.add_parser("demo", help="run all engines on the bundled examples and write workbooks"); m.add_argument("--out", default="out"); m.set_defaults(fn=cmd_demo)

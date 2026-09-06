@@ -58,3 +58,15 @@ def test_reverse_dcf_and_monte_carlo():
     assert mc["runs"] == 300 and mc["percentiles"][5] <= mc["median"] <= mc["percentiles"][95]
     assert 0 <= mc["prob_value_above_price"] <= 1 and sum(mc["histogram"]["counts"]) == 300
     assert dcf.monte_carlo(inp, runs=50, seed=1)["median"] == dcf.monte_carlo(inp, runs=50, seed=1)["median"]   # seeded → reproducible
+
+
+def test_mid_year_convention_raises_value():
+    import json, pathlib, copy
+    from finmodel import dcf
+    d = json.loads((pathlib.Path(__file__).resolve().parent.parent / "examples" / "cfi_dcf.json").read_text())
+    inp = dcf.DCFInputs(**dcf.clean(d)); base = dcf.run(inp)
+    x = copy.copy(inp); x.mid_year = True; mid = dcf.run(x)
+    assert mid["mid_year"] and mid["enterprise_value"] > base["enterprise_value"]
+    # the uplift is bounded by half a period of discounting on the explicit cash flows
+    pv_fcf_base = base["enterprise_value"] - base["terminal_value"]["used"] / (1 + inp.discount_rate) ** sum(base["year_fraction"])
+    assert 0 < mid["enterprise_value"] - base["enterprise_value"] < pv_fcf_base * ((1 + inp.discount_rate) ** 0.5 - 1) * 1.05

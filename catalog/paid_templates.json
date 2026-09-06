@@ -5,8 +5,8 @@
   "with_cfi_page": 98,
   "with_analogues": 87,
   "coverage": {
-   "full": 52,
-   "partial": 57,
+   "full": 59,
+   "partial": 50,
    "n/a": 14,
    "none": 4
   },
@@ -35,8 +35,8 @@
   },
   "DCF / intrinsic valuation": {
    "does": "Projects unlevered (FCFF) or levered (FCFE / dividend) cash flows, discounts them at WACC or cost of equity, adds a terminal value and bridges enterprise value to a per-share value with sensitivity tables.",
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   "LBO": {
@@ -53,20 +53,20 @@
   },
   "Comparable companies / precedent transactions": {
    "does": "Spreads peer multiples (EV/EBITDA, EV/revenue, P/E) and precedent deal multiples, computes quartile ranges and applies them to the target; sector versions add industry KPIs.",
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   "Ratios & financial analysis": {
    "does": "Computes and interprets liquidity, efficiency, leverage, coverage and return ratios, common-size and trend analysis; bank / insurance versions use regulatory metrics (net interest income, risk-weighted assets, combined ratio).",
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   "Cost of capital & capital structure": {
    "does": "Estimates cost of equity (CAPM), cost of debt and WACC, tests capital-structure choices and financing decisions.",
-   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-   "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+   "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
    "coverage": "partial"
   },
   "Real estate & project models": {
@@ -313,8 +313,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -351,8 +351,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -500,8 +500,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -623,8 +623,8 @@
      "url": "https://samples-breakingintowallstreet-com.s3.amazonaws.com/63-10-Deposit-Divestitures-After.xls"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -666,8 +666,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -706,8 +706,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -746,9 +746,9 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   {
    "title": "Business Valuation Exercises (Complete)",
@@ -786,8 +786,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -826,8 +826,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -872,8 +872,8 @@
      "url": "https://samples-breakingintowallstreet-com.s3.amazonaws.com/63-10-Deposit-Divestitures-After.xls"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -912,8 +912,8 @@
      "url": "https://samples-breakingintowallstreet-com.s3.amazonaws.com/63-10-Deposit-Divestitures-After.xls"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -1137,9 +1137,9 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-27-ALXN-MA-Comp.xlsx"
     }
    ],
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   {
    "title": "Compact LBO Model (Complete)",
@@ -1218,9 +1218,9 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-27-ALXN-MA-Comp.xlsx"
     }
    ],
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   {
    "title": "Confidential Information Memorandum Template",
@@ -1301,8 +1301,8 @@
    "cfi_sections": [],
    "what_it_does": "Estimates cost of equity (CAPM), cost of debt and WACC, tests capital-structure choices and financing decisions.",
    "analogues": [],
-   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-   "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+   "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
    "coverage": "partial"
   },
   {
@@ -1339,8 +1339,8 @@
      "url": "https://exinfm.com/excel%20files/npv_irr.xls"
     }
    ],
-   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-   "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+   "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
    "coverage": "partial"
   },
   {
@@ -1351,8 +1351,8 @@
    "cfi_sections": [],
    "what_it_does": "Estimates cost of equity (CAPM), cost of debt and WACC, tests capital-structure choices and financing decisions.",
    "analogues": [],
-   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-   "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+   "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
    "coverage": "partial"
   },
   {
@@ -1391,8 +1391,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -1513,8 +1513,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -1553,8 +1553,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -1594,8 +1594,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -1632,8 +1632,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -1673,8 +1673,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -1760,8 +1760,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -1800,8 +1800,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-21-Cash-Free-Debt-Free-Deals-Simple.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -1872,9 +1872,9 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-27-ALXN-MA-Comp.xlsx"
     }
    ],
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   {
    "title": "Detailed LBO Model Complete Private Equity Leveraged Buyout Analysis",
@@ -1969,8 +1969,8 @@
      "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -1988,8 +1988,8 @@
    ],
    "what_it_does": "Computes and interprets liquidity, efficiency, leverage, coverage and return ratios, common-size and trend analysis; bank / insurance versions use regulatory metrics (net interest income, risk-weighted assets, combined ratio).",
    "analogues": [],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -2040,8 +2040,8 @@
    ],
    "what_it_does": "Estimates cost of equity (CAPM), cost of debt and WACC, tests capital-structure choices and financing decisions.",
    "analogues": [],
-   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-   "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+   "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
    "coverage": "partial"
   },
   {
@@ -2080,9 +2080,9 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/KO-Equity-Value-Enterprise-Value.xlsx"
     }
    ],
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   {
    "title": "ETF Allocator Model",
@@ -2156,8 +2156,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -2168,8 +2168,8 @@
    "cfi_sections": [],
    "what_it_does": "Computes and interprets liquidity, efficiency, leverage, coverage and return ratios, common-size and trend analysis; bank / insurance versions use regulatory metrics (net interest income, risk-weighted assets, combined ratio).",
    "analogues": [],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -2206,8 +2206,8 @@
      "url": "https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-01-06-BS-to-IS-and-CFS-Before.xlsx"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -2508,8 +2508,8 @@
      "url": "https://samples-breakingintowallstreet-com.s3.amazonaws.com/63-10-Deposit-Divestitures-After.xls"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -2546,8 +2546,8 @@
      "url": "https://samples-breakingintowallstreet-com.s3.amazonaws.com/63-10-Deposit-Divestitures-After.xls"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -2613,8 +2613,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -2629,8 +2629,8 @@
    ],
    "what_it_does": "Estimates cost of equity (CAPM), cost of debt and WACC, tests capital-structure choices and financing decisions.",
    "analogues": [],
-   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-   "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+   "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
    "coverage": "partial"
   },
   {
@@ -2799,8 +2799,8 @@
      "url": "https://samples-breakingintowallstreet-com.s3.amazonaws.com/63-10-Deposit-Divestitures-After.xls"
     }
    ],
-   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-   "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+   "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+   "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
    "coverage": "full"
   },
   {
@@ -2839,8 +2839,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3016,8 +3016,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/109-26-CF-Sweep-Simple-LBO-Model.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3063,8 +3063,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/109-26-CF-Sweep-Simple-LBO-Model.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3108,8 +3108,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Startups-VC/CARR-vs-ARR/AI-Revenue-CARR-vs-ARR.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3197,8 +3197,8 @@
    ],
    "what_it_does": "Estimates cost of equity (CAPM), cost of debt and WACC, tests capital-structure choices and financing decisions.",
    "analogues": [],
-   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-   "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+   "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+   "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
    "coverage": "partial"
   },
   {
@@ -3307,8 +3307,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3347,8 +3347,8 @@
    "cfi_sections": [],
    "what_it_does": "Computes and interprets liquidity, efficiency, leverage, coverage and return ratios, common-size and trend analysis; bank / insurance versions use regulatory metrics (net interest income, risk-weighted assets, combined ratio).",
    "analogues": [],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3672,8 +3672,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3868,8 +3868,8 @@
      "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -3908,8 +3908,8 @@
      "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -4154,9 +4154,9 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-27-ALXN-MA-Comp.xlsx"
     }
    ],
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   {
    "title": "Transaction Comps",
@@ -4198,9 +4198,9 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-27-ALXN-MA-Comp.xlsx"
     }
    ],
-   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-   "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-   "coverage": "partial"
+   "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+   "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+   "coverage": "full"
   },
   {
    "title": "Trend Analysis",
@@ -4242,8 +4242,8 @@
      "url": "https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx"
     }
    ],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   },
   {
@@ -4263,8 +4263,8 @@
    ],
    "what_it_does": "Computes and interprets liquidity, efficiency, leverage, coverage and return ratios, common-size and trend analysis; bank / insurance versions use regulatory metrics (net interest income, risk-weighted assets, combined ratio).",
    "analogues": [],
-   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-   "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+   "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+   "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
    "coverage": "partial"
   }
  ]

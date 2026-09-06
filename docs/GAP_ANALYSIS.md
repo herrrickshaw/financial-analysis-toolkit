@@ -42,12 +42,14 @@ transpiles arbitrary workbooks; that remains this toolkit's distinctive capabili
 | **Reverse DCF (implied growth) and Monte-Carlo DCF** (governed-dcf, EmanueleSturzo, dafahentra, stockvaluation-io) | **Added** `dcf.implied_growth()` and `dcf.monte_carlo()` (dependency-free, seeded) |
 | **Institutional cost allocation / resource allocation / income diversification** (EUA toolkit; no GitHub project covers it) | **Added** `finmodel.costing` — formula-based resource allocation with top-slice and strategic pots, two-step driver-based cost allocation with indirect-cost rates on grossed-up salary, full-economic-cost pricing, income-source HHI and diversification ranking |
 | **Real-data validation and applied case studies** (AlphaAnalyst eval suite, agentii citations) | **Added** `scripts/comps_validation.py` (steel peers, warehouse prices, cross-check vs the market-pipeline ratio ledger) and `scripts/ma_case_study.py` (Microsoft/Activision, Chevron/Hess, Cisco/Splunk before-and-after) |
-| Residual-income / EVA valuation (FinModeling) | Not built — `ratios` has ROE/ROIC inputs; a residual-income engine is a small follow-up |
-| Sum-of-the-parts (agentii, governed-dcf) | Not built — segment-level multiples can be run today by calling `comps.implied_valuation` per segment and summing |
+| **Cost of capital: CAPM, synthetic rating, bottom-up beta, WACC** (Damodaran spreadsheets; no GitHub repo does the synthetic-rating step) | **Added** `finmodel.wacc` — CAPM cost of equity, Hamada beta unlever/relever, bottom-up beta from a peer set, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC |
+| **Residual-income / EVA valuation** (FinModeling) | **Added** `finmodel.residual_income` — clean-surplus residual income (EBO) with fading-persistence or growing terminal value, and EVA / economic-profit firm valuation |
+| **Sum-of-the-parts** (agentii, governed-dcf) | **Added** `finmodel.sotp` — per-segment multiple or override value, ownership stakes, capitalised corporate costs, conglomerate discount, full equity bridge |
+| **Workbook QC / hard-code scan** (3-statement-ultra's 19 QC checks, agentii's audit-xls) | **Added** `finmodel.audit` — error-value scan, hard-coded "plug" detection inside formulas and inside formula rows, R1C1-normalised inconsistent-formula detection across a row, external-link and hidden-sheet flags, optional `xlcalc.verify()` recomputation; found 112 real findings (78 hard-coded plugs, 1 very-hidden sheet) on the 15,323-formula Macabacus merger model |
+| **Mid-year discounting convention** (A Simple Model's `DCF_MidYear Convention.xlsx`) | **Added** `DCFInputs.mid_year` — discounts each period's cash flow from its midpoint while leaving the terminal value at period end |
 | Portfolio optimisation / efficient frontier (finmodels, pyfinmod roadmap) | Out of scope here; the market-pipeline repo already has an MPT optimiser |
 | Live market-data API wrappers (FMP, yfinance) | Deliberately not bundled — the warehouse and EDGAR are used instead; adapters are two functions |
 | LLM-agent packaging (agentii, 3-statement-ultra, financial-models) | Not a goal; every engine is plain Python with JSON in/out, so any agent can call it |
-| Workbook QC (hardcode scan, formula-error scan — 3-statement-ultra, agentii audit-xls) | Partially covered: `finmodel transpile --verify` proves every formula recomputes; a hardcode-in-forecast scan is a follow-up |
 
 ## 3. What the EUA toolkit adds that corporate templates do not
 

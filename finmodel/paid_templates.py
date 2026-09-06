@@ -26,8 +26,8 @@ CATEGORIES: Dict[str, Dict[str, Any]] = {
     "DCF / intrinsic valuation": {
         "match": r"\bdcf\b|dividend discount|business valuation|fcff vs fcfe|intrinsic|valuation model|financial institution dividend|introduction to bank valuation",
         "does": "Projects unlevered (FCFF) or levered (FCFE / dividend) cash flows, discounts them at WACC or cost of equity, adds a terminal value and bridges enterprise value to a per-share value with sensitivity tables.",
-        "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3",
-        "toolkit": "finmodel.dcf (stub period, XNPV, perpetuity + exit multiple TV, sensitivity, football field), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
+        "literature": "Damodaran Investment Valuation ch. 12–15 and `fcff.pdf`, `fcfe.pdf`, `ddm.pdf`; Koller ch. 8–12; Rosenbaum & Pearl ch. 3; CFA Level II residual income / EBO readings",
+        "toolkit": "finmodel.dcf (stub period, XNPV, mid-year convention, perpetuity + exit multiple TV, sensitivity, reverse DCF via implied_growth, Monte Carlo via monte_carlo), finmodel.residual_income (residual income / EBO and EVA), finmodel.charts dcf template; Damodaran ginzu spreadsheets in downloads/damodaran",
         "coverage": "full"},
     "LBO": {
         "match": r"\blbo\b|leveraged buyout|debt capacity",
@@ -44,20 +44,20 @@ CATEGORIES: Dict[str, Dict[str, Any]] = {
     "Comparable companies / precedent transactions": {
         "match": r"comps|comparable|trading comps|transaction comps|benchmarking|energy industry|detailed comps",
         "does": "Spreads peer multiples (EV/EBITDA, EV/revenue, P/E) and precedent deal multiples, computes quartile ranges and applies them to the target; sector versions add industry KPIs.",
-        "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws)",
-        "toolkit": "ratios + charts.range_bars (football field); comps spreading engine not yet implemented — use the BIWS / free CFI comps workbooks through xlcalc",
-        "coverage": "partial"},
+        "literature": "Rosenbaum & Pearl ch. 1–2; Damodaran `pe.pdf` and Investment Valuation ch. 17–20; BIWS comps and precedent files (downloads/biws); Investopedia CCA and precedent-transaction-analysis entries",
+        "toolkit": "finmodel.comps (trading comps, precedents, implied valuation, football field — reconciled to BIWS 107-21/107-27 and the CFI football-field template), charts comps template",
+        "coverage": "full"},
     "Ratios & financial analysis": {
         "match": r"ratio|turnover|days sales|days inventory|leverage|coverage|return on|ebt example|trend analysis|financial analysis fundamentals|normalizing|degree of leverage|working capital cycle|calculating net interest|risk weighted|bank ratio|bank of america|bank financial analysis|insurance company",
         "does": "Computes and interprets liquidity, efficiency, leverage, coverage and return ratios, common-size and trend analysis; bank / insurance versions use regulatory metrics (net interest income, risk-weighted assets, combined ratio).",
-        "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535",
-        "toolkit": "finmodel.ratios (CFI ratio sheet), glossary formulas; bank-specific ratios not implemented",
+        "literature": "Penman ch. 9–12; CFA Level I FSA; CFI Financial Ratios Definitive Guide (downloaded PDF); MIT OCW 15.535; Altman (1968/2000), Beneish (1999), Piotroski (2000)",
+        "toolkit": "finmodel.ratios (CFI ratio sheet), finmodel.scores (Altman Z, Beneish M, Piotroski F health/quality scores), glossary formulas; bank-specific regulatory ratios not implemented",
         "coverage": "partial"},
     "Cost of capital & capital structure": {
         "match": r"wacc|cost of capital|capital structure|corporate finance fundamentals|efficient frontier|market risk fundamentals|interest rate parity",
         "does": "Estimates cost of equity (CAPM), cost of debt and WACC, tests capital-structure choices and financing decisions.",
-        "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures",
-        "toolkit": "dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded",
+        "literature": "Damodaran Applied Corporate Finance ch. 4; corporate-finance packet 1 (`cfpacket1.pdf`); Koller ch. 15; MIT 15.401 CAPM lectures; Damodaran synthetic-rating methodology",
+        "toolkit": "finmodel.wacc (CAPM cost of equity, Hamada beta levering/unlevering, bottom-up beta from peers, Damodaran-style synthetic credit rating from interest coverage, market-value-weighted WACC), dcf.discount_rate input + sensitivity; Damodaran `wacccalc.xls`, `capstru.xlsx`, `levbeta.xls` downloaded; free CFI WACC / Beta / CAPM calculators downloaded; efficient frontier and interest rate parity not implemented",
         "coverage": "partial"},
     "Real estate & project models": {
         "match": r"real estate|reit|cap rate|solar|renewable|project",

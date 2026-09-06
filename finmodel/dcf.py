@@ -35,6 +35,7 @@ class DCFInputs:
     cash: float = 0.0
     terminal_method: str = "average"   # "average" | "perpetuity" | "multiple"
     yearfrac_basis: int = 0
+    mid_year: bool = False             # discount each period's cash flow from the middle of the period (terminal value stays at period end)
 
     def capex_list(self) -> List[float]:
         n = len(self.ebit)
@@ -87,7 +88,14 @@ def run(inp: DCFInputs) -> Dict[str, Any]:
     # valuation flows: entry 0, scaled FCFs, terminal value at last date
     val_flows = [0.0] + [ufcf[t] * yf[t] for t in range(n)] + [tv]
     val_dates = dates + [dates[-1]]
-    ev = xnpv(r, val_flows, val_dates)
+    if inp.mid_year:
+        from datetime import timedelta
+        mid = [dates[t] + timedelta(days=(dates[t + 1] - dates[t]).days / 2) for t in range(n)]
+        # xnpv discounts relative to its first date, so anchor both legs at the actual valuation date (dates[0])
+        # with an explicit zero cash flow, rather than letting the first midpoint become time zero.
+        ev = xnpv(r, [0.0] + [ufcf[t] * yf[t] for t in range(n)], [dates[0]] + mid) + xnpv(r, [0.0, tv], [dates[0], dates[-1]])
+    else:
+        ev = xnpv(r, val_flows, val_dates)
     equity = ev + inp.cash - inp.debt
     per_share = equity / inp.shares_outstanding
 
@@ -113,7 +121,7 @@ def run(inp: DCFInputs) -> Dict[str, Any]:
         "target_price_upside": per_share / inp.current_price - 1,
         "upside_per_share": per_share - inp.current_price,
         "irr": irr_val,
-        "discount_rate": r, "perpetual_growth": g,
+        "discount_rate": r, "perpetual_growth": g, "mid_year": inp.mid_year,
     }
 
 

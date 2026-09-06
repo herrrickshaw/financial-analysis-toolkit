@@ -89,9 +89,17 @@ terminal value; equity value = EV + cash − debt; per-share value vs market pri
 - Sensitivity grid over discount rate × growth (`dcf.sensitivity`).
 
 **Judgement calls.** WACC inputs (see §5); g must be below the long-run nominal growth of the economy;
-mid-year convention (A Simple Model file) vs end-of-period; reconciling the two terminal methods —
-the implied exit multiple of the perpetuity TV is the sanity check; treatment of leases, options,
-minority interests and non-operating assets in the bridge.
+mid-year convention (`DCFInputs.mid_year = True` discounts each period's cash flow from its midpoint,
+leaving the terminal value at period end — matches `asimplemodel/DCF_MidYear Convention.xlsx`) vs
+end-of-period; reconciling the two terminal methods — the implied exit multiple of the perpetuity TV is
+the sanity check; treatment of leases, options, minority interests and non-operating assets in the bridge.
+
+**Reverse DCF and Monte Carlo.** `dcf.implied_growth(inp)` bisects for the perpetual growth rate that
+reproduces the current price under the perpetuity terminal method — "what does the market believe?" instead
+of "what do I believe?" (stockvaluation-io, governed-dcf-skill). `dcf.monte_carlo(inp, runs=2000)` redraws
+discount rate, growth, and EBIT/capex scale factors from normal distributions and reports the distribution
+of equity value per share, including the probability the model value exceeds the current price
+(EmanueleSturzo's and dafahentra's Monte-Carlo DCFs).
 
 **Learn it.** Damodaran `basics.pdf`, `dcfinput.pdf`, `fcff.pdf`; *Investment Valuation* ch. 12–15;
 Koller ch. 8–12 (enterprise DCF, continuing value); Rosenbaum & Pearl ch. 3; Pignataro ch. 9–10;
@@ -145,18 +153,22 @@ compare against sector benchmarks (Damodaran's industry averages, updated each J
 
 ---
 
-## 5. Cost of capital (inputs to the DCF)
+## 5. Cost of capital (inputs to the DCF)  (`finmodel.wacc`)
 
-**What it is.** WACC = E/(D+E) × k_e + D/(D+E) × k_d × (1 − t); k_e from CAPM = r_f + β × ERP (+ country risk);
-β from regression or bottom-up (unlever peers, relever at target D/E); k_d from a synthetic rating
-(interest-coverage → rating → spread).
+**What it is.** WACC = E/(D+E) × k_e + D/(D+E) × k_d × (1 − t); k_e from CAPM = r_f + β × ERP (+ size and country
+risk); β from regression or bottom-up (unlever each peer at its own D/E and tax rate, average, relever at the
+target's D/E); k_d from a supplied pre-tax cost of debt or, for a company without traded debt, a synthetic rating
+derived from interest coverage (Damodaran's large-firm / small-firm coverage bands and default spreads).
 
 **Learn it.** Damodaran *Applied Corporate Finance* ch. 4, corporate-finance packet 1; `dcfinput.pdf`;
-Koller ch. 15; MIT 15.401 CAPM lectures; OpenStax ch. 15–17.
+Koller ch. 15; MIT 15.401 CAPM lectures; OpenStax ch. 15–17; Investopedia *WACC*.
 
 **Templates.** `damodaran/wacccalc.xls`, `ratings.xls` (synthetic rating), `levbeta.xls`, `risk.xls`,
 `implprem.xls` (implied ERP), `ctryprem.xlsx` (country premia), `exinfm/betawacc.xls`. Free CFI dashboard
 items: *WACC Calculator*, *Beta Calculator*, *Cost of Debt*, *CAPM Formula*, *Market Risk Premium*.
+
+**Try it.** `finmodel wacc examples/wacc_stld.json` — CAPM cost of equity, a synthetic AAA/A+/… rating from
+EBIT/interest coverage, and the market-value-weighted WACC, feeding `dcf.DCFInputs.discount_rate` directly.
 
 ---
 
@@ -242,6 +254,52 @@ pricing of a project, and an income-diversification scan (shares, Herfindahl ind
 per fiscal year, latest filing wins, EBIT derived from pre-tax + net interest when a filer omits it). This is what
 feeds `scripts/ma_case_study.py` — Microsoft/Activision, Chevron/Hess, Cisco/Splunk before and after — and the comps
 validation. Read `docs/CASE_STUDY_MA.md` for what a static merger model can and cannot tell you.
+
+## 8d. Residual income and EVA valuation  (`finmodel.residual_income`)
+
+**What it is.** Two ways to value equity or a firm from accounting numbers instead of cash-flow projections,
+useful when free cash flow is negative or lumpy but earnings and book value are stable:
+
+- **Residual income (Edwards–Bell–Ohlson)**: RI_t = NI_t − k_e × B_{t−1}; equity value = B_0 + Σ PV(RI_t) +
+  PV(terminal RI). Clean-surplus accounting rolls book value forward (B_t = B_{t−1} + NI_t − dividends_t), so
+  most of the value shows up immediately as B_0 and RI captures only the *excess* over the cost of equity —
+  a useful cross-check against a DCF, since the two agree exactly under consistent assumptions.
+- **EVA / economic profit**: EVA_t = NOPAT_t − WACC × invested capital_{t−1}; firm value = capital_0 +
+  Σ PV(EVA_t) + PV(terminal EVA); equity = firm value − net debt. The firm-level analogue of residual income.
+
+Terminal value is either a fading-persistence factor (ω, common for cyclical earnings — RI shrinks toward zero
+rather than growing forever) or a Gordon-style growing perpetuity.
+
+**Learn it.** CFA Level II residual-income and EVA readings; Penman *Financial Statement Analysis* ch. 5, 14–15;
+jimlindstrom/FinModeling's residual-operating-income model (Ruby, reformulates EDGAR statements the same way);
+Investopedia *Residual Income Valuation* and *Economic Value Added*.
+
+**Try it.** `finmodel residual-income examples/residual_income_stld.json` — Steel Dynamics book value and a
+4-year net-income projection, discounted at cost of equity from `finmodel wacc`.
+
+## 8e. Sum-of-the-parts  (`finmodel.sotp`)
+
+Value a multi-segment or holding company by valuing each piece on its own terms — a multiple on its own metric,
+or an override value (a quoted market cap for a listed subsidiary, a DCF, a net-asset value) — weighted by
+economic ownership, then subtract capitalised unallocated corporate costs, apply an optional conglomerate
+discount, and bridge enterprise value to equity value per share. Mirrors the SOTP tabs in agentii and
+governed-dcf-skill and Damodaran's "valuing a multi-business company" method (*Investment Valuation* ch. 24).
+
+**Try it.** `finmodel sotp examples/sotp_conglomerate.json` — an industrial segment on EV/EBITDA, a
+financial-services segment on a book-value multiple, and a 55%-owned listed subsidiary at its quoted market cap.
+
+## 8f. Workbook audit  (`finmodel.audit`)
+
+The quality checks a model-review checklist runs before trusting a workbook (CFI's modelling guidelines,
+3-statement-ultra's 19 QC checks, agentii's audit-xls skill): cached error values (#REF!, #DIV/0!, …),
+hard-coded numbers inside formulas ("plugs" — a constant other than 0/1/−1/100/12/365/…), a typed number
+sitting inside an otherwise-formula row, a formula whose R1C1-normalised pattern breaks from its row's
+dominant pattern, external workbook links, and hidden/very-hidden sheets. `--recompute` adds a full
+`xlcalc.verify()` pass. Run on the 15,323-formula Macabacus merger model, it found 112 findings — 78 hard-coded
+plugs and one `very Hidden` `__FDSCACHE__` sheet — while the recompute check still reported a 100% match rate,
+which is the point: a workbook can recalculate perfectly and still be full of undocumented assumptions.
+
+`finmodel audit path/to/workbook.xlsx --recompute --markdown-out out/audit.md`.
 
 ---
 
