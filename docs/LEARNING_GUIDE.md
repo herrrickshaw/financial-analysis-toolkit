@@ -196,19 +196,52 @@ Koller ch. 31 (mergers and acquisitions).
 
 ---
 
-## 8. Comparable companies and precedent transactions  (roadmap)
+## 8. Comparable companies and precedent transactions  (`finmodel.comps`)
 
-**What it is.** Relative valuation: pick peers, spread their EV/EBITDA, EV/Revenue, P/E and growth
-metrics, apply the range (25th–75th percentile) to the target; precedents do the same with control
-premia from past deals; a football-field chart lays the ranges side by side with the DCF and LBO values.
+**What it is.** Relative valuation: pick peers, spread their equity value (price × diluted shares) and enterprise
+value (equity + debt + preferred + NCI − cash), compute EV/Revenue, EV/EBITDA, EV/EBIT and P/E for LTM and forward
+years (negative or ≥100x multiples are "NM"), take max / 75th / median / 25th / min (Excel-inclusive quartiles), apply
+the range to the target's metrics, bridge implied EV to equity (cash, NOLs, investments add; debt, preferred, NCI,
+pensions, leases subtract) and divide by diluted shares; precedents do the same with deal EV, LTM metrics and the
+offer premium over the 1-day / 1-week / 1-month undisturbed price; the football field lays the low–high ranges of every
+method beside DCF and the 52-week range. Reconciled cell-for-cell to BIWS 107-21 (Steel Dynamics), BIWS 107-27 (Jazz
+precedents) and the CFI *Comps, Precedents, Football Field* template (`tests/test_comps.py`).
 
-**Learn it.** Rosenbaum & Pearl ch. 1–2, Damodaran `pe.pdf` and *Investment Valuation* ch. 17–20
-(what drives each multiple), BIWS comps tutorial (https://breakingintowallstreet.com/kb/valuation/comparable-company-analysis/)
-and precedent-transactions tutorial (…/kb/valuation/precedent-transaction-analysis/) with S3 Excel files.
+**Learn it.** Rosenbaum & Pearl ch. 1–2, Damodaran `pe.pdf` and *Investment Valuation* ch. 17–20, Investopedia
+*Comparable Company Analysis* and *Precedent Transaction Analysis*, Wall Street Prep's trading-comps and
+precedent-transactions lessons, Macabacus valuation pages (`catalog/analysis_intent.json` holds the links).
 
-**Templates.** `exinfm/Comparable Companies (NON-FDS).xls`, `damodaran/eqmult.xls`, `firmmult.xls`,
-BIWS `107-21-Comparable-Company-Analysis.xlsx` and precedent files; free CFI dashboard items
-*Comparable Company Analysis*, *Football Field Chart*, *Pharmaceuticals / Retail Industry Comps*.
+**Templates.** `exinfm/Comparable Companies (NON-FDS).xls`, `damodaran/eqmult.xls`, `firmmult.xls`, BIWS
+`107-21-Comparable-Company-Analysis.xlsx` and `107-27-*-Precedent-Transactions.xlsx`, CFI *Comparable Company
+Analysis*, *Valuation Model – Comps, Precedents, Football Field*, *Pharmaceuticals / Retail Industry Comps*.
+
+**Try it.** `finmodel comps examples/comps_stld.json`; `finmodel charts comps …`; on real filings:
+`python scripts/comps_validation.py` (see `docs/VALIDATION_REAL_DATA.md`).
+
+---
+
+## 8a. Health and quality scores  (`finmodel.scores`)
+
+Altman Z (1968 public, 1983 private Z′ and non-manufacturing Z″), Beneish M (8 variables, −1.78 threshold) and
+Piotroski F (9 signals) from two fiscal years of statements — the screens every open-source fundamental
+screener ships and the CFI *Financial Analysis* templates approximate with ratio dashboards. Learn it from the
+original papers (Altman 1968 / 2000 update, Beneish 1999, Piotroski 2000) and Investopedia's entries.
+`finmodel scores examples/scores_stld.json`.
+
+## 8b. Institutional costing and resource allocation  (`finmodel.costing`)
+
+From the EUA–ATHENA *Toolkit for Financial Management*: formula-based resource allocation with top-slicing and
+strategic pots, two-step driver-based cost allocation (students, person-years, effective work time, m²) with
+indirect-cost rates on grossed-up salary (Helsinki: 53–55% add-on, 84–150% indirect rates), full-economic-cost
+pricing of a project, and an income-diversification scan (shares, Herfindahl index, priority ranking).
+`finmodel costing examples/costing_university.json`.
+
+## 8c. Real statements from SEC EDGAR  (`finmodel.edgar`)
+
+`edgar.fetch(cik, user_agent)` + `edgar.annual()` turn the public company-facts API into annual rows (tag precedence
+per fiscal year, latest filing wins, EBIT derived from pre-tax + net interest when a filer omits it). This is what
+feeds `scripts/ma_case_study.py` — Microsoft/Activision, Chevron/Hess, Cisco/Splunk before and after — and the comps
+validation. Read `docs/CASE_STUDY_MA.md` for what a static merger model can and cannot tell you.
 
 ---
 

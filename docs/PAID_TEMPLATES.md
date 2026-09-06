@@ -19,6 +19,114 @@
 | Accounting topics | 4 | Worked accounting examples: lease capitalisation, inventory methods, depreciation methods, diluted EPS, equity-method investments. | CFI Accounting e-book (downloaded); Penman; docs/GLOSSARY.md GAAP-vs-IFRS table | glossary GAAP-vs-IFRS notes; xlcalc SLN/SYD; merger PPA/DTL logic (partial) |
 | Soft skills & career | 14 | Non-modelling material: assessments, checklists and document templates. | — | not applicable (n/a) |
 
+## Analysis intent by category (what the paid templates are for, per the public literature)
+
+### 3-statement / operating model
+
+- Macabacus: [Download the Macabacus free operating model Excel template. Forecast revenue, expenses, and key financial metrics for better decision-making and accuracy.](https://macabacus.com/excel/templates/operating-model)
+- CFI resources: [Curious about the three-statement model? Discover valuable insights with CFI's resources to enhance your financial skills. ✓ Explore now and elevate your expert](https://corporatefinanceinstitute.com/resources/financial-modeling/3-statement-model/)
+
+### DCF / intrinsic valuation
+
+Value an investment from the present value of its projected future cash flows at a discount rate (usually WACC); if DCF value exceeds cost, the opportunity may be worthwhile; weakness is reliance on cash-flow estimates. Intrinsic value of a stock as the present value of expected future dividends; Gordon Growth Model assumes constant dividend growth; best for mature, predictable dividend payers, weak for firms without stable dividends. Cash available to shareholders after expenses, reinvestment and net debt repayment (CFO − capex + net debt issued); an alternative to DDM for non-dividend payers; dividends/buybacks funded by FCFE are sustainable. Average after-tax cost of a company's debt and equity financing, weighted by each source's share of capital; used as the discount rate in valuation and capital budgeting; higher WACC = higher perceived risk.
+
+- Investopedia: [Discounted Cash Flow (DCF)](https://www.investopedia.com/terms/d/dcf.asp)
+- Wall Street Prep: [The following DCF model guide provides the six steps to building a DCF model using Excel along with conceptual explanations.](https://www.wallstreetprep.com/knowledge/dcf-model-training-6-steps-building-dcf-model-excel/)
+- Macabacus: [Discover how discounted cash flow analysis reveals a business's true value through projected cash flows. See practical steps, real examples, and grab free templ](https://macabacus.com/valuation/dcf/overview)
+- CFI resources: [Learn how to build a discounted cash flow (DCF) model, forecast free cash flows, apply discount rates, and estimate intrinsic company value.](https://corporatefinanceinstitute.com/resources/valuation/dcf-model-training-free-guide/)
+- Investopedia: [Dividend Discount Model](https://www.investopedia.com/terms/d/ddm.asp)
+- CFI resources: [Learn the Dividend Discount Model (DDM)—its formula, calculation, and use in valuing stocks based on expected dividends, growth rates, and cost of equity.](https://corporatefinanceinstitute.com/resources/valuation/dividend-discount-model/)
+- Investopedia: [Free Cash Flow to Equity (FCFE)](https://www.investopedia.com/terms/f/freecashflowtoequity.asp)
+- CFI resources: [Learn the differences between FCFF vs FCFE, how each cash flow metric is calculated, and when they’re used in company valuation.](https://corporatefinanceinstitute.com/resources/valuation/fcff-vs-fcfe/)
+
+### LBO
+
+Acquire a company mostly with borrowed money, using the target's assets and cash flows as collateral and repayment source; returns come from debt paydown, margin improvement and exit-multiple expansion over a 5–7 year hold. Good targets: mature, stable cash flows, strong management, viable exit.
+
+- Investopedia: [Understanding Leveraged Buyouts (LBOs): Fundamentals and Examples](https://www.investopedia.com/terms/l/leveragedbuyout.asp)
+- Wall Street Prep: [Short-Form LBO Model tutorial on building a simple LBO model step-by-step in Excel with a template provided.](https://www.wallstreetprep.com/knowledge/lbo-model/)
+- Macabacus: [Download our free LBO model template (long form) to gain insights into leveraged buyouts. Evaluate deals and assess risk for better investment decisions.](https://macabacus.com/excel/templates/lbo-model-long)
+- CFI resources: [Learn what an LBO model is, how it's structured in Excel, the capital stack (bank debt, HY debt, mezzanine, equity), key credit metrics, and how sponsor IRR is ](https://corporatefinanceinstitute.com/resources/financial-modeling/lbo-model/)
+- Wall Street Prep: [Debt Capacity is the maximum amount of leverage that a company could afford to incur, determined by its cash flow profile.](https://www.wallstreetprep.com/knowledge/debt-capacity/)
+- CFI resources: [This Debt Capacity Model Template will help you assess the debt capacity based on various credit metrics and current earnings.](https://corporatefinanceinstitute.com/resources/commercial-lending/debt-capacity/)
+
+### M&A / merger
+
+- Wall Street Prep: [A Merger Model measures the estimated accretion or dilution to an acquirer’s earnings per share (EPS) from the impact of an M&A transaction.](https://www.wallstreetprep.com/knowledge/merger-model/)
+- Macabacus: [Download the Macabacus free merger model template for Excel. Conduct scenario analysis, calculate synergies, and streamline your M&A valuations.](https://macabacus.com/excel/templates/merger-model)
+- CFI resources: [Purchase price allocation is a practice in which an acquirer allocates the purchase price into the assets and liabilities of the target company.](https://corporatefinanceinstitute.com/resources/valuation/purchase-price-allocation/)
+- CFI resources: [Find out what it takes to become a successful restructuring professional, from the skills you'll use to the typical day and compensation you can expect.](https://corporatefinanceinstitute.com/resources/valuation/restructuring/)
+
+### Comparable companies / precedent transactions
+
+Value a company relative to a peer group using ratios such as EV/EBITDA, P/E, P/B and P/S; start by forming a peer group, then judge whether the target is over- or under-valued versus peers; relative, not intrinsic (contrast DCF). Estimate what a company is worth in a takeover from prices paid for similar companies in past deals (public deal announcements and filings); recent deals are more relevant; results embed control premiums and need adjustment for market conditions and deal similarity.
+
+- Investopedia: [Comparable Company Analysis (CCA)](https://www.investopedia.com/terms/c/comparable-company-analysis-cca.asp)
+- Wall Street Prep: [Learn to build the trading comps model, or trading comparables model, the single most common model in investment banking.](https://www.wallstreetprep.com/knowledge/financial-modeling-quick-lesson-trading-comps/)
+- Macabacus: [Discover how to value companies like Wall Street using comparable analysis. See real examples of peer group comparisons, IPO valuations & M&A strategies from in](https://macabacus.com/valuation/comparable-companies)
+- CFI resources: [This guide shows you step-by-step how to build comparable company analysis ("Comps") and includes a free template and many examples.](https://corporatefinanceinstitute.com/resources/valuation/comparable-company-analysis/)
+- Investopedia: [Precedent Transaction Analysis](https://www.investopedia.com/terms/p/precedent-transaction-analysis.asp)
+- Wall Street Prep: [Precedent Transaction Analysis estimates the implied value of a company by analyzing the acquisition prices paid in comparable transactions.](https://www.wallstreetprep.com/knowledge/precedent-transaction-analysis/)
+- Macabacus: [Explore real M&A valuations and control premiums through precedent transactions analysis. See how actual buyers value similar companies and what premiums they p](https://macabacus.com/valuation/precedent-transactions)
+- CFI resources: [Learn what precedent transaction analysis is, how to perform it in five steps, and how it differs from comparable company analysis and DCF.](https://corporatefinanceinstitute.com/resources/valuation/precedent-transaction-analysis/)
+
+### Ratios & financial analysis
+
+Compare figures across the financial statements to judge profitability, liquidity, efficiency and solvency; most useful over time or against peers; e.g. current ratio, gross margin, inventory turnover. Bank statements differ: revenue is interest earned on loans minus interest paid on deposits (net interest income), plus fees; analysis centres on interest spread, loan quality, and regulatory capital (Fed/FDIC oversight).
+
+- Investopedia: [Financial Ratio Analysis](https://www.investopedia.com/terms/r/ratioanalysis.asp)
+- CFI resources: [Learn key financial ratios, formulas, and examples to analyze company performance. Explore liquidity, profitability, leverage, and efficiency ratios.](https://corporatefinanceinstitute.com/resources/accounting/financial-ratios/)
+- Investopedia: [Analyzing a Bank's Financial Statements](https://www.investopedia.com/articles/stocks/07/bankfinancials.asp)
+- CFI resources: [Learn the quick ratio formula and how to measure liquidity. Understand acid-test ratio, key components, and examples for financial analysis.](https://corporatefinanceinstitute.com/resources/accounting/quick-ratio-definition/)
+- CFI resources: [Learn the net debt-to-EBITDA ratio, its formula, and how it measures leverage and a company’s ability to repay debt using operating cash flow.](https://corporatefinanceinstitute.com/resources/valuation/net-debt-ebitda-ratio/)
+
+### Cost of capital & capital structure
+
+Average after-tax cost of a company's debt and equity financing, weighted by each source's share of capital; used as the discount rate in valuation and capital budgeting; higher WACC = higher perceived risk. Set of portfolios with the highest expected return for each risk level (Markowitz modern portfolio theory); guides allocation by risk tolerance; assumes normal returns and rational investors. Interest-rate differential between two countries equals the forward–spot exchange-rate differential; covered IRP uses forwards (no-arbitrage), uncovered IRP relies on expected spot rates.
+
+- Investopedia: [Weighted Average Cost of Capital (WACC)](https://www.investopedia.com/terms/w/wacc.asp)
+- Wall Street Prep: [WACC is the rate at which a company’s future cash flows need to be discounted to arrive at a present value (PV) for the business.](https://www.wallstreetprep.com/knowledge/wacc/)
+- CFI resources: [Learn about the WACC formula, how to calculate weighted average cost of capital, and why it’s used in valuation, DCF models, and investment decisions.](https://corporatefinanceinstitute.com/resources/valuation/what-is-wacc-formula/)
+- Wall Street Prep: [Debt Capacity is the maximum amount of leverage that a company could afford to incur, determined by its cash flow profile.](https://www.wallstreetprep.com/knowledge/debt-capacity/)
+- CFI resources: [This Debt Capacity Model Template will help you assess the debt capacity based on various credit metrics and current earnings.](https://corporatefinanceinstitute.com/resources/commercial-lending/debt-capacity/)
+- Investopedia: [Efficient Frontier](https://www.investopedia.com/terms/e/efficientfrontier.asp)
+- CFI resources: [Learn what the efficient frontier is, how it optimizes portfolio risk and return, and its role in Modern Portfolio Theory and investment diversification.](https://corporatefinanceinstitute.com/resources/career-map/sell-side/capital-markets/efficient-frontier/)
+- Investopedia: [Interest Rate Parity (IRP)](https://www.investopedia.com/terms/i/interestrateparity.asp)
+
+### Real estate & project models
+
+Expected return on an investment property = net operating income / current market value; used to compare relative value of similar properties. Finance large infrastructure/industrial projects through a special-purpose vehicle repaid from the project's own cash flows (non-recourse or limited recourse), keeping debt off the sponsor's balance sheet.
+
+- Investopedia: [Capitalization Rate](https://www.investopedia.com/terms/c/capitalizationrate.asp)
+- Investopedia: [Project Finance](https://www.investopedia.com/terms/p/projectfinance.asp)
+
+### Excel / charting / dashboards
+
+'What-if' analysis: how changes in an independent variable move a dependent output under fixed assumptions; used to find opportunities, mitigate risk and support decisions.
+
+- CFI resources: [Learn how to build Excel dashboards with charts, KPIs, and interactive features to visualize data and support better business decisions.](https://corporatefinanceinstitute.com/resources/excel/excel-dashboard/)
+- Investopedia: [Sensitivity Analysis](https://www.investopedia.com/terms/s/sensitivityanalysis.asp)
+- CFI resources: [Learn what sensitivity analysis is, how What-If analysis works in Excel, how it differs from scenario analysis, and best practices for financial modeling.](https://corporatefinanceinstitute.com/resources/financial-modeling/what-is-sensitivity-analysis/)
+
+### Options, trading & derivatives
+
+- CFI resources: [Put-call parity is an important concept in options pricing which shows how the prices of puts, calls, and the underlying asset must be consistent with one anoth](https://corporatefinanceinstitute.com/resources/derivatives/put-call-parity/)
+- CFI resources: [Algorithmic trading strategies involve making trading decisions based on pre-set rules that are programmed into a computer.](https://corporatefinanceinstitute.com/resources/derivatives/algorithmic-trading/)
+
+### Accounting topics
+
+- CFI resources: [Learn what lease accounting is, the difference between operating and finance leases, and how to record leases on the balance sheet.](https://corporatefinanceinstitute.com/resources/accounting/lease-accounting/)
+- CFI resources: [Learn how inventory accounting methods like FIFO, LIFO, and weighted average impact financial statements, profitability, taxes, and inventory management.](https://corporatefinanceinstitute.com/resources/accounting/inventory-accounting/)
+- CFI resources: [Learn the 4 main depreciation methods — straight-line, double declining balance, units of production, and sum-of-years-digits — with formulas and examples.](https://corporatefinanceinstitute.com/resources/accounting/types-depreciation-methods/)
+
+### Soft skills & career
+
+Investment-bank sales document: firm overview (analysts, IPO record, financial strength) or deal-specific presentation (e.g. an IPO or M&A proposal) tailored to the client.
+
+- Investopedia: [Pitchbook](https://www.investopedia.com/terms/p/pitchbook.asp)
+- CFI resources: [How to make an investment banking pitch book. This guide will teach you what's included, how to make an IB pitch book, and provides examples of slides.](https://corporatefinanceinstitute.com/resources/valuation/investment-banking-pitch-book/)
+
+
 ## Titles
 
 ### 3-statement / operating model

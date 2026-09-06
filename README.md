@@ -24,7 +24,7 @@ re-implemented in dependency-free Python and reconciled to the spreadsheets cell
 ```bash
 git clone https://github.com/herrrickshaw/financial-analysis-toolkit && cd financial-analysis-toolkit
 pip install -e ".[test]"          # only openpyxl is required at runtime
-pytest -q                         # 25 tests; the LibreOffice recalc test auto-skips if soffice is absent
+pytest -q                         # 53 tests; the LibreOffice recalc test auto-skips if soffice is absent
 ```
 
 ## Quick start
@@ -36,6 +36,10 @@ finmodel dcf examples/cfi_dcf.json --sensitivity --xlsx out/dcf.xlsx
 finmodel projection examples/projection_demo.json --xlsx out/proj.xlsx
 finmodel lbo examples/lbo_asm.json --xlsx out/lbo.xlsx                  # sponsor IRR 30.7%, sub-debt IRR 17.2%, data table
 finmodel merger examples/merger_biws.json                               # deal accretion +15.4%, pro forma by year
+finmodel comps examples/comps_stld.json --xlsx out/comps.xlsx            # trading comps, precedents, implied value, football field
+finmodel scores examples/scores_stld.json                                # Altman Z, Piotroski F, Beneish M
+finmodel costing examples/costing_university.json                        # EUA-style resource allocation, full costing, income diversification
+finmodel edgar 1022671 --user-agent "me name@example.com" --years 5      # SEC EDGAR annual statements for a CIK (Steel Dynamics)
 finmodel transpile downloads/macabacus/merger-model.xlsx -o out/py       # 15,323 formulas -> Python, 100% match to cached values
 finmodel charts lbo examples/lbo_asm.json -o out/charts_lbo.html         # chart template -> HTML report
 finmodel glossary "cash sweep"                                           # definition, formula, GAAP vs IFRS, toolkit pointer
@@ -88,11 +92,17 @@ verified through accounting identities instead, and it **corrects four template 
 
 Also: wage expense defaults to gross wages (`wage_expense_basis="gross"`); pass `"net_pay"` to reproduce the template.
 
+## Real-data validation and applied case studies
+
+- `docs/VALIDATION_REAL_DATA.md` (`scripts/comps_validation.py`) — the comps engine on the US steel peer set with SEC EDGAR fundamentals and warehouse prices, cross-checked against the market-pipeline's independent P/E ledger; Altman / Piotroski / Beneish on the same filings.
+- `docs/CASE_STUDY_MA.md` (`scripts/ma_case_study.py`) — Microsoft/Activision, Chevron/Hess and Cisco/Splunk: each party's last standalone year, the merger engine's static pro-forma, and the acquirer's actual statements after closing, with the reasons they differ.
+- `docs/GAP_ANALYSIS.md` — feature gap analysis against the 144 GitHub repositories found for financial modelling / valuation and the EUA–ATHENA financial-management toolkit; what was added in response (`edgar`, `scores`, `comps`, `costing`, reverse and Monte-Carlo DCF).
+
 ## Charts, glossary, paid-template knowledge base
 
 - `docs/CHARTS.md` — the chart template: for each engine, which data feeds which chart and the analysis question it answers. Rendering follows the data-viz method (validated palette, thin marks, 2px gaps, legends, tooltips, table view, light/dark).
 - `docs/GLOSSARY.md` / `data/glossary.json` — 176 terms (CFI Financial Analysis and Modeling glossaries, PwC statement primer, authored valuation/LBO/M&A terms with formulas and toolkit pointers) and a 19-row GAAP-vs-IFRS evaluation table.
-- `docs/PAID_TEMPLATES.md` / `catalog/paid_templates.json` — the 127 paid-only CFI titles: category, what they do, public analogues, literature, and how much this toolkit already covers.
+- `docs/PAID_TEMPLATES.md` / `catalog/paid_templates.json` — the 127 paid-only CFI titles: category, what they do, public analogues, literature, and how much this toolkit already covers; `catalog/analysis_intent.json` adds the analysis intent per category with the Investopedia, Wall Street Prep, Macabacus and CFI reference pages it was distilled from.
 
 ## Template sources
 
@@ -119,8 +129,10 @@ educational templates.
 ## Layout
 
 ```
-finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, excel, extract, catalog, integrations, cli)
-examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo)
+finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
+examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo, ASM LBO, BIWS merger, STLD comps, STLD scores, university costing)
+data/              glossary.json, edgar/ (compact SEC company-facts extracts for the case studies)
+scripts/           comps_validation.py, ma_case_study.py (regenerate the real-data docs)
 catalog/           source lists (cfi_dashboard_raw.txt, open_sources_verified.txt) -> catalog.json / catalog.md
 docs/              OPEN_SOURCE_MODULES.md
 tests/             pytest suite (reconciliation, identities, LibreOffice recalc, CLI)
@@ -128,6 +140,7 @@ tests/             pytest suite (reconciliation, identities, LibreOffice recalc,
 
 ## Roadmap
 
-- LBO engine (from A Simple Model's free LBO files) and mid-year-convention DCF
-- Damodaran-style WACC / synthetic-rating inputs feeding `dcf.DCFInputs`
+- Residual-income / EVA valuation and sum-of-the-parts (see `docs/GAP_ANALYSIS.md`)
+- Damodaran-style WACC / synthetic-rating inputs feeding `dcf.DCFInputs`; mid-year convention
 - Monthly roll-forward of the projection (the CFI base-year sheets are monthly)
+- Workbook hard-code / error scan on top of `xlcalc.verify`

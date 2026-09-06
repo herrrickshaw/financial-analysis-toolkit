@@ -41,3 +41,20 @@ def test_capex_list_and_fye_feb29():
     r = dcf.run(inp)
     assert r["capex"] == [5, 6]
     assert r["dates"][1:] == ["2024-02-29", "2025-02-28"]
+
+
+def test_reverse_dcf_and_monte_carlo():
+    import json, pathlib
+    from finmodel import dcf
+    d = json.loads((pathlib.Path(__file__).resolve().parent.parent / "examples" / "cfi_dcf.json").read_text())
+    inp = dcf.DCFInputs(**dcf.clean(d))
+    rg = dcf.implied_growth(inp)
+    assert rg["implied_growth"] is not None and -0.2 <= rg["implied_growth"] < inp.discount_rate
+    # plugging the implied growth back in reproduces the price under the perpetuity method
+    import copy
+    x = copy.copy(inp); x.terminal_method = "perpetuity"; x.perpetual_growth = rg["implied_growth"]
+    assert abs(dcf.run(x)["equity_value_per_share"] - inp.current_price) < 1e-6
+    mc = dcf.monte_carlo(inp, runs=300, seed=1)
+    assert mc["runs"] == 300 and mc["percentiles"][5] <= mc["median"] <= mc["percentiles"][95]
+    assert 0 <= mc["prob_value_above_price"] <= 1 and sum(mc["histogram"]["counts"]) == 300
+    assert dcf.monte_carlo(inp, runs=50, seed=1)["median"] == dcf.monte_carlo(inp, runs=50, seed=1)["median"]   # seeded → reproducible

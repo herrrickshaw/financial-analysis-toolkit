@@ -171,6 +171,76 @@ def cmd_transpile(a):
             p.write_text(to_python_source(m)); print("    ->", p)
 
 
+def cmd_comps(a):
+    from . import comps
+    res = comps.from_dict(_load_json(a.inputs))
+    if a.json_out:
+        Path(a.json_out).parent.mkdir(parents=True, exist_ok=True); Path(a.json_out).write_text(json.dumps(res, indent=1, default=str))
+    if "comps" in res:
+        print("Trading comps — peer multiples (max / 75th / median / 25th / min):")
+        for label, s in res["comps"]["summary"].items():
+            print(f"  {label:20} " + "  ".join(f"{s[k]:7.2f}x" if s['n'] else "     n/a" for k in ("max", "p75", "median", "p25", "min")))
+    if "precedents" in res:
+        print("Precedent transactions — deal multiples:")
+        for label, s in res["precedents"]["summary"].items():
+            print(f"  {label:20} " + "  ".join(f"{s[k]:7.2f}x" if s['n'] else "     n/a" for k in ("max", "p75", "median", "p25", "min")))
+        for label, s in res["precedents"]["premium_summary"].items():
+            print(f"  premium {label:12} median {s['median']:.1%}  25th {s['p25']:.1%}  75th {s['p75']:.1%}")
+    if "implied_from_comps" in res:
+        iv = res["implied_from_comps"]
+        print(f"Implied share price for {iv['target']} (current {iv['current_price']:.2f}):")
+        for r in iv["rows"]:
+            im = r["implied"]
+            print(f"  {r['multiple']:20} " + "  ".join(f"{im[k]['share_price']:7.2f}" for k in ("min", "p25", "median", "p75", "max") if k in im))
+    if "football_field" in res:
+        print("Football field (low – high implied share price):")
+        for it in res["football_field"]["items"]:
+            print(f"  {it['method']:24} {it['low']:7.2f} – {it['high']:7.2f}")
+    if a.xlsx and "comps" in res:
+        from .excel import write_generic
+        c = res["comps"]; names = [p["name"] for p in c["peers"]]
+        rows = {"Equity value": [p["equity_value"] for p in c["peers"]], "Enterprise value": [p["enterprise_value"] for p in c["peers"]]}
+        for lab in c["peers"][0]["multiples"]:
+            rows[lab] = [p["multiples"][lab] if isinstance(p["multiples"][lab], (int, float)) else None for p in c["peers"]]
+        write_generic(a.xlsx, {"Comps": (names, rows)})
+        print(f"wrote {a.xlsx}")
+
+
+def cmd_scores(a):
+    from . import scores
+    d = _load_json(a.inputs)
+    res = scores.health(d["current"], d.get("prior", d["current"]), d.get("market_cap"), d.get("variant", "public"))
+    print(f"Altman Z ({res['altman']['variant']}): {res['altman']['z']:.2f} → {res['altman']['zone']}")
+    print(f"Piotroski F: {res['piotroski']['f']}/9 ({res['piotroski']['grade']}): " + ", ".join(k for k, v in res["piotroski"]["signals"].items() if v))
+    print(f"Beneish M: {res['beneish']['m']:.2f} → {'likely manipulator' if res['beneish']['likely_manipulator'] else 'not flagged'}")
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+
+
+def cmd_costing(a):
+    from . import costing
+    res = costing.from_dict(_load_json(a.inputs))
+    if "resource_allocation" in res:
+        r = res["resource_allocation"]; print(f"Resource allocation: envelope {r['envelope']:,.0f}, top-slice {r['top_slice']:,.0f}, formula pool {r['formula_pool']:,.0f} (check {r['check']})")
+        for u, v in r["units"].items(): print(f"  {u:24} direct {v['direct']:>10,.0f}  formula {v['formula']:>10,.0f}  strategic {v['strategic']:>10,.0f}  total {v['total']:>10,.0f}")
+    if "costing" in res:
+        c = res["costing"]; print(f"Costing: pools {c['pools_total']:,.0f}, allocated {c['allocated']:,.0f}, unallocated {c['unallocated']} (check {c['check']})")
+        for o in c["objects"]: print(f"  {o['object']:24} {o['activity']:9} direct {o['direct']:>10,.0f}  indirect {o['indirect']:>10,.0f}  full {o['full_cost']:>10,.0f}  indirect rate on salary {o['indirect_rate_on_salary']:.0%}")
+        for k, v in c["by_activity"].items(): print(f"  by activity {k:12} full cost {v['full_cost']:>12,.0f}  indirect rate {v['indirect_rate_on_salary']:.0%}")
+    if "income_diversification" in res:
+        i = res["income_diversification"]; print(f"Income: total {i['total']:,.0f}, HHI {i['hhi']:.3f}, effective sources {i['effective_sources']:.2f}; priority: {', '.join(i['ranking'])}")
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+
+
+def cmd_edgar(a):
+    from . import edgar
+    facts = edgar.fetch(a.cik, user_agent=a.user_agent, cache_dir=a.cache_dir)
+    c = edgar.compact(facts, years=a.years)
+    if a.json_out: Path(a.json_out).write_text(json.dumps(c, indent=1))
+    print(f"{c['entity']} (CIK {c['cik']}): {len(c['years'])} fiscal years")
+    for fy, r in c["years"].items():
+        print(f"  {fy}  revenue {r.get('revenue', 0)/1e6:>12,.0f}m  EBIT {r.get('operating_income', 0)/1e6:>10,.0f}m  NI {r.get('net_income', 0)/1e6:>10,.0f}m  diluted EPS {r.get('eps_diluted', 0):>7.2f}  cash {r.get('cash', 0)/1e6:>10,.0f}m  debt {r.get('debt_total', 0)/1e6:>10,.0f}m")
+
+
 def cmd_charts(a):
     from . import charts
     d = _load_json(a.inputs)
@@ -183,6 +253,8 @@ def cmd_charts(a):
         from . import lbo; res = lbo.from_dict(d)
     elif a.engine == "merger":
         from . import merger; res = merger.from_dict(d)
+    elif a.engine == "comps":
+        from . import comps; res = comps.from_dict(d)
     else:
         from . import projection; res = projection.from_dict(d)
     p = charts.report_for(a.engine, res, a.out, title=a.title)
@@ -245,7 +317,11 @@ def main(argv=None):
     l = sp.add_parser("lbo", help="run the LBO model"); l.add_argument("inputs"); l.add_argument("--xlsx"); l.add_argument("--json-out"); l.set_defaults(fn=cmd_lbo)
     g = sp.add_parser("merger", help="run the merger (accretion/dilution) model"); g.add_argument("inputs"); g.add_argument("--xlsx"); g.add_argument("--json-out"); g.set_defaults(fn=cmd_merger)
     tp = sp.add_parser("transpile", help="convert a workbook's formulas to Python and verify against cached values"); tp.add_argument("files", nargs="+"); tp.add_argument("-o", "--out"); tp.add_argument("--show", type=int, default=5); tp.set_defaults(fn=cmd_transpile)
-    ch = sp.add_parser("charts", help="render the chart template for an engine's inputs to a self-contained HTML report"); ch.add_argument("engine", choices=["three_statement", "dcf", "lbo", "merger", "projection"]); ch.add_argument("inputs"); ch.add_argument("-o", "--out", default="out/charts.html"); ch.add_argument("--title"); ch.set_defaults(fn=cmd_charts)
+    cp = sp.add_parser("comps", help="trading comps, precedent transactions, implied valuation and football field"); cp.add_argument("inputs"); cp.add_argument("--xlsx"); cp.add_argument("--json-out"); cp.set_defaults(fn=cmd_comps)
+    sc = sp.add_parser("scores", help="Altman Z, Piotroski F, Beneish M from two fiscal years of statement data"); sc.add_argument("inputs"); sc.add_argument("--json-out"); sc.set_defaults(fn=cmd_scores)
+    co = sp.add_parser("costing", help="EUA-style resource allocation, cost allocation and income diversification"); co.add_argument("inputs"); co.add_argument("--json-out"); co.set_defaults(fn=cmd_costing)
+    ed = sp.add_parser("edgar", help="pull annual statements for a CIK from SEC EDGAR company facts"); ed.add_argument("cik"); ed.add_argument("--user-agent", required=True, help="e.g. 'my-tool name@example.com' (SEC requires a contact)"); ed.add_argument("--years", type=int, default=8); ed.add_argument("--cache-dir"); ed.add_argument("--json-out"); ed.set_defaults(fn=cmd_edgar)
+    ch = sp.add_parser("charts", help="render the chart template for an engine's inputs to a self-contained HTML report"); ch.add_argument("engine", choices=["three_statement", "dcf", "lbo", "merger", "projection", "comps"]); ch.add_argument("inputs"); ch.add_argument("-o", "--out", default="out/charts.html"); ch.add_argument("--title"); ch.set_defaults(fn=cmd_charts)
     gl = sp.add_parser("glossary", help="look up a financial term (definition, formula, GAAP vs IFRS note)"); gl.add_argument("query", nargs="+"); gl.add_argument("--deep", action="store_true"); gl.add_argument("--limit", type=int, default=5); gl.set_defaults(fn=cmd_glossary)
     m = sp.add_parser("demo", help="run all engines on the bundled examples and write workbooks"); m.add_argument("--out", default="out"); m.set_defaults(fn=cmd_demo)
     a = p.parse_args(argv)

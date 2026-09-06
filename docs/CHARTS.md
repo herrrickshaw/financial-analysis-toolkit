@@ -52,6 +52,20 @@ Every engine output has a fixed set of charts; each row says what data feeds it,
 | Pre-tax deal effects | synergies vs deal costs | stacked columns |
 | Acquisition debt | balance and interest | columns |
 
+## comps
+
+| chart | data | analysis / form |
+|---|---|---|
+| KPI tiles | current price, implied range, peer / deal counts | headline numbers |
+| Football field | low–high implied price per method + current price | range bars |
+| Peer EV multiples | EV/Revenue, EV/EBITDA per peer | grouped columns |
+| Peer equity multiples | P/E per peer | grouped columns |
+| Multiple statistics | 25th–75th percentile per multiple | range bars + stats table |
+| Implied share price by multiple | p25–p75 implied price | range bars vs current |
+| EV to equity bridge | cash, NOLs, debt, NCI … | waterfall |
+| Precedent multiples | EV/Revenue, EV/EBITDA, EV/EBIT per deal | grouped columns |
+| Offer premiums | 1-day / 1-week / 1-month | grouped columns |
+
 ## projection
 
 | chart | data | analysis / form |
@@ -63,7 +77,3 @@ Every engine output has a fixed set of charts; each row says what data feeds it,
 | Profitability | gross / EBIT / net margin | lines |
 | Cash flow by activity | CFO / CFI / CFF | stacked columns |
 | Liquidity and leverage ratios | current, quick, D/E | lines |
-
-## Method
-
-Palette, marks and interaction follow the data-viz method (reference palette, fixed categorical order, sequential blue for magnitude, diverging blue↔red centred on a neutral gray for polarity, 2px surface gaps, rounded data-ends, legend for every multi-series chart, hover tooltips, table view per chart, light/dark themes). Rendering is dependency-free SVG; `finmodel charts <engine> inputs.json -o report.html` or `charts.report_for(engine, result, path)`.

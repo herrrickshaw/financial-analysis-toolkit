@@ -140,3 +140,53 @@ def clean(d: Dict[str, Any]) -> Dict[str, Any]:
 
 def from_dict(d: Dict[str, Any]) -> Dict[str, Any]:
     return run(DCFInputs(**clean(d)))
+
+
+# ----------------------------------------------------------------------------- reverse DCF and Monte Carlo
+def implied_growth(inp: DCFInputs, target_price: Optional[float] = None, lo: float = -0.20, hi: float = 0.20, tol: float = 1e-9) -> Dict[str, Any]:
+    """Reverse DCF: the perpetual growth rate at which the model's equity value per share equals the current (or a
+    target) price, holding every other assumption fixed. Uses the perpetuity terminal method so the answer is exact;
+    bisection on [lo, hi] (growth must stay below the discount rate)."""
+    import copy
+    price = inp.current_price if target_price is None else target_price
+    base = copy.copy(inp); base.terminal_method = "perpetuity"
+    hi = min(hi, base.discount_rate - 1e-4)
+
+    def f(g):
+        x = copy.copy(base); x.perpetual_growth = g; return run(x)["equity_value_per_share"] - price
+    flo, fhi = f(lo), f(hi)
+    if flo * fhi > 0:
+        return {"implied_growth": None, "price": price, "bracket": [lo, hi], "note": "no growth rate in the bracket reproduces the price"}
+    for _ in range(200):
+        mid = (lo + hi) / 2; fm = f(mid)
+        if abs(fm) < tol or hi - lo < tol: break
+        if flo * fm < 0: hi, fhi = mid, fm
+        else: lo, flo = mid, fm
+    return {"implied_growth": mid, "price": price, "model_growth": inp.perpetual_growth, "discount_rate": base.discount_rate,
+            "reading": "market prices in faster perpetual growth than the model" if mid > inp.perpetual_growth else "market prices in slower perpetual growth than the model"}
+
+
+def monte_carlo(inp: DCFInputs, runs: int = 2000, seed: int = 7, discount_rate_sd: float = 0.01, growth_sd: float = 0.005,
+                ebit_scale_sd: float = 0.10, capex_scale_sd: float = 0.10, percentiles: Sequence[float] = (5, 25, 50, 75, 95)) -> Dict[str, Any]:
+    """Probabilistic DCF: draws discount rate, perpetual growth, an EBIT scale factor (applied to every forecast year) and a
+    capex scale factor from normal distributions around the base case, re-runs the model and reports the distribution of
+    equity value per share. Dependency-free (random.gauss), seeded for reproducibility; growth is capped below the
+    discount rate."""
+    import copy, random, statistics
+    rng = random.Random(seed); out: List[float] = []; evs: List[float] = []
+    for _ in range(runs):
+        x = copy.copy(inp)
+        x.discount_rate = max(0.01, rng.gauss(inp.discount_rate, discount_rate_sd))
+        x.perpetual_growth = min(rng.gauss(inp.perpetual_growth, growth_sd), x.discount_rate - 0.005)
+        es = max(0.0, rng.gauss(1.0, ebit_scale_sd)); cs = max(0.0, rng.gauss(1.0, capex_scale_sd))
+        x.ebit = [e * es for e in inp.ebit]; x.capex = [c * cs for c in inp.capex_list()]
+        r = run(x); out.append(r["equity_value_per_share"]); evs.append(r["enterprise_value"])
+    xs = sorted(out)
+    pct = {p: xs[min(len(xs) - 1, int(round(p / 100 * (len(xs) - 1))))] for p in percentiles}
+    prob_above = sum(1 for v in out if v > inp.current_price) / len(out)
+    hist_lo, hist_hi = xs[0], xs[-1]; bins = 20; width = (hist_hi - hist_lo) / bins or 1.0
+    hist = [0] * bins
+    for v in xs: hist[min(bins - 1, int((v - hist_lo) / width))] += 1
+    return {"runs": runs, "seed": seed, "mean": statistics.fmean(out), "median": statistics.median(out), "stdev": statistics.pstdev(out), "percentiles": pct,
+            "prob_value_above_price": prob_above, "current_price": inp.current_price, "histogram": {"edges": [hist_lo + i * width for i in range(bins + 1)], "counts": hist},
+            "enterprise_value_mean": statistics.fmean(evs), "assumptions": {"discount_rate_sd": discount_rate_sd, "growth_sd": growth_sd, "ebit_scale_sd": ebit_scale_sd, "capex_scale_sd": capex_scale_sd}}

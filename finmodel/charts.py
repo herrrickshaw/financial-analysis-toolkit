@@ -392,6 +392,46 @@ def _merger(res: Dict[str, Any]) -> str:
     return out
 
 
+def _comps(res: Dict[str, Any]) -> str:
+    out = ""
+    ff = res.get("football_field"); iv = res.get("implied_from_comps"); c = res.get("comps"); pr = res.get("precedents")
+    if ff:
+        lo = min(i["low"] for i in ff["items"]); hi = max(i["high"] for i in ff["items"])
+        out += tiles([("Current price", _fmt(ff["current_price"]), ff["target"]), ("Implied range (all methods)", f"{_fmt(lo)} – {_fmt(hi)}", "low of lows to high of highs"),
+                      ("Peers", str(len(c["peers"])) if c else "–", "trading comps set"), ("Precedent deals", str(len(pr["deals"])) if pr else "–", "transaction comps set")])
+        out += card("Football field", "Where does the current price sit against every valuation method's implied range?",
+                    range_bars([(i["method"], i["low"], i["high"]) for i in ff["items"]], marker=ff["current_price"], marker_label="Current"))
+    if c:
+        labels = [l for l in c["peers"][0]["multiples"] if c["summary"][l]["n"]]
+        ev_labels = [l for l in labels if l.startswith("EV")]; eq_labels = [l for l in labels if not l.startswith("EV")]
+        names = [p["ticker"] or p["name"] for p in c["peers"]]
+        for group, title, why in ((ev_labels, "Peer EV multiples", "Enterprise-value multiples per peer: who trades rich, who trades cheap? (NM multiples are omitted.)"),
+                                  (eq_labels, "Peer equity multiples", "P/E per peer: earnings-based pricing, sensitive to leverage and one-offs.")):
+            if not group: continue
+            series = {l: [p["multiples"][l] if isinstance(p["multiples"][l], (int, float)) else 0 for p in c["peers"]] for l in group[:4]}
+            out += card(title, why, column_chart(names, series, fmt="x"), list(series), _table(names, series, fmt="x"))
+        stat_rows = {k: [c["summary"][l][k] for l in labels] for k in ("min", "p25", "median", "p75", "max")}
+        out += card("Multiple statistics", "Max / 75th / median / 25th / min per multiple: the range that gets applied to the target.",
+                    range_bars([(l, c["summary"][l]["p25"], c["summary"][l]["p75"]) for l in labels], fmt="x"), (), _table(labels, stat_rows, fmt="x"))
+    if iv:
+        rows = [r for r in iv["rows"] if r["implied"]]
+        out += card("Implied share price by multiple", "25th–75th percentile implied price per multiple, with the median marked in the table.",
+                    range_bars([(r["multiple"], r["implied"].get("p25", r["implied"].get("min"))["share_price"], r["implied"].get("p75", r["implied"].get("max"))["share_price"]) for r in rows], marker=iv["current_price"], marker_label="Current"),
+                    (), _table([r["multiple"] for r in rows], {k: [r["implied"][k]["share_price"] if k in r["implied"] else 0 for r in rows] for k in ("min", "p25", "median", "p75", "max") if any(k in r["implied"] for r in rows)}))
+        b = iv["bridge"]
+        if b:
+            out += card("Enterprise value to equity value bridge", "Cash, non-core assets and NOLs add; debt, preferred, NCI, pensions and leases subtract.",
+                        waterfall([(k.replace("_", " ").title(), v) for k, v in b.items() if v] + [("Bridge total", iv["bridge_total"])], totals=(len([v for v in b.values() if v]),)))
+    if pr:
+        names = [d["target"] for d in pr["deals"]]
+        series = {l: [d["multiples"].get(l) if isinstance(d["multiples"].get(l), (int, float)) else 0 for d in pr["deals"]] for l in pr["summary"]}
+        out += card("Precedent transaction multiples", "Deal multiples include a control premium, so they usually sit above trading comps.", column_chart(names, series, fmt="x"), list(series), _table(names, series, fmt="x"))
+        if pr["premium_summary"]:
+            prem = {l: [d["premiums"].get(l, 0) for d in pr["deals"]] for l in pr["premium_summary"]}
+            out += card("Offer premiums to undisturbed price", "Premium paid over the 1-day, 1-week and 1-month prior share price.", column_chart(names, prem, fmt="pct"), list(prem))
+    return out
+
+
 def _projection(res: Dict[str, Any]) -> str:
     yrs = [str(y) for y in res["years"]]; IS, BS, CF = res["income_statement"], res["balance_sheet"], res["cash_flow"]
     out = tiles([("Revenue (final)", _fmt(IS["Revenue"][-1]), ""), ("EBIT margin (final)", _fmt(IS["EBIT"][-1] / IS["Revenue"][-1] if IS["Revenue"][-1] else 0, "pct"), ""), ("Closing cash", _fmt(BS["Cash"][-1]), ""), ("Balance check", "OK" if res["balanced"] else "ERROR", "")])
@@ -452,6 +492,16 @@ CATALOG: Dict[str, Dict[str, Any]] = {
         ("Purchase price allocation", "book value, write-ups, DTL, goodwill", "waterfall"),
         ("Pre-tax deal effects", "synergies vs deal costs", "stacked columns"),
         ("Acquisition debt", "balance and interest", "columns")]},
+    "comps": {"builder": _comps, "charts": [
+        ("KPI tiles", "current price, implied range, peer / deal counts", "headline numbers"),
+        ("Football field", "low–high implied price per method + current price", "range bars"),
+        ("Peer EV multiples", "EV/Revenue, EV/EBITDA per peer", "grouped columns"),
+        ("Peer equity multiples", "P/E per peer", "grouped columns"),
+        ("Multiple statistics", "25th–75th percentile per multiple", "range bars + stats table"),
+        ("Implied share price by multiple", "p25–p75 implied price", "range bars vs current"),
+        ("EV to equity bridge", "cash, NOLs, debt, NCI …", "waterfall"),
+        ("Precedent multiples", "EV/Revenue, EV/EBITDA, EV/EBIT per deal", "grouped columns"),
+        ("Offer premiums", "1-day / 1-week / 1-month", "grouped columns")]},
     "projection": {"builder": _projection, "charts": [
         ("KPI tiles", "revenue, EBIT margin, cash, balance check", "headline numbers"),
         ("Revenue by product", "product revenue", "stacked columns: mix"),

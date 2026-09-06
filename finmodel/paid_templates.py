@@ -135,13 +135,29 @@ def build(catalog_dir: Path = CATALOG_DIR) -> Dict[str, Any]:
     return out
 
 
+def load_intent(catalog_dir: Path = CATALOG_DIR) -> Dict[str, Any]:
+    """Analysis intent + reference sources per category (catalog/analysis_intent.json, built from Investopedia,
+    Wall Street Prep, Macabacus and CFI resource pages)."""
+    p = Path(catalog_dir) / "analysis_intent.json"
+    return json.loads(p.read_text())["categories"] if p.exists() else {}
+
+
 def to_markdown(out: Dict[str, Any]) -> str:
-    s = out["summary"]
+    s = out["summary"]; intent = out.get("intent") or load_intent()
     md = ["# Paid-only CFI templates: what they do, public analogues, literature, toolkit coverage", "",
           f"{s['paid_titles']} titles on the CFI dashboard need a paid plan. {s['with_cfi_page']} have a public CFI resource page (description scraped), {s['with_analogues']} have a public analogue in the catalog. Toolkit coverage: {s['coverage']}.", "",
           "## Categories", "", "| category | titles | what the templates do | literature | toolkit coverage |", "|---|---|---|---|---|"]
     for k, v in out["categories"].items():
         md.append(f"| {k} | {s['by_category'].get(k, 0)} | {v['does']} | {v['literature']} | {v['toolkit']} ({v['coverage']}) |")
+    if intent:
+        md += ["", "## Analysis intent by category (what the paid templates are for, per the public literature)", ""]
+        for k, v in intent.items():
+            if not v.get("intent") and not v.get("sources"): continue
+            md += [f"### {k}", ""]
+            if v.get("intent"): md += [v["intent"], ""]
+            for src in v.get("sources", [])[:8]:
+                md.append(f"- {src['site']}: [{src['title']}]({src['url']})")
+            md.append("")
     md += ["", "## Titles", ""]
     for c in list(out["categories"]) + ["Other"]:
         rows = [i for i in out["items"] if i["category"] == c]
