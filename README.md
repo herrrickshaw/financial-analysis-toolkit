@@ -33,7 +33,7 @@ finmodel ratios examples/ratios_demo.json
 finmodel extract path/to/AnyTemplate.xlsx -o extracted/         # JSON + Markdown spec of the workbook
 finmodel catalog list --source damodaran                        # 59 verified public spreadsheets
 finmodel catalog fetch --source damodaran asimplemodel exinfm   # downloads/<source>/ (git-ignored)
-finmodel catalog fetch --source cfi --auth "Cookie: ..."        # CFI dashboard needs your logged-in session
+finmodel catalog fetch-signed --urls signed.txt              # CFI dashboard: pre-signed S3 links captured from a logged-in browser
 ```
 
 Python:
@@ -68,8 +68,19 @@ Also: wage expense defaults to gross wages (`wage_expense_basis="gross"`); pass 
 
 ## Template sources
 
-`catalog/catalog.md` lists 323 CFI dashboard items (196 free-tier downloads, 127 paid) and 82 verified public
-spreadsheets from Damodaran (NYU Stern), A Simple Model and exinfm.com with sizes and HTTP status.
+`catalog/catalog.md` lists 636 entries: 323 CFI dashboard items (196 free-tier downloads, 127 paid) and 313
+verified public files from Damodaran (NYU Stern, 59), Breaking Into Wall Street (225), exinfm.com (15),
+A Simple Model (8) and Macabacus (6), each with size and HTTP status. `catalog/alternatives.md` maps every CFI
+title to the closest public equivalents (87 of the 127 paid-only titles have at least one).
+`docs/LEARNING_GUIDE.md` summarises each modelling tool with its formulas and the books and open university
+courses that teach it.
+
+**Fetching the CFI dashboard files.** The learn.corporatefinanceinstitute.com app authenticates with a Bearer
+token, so `api/files/<uuid>` returns 401 to scripts, but a top-level navigation in a logged-in browser answers
+with a 302 to a 60-second pre-signed S3 link. Capture those links from the browser's network log (the Chrome
+extension, DevTools or a HAR export) into a text file and run `finmodel catalog fetch-signed --urls links.txt`;
+the S3 leg needs no credentials. All 196 free-tier files were fetched this way on 2026-09-06 (169 xlsx,
+15 pdf, 11 docx, 2 pptx) and checksummed in `downloads/manifest.json`.
 `docs/OPEN_SOURCE_MODULES.md` surveys the Python packages that overlap with this toolkit (FinanceToolkit,
 pyxirr, numpy-financial, OpenBB, …) and `finmodel/integrations.py` has lazy bridges to them.
 

@@ -205,3 +205,38 @@ def fetch(cat: Dict[str, Any], dest: Path, sources: Optional[List[str]] = None, 
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(manifest, indent=1))
     return manifest
+
+
+def fetch_signed(url_file: Path, dest: Path, source: str = "cfi") -> List[Dict[str, Any]]:
+    """Download pre-signed URLs (one per line) into dest/<source>/, naming files from Content-Disposition.
+
+    This is the second half of the CFI dashboard workflow: the learn.corporatefinanceinstitute.com SPA
+    authenticates with a Bearer token, but a *top-level navigation* to api/files/<uuid> in a logged-in
+    browser returns a 302 to a pre-signed S3 URL (resources.corporatefinanceinstitute.com, 60-second
+    expiry).  Capture those URLs from the browser's network log (Claude-in-Chrome, DevTools, HAR export)
+    and feed them here; no credentials are needed for the S3 leg.
+    """
+    dest = Path(dest); out_dir = dest / source; out_dir.mkdir(parents=True, exist_ok=True)
+    manifest_path = dest / "manifest.json"
+    manifest: List[Dict[str, Any]] = json.loads(manifest_path.read_text()) if manifest_path.exists() else []
+    rows = []
+    for line in Path(url_file).read_text().splitlines():
+        url = line.strip()
+        if not url or url.startswith("#"):
+            continue
+        key = Path(urllib.parse.urlparse(url).path).name
+        row = {"id": f"{source}/{key.rsplit('.', 1)[0]}", "source": source, "title": key, "url": url.split("?")[0], "ok": False}
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                data = r.read(); fname = _filename_from_response(url, r.headers, key)
+        except urllib.error.HTTPError as ex:
+            row["error"] = f"HTTP {ex.code}"; rows.append(row); continue
+        except Exception as ex:  # noqa: BLE001
+            row["error"] = str(ex); rows.append(row); continue
+        out = out_dir / fname; out.write_bytes(data)
+        row.update({"ok": True, "path": str(out), "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+        rows.append(row)
+        manifest = [m for m in manifest if m["id"] != row["id"]] + [row]
+    manifest_path.write_text(json.dumps(manifest, indent=1))
+    return rows
