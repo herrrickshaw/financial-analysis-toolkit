@@ -28,3 +28,14 @@ def test_alternatives_tags():
     assert r["summary"]["paid_with_alternatives"] > 60
     lbo = next(i for i in r["items"] if i["cfi_title"] == "LBO Model")
     assert any(a["source"] in ("asimplemodel", "macabacus", "damodaran", "exinfm", "biws") for a in lbo["alternatives"])
+
+
+def test_paid_templates_kb():
+    from finmodel import paid_templates
+    assert paid_templates.categorise("Compact LBO Model (Complete)") == "LBO"
+    assert paid_templates.categorise("Trading Comps") == "Comparable companies / precedent transactions"
+    r = paid_templates.build()
+    assert r["summary"]["paid_titles"] == 127
+    assert r["summary"]["by_category"].get("Other", 0) <= 8
+    lbo = next(i for i in r["items"] if i["title"] == "LBO Model")
+    assert lbo["coverage"] == "full" and lbo["analogues"]

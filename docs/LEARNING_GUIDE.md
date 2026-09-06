@@ -160,12 +160,14 @@ items: *WACC Calculator*, *Beta Calculator*, *Cost of Debt*, *CAPM Formula*, *Ma
 
 ---
 
-## 6. Leveraged buyout  (not yet an engine — next on the roadmap)
+## 6. Leveraged buyout  (`finmodel.lbo`)
 
 **What it is.** Buy a company with mostly debt, run the operating model for 5–7 years, pay debt down
 from free cash flow, exit at a multiple, and solve for the sponsor's IRR / MOIC. Core mechanics:
 sources & uses, purchase-price allocation and goodwill, tranched debt schedule with cash sweep,
 PIK interest, management rollover, returns attribution.
+
+**How the engine works.** Tranches sized as EBITDA multiples (or amounts) with rate, scheduled amortisation, PIK share, sweep share and warrant equity; closing balance sheet with goodwill = seller proceeds − book equity, fees capitalised, transaction expenses through retained earnings; depreciation waves per capex vintage; revolver against a minimum cash balance; exit at a multiple; XIRR on dated flows for the sponsor and each lender; scenario × exit-multiple table. Reconciled to the A Simple Model workbook.
 
 **Learn it.** Rosenbaum & Pearl ch. 4–5, Pignataro part III, BIWS "Simple LBO model" tutorial
 (https://breakingintowallstreet.com/kb/leveraged-buyouts-and-lbo-models/simple-lbo-model-excel/),
@@ -177,11 +179,13 @@ Macabacus LBO tutorials (https://macabacus.com/learn), Damodaran `lboval.xls` fo
 
 ---
 
-## 7. Merger / M&A model  (roadmap)
+## 7. Merger / M&A model  (`finmodel.merger`)
 
 **What it is.** Combine acquirer and target statements, fund the deal (cash / debt / stock),
 adjust for purchase accounting (asset write-ups, goodwill, new D&A), synergies and transaction fees,
 then test accretion / dilution of EPS and the pro-forma leverage.
+
+**How the engine works.** Deal level: purchase equity = target market cap × (1 + premium); funding split cash / debt / stock; combined NI = (EBT_A + EBT_B − cash × foregone rate − debt × cost of debt + synergies − fees) × (1 − t); new shares = stock consideration ÷ acquirer price; accretion = combined EPS − standalone EPS. Multi-year: PPA (write-ups, new DTL, goodwill), synergies with realisation, integration costs, new-debt interest and amortisation, adjusted EPS. Reconciled to the BIWS workbook.
 
 **Learn it.** Rosenbaum & Pearl ch. 6–7, Damodaran `synergyvaluation.xls` and *The Value of Synergy* paper,
 BIWS merger-model tutorial (https://breakingintowallstreet.com/kb/ma-and-merger-models/merger-model/),

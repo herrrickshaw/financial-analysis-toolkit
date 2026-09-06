@@ -113,6 +113,7 @@ def run(inp: DCFInputs) -> Dict[str, Any]:
         "target_price_upside": per_share / inp.current_price - 1,
         "upside_per_share": per_share - inp.current_price,
         "irr": irr_val,
+        "discount_rate": r, "perpetual_growth": g,
     }
 
 

@@ -8,6 +8,11 @@ re-implemented in dependency-free Python and reconciled to the spreadsheets cell
 | `finmodel.three_statement` | CFI Case Study – 3-Statement Model | Linked IS / BS / CF with working-capital, PP&E and debt schedules; N historical + N forecast years driven by ratio assumptions; balance check |
 | `finmodel.dcf` | CFI DCF Model Template (Updated) | Unlevered FCF, stub-period `YEARFRAC`, `XNPV` enterprise value, perpetuity-growth + EV/EBITDA terminal value (average / either), equity bridge, `XIRR`, WACC × g sensitivity |
 | `finmodel.projection` | CFI Financial Projection Template | Bottom-up: products × units, employees × hours (NETWORKDAYS), opex by category → IS → BS → CF → ratios, 1 monthly base year + N forecast years |
+| `finmodel.lbo` | A Simple Model *Simple LBO (scenarios & data tables)* + BIWS sweep/PIK examples | Sources & uses, purchase accounting, tranche schedules (scheduled amortisation, cash sweep, PIK, revolver), depreciation waves, exit at EV/EBITDA, sponsor and mezzanine IRR/MOIC via XIRR, scenario × exit-multiple table; reconciled to the workbook (88 cells + both 42-cell data tables) |
+| `finmodel.merger` | BIWS *Equity value / EV in M&A deals* + BIWS/Macabacus merger models | Deal-level accretion/dilution (premium, cash/debt/stock mix, foregone interest, new shares), premium × %stock sensitivity; multi-year pro forma with purchase price allocation (write-ups, DTL, goodwill), synergies, integration costs, acquisition debt, adjusted EPS |
+| `finmodel.xlcalc` | any workbook | **Excel-formula transpiler and evaluator**: parses A1 formulas, compiles them to Python, evaluates with Excel semantics (~90 functions, lazy IF/IFERROR, ranges, names, circular refs by iteration), verifies against cached values, emits standalone Python modules |
+| `finmodel.charts` | — | Chart templates per engine (KPI tiles, stacked/grouped columns, lines, waterfalls, heatmaps, football field) rendered as dependency-free SVG into a themed HTML report with legends, tooltips and table views |
+| `finmodel.paid_templates` | CFI dashboard | Knowledge base of the 127 paid-only CFI titles: category, what each does (scraped CFI description), public analogues, literature, toolkit coverage |
 | `finmodel.ratios` | CFI Financial Ratio Analysis | Profitability, efficiency (turnover + days + funding gap), liquidity, leverage, coverage |
 | `finmodel.fin` | — | Excel-exact `YEARFRAC` (basis 0–4), `XNPV`, `XIRR`, `NPV`, `IRR`, `NETWORKDAYS`, `EOMONTH`, `PMT` |
 | `finmodel.excel` | — | Writes the 3-statement and DCF models as **live-formula** workbooks in the CFI layout (blue inputs / black formulas); LibreOffice headless recalc for verification |
@@ -29,6 +34,12 @@ finmodel demo                                                   # runs all engin
 finmodel three-statement examples/cfi_three_statement.json --table all --xlsx out/3s.xlsx
 finmodel dcf examples/cfi_dcf.json --sensitivity --xlsx out/dcf.xlsx
 finmodel projection examples/projection_demo.json --xlsx out/proj.xlsx
+finmodel lbo examples/lbo_asm.json --xlsx out/lbo.xlsx                  # sponsor IRR 30.7%, sub-debt IRR 17.2%, data table
+finmodel merger examples/merger_biws.json                               # deal accretion +15.4%, pro forma by year
+finmodel transpile downloads/macabacus/merger-model.xlsx -o out/py       # 15,323 formulas -> Python, 100% match to cached values
+finmodel charts lbo examples/lbo_asm.json -o out/charts_lbo.html         # chart template -> HTML report
+finmodel glossary "cash sweep"                                           # definition, formula, GAAP vs IFRS, toolkit pointer
+finmodel catalog paid --title comps                                      # what a paid CFI template does + public analogues
 finmodel ratios examples/ratios_demo.json
 finmodel extract path/to/AnyTemplate.xlsx -o extracted/         # JSON + Markdown spec of the workbook
 finmodel catalog list --source damodaran                        # 59 verified public spreadsheets
@@ -49,6 +60,17 @@ v = dcf.run(dcf.DCFInputs(ebit=[...], da=[...], change_nwc=[...], capex=15000, d
 v["equity_value_per_share"], v["irr"]
 ```
 
+## Excel formulas → Python (`finmodel.xlcalc`)
+
+`XlModel(path)` loads a workbook, transpiles every formula (tokeniser → recursive-descent parser → Python
+expression over `C(sheet,cell)`, `R(sheet,a,b)`, `N(name)` and ~90 Excel functions), evaluates lazily with
+memoisation and Excel-style iteration for circular references, and `verify()` compares every formula cell with
+the value Excel cached in the file. `to_python_source()` writes an importable module (inputs + transpiled
+formulas + a `Workbook` class with `.set()`/`.recalc()`). Verified 100% on: CFI 3-statement (515 formulas) and
+DCF (69), A Simple Model LBO (623), LBO II (1,756, 66 circular cells) and DCF (909), BIWS simple LBO, PIK, cash
+sweep, acquisition projections, income-statement combination (2,790), merger interview model, Macabacus
+short-form LBO (7,022), operating model (1,824) and merger model (15,323), Damodaran fcffsimpleginzu (1,231).
+
 ## Reconciliation to the CFI workbooks
 
 `tests/test_three_statement.py` and `tests/test_dcf.py` assert the engines against the cached values in the
@@ -65,6 +87,12 @@ verified through accounting identities instead, and it **corrects four template 
 4. prepaid and accrued expenses grow but are excluded from working capital, so the balance sheet cannot balance — included.
 
 Also: wage expense defaults to gross wages (`wage_expense_basis="gross"`); pass `"net_pay"` to reproduce the template.
+
+## Charts, glossary, paid-template knowledge base
+
+- `docs/CHARTS.md` — the chart template: for each engine, which data feeds which chart and the analysis question it answers. Rendering follows the data-viz method (validated palette, thin marks, 2px gaps, legends, tooltips, table view, light/dark).
+- `docs/GLOSSARY.md` / `data/glossary.json` — 176 terms (CFI Financial Analysis and Modeling glossaries, PwC statement primer, authored valuation/LBO/M&A terms with formulas and toolkit pointers) and a 19-row GAAP-vs-IFRS evaluation table.
+- `docs/PAID_TEMPLATES.md` / `catalog/paid_templates.json` — the 127 paid-only CFI titles: category, what they do, public analogues, literature, and how much this toolkit already covers.
 
 ## Template sources
 
