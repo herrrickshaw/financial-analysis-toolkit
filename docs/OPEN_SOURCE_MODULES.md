@@ -33,9 +33,12 @@ four. Install whichever you need — none is required.
 ## CFI member dashboard (login required)
 
 Your dashboard listing is parsed into `catalog/catalog.json`: 196 items downloadable on the free tier,
-127 need a paid plan. The `api.corporatefinanceinstitute.com/api/files/<uuid>` endpoint returns 401
-without your session, so fetch them with the header from your browser session:
+127 need a paid plan. The `api.corporatefinanceinstitute.com/api/files/<uuid>` endpoint returns 401 without
+authentication. The learn.corporatefinanceinstitute.com single-page app authenticates with a Bearer token
+(it is NOT a cookie: a credentialed fetch from the logged-in origin still gets 401), so either click the
+Download buttons in a logged-in browser (each opens the file), or copy the `Authorization` header from a
+logged-in request in DevTools → Network and run:
 
 ```bash
-finmodel catalog fetch --source cfi --auth "Cookie: <paste the Cookie header from a logged-in request>"
+finmodel catalog fetch --source cfi --auth "Authorization: Bearer <token>"
 ```

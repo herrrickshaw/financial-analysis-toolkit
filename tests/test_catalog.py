@@ -18,3 +18,13 @@ def test_fetch_skips_paid_and_login_without_auth(tmp_path):
     cat = catalog.build()
     man = catalog.fetch(cat, tmp_path, sources=["cfi"])  # no auth -> nothing attempted
     assert man == []
+
+
+def test_alternatives_tags():
+    from finmodel import alternatives
+    assert "lbo" in alternatives.tags_for("Compact LBO Model (Complete)")
+    assert {"m&a", "comps"} <= set(alternatives.tags_for("Transaction Comps and Merger Consequences"))
+    r = alternatives.build()
+    assert r["summary"]["paid_with_alternatives"] > 60
+    lbo = next(i for i in r["items"] if i["cfi_title"] == "LBO Model")
+    assert any(a["source"] in ("asimplemodel", "macabacus", "damodaran", "exinfm", "biws") for a in lbo["alternatives"])

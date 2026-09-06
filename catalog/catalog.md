@@ -1,6 +1,6 @@
 # Template source catalog
 
-Generated 2026-09-06. Counts: `{'cfi:cfi-paid': 127, 'cfi:cfi-login': 196, 'damodaran:public': 59, 'asimplemodel:public': 8, 'exinfm:public': 15}`
+Generated 2026-09-06. Counts: `{'cfi:cfi-paid': 127, 'cfi:cfi-login': 196, 'damodaran:public': 59, 'asimplemodel:public': 8, 'exinfm:public': 15, 'macabacus:public': 6}`
 
 ## damodaran — Aswath Damodaran, NYU Stern
 
@@ -107,6 +107,20 @@ Access: public
 | EVA Example | public | 166 KB | 200 | https://exinfm.com/excel%20files/EVA%20Example.xls |
 | Financial_model_1 | public | 672 KB | 200 | https://exinfm.com/excel%20files/Financial_model_1.xls |
 | capstruc | public | 39 KB | 200 | https://exinfm.com/excel%20files/capstruc.xls |
+
+## macabacus — Macabacus (Excel add-in vendor; free demo templates)
+
+Home: https://macabacus.com/category/excel/templates  
+Access: public
+
+| title | access | size | status | url |
+|---|---|---|---|---|
+| lbo-model-long-form | public | 295 KB | 200 | https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx |
+| lbo-model-short-form | public | 203 KB | 200 | https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx |
+| merger-model | public | 441 KB | 200 | https://macabacus.com/assets/2023/02/merger-model.xlsx |
+| operating-model | public | 99 KB | 200 | https://macabacus.com/assets/2023/02/operating-model.xlsx |
+| ipo-model | public | 68 KB | 200 | https://macabacus.com/assets/2023/02/ipo-model.xlsx |
+| vc-returns | public | 41 KB | 200 | https://macabacus.com/assets/2023/02/vc-returns.xlsx |
 
 ## cfi — Corporate Finance Institute
 

@@ -1,0 +1,6575 @@
+{
+ "generated": "2026-09-06",
+ "items": [
+  {
+   "cfi_title": "3-Statement Compact (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "3-Statement Model (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Accounting Fact Sheet",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Accounting for Business Combinations and Other Equity Investments",
+   "access": "cfi-paid",
+   "tags": [
+    "m&a"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "merger-model",
+     "url": "https://macabacus.com/assets/2023/02/merger-model.xlsx",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 451419
+    },
+    {
+     "source": "damodaran",
+     "title": "synergyvaluation",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "exinfm",
+     "title": "Combination Template",
+     "url": "https://exinfm.com/excel%20files/Combination%20Template.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 845824
+    }
+   ]
+  },
+  {
+   "cfi_title": "Accounting for Diluted Shares & Earnings per Share",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Accounting for Inventory",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Accounting for Leases",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Accounts Payable Turnover Ratio Template",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Accounts Receivable Aging Report Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Accounts Receivable Turnover Ratio Template",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Accumulated Depreciation Template",
+   "access": "cfi-login",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "Active Listening Diagnostic",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Activity Based Costing Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Additional Paid-in Capital Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Adjusted EBITDA",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Adjusted Present Value",
+   "access": "cfi-login",
+   "tags": [
+    "capital-structure"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Advanced All in One Financial Model Template",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Alpha Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Amortization Schedule Template",
+   "access": "cfi-login",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "AMZN Financial Model",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Annual Income Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Appraisal Checklist",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Asset Turnover Template",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Audit a Financial Model with Macabacus",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Audit a Financial Model with Macabacus (2)",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Audit and Balance a 3-Statement Model",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "AutoSum Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Balance-Sheet-Current-Assets-Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Balance-Sheet-Current-Liabilities-Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Balance-Sheet-Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Bank and FIG Financial Model Template",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement",
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Bank Financial Analysis",
+   "access": "cfi-paid",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Bank of America and Barclays Ratios",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios",
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    },
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Bank Ratio Calculator",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios",
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    },
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Bank Reconciliation Statement",
+   "access": "cfi-login",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Benchmarking Analysis",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Beneish M-Score Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Beta Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "wacc"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "betas",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 82432
+    },
+    {
+     "source": "damodaran",
+     "title": "levbeta",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "damodaran",
+     "title": "ratings",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 48640
+    },
+    {
+     "source": "damodaran",
+     "title": "wacc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 77312
+    },
+    {
+     "source": "damodaran",
+     "title": "wacccalc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 248832
+    },
+    {
+     "source": "exinfm",
+     "title": "betawacc",
+     "url": "https://exinfm.com/excel%20files/betawacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 35840
+    }
+   ]
+  },
+  {
+   "cfi_title": "Black Scholes Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "options"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "warrant",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls",
+     "shared_tags": [
+      "options"
+     ],
+     "size": 26624
+    }
+   ]
+  },
+  {
+   "cfi_title": "Bullet Chart Template",
+   "access": "cfi-login",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Burn Rate Template",
+   "access": "cfi-login",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "Business Letter Format Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Business Valuation Exercises (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "Business Valuation Model (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "BV vs MV of Equity Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "CAGR Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Calculating Net Interest Income",
+   "access": "cfi-paid",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Calculating Risk Weighted Assets",
+   "access": "cfi-paid",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Cap Rate and NOI",
+   "access": "cfi-paid",
+   "tags": [
+    "real-estate"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "reval",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/reval.xls",
+     "shared_tags": [
+      "real-estate"
+     ],
+     "size": 29696
+    }
+   ]
+  },
+  {
+   "cfi_title": "CapEx Formula",
+   "access": "cfi-login",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "Capital Adequacy Ratio (CAR) Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "ratios",
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    },
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Capital Asset Pricing Model (CAPM) Formula",
+   "access": "cfi-login",
+   "tags": [
+    "wacc"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "betas",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 82432
+    },
+    {
+     "source": "damodaran",
+     "title": "levbeta",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "damodaran",
+     "title": "ratings",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 48640
+    },
+    {
+     "source": "damodaran",
+     "title": "wacc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 77312
+    },
+    {
+     "source": "damodaran",
+     "title": "wacccalc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 248832
+    },
+    {
+     "source": "exinfm",
+     "title": "betawacc",
+     "url": "https://exinfm.com/excel%20files/betawacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 35840
+    }
+   ]
+  },
+  {
+   "cfi_title": "Capital Gains Yield Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Capital Intensity Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Capital Investment Model",
+   "access": "cfi-login",
+   "tags": [
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 51200
+    }
+   ]
+  },
+  {
+   "cfi_title": "Capital Investment Template",
+   "access": "cfi-login",
+   "tags": [
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 51200
+    }
+   ]
+  },
+  {
+   "cfi_title": "Capitalization Table Template",
+   "access": "cfi-login",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "Cash Budget Template",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement",
+    "working-capital"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Cash Conversion Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios",
+    "working-capital"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Cash EPS",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cash Flow Reconciliation",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cash Flow Statement",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cash Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Cash to Accrual (Complete)",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "CFI Accounting eBook",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "CFI Advanced Excel Formulas & Functions",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "CFI Essential Guide to Breaking into FP&A",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "CFI Excel eBook",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "CFI Financial Analysis Glossary",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "CFI Financial Modeling Guidelines",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "CFI Financial Ratios Definitive Guide",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "CFI Investment Banking Cover Letter Template",
+   "access": "cfi-login",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "CFI Investment Banking Pitch Book",
+   "access": "cfi-paid",
+   "tags": [
+    "bank",
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    },
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "CFI Investment Banking Resume Template",
+   "access": "cfi-login",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Charts and Graphs Template",
+   "access": "cfi-login",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Clean Cover Letter Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Clean Resignation Letter Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Coaching for Workplace Performance Assessment",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cohort Analysis",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Collateralized Mortgage Obligations (CMO) Models",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Common Size Analysis",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Communication Styles Diagnostic",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Compact Comps (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Compact LBO Model (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "lbo"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "LBO II Common_Preferred",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 126857
+    },
+    {
+     "source": "asimplemodel",
+     "title": "LBO_Simple LBO Scenarios and Data Tables",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 47222
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-long-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 302468
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-short-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 208380
+    },
+    {
+     "source": "exinfm",
+     "title": "LBO Model Template",
+     "url": "https://exinfm.com/excel%20files/LBO%20Model%20Template.xls",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 369152
+    }
+   ]
+  },
+  {
+   "cfi_title": "Comparable Company Analysis",
+   "access": "cfi-login",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Comparable Valuation Fundamentals",
+   "access": "cfi-paid",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Competitive Forces Model",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Compound Monthly Growth Rate (CMGR)",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Confidential Information Memorandum Template",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Conflict Styles Questionnaire",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Consolidation model",
+   "access": "cfi-paid",
+   "tags": [
+    "m&a"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "merger-model",
+     "url": "https://macabacus.com/assets/2023/02/merger-model.xlsx",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 451419
+    },
+    {
+     "source": "damodaran",
+     "title": "synergyvaluation",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "exinfm",
+     "title": "Combination Template",
+     "url": "https://exinfm.com/excel%20files/Combination%20Template.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 845824
+    }
+   ]
+  },
+  {
+   "cfi_title": "Contribution Margin Ratio",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Corporate Finance Fundamentals: Capital Financing",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Corporate Finance Fundamentals: Capital Investment",
+   "access": "cfi-paid",
+   "tags": [
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 51200
+    }
+   ]
+  },
+  {
+   "cfi_title": "Corporate Finance Fundamentals: Capital Return",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cost Behavior Analysis",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cost of Debt Template",
+   "access": "cfi-login",
+   "tags": [
+    "wacc"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "betas",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 82432
+    },
+    {
+     "source": "damodaran",
+     "title": "levbeta",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "damodaran",
+     "title": "ratings",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 48640
+    },
+    {
+     "source": "damodaran",
+     "title": "wacc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 77312
+    },
+    {
+     "source": "damodaran",
+     "title": "wacccalc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 248832
+    },
+    {
+     "source": "exinfm",
+     "title": "betawacc",
+     "url": "https://exinfm.com/excel%20files/betawacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 35840
+    }
+   ]
+  },
+  {
+   "cfi_title": "Cost of Goods Manufactured",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cost of Goods Sold",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cost of Preferred Stock Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Cost Volume Profit Analysis Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "COUNTIFS Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Coupon Rate",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "COVARIANCE.P Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Creative Cover Letter",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Crossover Rate",
+   "access": "cfi-login",
+   "tags": [
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 51200
+    }
+   ]
+  },
+  {
+   "cfi_title": "CUMIPMT Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Current Ratio Template",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Dashboard and Data Visualization Template",
+   "access": "cfi-paid",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Dashboard Template 2",
+   "access": "cfi-paid",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Days Inventory Outstanding Template",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Days Sales Outstanding",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "DCF Model",
+   "access": "cfi-paid",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "DCF Valuation Compact (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "DCF Valuation Model (Complete)",
+   "access": "cfi-paid",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "Debt Asset Ratio",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Debt Capacity Model",
+   "access": "cfi-paid",
+   "tags": [
+    "capital-structure"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Debt Equity Ratio",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Debt Service Coverage Ratio",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Degree of Leverage Analysis",
+   "access": "cfi-paid",
+   "tags": [
+    "capital-structure"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Depreciation-Methods",
+   "access": "cfi-paid",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "Detailed Comps Table Excel Template",
+   "access": "cfi-paid",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Detailed LBO Model Complete Private Equity Leveraged Buyout Analysis",
+   "access": "cfi-paid",
+   "tags": [
+    "lbo",
+    "capital-structure"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "LBO II Common_Preferred",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 126857
+    },
+    {
+     "source": "asimplemodel",
+     "title": "LBO_Simple LBO Scenarios and Data Tables",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 47222
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-long-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 302468
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-short-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 208380
+    },
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "LBO Model Template",
+     "url": "https://exinfm.com/excel%20files/LBO%20Model%20Template.xls",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 369152
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Diluted EPS Formula",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Dilution Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Directional Trading Strategies",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Dividend Coverage and Payout",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Dividend Discount Model",
+   "access": "cfi-paid",
+   "tags": [
+    "ddm"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "ddm2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 23040
+    },
+    {
+     "source": "damodaran",
+     "title": "ddm3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "ddmst",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 14336
+    },
+    {
+     "source": "damodaran",
+     "title": "divginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 236032
+    }
+   ]
+  },
+  {
+   "cfi_title": "Double Declining Balance Depreciation Template",
+   "access": "cfi-login",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "Earnings Per Share",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "EBIT Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "EBIT vs EBITDA",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "EBITDA Multiple",
+   "access": "cfi-login",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "EBITDA Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "EBT Example",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "ECM Deals Committee Memo Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "eCommerce Model",
+   "access": "cfi-paid",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "Economic Order Quantity",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Economic Value Added (EVA) Template",
+   "access": "cfi-login",
+   "tags": [
+    "eva-returns"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "cfroi",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 11776
+    },
+    {
+     "source": "damodaran",
+     "title": "valenh",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 15872
+    },
+    {
+     "source": "exinfm",
+     "title": "EVA Example",
+     "url": "https://exinfm.com/excel%20files/EVA%20Example.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 170496
+    }
+   ]
+  },
+  {
+   "cfi_title": "Effective Annual Interest Rate Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Efficient Frontier and CAL Template",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Energy Industry Comps Template",
+   "access": "cfi-paid",
+   "tags": [
+    "comps",
+    "energy-mining"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "natres",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/natres.xls",
+     "shared_tags": [
+      "energy-mining"
+     ],
+     "size": 19456
+    },
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Enterprise Value to EBITDA",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Enterprise Value vs Equity Value Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Equity Beta and Asset Beta Conversion",
+   "access": "cfi-login",
+   "tags": [
+    "wacc"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "betas",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 82432
+    },
+    {
+     "source": "damodaran",
+     "title": "levbeta",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "damodaran",
+     "title": "ratings",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 48640
+    },
+    {
+     "source": "damodaran",
+     "title": "wacc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 77312
+    },
+    {
+     "source": "damodaran",
+     "title": "wacccalc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 248832
+    },
+    {
+     "source": "exinfm",
+     "title": "betawacc",
+     "url": "https://exinfm.com/excel%20files/betawacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 35840
+    }
+   ]
+  },
+  {
+   "cfi_title": "ETF Allocator Model",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "EV to Revenue Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Excel for Finance Functions",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Excel Fundamentals - Formulas for Finance",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Excel Fundamentals - Formulas for Finance (Summary)",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Excel Fundamentals - Quick Start Guide (Summary)",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Excel Fundamentals - Quick Start Guide Analysis",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Excel shortcuts - Mac",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Excel shortcuts - PC",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Exchange Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "m&a",
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "merger-model",
+     "url": "https://macabacus.com/assets/2023/02/merger-model.xlsx",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 451419
+    },
+    {
+     "source": "damodaran",
+     "title": "synergyvaluation",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "exinfm",
+     "title": "Combination Template",
+     "url": "https://exinfm.com/excel%20files/Combination%20Template.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 845824
+    },
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Expected Return Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "FCFF vs FCFE Reconciliation Template",
+   "access": "cfi-paid",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "FFO Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Financial Analysis Fundamentals Template",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Financial Analysis Glossary",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Financial Institution Dividend Discount Model",
+   "access": "cfi-paid",
+   "tags": [
+    "ddm",
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "ddm2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 23040
+    },
+    {
+     "source": "damodaran",
+     "title": "ddm3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "ddmst",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 14336
+    },
+    {
+     "source": "damodaran",
+     "title": "divginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 236032
+    },
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Financial Modeling Fundamentals Glossary",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Financial Projection Template",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Fixed Asset Turnover Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Fixed Charge Coverage Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Football Field Chart",
+   "access": "cfi-login",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Forecasting Template",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Format a Financial Model with Macabacus Summary",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Format a Financial Model with Macabacus Summary (2)",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Forward Price Earnings (PE) Ratio",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "FP&A 3-Statement Model",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "FP&A Budgeting and Forecasting Model",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "FP&A Monthly Rollforward Template",
+   "access": "cfi-paid",
+   "tags": [
+    "working-capital"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Free Cash Flow (FCF) Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Future Value Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Gantt Chart Template",
+   "access": "cfi-login",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "General Cover Letter Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Geometric Mean Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Giving Feedback",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Goal Seek and Solver",
+   "access": "cfi-paid",
+   "tags": [
+    "sensitivity"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "LBO_Simple LBO Scenarios and Data Tables",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+     "shared_tags": [
+      "sensitivity"
+     ],
+     "size": 47222
+    }
+   ]
+  },
+  {
+   "cfi_title": "Gross Rent Multiplier Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "real-estate"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "reval",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/reval.xls",
+     "shared_tags": [
+      "real-estate"
+     ],
+     "size": 29696
+    }
+   ]
+  },
+  {
+   "cfi_title": "H-Model Template",
+   "access": "cfi-login",
+   "tags": [
+    "ddm"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "ddm2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 23040
+    },
+    {
+     "source": "damodaran",
+     "title": "ddm3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "ddmst",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 14336
+    },
+    {
+     "source": "damodaran",
+     "title": "divginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls",
+     "shared_tags": [
+      "ddm"
+     ],
+     "size": 236032
+    }
+   ]
+  },
+  {
+   "cfi_title": "HELOC Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Hybrid Team Self-Reflection",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Income Statement (P&L) and Profit Margins",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Individual Equity Allocation Model",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Insurance Company Financial Analysis: Allstate",
+   "access": "cfi-paid",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Insurance Company Financial Analysis: Progressive",
+   "access": "cfi-paid",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "InsurTech Pricer Model",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Interest Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Interest Coverage Ratio Template",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Interest Rate Parity (IRP) Calculator",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Intrinsic Value Example",
+   "access": "cfi-login",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "Intro to 3-Statement Modeling Model",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Intro to Leveraged Buyouts",
+   "access": "cfi-paid",
+   "tags": [
+    "lbo",
+    "capital-structure"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "LBO II Common_Preferred",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 126857
+    },
+    {
+     "source": "asimplemodel",
+     "title": "LBO_Simple LBO Scenarios and Data Tables",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 47222
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-long-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 302468
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-short-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 208380
+    },
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "LBO Model Template",
+     "url": "https://exinfm.com/excel%20files/LBO%20Model%20Template.xls",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 369152
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Intro to Mergers & Acquisitions",
+   "access": "cfi-paid",
+   "tags": [
+    "m&a"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "merger-model",
+     "url": "https://macabacus.com/assets/2023/02/merger-model.xlsx",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 451419
+    },
+    {
+     "source": "damodaran",
+     "title": "synergyvaluation",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "exinfm",
+     "title": "Combination Template",
+     "url": "https://exinfm.com/excel%20files/Combination%20Template.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 845824
+    }
+   ]
+  },
+  {
+   "cfi_title": "Introduction to Bank Valuation Examples",
+   "access": "cfi-paid",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Inventory Turnover Calculator",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Investment Banking Manual CFI 2019",
+   "access": "cfi-paid",
+   "tags": [
+    "bank"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "eqexret",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls",
+     "shared_tags": [
+      "bank"
+     ],
+     "size": 45568
+    }
+   ]
+  },
+  {
+   "cfi_title": "Investor Pitch Deck Template",
+   "access": "cfi-paid",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "Journal Entries Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Justified Price to Earnings Ratio",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "LBO Model",
+   "access": "cfi-paid",
+   "tags": [
+    "lbo"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "LBO II Common_Preferred",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 126857
+    },
+    {
+     "source": "asimplemodel",
+     "title": "LBO_Simple LBO Scenarios and Data Tables",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 47222
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-long-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 302468
+    },
+    {
+     "source": "macabacus",
+     "title": "lbo-model-short-form",
+     "url": "https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 208380
+    },
+    {
+     "source": "exinfm",
+     "title": "LBO Model Template",
+     "url": "https://exinfm.com/excel%20files/LBO%20Model%20Template.xls",
+     "shared_tags": [
+      "lbo"
+     ],
+     "size": 369152
+    }
+   ]
+  },
+  {
+   "cfi_title": "Letter of Intent Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Levelized Cost of Energy Template",
+   "access": "cfi-login",
+   "tags": [
+    "energy-mining"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "natres",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/natres.xls",
+     "shared_tags": [
+      "energy-mining"
+     ],
+     "size": 19456
+    }
+   ]
+  },
+  {
+   "cfi_title": "Leverage and Liquidity Ratios",
+   "access": "cfi-paid",
+   "tags": [
+    "capital-structure",
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Leverage Ratios",
+   "access": "cfi-paid",
+   "tags": [
+    "capital-structure",
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Leveraged Finance Example",
+   "access": "cfi-login",
+   "tags": [
+    "capital-structure"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "apv",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/apv.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 132608
+    },
+    {
+     "source": "damodaran",
+     "title": "capstru",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 100960
+    },
+    {
+     "source": "exinfm",
+     "title": "capstruc",
+     "url": "https://exinfm.com/excel%20files/capstruc.xls",
+     "shared_tags": [
+      "capital-structure"
+     ],
+     "size": 39936
+    }
+   ]
+  },
+  {
+   "cfi_title": "Line Cover Letter Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Liquidation Value Template",
+   "access": "cfi-login",
+   "tags": [
+    "restructuring"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "distress",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/distress.xls",
+     "shared_tags": [
+      "restructuring"
+     ],
+     "size": 13824
+    }
+   ]
+  },
+  {
+   "cfi_title": "Loan Payment Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "LTM Revenue Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "LTV CAC Ratio",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios",
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    },
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "M&A Model",
+   "access": "cfi-paid",
+   "tags": [
+    "m&a"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "merger-model",
+     "url": "https://macabacus.com/assets/2023/02/merger-model.xlsx",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 451419
+    },
+    {
+     "source": "damodaran",
+     "title": "synergyvaluation",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "exinfm",
+     "title": "Combination Template",
+     "url": "https://exinfm.com/excel%20files/Combination%20Template.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 845824
+    }
+   ]
+  },
+  {
+   "cfi_title": "Macabacus Quick Start Guide",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Macabacus Quick Start Guide (2)",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Making Effective Business Decisions Template",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Managing Relationships at Work",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Margin of Safety Example",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Marginal Cost Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Market Capitalization Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Market Risk Fundamentals",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Market Risk Premium Template",
+   "access": "cfi-login",
+   "tags": [
+    "wacc"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "betas",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 82432
+    },
+    {
+     "source": "damodaran",
+     "title": "levbeta",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "damodaran",
+     "title": "ratings",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 48640
+    },
+    {
+     "source": "damodaran",
+     "title": "wacc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 77312
+    },
+    {
+     "source": "damodaran",
+     "title": "wacccalc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 248832
+    },
+    {
+     "source": "exinfm",
+     "title": "betawacc",
+     "url": "https://exinfm.com/excel%20files/betawacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 35840
+    }
+   ]
+  },
+  {
+   "cfi_title": "Market to Book Price to Book Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Market Value of Debt Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Markup Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "MAX Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Mining Model",
+   "access": "cfi-paid",
+   "tags": [
+    "energy-mining"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "natres",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/natres.xls",
+     "shared_tags": [
+      "energy-mining"
+     ],
+     "size": 19456
+    }
+   ]
+  },
+  {
+   "cfi_title": "Monthly Cash Flow Model",
+   "access": "cfi-paid",
+   "tags": [
+    "working-capital"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Moving Averages Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Multi-Criteria Analysis Balance Scorecard",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "NDA Confidentiality Agreement Sample",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Net Debt Calulator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Net Debt EBITDA Ratio Template",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Net Identifiable Assets Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Net Present Value Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Net Working Capital Template",
+   "access": "cfi-login",
+   "tags": [
+    "working-capital"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Net Working Capital Template (2)",
+   "access": "cfi-login",
+   "tags": [
+    "working-capital"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Non-directional Trading Strategies",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "NOPAT Template",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Normalizing Income Statements",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "NORMDIST Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "NPV-XNPV Example",
+   "access": "cfi-login",
+   "tags": [
+    "dcf",
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting",
+      "dcf"
+     ],
+     "size": 51200
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    }
+   ]
+  },
+  {
+   "cfi_title": "NVDA Moving Average Algorithmic Trading Model",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Operating Budget Template",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Operating Cash Flow Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Operating Margin Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Operational Modeling",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Option Profit Loss Graph Maker",
+   "access": "cfi-paid",
+   "tags": [
+    "options",
+    "charts"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "warrant",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls",
+     "shared_tags": [
+      "options"
+     ],
+     "size": 26624
+    }
+   ]
+  },
+  {
+   "cfi_title": "Options Strategy Modeler",
+   "access": "cfi-paid",
+   "tags": [
+    "options"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "warrant",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls",
+     "shared_tags": [
+      "options"
+     ],
+     "size": 26624
+    }
+   ]
+  },
+  {
+   "cfi_title": "OR Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Payback Period Template",
+   "access": "cfi-login",
+   "tags": [
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 51200
+    }
+   ]
+  },
+  {
+   "cfi_title": "Percentage Change Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Perpetuity Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Personal Financial Statement",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Pharmaceuticals Industry Comps Template",
+   "access": "cfi-login",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Pitchbook Template",
+   "access": "cfi-paid",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "PPE Schedule",
+   "access": "cfi-login",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "Pre-Money Post-Money Valuation Analysis Template",
+   "access": "cfi-login",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "Present Value of Growth Opportunities (PVGO) Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Price Earnings (P/E) Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Price Earnings Growth (PEG) ratio",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Price Per Square Foot Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "real-estate"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "reval",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/reval.xls",
+     "shared_tags": [
+      "real-estate"
+     ],
+     "size": 29696
+    }
+   ]
+  },
+  {
+   "cfi_title": "Product Costs Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Profit and Loss Statement",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Profitability Index",
+   "access": "cfi-login",
+   "tags": [
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 51200
+    }
+   ]
+  },
+  {
+   "cfi_title": "Proforma Earnings Per Share Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Project Budget Template",
+   "access": "cfi-login",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Purchase Price Allocation & M&A Accounting Examples",
+   "access": "cfi-paid",
+   "tags": [
+    "m&a"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "merger-model",
+     "url": "https://macabacus.com/assets/2023/02/merger-model.xlsx",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 451419
+    },
+    {
+     "source": "damodaran",
+     "title": "synergyvaluation",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "exinfm",
+     "title": "Combination Template",
+     "url": "https://exinfm.com/excel%20files/Combination%20Template.xls",
+     "shared_tags": [
+      "m&a"
+     ],
+     "size": 845824
+    }
+   ]
+  },
+  {
+   "cfi_title": "Put Call Parity Calculator",
+   "access": "cfi-paid",
+   "tags": [
+    "options"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "warrant",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls",
+     "shared_tags": [
+      "options"
+     ],
+     "size": 26624
+    }
+   ]
+  },
+  {
+   "cfi_title": "Quick Ratio Example",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Real Estate Financial Modeling Course",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement",
+    "real-estate"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "damodaran",
+     "title": "reval",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/reval.xls",
+     "shared_tags": [
+      "real-estate"
+     ],
+     "size": 29696
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "REIT Financial Model Template",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement",
+    "real-estate"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "damodaran",
+     "title": "reval",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/reval.xls",
+     "shared_tags": [
+      "real-estate"
+     ],
+     "size": 29696
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Renewable Energy Solar Financial Model",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement",
+    "energy-mining"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "damodaran",
+     "title": "natres",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/natres.xls",
+     "shared_tags": [
+      "energy-mining"
+     ],
+     "size": 19456
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Research and Development Capitalization",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Restructuring Model Template",
+   "access": "cfi-paid",
+   "tags": [
+    "restructuring"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "distress",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/distress.xls",
+     "shared_tags": [
+      "restructuring"
+     ],
+     "size": 13824
+    }
+   ]
+  },
+  {
+   "cfi_title": "Retail Industry Comps Template",
+   "access": "cfi-login",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Retention Ratio Template",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Return on Assets Formula",
+   "access": "cfi-paid",
+   "tags": [
+    "eva-returns"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "cfroi",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 11776
+    },
+    {
+     "source": "damodaran",
+     "title": "valenh",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 15872
+    },
+    {
+     "source": "exinfm",
+     "title": "EVA Example",
+     "url": "https://exinfm.com/excel%20files/EVA%20Example.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 170496
+    }
+   ]
+  },
+  {
+   "cfi_title": "Return on Equity",
+   "access": "cfi-paid",
+   "tags": [
+    "eva-returns"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "cfroi",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 11776
+    },
+    {
+     "source": "damodaran",
+     "title": "valenh",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 15872
+    },
+    {
+     "source": "exinfm",
+     "title": "EVA Example",
+     "url": "https://exinfm.com/excel%20files/EVA%20Example.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 170496
+    }
+   ]
+  },
+  {
+   "cfi_title": "Return on Investment (ROI)",
+   "access": "cfi-login",
+   "tags": [
+    "eva-returns"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "cfroi",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 11776
+    },
+    {
+     "source": "damodaran",
+     "title": "valenh",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 15872
+    },
+    {
+     "source": "exinfm",
+     "title": "EVA Example",
+     "url": "https://exinfm.com/excel%20files/EVA%20Example.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 170496
+    }
+   ]
+  },
+  {
+   "cfi_title": "Revenue Run Rate",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Revenue Variance Analysis",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Robo-Advisor Model",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "ROIC Template",
+   "access": "cfi-login",
+   "tags": [
+    "eva-returns"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "cfroi",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 11776
+    },
+    {
+     "source": "damodaran",
+     "title": "valenh",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 15872
+    },
+    {
+     "source": "exinfm",
+     "title": "EVA Example",
+     "url": "https://exinfm.com/excel%20files/EVA%20Example.xls",
+     "shared_tags": [
+      "eva-returns"
+     ],
+     "size": 170496
+    }
+   ]
+  },
+  {
+   "cfi_title": "ROUNDUP Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Rule of 40 Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "SaaS Model",
+   "access": "cfi-paid",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "Sales Tax Decalculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Scenario & Sensitivity Analysis Model",
+   "access": "cfi-paid",
+   "tags": [
+    "sensitivity"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "LBO_Simple LBO Scenarios and Data Tables",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+     "shared_tags": [
+      "sensitivity"
+     ],
+     "size": 47222
+    }
+   ]
+  },
+  {
+   "cfi_title": "SEARCH Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Sensitivity Analysis Table",
+   "access": "cfi-login",
+   "tags": [
+    "sensitivity"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "LBO_Simple LBO Scenarios and Data Tables",
+     "url": "https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx",
+     "shared_tags": [
+      "sensitivity"
+     ],
+     "size": 47222
+    }
+   ]
+  },
+  {
+   "cfi_title": "Sharpe Ratio Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Sheet Name Formula Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Simplified Robo-Advisor Model",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "SME Lending - Owner's Net Worth Adjustment Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Startup Investor Pitch Deck Template",
+   "access": "cfi-paid",
+   "tags": [
+    "startup"
+   ],
+   "alternatives": [
+    {
+     "source": "macabacus",
+     "title": "vc-returns",
+     "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+     "shared_tags": [
+      "startup"
+     ],
+     "size": 41995
+    }
+   ]
+  },
+  {
+   "cfi_title": "Straight Line Depreciation",
+   "access": "cfi-login",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "Straight Line Depreciation Template",
+   "access": "cfi-login",
+   "tags": [
+    "depreciation"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "depreciation"
+     ],
+     "size": 26470
+    }
+   ]
+  },
+  {
+   "cfi_title": "SUBTOTAL Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Target Costing Example",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Tax-Shield Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Team Development Diagnostic",
+   "access": "cfi-paid",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Term Sheet Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "TMT Financial Model Template",
+   "access": "cfi-paid",
+   "tags": [
+    "3-statement"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "IFS_PPE Schedule",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 26470
+    },
+    {
+     "source": "asimplemodel",
+     "title": "IFS_Simple Three Statement Model",
+     "url": "https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 24324
+    },
+    {
+     "source": "exinfm",
+     "title": "Box IPO Financial Model",
+     "url": "https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 229376
+    },
+    {
+     "source": "exinfm",
+     "title": "Financial Projections Model v6.8.4",
+     "url": "https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 805888
+    },
+    {
+     "source": "exinfm",
+     "title": "statmnts",
+     "url": "https://exinfm.com/excel%20files/statmnts.xls",
+     "shared_tags": [
+      "3-statement"
+     ],
+     "size": 69632
+    }
+   ]
+  },
+  {
+   "cfi_title": "Trading Comps",
+   "access": "cfi-paid",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Transaction Comps",
+   "access": "cfi-paid",
+   "tags": [
+    "comps"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Comparable Companies (NON-FDS)",
+     "url": "https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls",
+     "shared_tags": [
+      "comps"
+     ],
+     "size": 1378816
+    }
+   ]
+  },
+  {
+   "cfi_title": "Treasury Stock Method Calculator",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Trend Analysis",
+   "access": "cfi-paid",
+   "tags": [
+    "ratios"
+   ],
+   "alternatives": [
+    {
+     "source": "exinfm",
+     "title": "Ratio_Tree",
+     "url": "https://exinfm.com/excel%20files/Ratio_Tree.xls",
+     "shared_tags": [
+      "ratios"
+     ],
+     "size": 46592
+    }
+   ]
+  },
+  {
+   "cfi_title": "Unlevered Cost of Capital Template",
+   "access": "cfi-login",
+   "tags": [
+    "wacc"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "betas",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 82432
+    },
+    {
+     "source": "damodaran",
+     "title": "levbeta",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "damodaran",
+     "title": "ratings",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 48640
+    },
+    {
+     "source": "damodaran",
+     "title": "wacc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 77312
+    },
+    {
+     "source": "damodaran",
+     "title": "wacccalc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 248832
+    },
+    {
+     "source": "exinfm",
+     "title": "betawacc",
+     "url": "https://exinfm.com/excel%20files/betawacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 35840
+    }
+   ]
+  },
+  {
+   "cfi_title": "Unlevered Free Cash Flow Template",
+   "access": "cfi-login",
+   "tags": [
+    "dcf"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "Valuation Model Comps Precedents Football Field",
+   "access": "cfi-login",
+   "tags": [
+    "dcf",
+    "comps",
+    "charts"
+   ],
+   "alternatives": [
+    {
+     "source": "asimplemodel",
+     "title": "DCF_A Basic Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 12888
+    },
+    {
+     "source": "asimplemodel",
+     "title": "DCF_Discounted Cash Flow Model",
+     "url": "https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 57599
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 28160
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfe3st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 43008
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfeginzu",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfeginzu.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 240128
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfest",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfest.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 36864
+    },
+    {
+     "source": "damodaran",
+     "title": "fcfevsddm",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcfevsddm.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 35328
+    },
+    {
+     "source": "damodaran",
+     "title": "fcff2st",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/fcff2st.xls",
+     "shared_tags": [
+      "dcf"
+     ],
+     "size": 49152
+    }
+   ]
+  },
+  {
+   "cfi_title": "Variance Analysis",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Variance Formula",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Variance Waterfall Chart",
+   "access": "cfi-login",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Waterfall Chart Template",
+   "access": "cfi-login",
+   "tags": [
+    "charts"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Weighted Average Cost of Capital (WACC) Calculator",
+   "access": "cfi-login",
+   "tags": [
+    "wacc"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "betas",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 82432
+    },
+    {
+     "source": "damodaran",
+     "title": "levbeta",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 24064
+    },
+    {
+     "source": "damodaran",
+     "title": "ratings",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 48640
+    },
+    {
+     "source": "damodaran",
+     "title": "wacc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 77312
+    },
+    {
+     "source": "damodaran",
+     "title": "wacccalc",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 248832
+    },
+    {
+     "source": "exinfm",
+     "title": "betawacc",
+     "url": "https://exinfm.com/excel%20files/betawacc.xls",
+     "shared_tags": [
+      "wacc"
+     ],
+     "size": 35840
+    }
+   ]
+  },
+  {
+   "cfi_title": "Weighted Average Shares Outstanding Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Working Capital Cycle",
+   "access": "cfi-paid",
+   "tags": [
+    "working-capital"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Working Capital Cycle Template",
+   "access": "cfi-login",
+   "tags": [
+    "working-capital"
+   ],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "XIRR vs IRR Template",
+   "access": "cfi-login",
+   "tags": [
+    "capital-budgeting"
+   ],
+   "alternatives": [
+    {
+     "source": "damodaran",
+     "title": "capbudg",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 30720
+    },
+    {
+     "source": "exinfm",
+     "title": "npv_irr",
+     "url": "https://exinfm.com/excel%20files/npv_irr.xls",
+     "shared_tags": [
+      "capital-budgeting"
+     ],
+     "size": 51200
+    }
+   ]
+  },
+  {
+   "cfi_title": "Year over Year (YoY) Analysis",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  },
+  {
+   "cfi_title": "Year to Date YTD Template",
+   "access": "cfi-login",
+   "tags": [],
+   "alternatives": []
+  }
+ ],
+ "summary": {
+  "cfi_titles": 323,
+  "with_alternatives": 166,
+  "paid_with_alternatives": 85,
+  "paid_total": 127
+ }
+}

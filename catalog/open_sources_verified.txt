@@ -80,3 +80,9 @@ exinfm|cash_flow_model.xls|https://exinfm.com/excel%20files/cash_flow_model.xls|
 exinfm|EVA Example.xls|https://exinfm.com/excel%20files/EVA%20Example.xls|200|170496|application/vnd.ms-excel
 exinfm|Financial_model_1.xls|https://exinfm.com/excel%20files/Financial_model_1.xls|200|688128|application/vnd.ms-excel
 exinfm|capstruc.xls|https://exinfm.com/excel%20files/capstruc.xls|200|39936|application/vnd.ms-excel
+macabacus|lbo-model-long-form.xlsx|https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx|200|302468|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+macabacus|lbo-model-short-form.xlsx|https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx|200|208380|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+macabacus|merger-model.xlsx|https://macabacus.com/assets/2023/02/merger-model.xlsx|200|451419|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+macabacus|operating-model.xlsx|https://macabacus.com/assets/2023/02/operating-model.xlsx|200|101267|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+macabacus|ipo-model.xlsx|https://macabacus.com/assets/2023/02/ipo-model.xlsx|200|69491|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+macabacus|vc-returns.xlsx|https://macabacus.com/assets/2023/02/vc-returns.xlsx|200|41995|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet

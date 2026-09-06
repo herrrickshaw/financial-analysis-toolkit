@@ -2,9 +2,9 @@
 
 Sources
 -------
-- cfi           : CFI member dashboard (api.corporatefinanceinstitute.com/api/files/<uuid>) -- needs a logged-in
-                  session; pass the request header via --auth / env FINMODEL_CFI_AUTH (e.g. "Cookie: ..." or
-                  "Authorization: Bearer ...").  Items marked cfi-paid need a paid plan and are never fetched.
+- cfi           : CFI member dashboard (api.corporatefinanceinstitute.com/api/files/<uuid>) -- the SPA sends a
+                  Bearer token (not a cookie); pass it via --auth / env FINMODEL_CFI_AUTH as
+                  "Authorization: Bearer <token>" copied from a logged-in request in DevTools.  Items marked cfi-paid need a paid plan and are never fetched.
 - damodaran     : NYU Stern spreadsheets (public, no login)
 - asimplemodel  : A Simple Model free downloads (public direct links)
 - exinfm        : exinfm.com free spreadsheets (public)
@@ -32,6 +32,8 @@ PUBLIC_SOURCE_META = {
     "damodaran": {"publisher": "Aswath Damodaran, NYU Stern", "home": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm", "access": "public"},
     "asimplemodel": {"publisher": "A Simple Model", "home": "https://www.asimplemodel.com/resources/quick-references/free-downloads", "access": "public"},
     "exinfm": {"publisher": "Excellence in Financial Management (exinfm.com)", "home": "https://exinfm.com/free_spreadsheets.html", "access": "public"},
+    "macabacus": {"publisher": "Macabacus (Excel add-in vendor; free demo templates)", "home": "https://macabacus.com/category/excel/templates", "access": "public"},
+    "biws": {"publisher": "Breaking Into Wall Street / Mergers & Inquisitions knowledge base", "home": "https://breakingintowallstreet.com/kb/", "access": "public"},
     "cfi": {"publisher": "Corporate Finance Institute", "home": "https://corporatefinanceinstitute.com/resources/templates/", "access": "login"},
 }
 

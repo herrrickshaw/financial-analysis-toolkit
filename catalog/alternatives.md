@@ -1,0 +1,693 @@
+# Public alternatives for CFI template titles
+
+85/127 paid-only CFI titles and 166/323 titles overall have at least one public match.
+Matching is by model-type tag; treat it as a shortlist.
+
+## Paid-only CFI titles (Unlock)
+
+- **3-Statement Compact (Complete)** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **3-Statement Model (Complete)** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Accounting for Business Combinations and Other Equity Investments** `m&a`
+  - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
+  - damodaran: [synergyvaluation](https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls) (m&a)
+  - exinfm: [Combination Template](https://exinfm.com/excel%20files/Combination%20Template.xls) (m&a)
+- **Accounting for Diluted Shares & Earnings per Share** `-` — no public match
+- **Accounting for Inventory** `-` — no public match
+- **Accounting for Leases** `-` — no public match
+- **Accounts Payable Turnover Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Accounts Receivable Turnover Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Active Listening Diagnostic** `-` — no public match
+- **Advanced All in One Financial Model Template** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **AMZN Financial Model** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Appraisal Checklist** `-` — no public match
+- **Asset Turnover Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Audit and Balance a 3-Statement Model** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Bank and FIG Financial Model Template** `3-statement bank`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+- **Bank Financial Analysis** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Bank of America and Barclays Ratios** `ratios bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Bank Ratio Calculator** `ratios bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Benchmarking Analysis** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Business Valuation Exercises (Complete)** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **Business Valuation Model (Complete)** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **Calculating Net Interest Income** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Calculating Risk Weighted Assets** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Cap Rate and NOI** `real-estate`
+  - damodaran: [reval](https://pages.stern.nyu.edu/~adamodar/pc/reval.xls) (real-estate)
+- **CFI Advanced Excel Formulas & Functions** `-` — no public match
+- **CFI Excel eBook** `-` — no public match
+- **CFI Investment Banking Pitch Book** `bank startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Coaching for Workplace Performance Assessment** `-` — no public match
+- **Cohort Analysis** `-` — no public match
+- **Collateralized Mortgage Obligations (CMO) Models** `-` — no public match
+- **Communication Styles Diagnostic** `-` — no public match
+- **Compact Comps (Complete)** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Compact LBO Model (Complete)** `lbo`
+  - asimplemodel: [LBO II Common_Preferred](https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx) (lbo)
+  - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (lbo)
+  - macabacus: [lbo-model-long-form](https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx) (lbo)
+  - macabacus: [lbo-model-short-form](https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx) (lbo)
+- **Comparable Valuation Fundamentals** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Confidential Information Memorandum Template** `-` — no public match
+- **Conflict Styles Questionnaire** `-` — no public match
+- **Consolidation model** `m&a`
+  - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
+  - damodaran: [synergyvaluation](https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls) (m&a)
+  - exinfm: [Combination Template](https://exinfm.com/excel%20files/Combination%20Template.xls) (m&a)
+- **Corporate Finance Fundamentals: Capital Financing** `-` — no public match
+- **Corporate Finance Fundamentals: Capital Investment** `capital-budgeting`
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting)
+- **Corporate Finance Fundamentals: Capital Return** `-` — no public match
+- **Current Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Dashboard and Data Visualization Template** `charts` — no public match
+- **Dashboard Template 2** `charts` — no public match
+- **Days Inventory Outstanding Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Days Sales Outstanding** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **DCF Model** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **DCF Valuation Compact (Complete)** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **DCF Valuation Model (Complete)** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **Debt Capacity Model** `capital-structure`
+  - damodaran: [apv](https://pages.stern.nyu.edu/~adamodar/pc/apv.xls) (capital-structure)
+  - damodaran: [capstru](https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx) (capital-structure)
+  - exinfm: [capstruc](https://exinfm.com/excel%20files/capstruc.xls) (capital-structure)
+- **Debt Equity Ratio** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Degree of Leverage Analysis** `capital-structure`
+  - damodaran: [apv](https://pages.stern.nyu.edu/~adamodar/pc/apv.xls) (capital-structure)
+  - damodaran: [capstru](https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx) (capital-structure)
+  - exinfm: [capstruc](https://exinfm.com/excel%20files/capstruc.xls) (capital-structure)
+- **Depreciation-Methods** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **Detailed Comps Table Excel Template** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Detailed LBO Model Complete Private Equity Leveraged Buyout Analysis** `lbo capital-structure`
+  - asimplemodel: [LBO II Common_Preferred](https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx) (lbo)
+  - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (lbo)
+  - macabacus: [lbo-model-long-form](https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx) (lbo)
+  - macabacus: [lbo-model-short-form](https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx) (lbo)
+- **Directional Trading Strategies** `-` — no public match
+- **Dividend Discount Model** `ddm`
+  - damodaran: [ddm2st](https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls) (ddm)
+  - damodaran: [ddm3st](https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls) (ddm)
+  - damodaran: [ddmst](https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls) (ddm)
+  - damodaran: [divginzu](https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls) (ddm)
+- **EBT Example** `-` — no public match
+- **eCommerce Model** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Efficient Frontier and CAL Template** `-` — no public match
+- **Energy Industry Comps Template** `comps energy-mining`
+  - damodaran: [natres](https://pages.stern.nyu.edu/~adamodar/pc/natres.xls) (energy-mining)
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **ETF Allocator Model** `-` — no public match
+- **Excel for Finance Functions** `-` — no public match
+- **FCFF vs FCFE Reconciliation Template** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **Financial Analysis Fundamentals Template** `-` — no public match
+- **Financial Institution Dividend Discount Model** `ddm bank`
+  - damodaran: [ddm2st](https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls) (ddm)
+  - damodaran: [ddm3st](https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls) (ddm)
+  - damodaran: [ddmst](https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls) (ddm)
+  - damodaran: [divginzu](https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls) (ddm)
+- **Financial Projection Template** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Forecasting Template** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **FP&A 3-Statement Model** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **FP&A Budgeting and Forecasting Model** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **FP&A Monthly Rollforward Template** `working-capital` — no public match
+- **Giving Feedback** `-` — no public match
+- **Goal Seek and Solver** `sensitivity`
+  - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (sensitivity)
+- **Hybrid Team Self-Reflection** `-` — no public match
+- **Individual Equity Allocation Model** `-` — no public match
+- **Insurance Company Financial Analysis: Allstate** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Insurance Company Financial Analysis: Progressive** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **InsurTech Pricer Model** `-` — no public match
+- **Interest Coverage Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Interest Rate Parity (IRP) Calculator** `-` — no public match
+- **Intro to 3-Statement Modeling Model** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Intro to Leveraged Buyouts** `lbo capital-structure`
+  - asimplemodel: [LBO II Common_Preferred](https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx) (lbo)
+  - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (lbo)
+  - macabacus: [lbo-model-long-form](https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx) (lbo)
+  - macabacus: [lbo-model-short-form](https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx) (lbo)
+- **Intro to Mergers & Acquisitions** `m&a`
+  - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
+  - damodaran: [synergyvaluation](https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls) (m&a)
+  - exinfm: [Combination Template](https://exinfm.com/excel%20files/Combination%20Template.xls) (m&a)
+- **Introduction to Bank Valuation Examples** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Inventory Turnover Calculator** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Investment Banking Manual CFI 2019** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Investor Pitch Deck Template** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **LBO Model** `lbo`
+  - asimplemodel: [LBO II Common_Preferred](https://portal.asimplemodel.com/assets/files/LBO%20II%20Common_Preferred.xlsx) (lbo)
+  - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (lbo)
+  - macabacus: [lbo-model-long-form](https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx) (lbo)
+  - macabacus: [lbo-model-short-form](https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx) (lbo)
+- **Leverage and Liquidity Ratios** `capital-structure ratios`
+  - damodaran: [apv](https://pages.stern.nyu.edu/~adamodar/pc/apv.xls) (capital-structure)
+  - damodaran: [capstru](https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx) (capital-structure)
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+  - exinfm: [capstruc](https://exinfm.com/excel%20files/capstruc.xls) (capital-structure)
+- **Leverage Ratios** `capital-structure ratios`
+  - damodaran: [apv](https://pages.stern.nyu.edu/~adamodar/pc/apv.xls) (capital-structure)
+  - damodaran: [capstru](https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx) (capital-structure)
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+  - exinfm: [capstruc](https://exinfm.com/excel%20files/capstruc.xls) (capital-structure)
+- **LTV CAC Ratio** `ratios startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **M&A Model** `m&a`
+  - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
+  - damodaran: [synergyvaluation](https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls) (m&a)
+  - exinfm: [Combination Template](https://exinfm.com/excel%20files/Combination%20Template.xls) (m&a)
+- **Making Effective Business Decisions Template** `-` — no public match
+- **Managing Relationships at Work** `-` — no public match
+- **Market Risk Fundamentals** `-` — no public match
+- **Mining Model** `energy-mining`
+  - damodaran: [natres](https://pages.stern.nyu.edu/~adamodar/pc/natres.xls) (energy-mining)
+- **Monthly Cash Flow Model** `working-capital` — no public match
+- **NDA Confidentiality Agreement Sample** `-` — no public match
+- **Net Debt EBITDA Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Non-directional Trading Strategies** `-` — no public match
+- **NOPAT Template** `-` — no public match
+- **Normalizing Income Statements** `-` — no public match
+- **NVDA Moving Average Algorithmic Trading Model** `-` — no public match
+- **Operating Budget Template** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Operational Modeling** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Option Profit Loss Graph Maker** `options charts`
+  - damodaran: [warrant](https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls) (options)
+- **Options Strategy Modeler** `options`
+  - damodaran: [warrant](https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls) (options)
+- **Pitchbook Template** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Purchase Price Allocation & M&A Accounting Examples** `m&a`
+  - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
+  - damodaran: [synergyvaluation](https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls) (m&a)
+  - exinfm: [Combination Template](https://exinfm.com/excel%20files/Combination%20Template.xls) (m&a)
+- **Put Call Parity Calculator** `options`
+  - damodaran: [warrant](https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls) (options)
+- **Quick Ratio Example** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Real Estate Financial Modeling Course** `3-statement real-estate`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - damodaran: [reval](https://pages.stern.nyu.edu/~adamodar/pc/reval.xls) (real-estate)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+- **REIT Financial Model Template** `3-statement real-estate`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - damodaran: [reval](https://pages.stern.nyu.edu/~adamodar/pc/reval.xls) (real-estate)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+- **Renewable Energy Solar Financial Model** `3-statement energy-mining`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - damodaran: [natres](https://pages.stern.nyu.edu/~adamodar/pc/natres.xls) (energy-mining)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+- **Restructuring Model Template** `restructuring`
+  - damodaran: [distress](https://pages.stern.nyu.edu/~adamodar/pc/distress.xls) (restructuring)
+- **Return on Assets Formula** `eva-returns`
+  - damodaran: [cfroi](https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls) (eva-returns)
+  - damodaran: [valenh](https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls) (eva-returns)
+  - exinfm: [EVA Example](https://exinfm.com/excel%20files/EVA%20Example.xls) (eva-returns)
+- **Return on Equity** `eva-returns`
+  - damodaran: [cfroi](https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls) (eva-returns)
+  - damodaran: [valenh](https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls) (eva-returns)
+  - exinfm: [EVA Example](https://exinfm.com/excel%20files/EVA%20Example.xls) (eva-returns)
+- **Robo-Advisor Model** `-` — no public match
+- **SaaS Model** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Scenario & Sensitivity Analysis Model** `sensitivity`
+  - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (sensitivity)
+- **Simplified Robo-Advisor Model** `-` — no public match
+- **Startup Investor Pitch Deck Template** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Team Development Diagnostic** `-` — no public match
+- **TMT Financial Model Template** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Trading Comps** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Transaction Comps** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Trend Analysis** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Working Capital Cycle** `working-capital` — no public match
+
+## Free-tier CFI titles (Download)
+
+- **Accounting Fact Sheet** `-` — no public match
+- **Accounts Receivable Aging Report Template** `-` — no public match
+- **Accumulated Depreciation Template** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **Activity Based Costing Template** `-` — no public match
+- **Additional Paid-in Capital Template** `-` — no public match
+- **Adjusted EBITDA** `-` — no public match
+- **Adjusted Present Value** `capital-structure`
+  - damodaran: [apv](https://pages.stern.nyu.edu/~adamodar/pc/apv.xls) (capital-structure)
+  - damodaran: [capstru](https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx) (capital-structure)
+  - exinfm: [capstruc](https://exinfm.com/excel%20files/capstruc.xls) (capital-structure)
+- **Alpha Calculator** `-` — no public match
+- **Amortization Schedule Template** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **Annual Income Calculator** `-` — no public match
+- **Audit a Financial Model with Macabacus** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Audit a Financial Model with Macabacus (2)** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **AutoSum Example** `-` — no public match
+- **Balance-Sheet-Current-Assets-Template** `-` — no public match
+- **Balance-Sheet-Current-Liabilities-Template** `-` — no public match
+- **Balance-Sheet-Template** `-` — no public match
+- **Bank Reconciliation Statement** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Beneish M-Score Template** `-` — no public match
+- **Beta Calculator** `wacc`
+  - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
+  - damodaran: [levbeta](https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls) (wacc)
+  - damodaran: [ratings](https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls) (wacc)
+  - damodaran: [wacc](https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls) (wacc)
+- **Black Scholes Calculator** `options`
+  - damodaran: [warrant](https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls) (options)
+- **Bullet Chart Template** `charts` — no public match
+- **Burn Rate Template** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Business Letter Format Template** `-` — no public match
+- **BV vs MV of Equity Template** `-` — no public match
+- **CAGR Calculator** `-` — no public match
+- **CapEx Formula** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **Capital Adequacy Ratio (CAR) Calculator** `ratios bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Capital Asset Pricing Model (CAPM) Formula** `wacc`
+  - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
+  - damodaran: [levbeta](https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls) (wacc)
+  - damodaran: [ratings](https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls) (wacc)
+  - damodaran: [wacc](https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls) (wacc)
+- **Capital Gains Yield Calculator** `-` — no public match
+- **Capital Intensity Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Capital Investment Model** `capital-budgeting`
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting)
+- **Capital Investment Template** `capital-budgeting`
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting)
+- **Capitalization Table Template** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Cash Budget Template** `3-statement working-capital`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Cash Conversion Ratio Template** `ratios working-capital`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Cash EPS** `-` — no public match
+- **Cash Flow Reconciliation** `-` — no public match
+- **Cash Flow Statement** `-` — no public match
+- **Cash Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Cash to Accrual (Complete)** `-` — no public match
+- **CFI Accounting eBook** `-` — no public match
+- **CFI Essential Guide to Breaking into FP&A** `-` — no public match
+- **CFI Financial Analysis Glossary** `-` — no public match
+- **CFI Financial Modeling Guidelines** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **CFI Financial Ratios Definitive Guide** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **CFI Investment Banking Cover Letter Template** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **CFI Investment Banking Resume Template** `bank`
+  - damodaran: [eqexret](https://pages.stern.nyu.edu/~adamodar/pc/eqexret.xls) (bank)
+- **Charts and Graphs Template** `charts` — no public match
+- **Clean Cover Letter Template** `-` — no public match
+- **Clean Resignation Letter Template** `-` — no public match
+- **Common Size Analysis** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Comparable Company Analysis** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Competitive Forces Model** `-` — no public match
+- **Compound Monthly Growth Rate (CMGR)** `-` — no public match
+- **Contribution Margin Ratio** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Cost Behavior Analysis** `-` — no public match
+- **Cost of Debt Template** `wacc`
+  - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
+  - damodaran: [levbeta](https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls) (wacc)
+  - damodaran: [ratings](https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls) (wacc)
+  - damodaran: [wacc](https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls) (wacc)
+- **Cost of Goods Manufactured** `-` — no public match
+- **Cost of Goods Sold** `-` — no public match
+- **Cost of Preferred Stock Calculator** `-` — no public match
+- **Cost Volume Profit Analysis Template** `-` — no public match
+- **COUNTIFS Template** `-` — no public match
+- **Coupon Rate** `-` — no public match
+- **COVARIANCE.P Template** `-` — no public match
+- **Creative Cover Letter** `-` — no public match
+- **Crossover Rate** `capital-budgeting`
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting)
+- **CUMIPMT Template** `-` — no public match
+- **Debt Asset Ratio** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Debt Service Coverage Ratio** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Diluted EPS Formula** `-` — no public match
+- **Dilution Example** `-` — no public match
+- **Dividend Coverage and Payout** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Double Declining Balance Depreciation Template** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **Earnings Per Share** `-` — no public match
+- **EBIT Example** `-` — no public match
+- **EBIT vs EBITDA** `-` — no public match
+- **EBITDA Multiple** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **EBITDA Template** `-` — no public match
+- **ECM Deals Committee Memo Template** `-` — no public match
+- **Economic Order Quantity** `-` — no public match
+- **Economic Value Added (EVA) Template** `eva-returns`
+  - damodaran: [cfroi](https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls) (eva-returns)
+  - damodaran: [valenh](https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls) (eva-returns)
+  - exinfm: [EVA Example](https://exinfm.com/excel%20files/EVA%20Example.xls) (eva-returns)
+- **Effective Annual Interest Rate Calculator** `-` — no public match
+- **Enterprise Value to EBITDA** `-` — no public match
+- **Enterprise Value vs Equity Value Calculator** `-` — no public match
+- **Equity Beta and Asset Beta Conversion** `wacc`
+  - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
+  - damodaran: [levbeta](https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls) (wacc)
+  - damodaran: [ratings](https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls) (wacc)
+  - damodaran: [wacc](https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls) (wacc)
+- **EV to Revenue Calculator** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Excel Fundamentals - Formulas for Finance** `-` — no public match
+- **Excel Fundamentals - Formulas for Finance (Summary)** `-` — no public match
+- **Excel Fundamentals - Quick Start Guide (Summary)** `-` — no public match
+- **Excel Fundamentals - Quick Start Guide Analysis** `-` — no public match
+- **Excel shortcuts - Mac** `-` — no public match
+- **Excel shortcuts - PC** `-` — no public match
+- **Exchange Ratio Template** `m&a ratios`
+  - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
+  - damodaran: [synergyvaluation](https://pages.stern.nyu.edu/~adamodar/pc/synergyvaluation.xls) (m&a)
+  - exinfm: [Combination Template](https://exinfm.com/excel%20files/Combination%20Template.xls) (m&a)
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Expected Return Example** `-` — no public match
+- **FFO Example** `-` — no public match
+- **Financial Analysis Glossary** `-` — no public match
+- **Financial Modeling Fundamentals Glossary** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Fixed Asset Turnover Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Fixed Charge Coverage Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Football Field Chart** `charts` — no public match
+- **Format a Financial Model with Macabacus Summary** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Format a Financial Model with Macabacus Summary (2)** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Forward Price Earnings (PE) Ratio** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Free Cash Flow (FCF) Example** `-` — no public match
+- **Future Value Calculator** `-` — no public match
+- **Gantt Chart Template** `charts` — no public match
+- **General Cover Letter Template** `-` — no public match
+- **Geometric Mean Example** `-` — no public match
+- **Gross Rent Multiplier Calculator** `real-estate`
+  - damodaran: [reval](https://pages.stern.nyu.edu/~adamodar/pc/reval.xls) (real-estate)
+- **H-Model Template** `ddm`
+  - damodaran: [ddm2st](https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls) (ddm)
+  - damodaran: [ddm3st](https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls) (ddm)
+  - damodaran: [ddmst](https://pages.stern.nyu.edu/~adamodar/pc/ddmst.xls) (ddm)
+  - damodaran: [divginzu](https://pages.stern.nyu.edu/~adamodar/pc/divginzu.xls) (ddm)
+- **HELOC Calculator** `-` — no public match
+- **Income Statement (P&L) and Profit Margins** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Interest Calculator** `-` — no public match
+- **Intrinsic Value Example** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **Journal Entries Template** `-` — no public match
+- **Justified Price to Earnings Ratio** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Letter of Intent Template** `-` — no public match
+- **Levelized Cost of Energy Template** `energy-mining`
+  - damodaran: [natres](https://pages.stern.nyu.edu/~adamodar/pc/natres.xls) (energy-mining)
+- **Leveraged Finance Example** `capital-structure`
+  - damodaran: [apv](https://pages.stern.nyu.edu/~adamodar/pc/apv.xls) (capital-structure)
+  - damodaran: [capstru](https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx) (capital-structure)
+  - exinfm: [capstruc](https://exinfm.com/excel%20files/capstruc.xls) (capital-structure)
+- **Line Cover Letter Template** `-` — no public match
+- **Liquidation Value Template** `restructuring`
+  - damodaran: [distress](https://pages.stern.nyu.edu/~adamodar/pc/distress.xls) (restructuring)
+- **Loan Payment Calculator** `-` — no public match
+- **LTM Revenue Example** `-` — no public match
+- **Macabacus Quick Start Guide** `-` — no public match
+- **Macabacus Quick Start Guide (2)** `-` — no public match
+- **Margin of Safety Example** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Marginal Cost Calculator** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Market Capitalization Template** `-` — no public match
+- **Market Risk Premium Template** `wacc`
+  - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
+  - damodaran: [levbeta](https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls) (wacc)
+  - damodaran: [ratings](https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls) (wacc)
+  - damodaran: [wacc](https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls) (wacc)
+- **Market to Book Price to Book Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Market Value of Debt Template** `-` — no public match
+- **Markup Calculator** `-` — no public match
+- **MAX Template** `-` — no public match
+- **Moving Averages Template** `-` — no public match
+- **Multi-Criteria Analysis Balance Scorecard** `-` — no public match
+- **Net Debt Calulator** `-` — no public match
+- **Net Identifiable Assets Template** `-` — no public match
+- **Net Present Value Template** `-` — no public match
+- **Net Working Capital Template** `working-capital` — no public match
+- **Net Working Capital Template (2)** `working-capital` — no public match
+- **NORMDIST Template** `-` — no public match
+- **NPV-XNPV Example** `dcf capital-budgeting`
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting, dcf)
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+- **Operating Cash Flow Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Operating Margin Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **OR Template** `-` — no public match
+- **Payback Period Template** `capital-budgeting`
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting)
+- **Percentage Change Calculator** `-` — no public match
+- **Perpetuity Calculator** `-` — no public match
+- **Personal Financial Statement** `-` — no public match
+- **Pharmaceuticals Industry Comps Template** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **PPE Schedule** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **Pre-Money Post-Money Valuation Analysis Template** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Present Value of Growth Opportunities (PVGO) Template** `-` — no public match
+- **Price Earnings (P/E) Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Price Earnings Growth (PEG) ratio** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Price Per Square Foot Calculator** `real-estate`
+  - damodaran: [reval](https://pages.stern.nyu.edu/~adamodar/pc/reval.xls) (real-estate)
+- **Product Costs Template** `-` — no public match
+- **Profit and Loss Statement** `-` — no public match
+- **Profitability Index** `capital-budgeting`
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting)
+- **Proforma Earnings Per Share Template** `-` — no public match
+- **Project Budget Template** `3-statement`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
+  - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
+  - exinfm: [Box IPO Financial Model](https://exinfm.com/excel%20files/Box%20IPO%20Financial%20Model.xls) (3-statement)
+  - exinfm: [Financial Projections Model v6.8.4](https://exinfm.com/excel%20files/Financial%20Projections%20Model%20v6.8.4.xls) (3-statement)
+- **Research and Development Capitalization** `-` — no public match
+- **Retail Industry Comps Template** `comps`
+  - exinfm: [Comparable Companies (NON-FDS)](https://exinfm.com/excel%20files/Comparable%20Companies%20(NON-FDS).xls) (comps)
+- **Retention Ratio Template** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Return on Investment (ROI)** `eva-returns`
+  - damodaran: [cfroi](https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls) (eva-returns)
+  - damodaran: [valenh](https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls) (eva-returns)
+  - exinfm: [EVA Example](https://exinfm.com/excel%20files/EVA%20Example.xls) (eva-returns)
+- **Revenue Run Rate** `-` — no public match
+- **Revenue Variance Analysis** `-` — no public match
+- **ROIC Template** `eva-returns`
+  - damodaran: [cfroi](https://pages.stern.nyu.edu/~adamodar/pc/cfroi.xls) (eva-returns)
+  - damodaran: [valenh](https://pages.stern.nyu.edu/~adamodar/pc/valenh.xls) (eva-returns)
+  - exinfm: [EVA Example](https://exinfm.com/excel%20files/EVA%20Example.xls) (eva-returns)
+- **ROUNDUP Template** `-` — no public match
+- **Rule of 40 Calculator** `startup`
+  - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
+- **Sales Tax Decalculator** `-` — no public match
+- **SEARCH Template** `-` — no public match
+- **Sensitivity Analysis Table** `sensitivity`
+  - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (sensitivity)
+- **Sharpe Ratio Calculator** `ratios`
+  - exinfm: [Ratio_Tree](https://exinfm.com/excel%20files/Ratio_Tree.xls) (ratios)
+- **Sheet Name Formula Template** `-` — no public match
+- **SME Lending - Owner's Net Worth Adjustment Template** `-` — no public match
+- **Straight Line Depreciation** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **Straight Line Depreciation Template** `depreciation`
+  - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
+- **SUBTOTAL Template** `-` — no public match
+- **Target Costing Example** `-` — no public match
+- **Tax-Shield Template** `-` — no public match
+- **Term Sheet Template** `-` — no public match
+- **Treasury Stock Method Calculator** `-` — no public match
+- **Unlevered Cost of Capital Template** `wacc`
+  - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
+  - damodaran: [levbeta](https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls) (wacc)
+  - damodaran: [ratings](https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls) (wacc)
+  - damodaran: [wacc](https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls) (wacc)
+- **Unlevered Free Cash Flow Template** `dcf`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **Valuation Model Comps Precedents Football Field** `dcf comps charts`
+  - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
+  - damodaran: [fcfe2st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe2st.xls) (dcf)
+  - damodaran: [fcfe3st](https://pages.stern.nyu.edu/~adamodar/pc/fcfe3st.xls) (dcf)
+- **Variance Analysis** `-` — no public match
+- **Variance Formula** `-` — no public match
+- **Variance Waterfall Chart** `charts` — no public match
+- **Waterfall Chart Template** `charts` — no public match
+- **Weighted Average Cost of Capital (WACC) Calculator** `wacc`
+  - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
+  - damodaran: [levbeta](https://pages.stern.nyu.edu/~adamodar/pc/levbeta.xls) (wacc)
+  - damodaran: [ratings](https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls) (wacc)
+  - damodaran: [wacc](https://pages.stern.nyu.edu/~adamodar/pc/datasets/wacc.xls) (wacc)
+- **Weighted Average Shares Outstanding Template** `-` — no public match
+- **Working Capital Cycle Template** `working-capital` — no public match
+- **XIRR vs IRR Template** `capital-budgeting`
+  - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
+  - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting)
+- **Year over Year (YoY) Analysis** `-` — no public match
+- **Year to Date YTD Template** `-` — no public match

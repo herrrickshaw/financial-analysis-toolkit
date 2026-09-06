@@ -16,6 +16,16 @@
    "home": "https://exinfm.com/free_spreadsheets.html",
    "access": "public"
   },
+  "macabacus": {
+   "publisher": "Macabacus (Excel add-in vendor; free demo templates)",
+   "home": "https://macabacus.com/category/excel/templates",
+   "access": "public"
+  },
+  "biws": {
+   "publisher": "Breaking Into Wall Street / Mergers & Inquisitions knowledge base",
+   "home": "https://breakingintowallstreet.com/kb/",
+   "access": "public"
+  },
   "cfi": {
    "publisher": "Corporate Finance Institute",
    "home": "https://corporatefinanceinstitute.com/resources/templates/",
@@ -4072,6 +4082,66 @@
    "filename": "capstruc.xls",
    "size": 39936,
    "verified_status": "200"
+  },
+  {
+   "id": "macabacus/lbo-model-long-form",
+   "source": "macabacus",
+   "title": "lbo-model-long-form",
+   "url": "https://macabacus.com/assets/2023/02/lbo-model-long-form.xlsx",
+   "access": "public",
+   "filename": "lbo-model-long-form.xlsx",
+   "size": 302468,
+   "verified_status": "200"
+  },
+  {
+   "id": "macabacus/lbo-model-short-form",
+   "source": "macabacus",
+   "title": "lbo-model-short-form",
+   "url": "https://macabacus.com/assets/2023/02/lbo-model-short-form.xlsx",
+   "access": "public",
+   "filename": "lbo-model-short-form.xlsx",
+   "size": 208380,
+   "verified_status": "200"
+  },
+  {
+   "id": "macabacus/merger-model",
+   "source": "macabacus",
+   "title": "merger-model",
+   "url": "https://macabacus.com/assets/2023/02/merger-model.xlsx",
+   "access": "public",
+   "filename": "merger-model.xlsx",
+   "size": 451419,
+   "verified_status": "200"
+  },
+  {
+   "id": "macabacus/operating-model",
+   "source": "macabacus",
+   "title": "operating-model",
+   "url": "https://macabacus.com/assets/2023/02/operating-model.xlsx",
+   "access": "public",
+   "filename": "operating-model.xlsx",
+   "size": 101267,
+   "verified_status": "200"
+  },
+  {
+   "id": "macabacus/ipo-model",
+   "source": "macabacus",
+   "title": "ipo-model",
+   "url": "https://macabacus.com/assets/2023/02/ipo-model.xlsx",
+   "access": "public",
+   "filename": "ipo-model.xlsx",
+   "size": 69491,
+   "verified_status": "200"
+  },
+  {
+   "id": "macabacus/vc-returns",
+   "source": "macabacus",
+   "title": "vc-returns",
+   "url": "https://macabacus.com/assets/2023/02/vc-returns.xlsx",
+   "access": "public",
+   "filename": "vc-returns.xlsx",
+   "size": 41995,
+   "verified_status": "200"
   }
  ],
  "counts": {
@@ -4079,6 +4149,7 @@
   "cfi:cfi-login": 196,
   "damodaran:public": 59,
   "asimplemodel:public": 8,
-  "exinfm:public": 15
+  "exinfm:public": 15,
+  "macabacus:public": 6
  }
 }
