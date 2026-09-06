@@ -24,7 +24,7 @@ re-implemented in dependency-free Python and reconciled to the spreadsheets cell
 ```bash
 git clone https://github.com/herrrickshaw/financial-analysis-toolkit && cd financial-analysis-toolkit
 pip install -e ".[test]"          # only openpyxl is required at runtime
-pytest -q                         # 64 tests; the LibreOffice recalc test auto-skips if soffice is absent
+pytest -q                         # 65 tests; the LibreOffice recalc test auto-skips if soffice is absent
 ```
 
 ## Quick start
@@ -99,6 +99,7 @@ Also: wage expense defaults to gross wages (`wage_expense_basis="gross"`); pass 
 ## Real-data validation and applied case studies
 
 - `docs/VALIDATION_REAL_DATA.md` (`scripts/comps_validation.py`) — the comps engine on the US steel peer set with SEC EDGAR fundamentals and warehouse prices, cross-checked against the market-pipeline's independent P/E ledger; Altman / Piotroski / Beneish on the same filings.
+- `docs/FOOTBALL_FIELD_STLD.md` (`scripts/football_field_stld.py`) — the CFI football-field template (comps + precedents + DCF + 52-week range) populated with real Steel Dynamics data: real peer multiples, two real verifiable steel M&A precedents (Nippon Steel/U.S. Steel, Cleveland-Cliffs/AK Steel) built from SEC EDGAR filings, two DCF scenarios grounded in STLD's own historical margin range, and the real trailing 52-week price range — checked against STLD's actual price.
 - `docs/CASE_STUDY_MA.md` (`scripts/ma_case_study.py`) — Microsoft/Activision, Chevron/Hess and Cisco/Splunk: each party's last standalone year, the merger engine's static pro-forma, and the acquirer's actual statements after closing, with the reasons they differ.
 - `docs/GAP_ANALYSIS.md` — feature gap analysis against the 144 GitHub repositories found for financial modelling / valuation and the EUA–ATHENA financial-management toolkit; what was added in response (`edgar`, `scores`, `comps`, `costing`, reverse and Monte-Carlo DCF).
 
@@ -136,7 +137,7 @@ educational templates.
 finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, audit, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
 examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo, ASM LBO, BIWS merger, STLD comps, STLD scores, university costing, STLD WACC, STLD residual income, conglomerate SOTP)
 data/              glossary.json, edgar/ (compact SEC company-facts extracts for the case studies)
-scripts/           comps_validation.py, ma_case_study.py (regenerate the real-data docs)
+scripts/           comps_validation.py, football_field_stld.py, ma_case_study.py (regenerate the real-data docs)
 catalog/           source lists (cfi_dashboard_raw.txt, open_sources_verified.txt) -> catalog.json / catalog.md
 docs/              OPEN_SOURCE_MODULES.md
 tests/             pytest suite (reconciliation, identities, LibreOffice recalc, CLI)

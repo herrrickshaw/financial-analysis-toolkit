@@ -34,6 +34,20 @@ def test_chart_primitives():
     assert charts._fmt(0.1234, "pct") == "12.3%" and charts._fmt(1234567) == "1.2M"
 
 
+def test_range_bars_wraps_long_labels_without_overflow():
+    short = charts.range_bars([("Trading comps", 10, 20), ("52-week range", 5, 40)])
+    assert '<tspan' not in short and short.count('<text class="t"') == 2   # short labels: one line each, no wrap needed
+    long_label = "DCF - base case (margin recovers toward FY2024 level)"
+    r = charts.range_bars([(long_label, 10, 20), ("Precedent transactions", 5, 15)])
+    import re
+    label_x = [float(m) for m in re.findall(r'<text class="t" x="(-?[\d.]+)"', r)]
+    svg_w = int(re.search(r'viewBox="0 0 (\d+)', r).group(1))
+    assert label_x and all(0 <= x < svg_w for x in label_x)   # no label anchor sits off-canvas
+    assert r.count('<text class="t" x=') > 2   # the long label wrapped onto a second line, adding a text node
+    assert charts._wrap_label("short", 20) == ["short"]
+    assert charts._wrap_label("a rather long label that needs wrapping onto two lines", 20) == ["a rather long label", "that needs wrapping…"]
+
+
 def test_glossary_data():
     g = json.loads((ROOT / "data/glossary.json").read_text())
     terms = {e["term"].lower() for e in g["entries"]}

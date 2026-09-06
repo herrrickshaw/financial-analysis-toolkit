@@ -64,6 +64,24 @@ def _fmt(v: float, kind: str = "num") -> str:
     return s
 
 
+def _wrap_label(s: str, max_chars: int) -> List[str]:
+    """Greedily wrap onto at most 2 lines at word boundaries; ellipsize an overlong second line."""
+    if len(s) <= max_chars:
+        return [s]
+    words = s.split(); line1 = ""
+    for w in words:
+        if len((line1 + " " + w).strip()) > max_chars:
+            break
+        line1 = (line1 + " " + w).strip()
+    line1 = line1 or s[:max_chars]
+    rest = s[len(line1):].strip()
+    if not rest:
+        return [line1]
+    if len(rest) > max_chars:
+        rest = rest[: max(1, max_chars - 1)].rstrip() + "…"
+    return [line1, rest]
+
+
 def _nice_ticks(lo: float, hi: float, n: int = 5) -> List[float]:
     if hi == lo: hi = lo + 1
     raw = (hi - lo) / n
@@ -218,21 +236,32 @@ def heatmap(row_labels: Sequence, col_labels: Sequence, table: Sequence[Sequence
 
 
 def range_bars(items: Sequence[Tuple[str, float, float]], marker: Optional[float] = None, marker_label="", fmt="num", w=760) -> str:
-    """Football field: horizontal low-high bars per valuation method with an optional current-price marker."""
-    rh, L, R, T = 30, 200, 20, 16; n = len(items); h = T + n * rh + 40; svg = SVG(w, h)
-    lo = min([a for _, a, _ in items] + ([marker] if marker is not None else [])); hi = max([b for _, _, b in items] + ([marker] if marker is not None else []))
+    """Football field: horizontal low-high bars per valuation method with an optional current-price marker.
+    The left margin is sized to the longest label (capped so the bars keep most of the width); a label that would
+    still overflow the cap wraps onto a second line instead of being clipped."""
+    R, T, char_px, row_h = 20, 16, 6.2, 30
+    L_cap = min(360, w * 0.42)
+    L = max(140, min(L_cap, max((len(lab) * char_px + 16 for lab, _, _ in items), default=140)))
+    max_chars = max(8, int((L - 16) / char_px))
+    rows = [(_wrap_label(lab, max_chars), a, b, lab) for lab, a, b in items]
+    row_heights = [row_h + 14 * (len(lines) - 1) for lines, _, _, _ in rows]
+    n_h = sum(row_heights); h = T + n_h + 40; svg = SVG(w, h)
+    lo = min([a for _, a, b, _ in rows] + ([marker] if marker is not None else [])); hi = max([b for _, a, b, _ in rows] + ([marker] if marker is not None else []))
     pad = (hi - lo) * 0.08 or 1; lo -= pad; hi += pad
     sx = lambda v: L + (v - lo) / (hi - lo) * (w - L - R)
     for t in _nice_ticks(lo, hi, 6):
         if lo <= t <= hi:
-            svg.add(f'<line class="grid" x1="{sx(t):.1f}" y1="{T}" x2="{sx(t):.1f}" y2="{T+n*rh}"/><text x="{sx(t):.1f}" y="{T+n*rh+16}" text-anchor="middle">{_fmt(t, fmt)}</text>')
-    for i, (lab, a, b) in enumerate(items):
-        y = T + i * rh + 6
-        svg.add(f'<text class="t" x="{L-8}" y="{y+13}" text-anchor="end">{html.escape(lab)}</text>')
-        svg.add(f'<rect class="mark" x="{sx(a):.1f}" y="{y}" width="{max(sx(b)-sx(a),2):.1f}" height="18" rx="4" fill="{CAT_LIGHT[0]}" data-tip="{html.escape(lab)}: {_fmt(a, fmt)} – {_fmt(b, fmt)}"/>')
-        svg.add(f'<text x="{sx(a)-4:.1f}" y="{y+13}" text-anchor="end">{_fmt(a, fmt)}</text><text x="{sx(b)+4:.1f}" y="{y+13}">{_fmt(b, fmt)}</text>')
+            svg.add(f'<line class="grid" x1="{sx(t):.1f}" y1="{T}" x2="{sx(t):.1f}" y2="{T+n_h}"/><text x="{sx(t):.1f}" y="{T+n_h+16}" text-anchor="middle">{_fmt(t, fmt)}</text>')
+    y_cur = T
+    for (lines, a, b, lab), rh in zip(rows, row_heights):
+        y = y_cur + (rh - 18) / 2
+        for li, line in enumerate(lines):
+            svg.add(f'<text class="t" x="{L-8}" y="{y+13-(len(lines)-1-li)*13:.1f}" text-anchor="end">{html.escape(line)}</text>')
+        svg.add(f'<rect class="mark" x="{sx(a):.1f}" y="{y:.1f}" width="{max(sx(b)-sx(a),2):.1f}" height="18" rx="4" fill="{CAT_LIGHT[0]}" data-tip="{html.escape(lab)}: {_fmt(a, fmt)} – {_fmt(b, fmt)}"/>')
+        svg.add(f'<text x="{sx(a)-4:.1f}" y="{y+13:.1f}" text-anchor="end">{_fmt(a, fmt)}</text><text x="{sx(b)+4:.1f}" y="{y+13:.1f}">{_fmt(b, fmt)}</text>')
+        y_cur += rh
     if marker is not None:
-        svg.add(f'<line x1="{sx(marker):.1f}" y1="{T-4}" x2="{sx(marker):.1f}" y2="{T+n*rh+4}" stroke="{CAT_LIGHT[1]}" stroke-width="2" stroke-dasharray="4 3"/><text class="t" x="{sx(marker)+5:.1f}" y="{T+n*rh+30}">{html.escape(marker_label)} {_fmt(marker, fmt)}</text>')
+        svg.add(f'<line x1="{sx(marker):.1f}" y1="{T-4}" x2="{sx(marker):.1f}" y2="{T+n_h+4}" stroke="{CAT_LIGHT[1]}" stroke-width="2" stroke-dasharray="4 3"/><text class="t" x="{sx(marker)+5:.1f}" y="{T+n_h+30}">{html.escape(marker_label)} {_fmt(marker, fmt)}</text>')
     return svg.render()
 
 

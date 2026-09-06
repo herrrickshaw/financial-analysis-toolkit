@@ -228,7 +228,9 @@ precedent-transactions lessons, Macabacus valuation pages (`catalog/analysis_int
 Analysis*, *Valuation Model – Comps, Precedents, Football Field*, *Pharmaceuticals / Retail Industry Comps*.
 
 **Try it.** `finmodel comps examples/comps_stld.json`; `finmodel charts comps …`; on real filings:
-`python scripts/comps_validation.py` (see `docs/VALIDATION_REAL_DATA.md`).
+`python scripts/comps_validation.py` (see `docs/VALIDATION_REAL_DATA.md`). To see the *full* CFI football-field
+template — comps + precedents + DCF + 52-week range together — checked against a real company's actual price,
+`python scripts/football_field_stld.py` (see `docs/FOOTBALL_FIELD_STLD.md`).
 
 ---
 
