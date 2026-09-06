@@ -87,3 +87,46 @@ def test_cvx_own_cycle_is_wide_and_current_year_below_median():
     d = sectors.cycle_diagnostics(_real_history("CVX"), periods=8, sector="oil_gas")
     assert d["fiscal_year"] == "2025-12-31"
     assert d["median_margin_trailing_years"] > d["latest_margin"]   # 2025 sits below Chevron's own trailing median margin
+
+
+def test_trend_diagnostics_detects_strong_monotonic_trend():
+    up = synthetic_history([0.02, 0.03, 0.04, 0.08, 0.10, 0.14, 0.17, 0.20])   # a Salesforce-shaped ramp
+    t = sectors.trend_diagnostics(up, periods=8)
+    assert t["trend_strength"] == "strong" and t["direction"] == "improving" and t["correlation"] > 0.9 and t["warning"]
+    down = synthetic_history([0.20, 0.17, 0.14, 0.10, 0.08, 0.04, 0.03, 0.02])
+    assert sectors.trend_diagnostics(down, periods=8)["direction"] == "declining"
+
+
+def test_trend_diagnostics_weak_on_noisy_or_cyclical_data():
+    h = synthetic_history([0.10, 0.15, 0.09, 0.16, 0.10, 0.14, 0.11, 0.15])   # oscillates, no consistent direction
+    t = sectors.trend_diagnostics(h, periods=8)
+    assert t["trend_strength"] == "weak/none" and t["direction"] == "none" and t["warning"] is None
+    assert sectors.trend_diagnostics(synthetic_history([0.1, 0.1, 0.1]), periods=8) == {"trend": "insufficient_data"}
+
+
+def test_cycle_diagnostics_appends_trend_caution_to_a_misleading_peak_flag():
+    # a genuine secular ramp: the latest year is correctly a statistical "peak" vs trailing median, but it is NOT
+    # a cyclical extreme, and cycle_diagnostics should say so rather than silently calling it a peak.
+    h = synthetic_history([0.02, 0.03, 0.04, 0.08, 0.10, 0.14, 0.17, 0.20])
+    d = sectors.cycle_diagnostics(h, periods=8, sector="software")
+    assert "peak" in d["flag"] and "CAUTION" in d["flag"] and d["trend"]["trend_strength"] == "strong"
+    # a real cyclical peak (no secular trend) should NOT get the caution suffix
+    cyc = synthetic_history([0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.10, 0.30])
+    d2 = sectors.cycle_diagnostics(cyc, periods=8, sector="oil_gas")
+    assert "peak" in d2["flag"] and "CAUTION" not in d2["flag"]
+
+
+# ---- regression: the real EDGAR data behind the third (enterprise-tech) football-field check
+def test_crm_secular_margin_expansion_flagged_as_trend_not_cycle_on_real_data():
+    d = sectors.cycle_diagnostics(_real_history("CRM"), periods=8, sector="software")
+    assert "peak" in d["flag"] and "CAUTION" in d["flag"] and d["trend"]["direction"] == "improving"
+
+
+def test_csco_own_margin_has_tight_range_but_a_real_gentle_trend_on_real_data():
+    # Cisco's absolute margin range (20.8%-27.6%) is far tighter than steel's or oil & gas's, but that is a
+    # statement about RANGE, not about trend: the correlation module still (correctly) picks up a real, if narrow-
+    # band, declining drift over the window (~27.6% -> 20.8% before a partial FY2026 recovery to 24.3%) — a useful
+    # reminder that "low cyclicality" (SECTOR_PROFILES["software"]) does not mean "no trend to check for."
+    d = sectors.cycle_diagnostics(_real_history("CSCO"), periods=8, sector="software")
+    assert d["flag"] == "near normal"   # the sector's tighter ±15% thresholds still call FY2026 unremarkable
+    assert d["trend"]["trend_strength"] == "strong" and d["trend"]["direction"] == "declining"

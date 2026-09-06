@@ -230,9 +230,11 @@ Analysis*, *Valuation Model – Comps, Precedents, Football Field*, *Pharmaceuti
 **Try it.** `finmodel comps examples/comps_stld.json`; `finmodel charts comps …`; on real filings:
 `python scripts/comps_validation.py` (see `docs/VALIDATION_REAL_DATA.md`). To see the *full* CFI football-field
 template — comps + precedents + DCF + 52-week range together — checked against a real company's actual price,
-`python scripts/football_field_stld.py` (`docs/FOOTBALL_FIELD_STLD.md`, steel) and
+`python scripts/football_field_stld.py` (`docs/FOOTBALL_FIELD_STLD.md`, steel),
 `python scripts/football_field_cvx.py` (`docs/FOOTBALL_FIELD_CVX.md`, oil & gas — a different sector, a genuinely
-different result). §5 of each document also checks the sector-tuning in `finmodel.sectors` below.
+different result), and `python scripts/football_field_csco.py` (`docs/FOOTBALL_FIELD_CSCO.md`, enterprise
+technology — a third, much lower-cyclicality sector). §5 of each document also checks the sector-tuning in
+`finmodel.sectors` below.
 
 ---
 
@@ -270,23 +272,33 @@ year happens to fall. `finmodel.sectors` formalizes the fix directly from that f
 
 - `cycle_diagnostics(history, sector=...)` — compares the latest fiscal year's margin to its own trailing multi-year
   median and flags trough / peak / near-normal. Regression-tested against the real committed data: it correctly
-  flags STLD's FY2025 as a trough and Pioneer Natural Resources' FY2022 as a peak — the exact years the two
-  football-field docs found by hand.
+  flags STLD's FY2025 as a trough, Pioneer Natural Resources' FY2022 as a peak, and Cisco's FY2026 as near normal —
+  the exact readings the football-field docs found by hand.
 - `dcf_scenarios_from_history(history)` — data-driven bear/base/blue-sky EBIT-margin targets (trailing minimum /
   median / maximum) instead of a hand-picked "toward last year's level" assumption, which the STLD check found
   had materially understated the true historical peak margin by picking too short a lookback.
 - `normalized_comps_metrics(history, sector=...)` — a metrics dict with through-cycle-normalized EBITDA/EBIT ready
   to feed `finmodel.comps.Peer`/`Target`, leaving revenue and net income at the latest year.
+- `trend_diagnostics(history)` — the guard the enterprise-tech check (`docs/FOOTBALL_FIELD_CSCO.md`) added: it
+  distinguishes a genuine secular trend (Salesforce's margin moving ~2%→20% over 8 years as it shifted from
+  growth-at-all-costs to profitability — real, deliberate, not something that will mean-revert) from noisy or
+  mean-reverting cyclicality, using the correlation between margin and time. `cycle_diagnostics()` calls it
+  automatically and appends a CAUTION to its flag when the trend is strong, because trailing-median normalization
+  is the wrong tool for a company on a real secular trend — it would misread a sustainable, improved margin as a
+  misleading cyclical peak and understate its multiple.
 - `sector_beta(sector)` — an illustrative, Damodaran-style unlevered beta by sector, a starting point when a
   company-specific beta isn't available.
 
-Only two sectors (`"steel"`, `"oil_gas"`) are tuned against real multi-year data so far, each with a `SECTOR_PROFILE`
-entry documenting exactly what real range justified its thresholds; every other sector falls back to a clearly
-labelled `"default"` rather than a fabricated industry assumption. Both football-field docs' §5 rebuild their full
-football field with this normalization and compare it to the raw run — at STLD it didn't close the gap (the whole
-peer set shares the same trough, so normalizing both sides of the trade moves them together); at Chevron it did
-change the answer (only the precedent-deal *targets* were cycle-distorted, not Chevron itself, so correcting just
-that one input pushed the precedent-implied range past the price).
+Three sectors (`"steel"`, `"oil_gas"`, `"software"`) are tuned against real multi-year data so far, each with a
+`SECTOR_PROFILE` entry documenting exactly what real range justified its thresholds; every other sector falls back
+to a clearly labelled `"default"` rather than a fabricated industry assumption. All three football-field docs' §5
+rebuild their full football field with this normalization and compare it to the raw run: at STLD it didn't close
+the gap (the whole peer set shares the same trough, so normalizing both sides of the trade moves them together);
+at Chevron it did change the answer (only the precedent-deal *targets* were cycle-distorted, not Chevron itself,
+so correcting just that one input pushed the precedent-implied range past the price); at Cisco the script had to
+add the trend guard mid-way through, because Salesforce's peer data would otherwise have been normalized straight
+into a misleading number — and even Cisco's own tight-range margin turned out to carry a real (if gentle) trend,
+which is not the same statistical property as a wide cyclical range.
 
 **Try it.** `finmodel cycle data/edgar/STLD.json --sector steel`.
 

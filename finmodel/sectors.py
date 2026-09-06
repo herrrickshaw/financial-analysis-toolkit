@@ -7,9 +7,18 @@ precedent targets' pre-deal years, understating multiples). This module does not
 finmodel.dcf — it prepares better INPUTS for them from a company's own EDGAR history (edgar.annual()'s output
 shape: {fiscal_year_end: {field: value, ...}}).
 
-Only two sectors have been tuned against real multi-year data so far (steel and oil & gas E&P/integrated) — see
-SECTOR_PROFILES. Everything else falls back to a clearly-labelled generic default rather than a fabricated
-industry assumption."""
+Three sectors have been tuned against real multi-year data so far (steel, oil & gas E&P/integrated, and enterprise
+technology — see SECTOR_PROFILES); everything else falls back to a clearly-labelled generic default rather than a
+fabricated industry assumption.
+
+A caveat the enterprise-technology check (docs/FOOTBALL_FIELD_CSCO.md) surfaced, and that the whole module is built
+around: `cycle_diagnostics()` and `dcf_scenarios_from_history()` assume the margin history is MEAN-REVERTING —
+true for a commodity producer whose margin swings with a price it doesn't control, but false for a company on a
+genuine secular trend (Salesforce shifting from growth-at-all-costs to profitability moved its own margin from
+~2% to ~20% over 8 years — real, deliberate, and not something a "trailing median" should be treated as a normal
+baseline for). Applying trailing-median normalization to a secularly-trending company would flag its improved,
+sustainable margin as a misleading "peak" and understate its DCF. `trend_diagnostics()` (and the `trend` field
+`cycle_diagnostics()` now includes) exists to catch this before it happens."""
 from __future__ import annotations
 
 import statistics
@@ -39,6 +48,16 @@ SECTOR_PROFILES: Dict[str, SectorProfile] = {
         "EBIT margin ranged -7.1% to +20.4% for Chevron over FY2018–2025 (data/edgar/CVX.json) — it swings sign "
         "entirely with a commodity price the company does not set; the two precedent-deal targets in "
         "docs/FOOTBALL_FIELD_CVX.md (Pioneer FY2022, Marathon Oil FY2023) both sit near the 2022 price-spike peak."),
+    "software": SectorProfile("Enterprise technology / software", "low", 8, 1.15, -0.15, 0.15,
+        "EBIT margin ranged 20.8%–27.6% for Cisco over FY2020–2026 (data/edgar/CSCO.json) — a genuinely tight, "
+        "low-cyclicality RANGE relative to steel/oil & gas (tighter thresholds reflect that). But tight range is not "
+        "the same as no trend: trend_diagnostics() still finds a real, if narrow-band, declining drift within that "
+        "range (r=-0.75, ~27.6%→20.8% before a partial FY2026 recovery) — 'low cyclicality' means smaller swings, "
+        "not zero drift to check for. WARNING: this profile fits Cisco itself, not the whole sector by label alone — "
+        "peers in the same comps set showed a much stronger SECULAR margin-EXPANSION trend over the same window "
+        "(Salesforce ~2%→20%, docs/FOOTBALL_FIELD_CSCO.md), which trailing-median normalization would badly misread "
+        "as a cyclical peak. Always run trend_diagnostics() before trusting this profile's normalization on a "
+        "specific company."),
     "default": SectorProfile("Uncategorised / not yet analysed with real data", "moderate", 5, 1.00, -0.20, 0.20,
         "No sector-specific tuning has been validated against real multi-year EDGAR data for this sector yet — "
         "treat these numbers as a generic starting point, not a calibrated assumption."),
@@ -63,12 +82,38 @@ def normalize_metric(history: Dict[str, Dict[str, float]], field: str, periods: 
     return {"field": field, "method": method, "periods_used": window, "value": fn(vals), "raw_values": vals}
 
 
+def trend_diagnostics(history: Dict[str, Dict[str, float]], field: str = "operating_income", revenue_field: str = "revenue",
+                      periods: int = 8, as_of: Optional[str] = None, strong: float = 0.7, moderate: float = 0.4) -> Dict[str, Any]:
+    """Distinguishes a genuine secular trend (margin moving consistently in one direction, e.g. Salesforce's
+    growth-to-profitability shift, ~2%→20% over 8 years) from noisy or mean-reverting cyclicality, using the
+    correlation between margin and time over the trailing `periods` fiscal years. A strong trend (|r| >= `strong`,
+    default 0.7) means trailing-median normalization is the WRONG tool: it would treat a sustainable, structurally
+    improved (or deteriorated) margin as a misleading cyclical extreme."""
+    years = sorted(history)
+    if as_of: years = [y for y in years if y <= as_of]
+    margins = _margins(history, field, revenue_field, years[-periods:])
+    if len(margins) < 4:
+        return {"trend": "insufficient_data"}
+    ordered = sorted(margins)
+    vals = [margins[y] for y in ordered]
+    corr = statistics.correlation(range(len(vals)), vals)
+    strength = "strong" if abs(corr) >= strong else "moderate" if abs(corr) >= moderate else "weak/none"
+    direction = "improving" if corr > 0 else "declining" if corr < 0 else "flat"
+    warning = None
+    if strength == "strong":
+        warning = (f"a {direction} secular trend (r={corr:.2f}), not mean-reverting cyclicality — trailing-median "
+                   f"normalization would misread the latest margin as a cyclical extreme; use the latest year or a "
+                   f"short recent window instead, not the trailing median")
+    return {"correlation": corr, "trend_strength": strength, "direction": direction if strength != "weak/none" else "none",
+            "years_used": ordered, "margin_history": margins, "warning": warning}
+
+
 def cycle_diagnostics(history: Dict[str, Dict[str, float]], field: str = "operating_income", revenue_field: str = "revenue",
                       periods: int = 8, sector: str = "default", as_of: Optional[str] = None) -> Dict[str, Any]:
     """Compares the latest (or `as_of`) fiscal year's margin on `field` to its own trailing multi-year median margin
     and flags whether that year is likely to distort a trailing-multiple valuation built on it. Thresholds come from
-    the sector profile (both currently tuned sectors use ±20%, i.e. a margin more than a fifth away from its own
-    trailing median)."""
+    the sector profile. Also runs `trend_diagnostics()` and attaches its result — a strong secular trend makes the
+    trough/peak flag below unreliable; check the `trend` field before trusting it."""
     profile = SECTOR_PROFILES.get(sector, SECTOR_PROFILES["default"])
     years = sorted(history)
     if as_of: years = [y for y in years if y <= as_of]
@@ -87,8 +132,11 @@ def cycle_diagnostics(history: Dict[str, Dict[str, float]], field: str = "operat
         flag = "peak — trailing multiples built on this year likely UNDERstate the true multiple"
     else:
         flag = "near normal"
+    trend = trend_diagnostics(history, field, revenue_field, periods, as_of)
+    if trend.get("warning") and flag != "near normal":
+        flag += f" — CAUTION: {trend['warning']}"
     return {"fiscal_year": latest, "sector": profile.name, "latest_margin": latest_margin, "median_margin_trailing_years": baseline,
-            "deviation_pct": deviation, "flag": flag, "margin_history": margins, "periods_used": years[-periods:]}
+            "deviation_pct": deviation, "flag": flag, "margin_history": margins, "periods_used": years[-periods:], "trend": trend}
 
 
 def dcf_scenarios_from_history(history: Dict[str, Dict[str, float]], field: str = "operating_income", revenue_field: str = "revenue",
