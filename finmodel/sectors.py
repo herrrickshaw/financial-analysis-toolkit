@@ -1,0 +1,135 @@
+"""Sector-aware tuning built directly from what the real-data checks in docs/FOOTBALL_FIELD_STLD.md (steel) and
+docs/FOOTBALL_FIELD_CVX.md (oil & gas) found: a single trailing fiscal year's EBITDA can sit anywhere in a
+company's own multi-year earnings cycle, and using it un-normalized in trading-comps or precedent-transaction
+multiples silently over- or under-states the "true" multiple depending on whether that year happened to be a
+cycle trough (steel's 2025, understating value... no, overstating multiples) or a cycle peak (the oil & gas
+precedent targets' pre-deal years, understating multiples). This module does not replace finmodel.comps or
+finmodel.dcf — it prepares better INPUTS for them from a company's own EDGAR history (edgar.annual()'s output
+shape: {fiscal_year_end: {field: value, ...}}).
+
+Only two sectors have been tuned against real multi-year data so far (steel and oil & gas E&P/integrated) — see
+SECTOR_PROFILES. Everything else falls back to a clearly-labelled generic default rather than a fabricated
+industry assumption."""
+from __future__ import annotations
+
+import statistics
+from dataclasses import dataclass
+from typing import Any, Dict, List, Optional, Sequence
+
+from .fin import safe_div
+
+
+@dataclass
+class SectorProfile:
+    name: str
+    cyclicality: str          # "high" | "moderate" | "low"
+    normalize_periods: int    # trailing fiscal years used for a through-cycle baseline
+    unlevered_beta: float     # illustrative, Damodaran-style industry-average unlevered beta — not company-specific
+    trough_threshold: float   # margin deviation below the trailing median that flags a "trough" year
+    peak_threshold: float     # margin deviation above the trailing median that flags a "peak" year
+    note: str
+
+
+SECTOR_PROFILES: Dict[str, SectorProfile] = {
+    "steel": SectorProfile("Steel / metals & mining", "high", 8, 1.05, -0.20, 0.20,
+        "EBIT margin ranged 8.1%–23.4% for Steel Dynamics over FY2018–2025 (data/edgar/STLD.json) — a >2.5x "
+        "peak-to-trough swing driven by steel-price cycles, not company execution; FY2025 (the LTM year both the "
+        "comps and precedents in docs/FOOTBALL_FIELD_STLD.md were built on) sits at the trough."),
+    "oil_gas": SectorProfile("Oil & gas E&P / integrated", "high", 8, 1.10, -0.20, 0.20,
+        "EBIT margin ranged -7.1% to +20.4% for Chevron over FY2018–2025 (data/edgar/CVX.json) — it swings sign "
+        "entirely with a commodity price the company does not set; the two precedent-deal targets in "
+        "docs/FOOTBALL_FIELD_CVX.md (Pioneer FY2022, Marathon Oil FY2023) both sit near the 2022 price-spike peak."),
+    "default": SectorProfile("Uncategorised / not yet analysed with real data", "moderate", 5, 1.00, -0.20, 0.20,
+        "No sector-specific tuning has been validated against real multi-year EDGAR data for this sector yet — "
+        "treat these numbers as a generic starting point, not a calibrated assumption."),
+}
+
+
+def _margins(history: Dict[str, Dict[str, float]], field: str, revenue_field: str, years: Sequence[str]) -> Dict[str, float]:
+    return {y: safe_div(history[y].get(field, 0) or 0, history[y].get(revenue_field, 0) or 0)
+            for y in years if history.get(y, {}).get(revenue_field)}
+
+
+def normalize_metric(history: Dict[str, Dict[str, float]], field: str, periods: int = 5, method: str = "median", as_of: Optional[str] = None) -> Dict[str, Any]:
+    """Through-cycle baseline for `field` (e.g. "operating_income", "ebitda") from an edgar.annual()-shaped history
+    dict: the trailing `periods` fiscal years up to (and including) `as_of` (defaults to the latest available)."""
+    years = sorted(history)
+    if as_of: years = [y for y in years if y <= as_of]
+    window = years[-periods:]
+    vals = [history[y][field] for y in window if history[y].get(field) is not None]
+    if not vals:
+        raise ValueError(f"no data for field {field!r} in the trailing {periods} years")
+    fn = {"median": statistics.median, "mean": statistics.fmean, "min": min, "max": max}[method]
+    return {"field": field, "method": method, "periods_used": window, "value": fn(vals), "raw_values": vals}
+
+
+def cycle_diagnostics(history: Dict[str, Dict[str, float]], field: str = "operating_income", revenue_field: str = "revenue",
+                      periods: int = 8, sector: str = "default", as_of: Optional[str] = None) -> Dict[str, Any]:
+    """Compares the latest (or `as_of`) fiscal year's margin on `field` to its own trailing multi-year median margin
+    and flags whether that year is likely to distort a trailing-multiple valuation built on it. Thresholds come from
+    the sector profile (both currently tuned sectors use ±20%, i.e. a margin more than a fifth away from its own
+    trailing median)."""
+    profile = SECTOR_PROFILES.get(sector, SECTOR_PROFILES["default"])
+    years = sorted(history)
+    if as_of: years = [y for y in years if y <= as_of]
+    if not years:
+        return {"flag": "no_data"}
+    latest = years[-1]
+    margins = _margins(history, field, revenue_field, years[-periods:])
+    latest_margin = margins.get(latest)
+    if latest_margin is None or len(margins) < 2:
+        return {"fiscal_year": latest, "flag": "insufficient_data"}
+    baseline = statistics.median(list(margins.values()))
+    deviation = safe_div(latest_margin - baseline, abs(baseline)) if baseline else (float("inf") if latest_margin else 0.0)
+    if deviation <= profile.trough_threshold:
+        flag = "trough — trailing multiples built on this year likely OVERstate the true multiple"
+    elif deviation >= profile.peak_threshold:
+        flag = "peak — trailing multiples built on this year likely UNDERstate the true multiple"
+    else:
+        flag = "near normal"
+    return {"fiscal_year": latest, "sector": profile.name, "latest_margin": latest_margin, "median_margin_trailing_years": baseline,
+            "deviation_pct": deviation, "flag": flag, "margin_history": margins, "periods_used": years[-periods:]}
+
+
+def dcf_scenarios_from_history(history: Dict[str, Dict[str, float]], field: str = "operating_income", revenue_field: str = "revenue",
+                               periods: int = 8) -> Dict[str, Any]:
+    """Data-driven base/bear/blue-sky EBIT-margin targets from a company's OWN historical margin distribution —
+    replaces a hand-picked "toward last year's level" assumption with base = trailing median margin, bear = trailing
+    minimum, blue_sky = trailing maximum, each computed over the trailing `periods` fiscal years. Works for any
+    company with enough EDGAR history; not specific to steel or oil & gas."""
+    years = sorted(history)[-periods:]
+    margins = _margins(history, field, revenue_field, years)
+    if not margins:
+        raise ValueError("no revenue/field data to build margin scenarios from")
+    vals = list(margins.values())
+    return {"years_used": years, "margin_history": margins, "current_margin": margins[years[-1]],
+            "base_margin": statistics.median(vals), "bear_margin": min(vals), "blue_sky_margin": max(vals)}
+
+
+def sector_beta(sector: str) -> float:
+    """Illustrative, Damodaran-style unlevered beta for a sector profile — a starting point when a company-specific
+    beta isn't available, not a substitute for one."""
+    return SECTOR_PROFILES.get(sector, SECTOR_PROFILES["default"]).unlevered_beta
+
+
+def normalized_comps_metrics(history: Dict[str, Dict[str, float]], sector: str = "default", periods: Optional[int] = None) -> Dict[str, float]:
+    """A metrics dict — {"revenue", "ebitda", "ebit", "net_income"} — using through-cycle-normalized EBITDA/EBIT
+    (median over the sector's normalize_periods) instead of the raw LTM year, ready to feed finmodel.comps.Peer or
+    finmodel.comps.Target. Revenue and net_income stay at the latest LTM year (normalizing every line would also
+    distort per-share metrics like P/E in ways this module hasn't validated)."""
+    profile = SECTOR_PROFILES.get(sector, SECTOR_PROFILES["default"])
+    n = periods or profile.normalize_periods
+    latest = sorted(history)[-1]
+    ebit_n = normalize_metric(history, "operating_income", n, "median")["value"]
+    da_n = normalize_metric(history, "da", n, "median")["value"] if any(history[y].get("da") for y in history) else 0.0
+    return {"revenue": history[latest].get("revenue", 0), "ebitda": ebit_n + da_n, "ebit": ebit_n, "net_income": history[latest].get("net_income", 0)}
+
+
+def from_dict(d: Dict[str, Any]) -> Dict[str, Any]:
+    d = {k: v for k, v in d.items() if not str(k).startswith("_")}
+    history = d["history"]
+    sector = d.get("sector", "default")
+    return {"cycle_diagnostics": cycle_diagnostics(history, sector=sector, periods=d.get("periods", 8), field=d.get("field", "operating_income")),
+            "dcf_scenarios": dcf_scenarios_from_history(history, periods=d.get("periods", 8), field=d.get("field", "operating_income")),
+            "normalized_metrics": normalized_comps_metrics(history, sector=sector, periods=d.get("periods")),
+            "sector_profile": {"name": SECTOR_PROFILES.get(sector, SECTOR_PROFILES["default"]).name, "unlevered_beta": sector_beta(sector)}}

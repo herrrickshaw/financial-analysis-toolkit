@@ -56,6 +56,22 @@ Discount rate 10.28% for both scenarios (`finmodel wacc examples/wacc_stld.json`
 
 $119.93 – $282.12 (2025-07-02 to 2026-07-02, 252 trading days).
 
+## 5. Sector-tuned comparison: does cycle-normalizing the inputs change the answer?
+
+`finmodel.sectors` was built from exactly the distortion this document flags above: STLD's own FY2025 EBIT margin (8.1%) sits well below its own trailing 8-year median (12.8%), a real trough by `finmodel cycle`'s own diagnostic (`finmodel cycle data/edgar/STLD.json --sector steel`). This section rebuilds the trading comps, precedent multiples and DCF scenarios using each company's own trailing-history median EBIT/EBITDA instead of the raw cycle-distorted LTM year, holding every other assumption (growth, D&A%, capex%, discount rate) identical, so the comparison isolates what normalization alone changes.
+
+| Method | Raw LTM range | Sector-normalized range | Normalized brackets price? |
+|---|---|---|---|
+| Trading comps | 90.30 – 434.61 | 90.30 – 337.47 | yes |
+| Precedent transactions | 46.84 – 155.72 | 46.84 – 185.15 | no |
+| DCF - base case | 58.66 – 80.62 | 77.08 – 104.45 | no |
+| DCF - blue sky | 67.02 – 94.12 | 142.90 – 192.48 | no |
+| 52-week range | 119.93 – 282.12 | 119.93 – 282.12 (unchanged — real price history) | yes |
+
+Data-driven margin targets from STLD's own trailing 8 fiscal years (`finmodel cycle`): bear 8.1%, base (trailing median) 12.8%, blue sky (trailing peak) 23.4% — versus the hand-picked 11.0%/16.8% used in the raw run above. The base case is reasonably close (+1.8%pt); the blue-sky case is not: the hand-picked 'toward FY2023' target (16.8%) significantly understated STLD's own historical best case — the true trailing peak, 23.4%, came from FY2021, which sat outside the shorter lookback I picked by hand. This is exactly the failure mode `sectors.dcf_scenarios_from_history` is meant to catch: a hand-picked scenario label ('toward last year', 'toward two years ago') implicitly assumes the cycle's extremes fall within whatever window the analyst happens to be looking at.
+
+Normalizing does **not** change which methods bracket the price here (still Trading comps and 52-week range), even though the individual ranges move — normalizing the trading comps compresses the high end (434.61 → 337.47) because it corrects both sides of the same trade (peer AND target EBITDA rise together, since the whole steel sector shares the same 2025 trough), while normalizing the DCF and precedent ranges pushes them meaningfully higher without lifting them far enough to reach the price. Sector normalization corrected a real distortion in each individual method's own numbers, but by itself it did not close the STLD gap documented above — see `docs/FOOTBALL_FIELD_CVX.md` for a case where cycle normalization was less needed in the first place, because only one side of the trade (the precedent-deal targets) was cycle-distorted, not Chevron's own numbers.
+
 ## Method note
 
 Everything here is either a live database query (peer prices, precedent-deal-acquirer's price, 52-week range), a public SEC filing (every revenue/EBIT/D&A/debt/cash figure), a matter of public record (the two deals' offer prices and announcement dates), or an explicitly labelled assumption I built (the two DCF scenarios' growth and margin paths, and the choice of which two precedent deals to include). Nothing here was invented and presented as fact; where a genuinely real number was unavailable (target-side premiums for delisted companies), it was omitted rather than approximated.

@@ -26,7 +26,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from finmodel import comps, charts, dcf, edgar  # noqa: E402
+from finmodel import comps, charts, dcf, edgar, sectors  # noqa: E402
 
 CORE = ["XOM", "COP", "EOG", "OXY"]   # integrated majors and large-cap E&P; refiners (PSX/VLO/MPC) and oilfield services (SLB) excluded as different business models
 TARGET = "CVX"
@@ -126,6 +126,49 @@ def cvx_dcf_scenario(name: str, growth: float, margin_target: float, da_pct: flo
             "assumptions": {"revenue_growth": growth, "ebit_margin_target_year5": margin_target, "da_pct_revenue": da_pct, "capex_pct_revenue": capex_pct, "discount_rate": discount_rate, "terminal_growth": 0.025}}
 
 
+def build_normalized(px):
+    """Same football field, rebuilt with finmodel.sectors: peer/target EBIT+EBITDA use the trailing-8yr median
+    (through-cycle) instead of the raw LTM year; precedent-deal targets (PXD, MRO) use their own trailing-history
+    median EBIT/EBITDA as of the announcement instead of the deal-year figure; the two DCF scenarios use
+    finmodel.sectors.dcf_scenarios_from_history's data-driven bear/base/blue-sky margins. Every other assumption
+    (growth, D&A%, capex%, discount rate, tax rate) is held identical to the raw run."""
+    peers = []
+    for t in CORE:
+        hist = json.loads((ROOT / "data" / "edgar" / f"{t}.json").read_text())["years"]
+        r = fy(t, "2025-12-31")
+        m = sectors.normalized_comps_metrics(hist, sector="oil_gas")
+        peers.append(comps.Peer(t, px[t], r["diluted_shares"], cash=r["cash"] + r.get("short_term_investments", 0), debt=r["debt_total"], nci=r.get("nci", 0), metrics=m, ticker=t))
+    trading = comps.spread(peers)
+
+    pxd_hist = json.loads((ROOT / "data" / "edgar" / "PXD.json").read_text())["years"]
+    mro_hist = json.loads((ROOT / "data" / "edgar" / "MRO.json").read_text())["years"]
+    pxd_n = sectors.normalize_metric(pxd_hist, "operating_income", periods=8, method="median", as_of="2022-12-31")["value"]
+    pxd_da_n = sectors.normalize_metric(pxd_hist, "da", periods=8, method="median", as_of="2022-12-31")["value"]
+    mro_n = sectors.normalize_metric(mro_hist, "operating_income", periods=8, method="median", as_of="2023-12-31")["value"]
+    mro_da_n = sectors.normalize_metric(mro_hist, "da", periods=8, method="median", as_of="2023-12-31")["value"]
+    x_deal, c_deal = xom_pxd_precedent(), cop_mro_precedent()
+    from finmodel.comps import Deal
+    deals = [Deal(x_deal["acquirer"], x_deal["target"], x_deal["date"], x_deal["enterprise_value"], ltm_revenue=x_deal["ltm_revenue"], ltm_ebitda=pxd_n + pxd_da_n, ltm_ebit=pxd_n),
+             Deal(c_deal["acquirer"], c_deal["target"], c_deal["date"], c_deal["enterprise_value"], ltm_revenue=c_deal["ltm_revenue"], ltm_ebitda=mro_n + mro_da_n, ltm_ebit=mro_n)]
+    precedents = comps.precedents(deals)
+
+    cvx_hist = json.loads((ROOT / "data" / "edgar" / "CVX.json").read_text())["years"]
+    tr = fy(TARGET, "2025-12-31")
+    tm = sectors.normalized_comps_metrics(cvx_hist, sector="oil_gas")
+    target = comps.Target("Chevron Corporation", px[TARGET], tr["diluted_shares"], metrics=tm,
+                          bridge={"cash": tr["cash"] + tr.get("short_term_investments", 0), "debt": -tr["debt_total"], "nci": -tr.get("nci", 0)})
+
+    s = sectors.dcf_scenarios_from_history(cvx_hist, periods=8)
+    base = cvx_dcf_scenario("DCF - base case (sector-normalized: trailing median margin)", growth=0.02, margin_target=s["base_margin"], da_pct=0.095, capex_pct=0.075, discount_rate=0.0826, current_price=px[TARGET])
+    blue = cvx_dcf_scenario("DCF - blue sky (sector-normalized: trailing peak margin)", growth=0.05, margin_target=s["blue_sky_margin"], da_pct=0.07, capex_pct=0.06, discount_rate=0.0826, current_price=px[TARGET])
+    wk52 = week52(TARGET)
+
+    ff = comps.football_field(target, {"Trading comps": trading, "Precedent transactions": precedents},
+                              extra={base["name"]: (base["low"], base["high"]), blue["name"]: (blue["low"], blue["high"]), "52-week range": (wk52["low"], wk52["high"])},
+                              stat_low="p25", stat_high="p75")
+    return {"trading_comps": trading, "precedents": precedents, "dcf_base": base, "dcf_blue_sky": blue, "dcf_scenarios_from_history": s, "football_field": ff}
+
+
 def run():
     px = prices(CORE + [TARGET])
     peers = []
@@ -155,9 +198,11 @@ def run():
                               extra={base["name"]: (base["low"], base["high"]), blue["name"]: (blue["low"], blue["high"]), "52-week range": (wk52["low"], wk52["high"])},
                               stat_low="p25", stat_high="p75")
 
+    normalized = build_normalized(px)
+
     out = {"price": px[TARGET], "price_date": PRICE_DATE, "trading_comps": trading, "precedents": precedents,
            "xom_pxd_detail": x_deal, "cop_mro_detail": c_deal, "dcf_base": base, "dcf_blue_sky": blue, "week52": wk52, "football_field": ff,
-           "cvx_fy2025_margin": tr["operating_income"] / tr["revenue"]}
+           "cvx_fy2025_margin": tr["operating_income"] / tr["revenue"], "normalized": normalized}
     (ROOT / "out").mkdir(exist_ok=True)
     (ROOT / "out" / "comps_football_field_cvx.json").write_text(json.dumps(out, indent=1, default=str))
     charts.report_for("comps", {"comps": trading, "precedents": precedents, "football_field": ff}, ROOT / "out" / "charts_football_field_cvx.html", title="Chevron — CFI football-field template on real data")
@@ -238,8 +283,42 @@ def write_doc(out):
                f"(FY2025 was {out['cvx_fy2025_margin']*100:.1f}%) → implied share price **{d['base_value_per_share']:.2f}** "
                f"(range {d['low']:.2f} – {d['high']:.2f} across the sensitivity grid).", ""]
     md += ["", "## 4. 52-week trading range (real, market_data warehouse)", "",
-           f"${out['week52']['low']:.2f} – ${out['week52']['high']:.2f} ({out['week52']['from']} to {out['week52']['to']}, {out['week52']['n_days']} trading days).", "",
-           "## Method note", "",
+           f"${out['week52']['low']:.2f} – ${out['week52']['high']:.2f} ({out['week52']['from']} to {out['week52']['to']}, {out['week52']['n_days']} trading days).", ""]
+    md += ["## 5. Sector-tuned comparison: does cycle-normalizing the inputs change the answer?", "",
+           "The same `finmodel.sectors` treatment as `docs/FOOTBALL_FIELD_STLD.md`, applied here. Chevron's own FY2025 margin sits only "
+           "modestly below its own trailing 8-year median (`finmodel cycle data/edgar/CVX.json --sector oil_gas` calls it 'near normal', "
+           "not a trough) — a real, useful contrast with STLD, where FY2025 WAS flagged as a trough. The precedent-deal targets are a "
+           "different story: both PXD (as of FY2022) and MRO (as of FY2023) sit at or near their own historical peaks. This section "
+           "rebuilds every input with each company's own trailing-history median EBIT/EBITDA instead of its raw LTM year, holding every "
+           "other assumption identical.", ""]
+    norm = out["normalized"]; nff = norm["football_field"]
+    md += ["| Method | Raw LTM range | Sector-normalized range | Normalized brackets price? |", "|---|---|---|---|"]
+    n_brackets = []
+    for it, nit in zip(ff["items"], nff["items"]):
+        inside = nit["low"] <= px <= nit["high"]
+        if inside: n_brackets.append(nit["method"])
+        note = " (unchanged — real price history)" if nit["method"] == "52-week range" else ""
+        md.append(f"| {it['method'].split(' (')[0]} | {it['low']:.2f} – {it['high']:.2f} | {nit['low']:.2f} – {nit['high']:.2f}{note} | {'yes' if inside else 'no'} |")
+    s = norm["dcf_scenarios_from_history"]
+    peak_year = max(s["margin_history"], key=s["margin_history"].get)[:4]
+    md += ["", f"Data-driven margin targets from Chevron's own trailing 8 fiscal years (`finmodel cycle`): bear {s['bear_margin']:.1%}, "
+           f"base (trailing median) {s['base_margin']:.1%}, blue sky (trailing peak, FY{peak_year}) {s['blue_sky_margin']:.1%} — versus "
+           f"the hand-picked 13.5%/20.0% used in the raw run above.", ""]
+    if _oxford_join(n_brackets) != _oxford_join(brackets):
+        md.append(f"Normalizing changes which methods bracket the price: raw run → {_oxford_join(brackets)}; normalized run → {_oxford_join(n_brackets)}.")
+    else:
+        md.append(f"Normalizing does not change which methods bracket the price here (still {_oxford_join(n_brackets)}).")
+    n_prec = nff["items"][1]
+    md += ["", f"The trading comps and both DCF scenarios barely move — Chevron's own peer set and its own margin history were never far "
+           f"from normal, so there was little to correct. The precedent-transaction range moves the most, and moves up: normalizing PXD's "
+           f"and MRO's EBIT/EBITDA down from their own 2022/2023 cycle peaks toward their trailing-history median makes the deals' EV/EBITDA "
+           f"multiples meaningfully more expensive (as flagged qualitatively in section 2), which pushes the whole precedent-implied range up "
+           f"to {n_prec['low']:.2f} – {n_prec['high']:.2f} — high enough that it stops bracketing the price at all, this time because the raw "
+           f"range's low end no longer reaches down to Chevron's actual price. Read together with the STLD result, the pattern is that "
+           f"normalization corrects the specific method it's applied to in the direction the sign of that method's own cycle distortion "
+           f"predicts — it doesn't automatically make every football field converge on the market price, because the market price reflects "
+           f"information (forward estimates, buybacks, sentiment) that none of these backward-looking methods carry.", ""]
+    md += ["## Method note", "",
            "Same standard as the STLD check: every revenue/EBIT/D&A/debt/cash figure is from an SEC 10-K (via `finmodel.edgar`), "
            "every price is a live database query against `market_data`, the two deals' exchange ratios and announcement dates are "
            "public record, and the two DCF scenarios are explicitly labelled illustrative assumptions grounded in the target's own "

@@ -24,7 +24,7 @@ re-implemented in dependency-free Python and reconciled to the spreadsheets cell
 ```bash
 git clone https://github.com/herrrickshaw/financial-analysis-toolkit && cd financial-analysis-toolkit
 pip install -e ".[test]"          # only openpyxl is required at runtime
-pytest -q                         # 65 tests; the LibreOffice recalc test auto-skips if soffice is absent
+pytest -q                         # 76 tests; the LibreOffice recalc test auto-skips if soffice is absent
 ```
 
 ## Quick start
@@ -40,6 +40,7 @@ finmodel comps examples/comps_stld.json --xlsx out/comps.xlsx            # tradi
 finmodel scores examples/scores_stld.json                                # Altman Z, Piotroski F, Beneish M
 finmodel costing examples/costing_university.json                        # EUA-style resource allocation, full costing, income diversification
 finmodel edgar 1022671 --user-agent "me name@example.com" --years 5      # SEC EDGAR annual statements for a CIK (Steel Dynamics)
+finmodel cycle data/edgar/STLD.json --sector steel                       # where an LTM year sits in its own margin cycle; data-driven DCF scenario targets
 finmodel wacc examples/wacc_stld.json                                    # CAPM cost of equity, synthetic-rating cost of debt, WACC
 finmodel residual-income examples/residual_income_stld.json              # residual-income (EBO) / EVA equity valuation
 finmodel sotp examples/sotp_conglomerate.json                            # sum-of-the-parts across segments
@@ -99,8 +100,9 @@ Also: wage expense defaults to gross wages (`wage_expense_basis="gross"`); pass 
 ## Real-data validation and applied case studies
 
 - `docs/VALIDATION_REAL_DATA.md` (`scripts/comps_validation.py`) — the comps engine on the US steel peer set with SEC EDGAR fundamentals and warehouse prices, cross-checked against the market-pipeline's independent P/E ledger; Altman / Piotroski / Beneish on the same filings.
-- `docs/FOOTBALL_FIELD_STLD.md` (`scripts/football_field_stld.py`) — the CFI football-field template (comps + precedents + DCF + 52-week range) populated with real Steel Dynamics data: real peer multiples, two real verifiable steel M&A precedents (Nippon Steel/U.S. Steel, Cleveland-Cliffs/AK Steel) built from SEC EDGAR filings, two DCF scenarios grounded in STLD's own historical margin range, and the real trailing 52-week price range — checked against STLD's actual price. Only the trading-comps and 52-week ranges bracket it; both DCF scenarios and both precedents sit below.
-- `docs/FOOTBALL_FIELD_CVX.md` (`scripts/football_field_cvx.py`) — the same check on Chevron, a different industry (oil & gas majors), with two different real precedent deals (ExxonMobil/Pioneer Natural Resources, ConocoPhillips/Marathon Oil): four of five methods bracket the price, a genuinely different result from STLD that shows the method isn't tuned to one outcome.
+- `docs/FOOTBALL_FIELD_STLD.md` (`scripts/football_field_stld.py`) — the CFI football-field template (comps + precedents + DCF + 52-week range) populated with real Steel Dynamics data: real peer multiples, two real verifiable steel M&A precedents (Nippon Steel/U.S. Steel, Cleveland-Cliffs/AK Steel) built from SEC EDGAR filings, two DCF scenarios grounded in STLD's own historical margin range, and the real trailing 52-week price range — checked against STLD's actual price. Only the trading-comps and 52-week ranges bracket it; both DCF scenarios and both precedents sit below. §5 rebuilds every input with `finmodel.sectors`' through-cycle normalization and finds it doesn't close the gap here — the whole steel sector shares the same 2025 trough, so normalizing both sides of each trade moves them together.
+- `docs/FOOTBALL_FIELD_CVX.md` (`scripts/football_field_cvx.py`) — the same check on Chevron, a different industry (oil & gas majors), with two different real precedent deals (ExxonMobil/Pioneer Natural Resources, ConocoPhillips/Marathon Oil): four of five methods bracket the price, a genuinely different result from STLD that shows the method isn't tuned to one outcome. §5's sector normalization does change the answer here: correcting the two precedent targets' 2022/2023 cycle-peak years pushes the precedent-implied range up so far it stops bracketing the price.
+- `finmodel.sectors` (`finmodel cycle <edgar-json> --sector steel|oil_gas`) — the sector-tuning module both checks above validate: `cycle_diagnostics()` flags whether an LTM year is a cycle trough/peak/normal relative to its own trailing history (confirmed automatically on STLD FY2025 = trough, PXD FY2022 = peak — the exact years the two docs above found by hand), `dcf_scenarios_from_history()` derives data-driven bear/base/blue-sky margin targets instead of a hand-picked one, and `normalized_comps_metrics()` swaps a raw LTM EBITDA for a through-cycle median. Only steel and oil & gas are tuned against real multi-year data so far; everything else uses a clearly-labelled generic default.
 - `docs/CASE_STUDY_MA.md` (`scripts/ma_case_study.py`) — Microsoft/Activision, Chevron/Hess and Cisco/Splunk: each party's last standalone year, the merger engine's static pro-forma, and the acquirer's actual statements after closing, with the reasons they differ.
 - `docs/GAP_ANALYSIS.md` — feature gap analysis against the 144 GitHub repositories found for financial modelling / valuation and the EUA–ATHENA financial-management toolkit; what was added in response (`edgar`, `scores`, `comps`, `costing`, reverse and Monte-Carlo DCF).
 
@@ -135,7 +137,7 @@ educational templates.
 ## Layout
 
 ```
-finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, audit, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
+finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, audit, sectors, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
 examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo, ASM LBO, BIWS merger, STLD comps, STLD scores, university costing, STLD WACC, STLD residual income, conglomerate SOTP)
 data/              glossary.json, edgar/ (compact SEC company-facts extracts for the case studies)
 scripts/           comps_validation.py, football_field_stld.py, football_field_cvx.py, ma_case_study.py (regenerate the real-data docs)

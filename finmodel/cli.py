@@ -241,6 +241,20 @@ def cmd_edgar(a):
         print(f"  {fy}  revenue {r.get('revenue', 0)/1e6:>12,.0f}m  EBIT {r.get('operating_income', 0)/1e6:>10,.0f}m  NI {r.get('net_income', 0)/1e6:>10,.0f}m  diluted EPS {r.get('eps_diluted', 0):>7.2f}  cash {r.get('cash', 0)/1e6:>10,.0f}m  debt {r.get('debt_total', 0)/1e6:>10,.0f}m")
 
 
+def cmd_cycle(a):
+    from . import sectors
+    history = json.loads(Path(a.edgar_json).read_text())["years"]
+    d = sectors.cycle_diagnostics(history, periods=a.periods, sector=a.sector, as_of=a.as_of)
+    print(f"Sector: {d.get('sector', sectors.SECTOR_PROFILES.get(a.sector, sectors.SECTOR_PROFILES['default']).name)}")
+    print(f"FY {d.get('fiscal_year')}: margin {d.get('latest_margin', float('nan')):.1%} vs trailing-{a.periods}yr median {d.get('median_margin_trailing_years', float('nan')):.1%} "
+          f"({d.get('deviation_pct', float('nan')):+.1%}) → {d.get('flag')}")
+    s = sectors.dcf_scenarios_from_history(history, periods=a.periods)
+    print(f"Data-driven DCF margin targets: bear {s['bear_margin']:.1%}  base {s['base_margin']:.1%}  blue sky {s['blue_sky_margin']:.1%}  (current {s['current_margin']:.1%})")
+    if a.json_out:
+        out = {"cycle_diagnostics": d, "dcf_scenarios": s, "sector_beta": sectors.sector_beta(a.sector)}
+        Path(a.json_out).write_text(json.dumps(out, indent=1))
+
+
 def cmd_wacc(a):
     from . import wacc as W
     res = W.from_dict(_load_json(a.inputs))
@@ -369,6 +383,7 @@ def main(argv=None):
     sc = sp.add_parser("scores", help="Altman Z, Piotroski F, Beneish M from two fiscal years of statement data"); sc.add_argument("inputs"); sc.add_argument("--json-out"); sc.set_defaults(fn=cmd_scores)
     co = sp.add_parser("costing", help="EUA-style resource allocation, cost allocation and income diversification"); co.add_argument("inputs"); co.add_argument("--json-out"); co.set_defaults(fn=cmd_costing)
     ed = sp.add_parser("edgar", help="pull annual statements for a CIK from SEC EDGAR company facts"); ed.add_argument("cik"); ed.add_argument("--user-agent", required=True, help="e.g. 'my-tool name@example.com' (SEC requires a contact)"); ed.add_argument("--years", type=int, default=8); ed.add_argument("--cache-dir"); ed.add_argument("--json-out"); ed.set_defaults(fn=cmd_edgar)
+    cy = sp.add_parser("cycle", help="where a company's LTM year sits in its own margin cycle, and data-driven DCF scenario targets from its own history"); cy.add_argument("edgar_json", help="a data/edgar/<TICKER>.json extract (finmodel edgar --json-out)"); cy.add_argument("--sector", default="default", choices=["steel", "oil_gas", "default"]); cy.add_argument("--periods", type=int, default=8); cy.add_argument("--as-of"); cy.add_argument("--json-out"); cy.set_defaults(fn=cmd_cycle)
     wc = sp.add_parser("wacc", help="CAPM cost of equity, synthetic-rating cost of debt, bottom-up beta and WACC"); wc.add_argument("inputs"); wc.add_argument("--json-out"); wc.set_defaults(fn=cmd_wacc)
     ri = sp.add_parser("residual-income", help="residual-income (EBO) equity valuation and/or EVA firm valuation"); ri.add_argument("inputs"); ri.add_argument("--json-out"); ri.set_defaults(fn=cmd_residual_income)
     so = sp.add_parser("sotp", help="sum-of-the-parts valuation across segments"); so.add_argument("inputs"); so.add_argument("--json-out"); so.set_defaults(fn=cmd_sotp)

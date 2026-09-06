@@ -32,7 +32,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from finmodel import comps, charts, dcf  # noqa: E402
+from finmodel import comps, charts, dcf, sectors  # noqa: E402
 import comps_validation as CV  # noqa: E402  (reuses CORE peer set, price lookup, latest() EDGAR loader)
 
 PRICE_DATE = CV.PRICE_DATE
@@ -116,6 +116,50 @@ def stld_dcf_scenario(name: str, growth: float, margin_target: float, da_pct: fl
             "projection": {"revenue": rev[1:], "ebit": ebit, "da": da, "capex": capex, "change_nwc": change_nwc}}
 
 
+def build_normalized(px, price_source):
+    """The same football field, but built with finmodel.sectors: peer and target EBIT/EBITDA are the trailing-8yr
+    median (through-cycle) rather than the raw, cycle-distorted LTM year; precedent-deal target multiples use their
+    own trailing-history median EBIT/EBITDA as of the announcement instead of the deal-year figure; the two DCF
+    scenarios use finmodel.sectors.dcf_scenarios_from_history's data-driven bear/base/blue-sky margins instead of a
+    hand-picked 'toward FY20XX' target — everything else (growth, D&A%, capex%, discount rate, tax rate) is held
+    identical to the raw run so the comparison isolates the effect of cycle normalization."""
+    peers = []
+    for t in CV.CORE:
+        hist = json.loads((ROOT / "data" / "edgar" / f"{t}.json").read_text())["years"]
+        _, _, r, _ = CV.latest(t)
+        m = sectors.normalized_comps_metrics(hist, sector="steel")
+        peers.append(comps.Peer(t, px[t], r.get("diluted_shares", 0), cash=r.get("cash", 0) + r.get("short_term_investments", 0), debt=r.get("debt_total", 0), nci=r.get("nci", 0), metrics=m, ticker=t))
+    trading = comps.spread(peers)
+
+    x_hist = json.loads((ROOT / "data" / "edgar" / "X.json").read_text())["years"]
+    aks_hist = json.loads((ROOT / "data" / "edgar" / "AKS.json").read_text())["years"]
+    x_n = sectors.normalize_metric(x_hist, "operating_income", periods=8, method="median", as_of="2023-12-31")["value"]
+    x_da_n = sectors.normalize_metric(x_hist, "da", periods=8, method="median", as_of="2023-12-31")["value"]
+    aks_n = sectors.normalize_metric(aks_hist, "operating_income", periods=8, method="median", as_of="2019-12-31")["value"]
+    aks_da_n = sectors.normalize_metric(aks_hist, "da", periods=8, method="median", as_of="2019-12-31")["value"]
+    x_deal, aks_deal = x_precedent(), aks_precedent()
+    from finmodel.comps import Deal
+    deals = [Deal(x_deal["acquirer"], x_deal["target"], x_deal["date"], x_deal["enterprise_value"], ltm_revenue=x_deal["ltm_revenue"], ltm_ebitda=x_n + x_da_n, ltm_ebit=x_n),
+             Deal(aks_deal["acquirer"], aks_deal["target"], aks_deal["date"], aks_deal["enterprise_value"], ltm_revenue=aks_deal["ltm_revenue"], ltm_ebitda=aks_n + aks_da_n, ltm_ebit=aks_n)]
+    precedents = comps.precedents(deals)
+
+    stld_hist = json.loads((ROOT / "data" / "edgar" / "STLD.json").read_text())["years"]
+    _, _, tr, _ = CV.latest("STLD")
+    tm = sectors.normalized_comps_metrics(stld_hist, sector="steel")
+    target = comps.Target("Steel Dynamics, Inc.", px["STLD"], tr["diluted_shares"], metrics=tm,
+                          bridge={"cash": tr.get("cash", 0) + tr.get("short_term_investments", 0), "debt": -tr.get("debt_total", 0), "nci": -tr.get("nci", 0)})
+
+    s = sectors.dcf_scenarios_from_history(stld_hist, periods=8)
+    base = stld_dcf_scenario("DCF - base case (sector-normalized: trailing median margin)", growth=0.03, margin_target=s["base_margin"], da_pct=0.030, capex_pct=0.052, discount_rate=0.1028, current_price=px["STLD"])
+    blue = stld_dcf_scenario("DCF - blue sky (sector-normalized: trailing peak margin)", growth=0.06, margin_target=s["blue_sky_margin"], da_pct=0.023, capex_pct=0.080, discount_rate=0.1028, current_price=px["STLD"])
+    wk52 = week52("STLD")
+
+    ff = comps.football_field(target, {"Trading comps": trading, "Precedent transactions": precedents},
+                              extra={base["name"]: (base["low"], base["high"]), blue["name"]: (blue["low"], blue["high"]), "52-week range": (wk52["low"], wk52["high"])},
+                              stat_low="p25", stat_high="p75")
+    return {"trading_comps": trading, "precedents": precedents, "dcf_base": base, "dcf_blue_sky": blue, "dcf_scenarios_from_history": s, "football_field": ff}
+
+
 def run():
     px, price_source = CV.prices()
     peers = []
@@ -148,8 +192,11 @@ def run():
     fy0, fy1 = min(stld_years), max(stld_years)
     buyback = {"from_fy": fy0, "from_shares": stld_years[fy0]["diluted_shares"], "to_fy": fy1, "to_shares": stld_years[fy1]["diluted_shares"]}
 
+    normalized = build_normalized(px, price_source)
+
     out = {"price": px["STLD"], "price_date": PRICE_DATE, "price_source": price_source, "trading_comps": trading, "precedents": precedents,
-           "x_precedent_detail": x_deal, "aks_precedent_detail": aks_deal, "dcf_base": base, "dcf_blue_sky": blue, "week52": wk52, "football_field": ff, "buyback": buyback}
+           "x_precedent_detail": x_deal, "aks_precedent_detail": aks_deal, "dcf_base": base, "dcf_blue_sky": blue, "week52": wk52, "football_field": ff, "buyback": buyback,
+           "normalized": normalized}
     (ROOT / "out").mkdir(exist_ok=True)
     (ROOT / "out" / "comps_football_field_stld.json").write_text(json.dumps(out, indent=1, default=str))
     charts.report_for("comps", {"comps": trading, "precedents": precedents, "football_field": ff}, ROOT / "out" / "charts_football_field_stld.html", title="Steel Dynamics — CFI football-field template on real data")
@@ -242,6 +289,41 @@ def write_doc(out):
     wk = out["week52"]
     if "low" in wk:
         md.append(f"${wk['low']:.2f} – ${wk['high']:.2f} ({wk['from']} to {wk['to']}, {wk['n_days']} trading days).")
+    md += ["", "## 5. Sector-tuned comparison: does cycle-normalizing the inputs change the answer?", "",
+           "`finmodel.sectors` was built from exactly the distortion this document flags above: STLD's own FY2025 EBIT margin "
+           "(8.1%) sits well below its own trailing 8-year median (12.8%), a real trough by `finmodel cycle`'s own diagnostic "
+           "(`finmodel cycle data/edgar/STLD.json --sector steel`). This section rebuilds the trading comps, precedent "
+           "multiples and DCF scenarios using each company's own trailing-history median EBIT/EBITDA instead of the raw "
+           "cycle-distorted LTM year, holding every other assumption (growth, D&A%, capex%, discount rate) identical, so the "
+           "comparison isolates what normalization alone changes.", ""]
+    norm = out["normalized"]; nff = norm["football_field"]
+    md += ["| Method | Raw LTM range | Sector-normalized range | Normalized brackets price? |", "|---|---|---|---|"]
+    n_brackets = []
+    for it, nit in zip(ff["items"], nff["items"]):
+        inside = nit["low"] <= px <= nit["high"]
+        if inside: n_brackets.append(nit["method"])
+        note = " (unchanged — real price history)" if nit["method"] == "52-week range" else ""
+        md.append(f"| {it['method'].split(' (')[0]} | {it['low']:.2f} – {it['high']:.2f} | {nit['low']:.2f} – {nit['high']:.2f}{note} | {'yes' if inside else 'no'} |")
+    s = norm["dcf_scenarios_from_history"]
+    raw_base, raw_blue = 0.11, 0.168
+    md += ["", f"Data-driven margin targets from STLD's own trailing 8 fiscal years (`finmodel cycle`): bear {s['bear_margin']:.1%}, "
+           f"base (trailing median) {s['base_margin']:.1%}, blue sky (trailing peak) {s['blue_sky_margin']:.1%} — versus the hand-picked "
+           f"{raw_base:.1%}/{raw_blue:.1%} used in the raw run above. The base case is reasonably close ({s['base_margin']-raw_base:+.1%}pt); "
+           f"the blue-sky case is not: the hand-picked 'toward FY2023' target ({raw_blue:.1%}) significantly understated STLD's own "
+           f"historical best case — the true trailing peak, {s['blue_sky_margin']:.1%}, came from FY{max(s['margin_history'], key=s['margin_history'].get)[:4]}, "
+           f"which sat outside the shorter lookback I picked by hand. This is exactly the failure mode `sectors.dcf_scenarios_from_history` "
+           f"is meant to catch: a hand-picked scenario label ('toward last year', 'toward two years ago') implicitly assumes the cycle's "
+           f"extremes fall within whatever window the analyst happens to be looking at.", ""]
+    if _oxford_join(n_brackets) != _oxford_join(brackets):
+        md.append(f"Normalizing changes which methods bracket the price: raw run → {_oxford_join(brackets)}; normalized run → {_oxford_join(n_brackets)}.")
+    else:
+        md.append(f"Normalizing does **not** change which methods bracket the price here (still {_oxford_join(n_brackets)}), even though the "
+                  f"individual ranges move — normalizing the trading comps compresses the high end (434.61 → 337.47) because it corrects both "
+                  f"sides of the same trade (peer AND target EBITDA rise together, since the whole steel sector shares the same 2025 trough), "
+                  f"while normalizing the DCF and precedent ranges pushes them meaningfully higher without lifting them far enough to reach the "
+                  f"price. Sector normalization corrected a real distortion in each individual method's own numbers, but by itself it did not "
+                  f"close the STLD gap documented above — see `docs/FOOTBALL_FIELD_CVX.md` for a case where cycle normalization was less "
+                  f"needed in the first place, because only one side of the trade (the precedent-deal targets) was cycle-distorted, not Chevron's own numbers.")
     md += ["", "## Method note", "",
            "Everything here is either a live database query (peer prices, precedent-deal-acquirer's price, 52-week range), "
            "a public SEC filing (every revenue/EBIT/D&A/debt/cash figure), a matter of public record (the two deals' offer "

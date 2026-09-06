@@ -66,6 +66,24 @@ Discount rate 8.26% for both scenarios (`finmodel wacc examples/wacc_cvx.json`);
 
 $141.47 – $209.23 (2025-07-02 to 2026-07-02, 252 trading days).
 
+## 5. Sector-tuned comparison: does cycle-normalizing the inputs change the answer?
+
+The same `finmodel.sectors` treatment as `docs/FOOTBALL_FIELD_STLD.md`, applied here. Chevron's own FY2025 margin sits only modestly below its own trailing 8-year median (`finmodel cycle data/edgar/CVX.json --sector oil_gas` calls it 'near normal', not a trough) — a real, useful contrast with STLD, where FY2025 WAS flagged as a trough. The precedent-deal targets are a different story: both PXD (as of FY2022) and MRO (as of FY2023) sit at or near their own historical peaks. This section rebuilds every input with each company's own trailing-history median EBIT/EBITDA instead of its raw LTM year, holding every other assumption identical.
+
+| Method | Raw LTM range | Sector-normalized range | Normalized brackets price? |
+|---|---|---|---|
+| Trading comps | 104.43 – 306.63 | 104.43 – 306.63 | yes |
+| Precedent transactions | 57.57 – 289.37 | 208.39 – 519.46 | no |
+| DCF - base case | 140.83 – 200.63 | 139.02 – 198.06 | yes |
+| DCF - blue sky | 207.99 – 296.92 | 211.74 – 302.26 | no |
+| 52-week range | 141.47 – 209.23 | 141.47 – 209.23 (unchanged — real price history) | yes |
+
+Data-driven margin targets from Chevron's own trailing 8 fiscal years (`finmodel cycle`): bear -7.1%, base (trailing median) 13.3%, blue sky (trailing peak, FY2022) 20.4% — versus the hand-picked 13.5%/20.0% used in the raw run above.
+
+Normalizing changes which methods bracket the price: raw run → Trading comps, Precedent transactions, DCF - base case (margin near 2023-25 average) and 52-week range; normalized run → Trading comps, DCF - base case (sector-normalized: trailing median margin) and 52-week range.
+
+The trading comps and both DCF scenarios barely move — Chevron's own peer set and its own margin history were never far from normal, so there was little to correct. The precedent-transaction range moves the most, and moves up: normalizing PXD's and MRO's EBIT/EBITDA down from their own 2022/2023 cycle peaks toward their trailing-history median makes the deals' EV/EBITDA multiples meaningfully more expensive (as flagged qualitatively in section 2), which pushes the whole precedent-implied range up to 208.39 – 519.46 — high enough that it stops bracketing the price at all, this time because the raw range's low end no longer reaches down to Chevron's actual price. Read together with the STLD result, the pattern is that normalization corrects the specific method it's applied to in the direction the sign of that method's own cycle distortion predicts — it doesn't automatically make every football field converge on the market price, because the market price reflects information (forward estimates, buybacks, sentiment) that none of these backward-looking methods carry.
+
 ## Method note
 
 Same standard as the STLD check: every revenue/EBIT/D&A/debt/cash figure is from an SEC 10-K (via `finmodel.edgar`), every price is a live database query against `market_data`, the two deals' exchange ratios and announcement dates are public record, and the two DCF scenarios are explicitly labelled illustrative assumptions grounded in the target's own historical margin range, not analyst consensus. Target-side deal premiums are omitted for the same reason as before: both PXD and MRO are delisted and absent from the warehouse.

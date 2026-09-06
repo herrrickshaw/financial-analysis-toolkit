@@ -230,7 +230,9 @@ Analysis*, *Valuation Model – Comps, Precedents, Football Field*, *Pharmaceuti
 **Try it.** `finmodel comps examples/comps_stld.json`; `finmodel charts comps …`; on real filings:
 `python scripts/comps_validation.py` (see `docs/VALIDATION_REAL_DATA.md`). To see the *full* CFI football-field
 template — comps + precedents + DCF + 52-week range together — checked against a real company's actual price,
-`python scripts/football_field_stld.py` (see `docs/FOOTBALL_FIELD_STLD.md`).
+`python scripts/football_field_stld.py` (`docs/FOOTBALL_FIELD_STLD.md`, steel) and
+`python scripts/football_field_cvx.py` (`docs/FOOTBALL_FIELD_CVX.md`, oil & gas — a different sector, a genuinely
+different result). §5 of each document also checks the sector-tuning in `finmodel.sectors` below.
 
 ---
 
@@ -256,6 +258,37 @@ pricing of a project, and an income-diversification scan (shares, Herfindahl ind
 per fiscal year, latest filing wins, EBIT derived from pre-tax + net interest when a filer omits it). This is what
 feeds `scripts/ma_case_study.py` — Microsoft/Activision, Chevron/Hess, Cisco/Splunk before and after — and the comps
 validation. Read `docs/CASE_STUDY_MA.md` for what a static merger model can and cannot tell you.
+
+## 8c-i. Sector-aware cycle tuning  (`finmodel.sectors`)
+
+**What it is.** `docs/FOOTBALL_FIELD_STLD.md` and `docs/FOOTBALL_FIELD_CVX.md` both found the same problem from
+opposite directions: a single trailing fiscal year's EBITDA can sit anywhere in a company's own multi-year earnings
+cycle, and a trading-comps or precedent-transaction multiple built on it is silently too rich (a cycle trough —
+steel's 2025) or too cheap (a cycle peak — the oil & gas precedent targets' pre-deal years) depending on where that
+year happens to fall. `finmodel.sectors` formalizes the fix directly from that finding, using a company's own
+`finmodel.edgar` history rather than an industry-wide assumption:
+
+- `cycle_diagnostics(history, sector=...)` — compares the latest fiscal year's margin to its own trailing multi-year
+  median and flags trough / peak / near-normal. Regression-tested against the real committed data: it correctly
+  flags STLD's FY2025 as a trough and Pioneer Natural Resources' FY2022 as a peak — the exact years the two
+  football-field docs found by hand.
+- `dcf_scenarios_from_history(history)` — data-driven bear/base/blue-sky EBIT-margin targets (trailing minimum /
+  median / maximum) instead of a hand-picked "toward last year's level" assumption, which the STLD check found
+  had materially understated the true historical peak margin by picking too short a lookback.
+- `normalized_comps_metrics(history, sector=...)` — a metrics dict with through-cycle-normalized EBITDA/EBIT ready
+  to feed `finmodel.comps.Peer`/`Target`, leaving revenue and net income at the latest year.
+- `sector_beta(sector)` — an illustrative, Damodaran-style unlevered beta by sector, a starting point when a
+  company-specific beta isn't available.
+
+Only two sectors (`"steel"`, `"oil_gas"`) are tuned against real multi-year data so far, each with a `SECTOR_PROFILE`
+entry documenting exactly what real range justified its thresholds; every other sector falls back to a clearly
+labelled `"default"` rather than a fabricated industry assumption. Both football-field docs' §5 rebuild their full
+football field with this normalization and compare it to the raw run — at STLD it didn't close the gap (the whole
+peer set shares the same trough, so normalizing both sides of the trade moves them together); at Chevron it did
+change the answer (only the precedent-deal *targets* were cycle-distorted, not Chevron itself, so correcting just
+that one input pushed the precedent-implied range past the price).
+
+**Try it.** `finmodel cycle data/edgar/STLD.json --sector steel`.
 
 ## 8d. Residual income and EVA valuation  (`finmodel.residual_income`)
 

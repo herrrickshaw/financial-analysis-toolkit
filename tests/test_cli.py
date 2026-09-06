@@ -54,3 +54,11 @@ def test_cli_audit(tmp_path, capsys):
     main(["audit", str(AUDIT_FILE), "--json-out", str(tmp_path / "a.json"), "--markdown-out", str(tmp_path / "a.md")])
     out = capsys.readouterr().out
     assert "sheets" in out and (tmp_path / "a.json").exists() and "Workbook audit" in (tmp_path / "a.md").read_text()
+
+
+def test_cli_cycle(tmp_path, capsys):
+    from finmodel.cli import main
+    root = Path(__file__).resolve().parent.parent
+    main(["cycle", str(root / "data" / "edgar" / "STLD.json"), "--sector", "steel", "--json-out", str(tmp_path / "c.json")])
+    out = capsys.readouterr().out
+    assert "trough" in out and "Data-driven DCF margin targets" in out and (tmp_path / "c.json").exists()
