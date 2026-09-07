@@ -1,6 +1,6 @@
 # Template source catalog
 
-Generated 2026-09-06. Counts: `{'cfi:cfi-paid': 127, 'cfi:cfi-login': 196, 'damodaran:public': 59, 'asimplemodel:public': 8, 'exinfm:public': 15, 'macabacus:public': 6, 'biws:public': 225}`
+Generated 2026-09-07. Counts: `{'cfi:cfi-paid': 127, 'cfi:cfi-login': 196, 'damodaran:public': 59, 'asimplemodel:public': 8, 'exinfm:public': 15, 'macabacus:public': 6, 'biws:public': 225}`
 
 ## damodaran — Aswath Damodaran, NYU Stern
 
