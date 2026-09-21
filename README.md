@@ -24,7 +24,7 @@ re-implemented in dependency-free Python and reconciled to the spreadsheets cell
 ```bash
 git clone https://github.com/herrrickshaw/financial-analysis-toolkit && cd financial-analysis-toolkit
 pip install -e ".[test]"          # only openpyxl is required at runtime
-pytest -q                         # 665 tests; the LibreOffice recalc test auto-skips if soffice is absent
+pytest -q                         # 685 tests; the LibreOffice recalc test auto-skips if soffice is absent
 ```
 
 ## Quick start
@@ -69,6 +69,7 @@ finmodel breakeven examples/breakeven_demo.json                          # break
 finmodel cap-table examples/vc_method_demo.json                          # VC Method: required multiple/ownership -> implied pre-/post-money valuation
 finmodel cap-table examples/round_math_demo.json                         # pre-/post-money round-math calculator: give any two of {pre, post, investment}
 finmodel safe-notes examples/safe_notes_demo.json                        # SAFE/convertible-note pre- vs. post-money conversion (cap-vs-discount, stacked-note dilution) into a priced round
+finmodel trl-valuation examples/trl_valuation_demo.json --xlsx out/trl.xlsx  # Technology Readiness Level risk-adjusted valuation: TRL5-vs-TRL7 value uplift net of financing dilution, live-formula Excel workbook
 finmodel loss-reserving examples/loss_reserving_demo.json                # chain-ladder loss development triangle: age-to-age factors, ultimates, IBNR
 finmodel tax-provision examples/tax_provision_demo.json                  # deferred tax, valuation allowance, NOL carryforward (pre-2018/post-2017 baskets)
 finmodel real-estate-development examples/real_estate_development_demo.json  # development pro forma: TDC, draw schedule, yield on cost, unlevered IRR
@@ -292,6 +293,24 @@ question is "what's this worth / what does it cost me":
   loop for a realistic mix of capped and discount-only notes — verified against the defining invariant that a
   post-money SAFE's ownership % never moves when other SAFEs stack alongside it. `to_holders()` feeds the
   converted notes straight into `simulate_rounds()`'s initial cap table for the priced round that follows.
+- `finmodel.trl_valuation` (new) — Technology Readiness Level (TRL) risk-adjusted valuation for a deep-tech /
+  hard-tech startup: how a company at TRL 5 (component/subsystem validated in a relevant environment) should be
+  valued differently than the same company at TRL 7 (a system prototype demonstrated in an operational
+  environment), and what it costs to get there. Two established techniques applied together as a cross-check:
+  a risk-adjusted (probability-weighted) NPV -- the same logic biotech uses to price a drug candidate by its
+  remaining clinical-trial phases, applied here to TRL-gate technical risk -- and the VC Method (reusing
+  `cap_table.vc_method_valuation()` directly) pricing the same risk into a stage-appropriate required IRR
+  instead. `trl_uplift()` nets the resulting TRL5-vs-TRL7 value gap against the capital it actually takes to
+  climb there (via `cap_table.round_math()`, so the value re-rating and the dilution from raising it are seen
+  together). Checked against how real deep-tech valuation practice actually treats this (Equidam's published
+  TRL-conditioned discount-rate methodology; no universal fixed TRL-to-probability table exists anywhere) --
+  this module deliberately does NOT hardcode one, taking every probability/discount-rate/required-IRR figure as
+  a required input instead, and cites the real, oft-quoted empirical link a caller can lean on to justify their
+  own numbers: a 2005 GAO review of 54 DoD programs found system-integration efforts using technology rated
+  below TRL 6-7 averaged 41% cost growth and a 13-month schedule delay. `finmodel.excel.write_trl_valuation()`
+  emits a fully live-formula workbook (every input a blue cell, every probability/PV/risk-adjusted-value/uplift/
+  VC-Method figure a formula computed from those cells) so the TRL5-to-TRL7 gap can actually be explored in
+  Excel, not just read off a static printout.
 
 ## Operating-finance tools (`docs/OPERATING_FINANCE_TOOLS.md`)
 
@@ -683,7 +702,7 @@ educational templates.
 ## Layout
 
 ```
-finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, startup_model, cap_table, safe_notes, vc_fund_metrics, cash_flow_forecast, impact_scoring, strategy_frameworks, rd_capitalization, project_finance, variance_analysis, fpa_planning, breakeven, loss_reserving, tax_provision, real_estate_development, working_capital_financing, retail_loans, retail_deposits, carry_trade, revolving_credit, npa_classification, pipeline, credit_risk, interest_rate_risk, fixed_income_risk, earnout_valuation, percentage_of_completion, credit_card_abs, sales_capacity_planning, lease_accounting, fx_hedging, stock_based_compensation, bond_amortization, foreign_currency_translation, inventory_costing, pension_accounting, nwc_peg, eps_calculation, investment_securities, consolidation, debt_covenants, asset_retirement_obligations, warranty_and_receivables_allowance, investment_incentives, sector_investment_model, project_bankability, india_incentive_workbook, india_corporate_tax_regimes, audit, sectors, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
+finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, startup_model, cap_table, safe_notes, trl_valuation, vc_fund_metrics, cash_flow_forecast, impact_scoring, strategy_frameworks, rd_capitalization, project_finance, variance_analysis, fpa_planning, breakeven, loss_reserving, tax_provision, real_estate_development, working_capital_financing, retail_loans, retail_deposits, carry_trade, revolving_credit, npa_classification, pipeline, credit_risk, interest_rate_risk, fixed_income_risk, earnout_valuation, percentage_of_completion, credit_card_abs, sales_capacity_planning, lease_accounting, fx_hedging, stock_based_compensation, bond_amortization, foreign_currency_translation, inventory_costing, pension_accounting, nwc_peg, eps_calculation, investment_securities, consolidation, debt_covenants, asset_retirement_obligations, warranty_and_receivables_allowance, investment_incentives, sector_investment_model, project_bankability, india_incentive_workbook, india_corporate_tax_regimes, audit, sectors, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
 examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo, ASM LBO, BIWS merger, STLD comps, STLD scores, university costing, STLD WACC, STLD residual income, conglomerate SOTP, SaaS startup model)
 data/              glossary.json, edgar/ (compact SEC company-facts extracts for the case studies)
 scripts/           comps_validation.py, football_field_stld.py, football_field_cvx.py, football_field_csco.py, football_field_usb.py, football_field_o.py, football_field_alk.py, football_field_trv.py, football_field_txn.py, ma_case_study.py (regenerate the real-data docs)

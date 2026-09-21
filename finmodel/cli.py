@@ -370,6 +370,36 @@ def cmd_safe_notes(a):
     if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
 
 
+def cmd_trl_valuation(a):
+    from . import trl_valuation as TRL
+    d = _load_json(a.inputs)
+    inputs = TRL.inputs_from_dict(d)
+    res = TRL.from_dict(d)
+    if "risk_adjusted_value" in res:
+        v = res["risk_adjusted_value"]
+        print(f"TRL {v['trl']}: cumulative P(success) {v['cumulative_probability_of_success']:.1%}, "
+              f"{v['years_to_commercial']:.1f}y to commercial, risk-adjusted value {v['risk_adjusted_value']:,.0f}")
+    if "uplift" in res:
+        u = res["uplift"]
+        print(f"TRL {u['from']['trl']} -> TRL {u['to']['trl']}: {u['from']['risk_adjusted_value']:,.0f} -> "
+              f"{u['to']['risk_adjusted_value']:,.0f}  (+{u['value_uplift']:,.0f}, {u['value_uplift_multiple']:.2f}x)  "
+              f"capital required {u['capital_required_to_advance']:,.0f}")
+        if "financing_round_math" in u:
+            rm = u["financing_round_math"]
+            print(f"  financing round: pre-money {rm['pre_money']:,.0f} + {rm['investment']:,.0f} = post-money "
+                  f"{rm['post_money']:,.0f}  (new investor {rm['new_investor_ownership_pct']:.1%})")
+    if "vc_method_cross_check" in res:
+        v = res["vc_method_cross_check"]
+        print(f"VC-Method cross-check: required multiple {v['required_multiple']:.2f}x, implied pre-money "
+              f"{v['implied_pre_money_valuation']:,.0f}, post-money {v['implied_post_money_valuation']:,.0f}")
+    if a.xlsx:
+        from .excel import write_trl_valuation
+        uplift = d.get("uplift", {})
+        write_trl_valuation(a.xlsx, inputs, uplift.get("from_trl", 5), uplift.get("to_trl", 7))
+        print(f"wrote {a.xlsx}")
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+
+
 def cmd_vc_fund(a):
     from . import vc_fund_metrics as VC
     res = VC.from_dict(_load_json(a.inputs))
@@ -1455,6 +1485,7 @@ def main(argv=None):
     su = sp.add_parser("startup", help="new-business 3-statement projection + DCF valuation, benchmarked against real sector peer data"); su.add_argument("inputs"); su.add_argument("--benchmark-sector", choices=list(_SM.SECTOR_PEER_TICKERS)); su.add_argument("--json-out"); su.set_defaults(fn=cmd_startup)
     ct = sp.add_parser("cap-table", help="priced-round dilution (with the option-pool shuffle), pre-/post-money round math, VC Method valuation, and an exit liquidation-preference waterfall"); ct.add_argument("inputs"); ct.add_argument("--json-out"); ct.set_defaults(fn=cmd_cap_table)
     safn = sp.add_parser("safe-notes", help="SAFE / convertible-note pre-money vs. post-money conversion mechanics (cap-vs-discount, stacked-note dilution) into a priced round"); safn.add_argument("inputs"); safn.add_argument("--json-out"); safn.set_defaults(fn=cmd_safe_notes)
+    trlv = sp.add_parser("trl-valuation", help="Technology Readiness Level (TRL) risk-adjusted valuation: risk-adjusted NPV by TRL stage, TRL5-vs-TRL7 value uplift net of financing dilution, and a VC-Method cross-check"); trlv.add_argument("inputs"); trlv.add_argument("--xlsx"); trlv.add_argument("--json-out"); trlv.set_defaults(fn=cmd_trl_valuation)
     vf = sp.add_parser("vc-fund", help="VC/PE fund LP metrics (DPI/RVPI/TVPI/IRR), deal-level MOIC/IRR, and European or American (deal-by-deal, with clawback) carry waterfalls"); vf.add_argument("inputs"); vf.add_argument("--json-out"); vf.set_defaults(fn=cmd_vc_fund)
     cf = sp.add_parser("cash-flow-forecast", help="13-week rolling direct-method cash flow forecast, covenant-breach flagging, forecast-vs-actual variance"); cf.add_argument("inputs"); cf.add_argument("--json-out"); cf.set_defaults(fn=cmd_cash_flow_forecast)
     ic = sp.add_parser("impact", help="2X Criteria gender-lens screen, Impact Management Project ABC classification, GHG intensity"); ic.add_argument("inputs"); ic.add_argument("--json-out"); ic.set_defaults(fn=cmd_impact)
