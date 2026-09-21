@@ -342,6 +342,31 @@ def cmd_cap_table(a):
         v = res["vc_method_valuation"]
         print(f"VC method: required multiple {v['required_multiple']:.2f}x, ownership required today {v['ownership_required_today']:.2%}, "
               f"implied pre-money {v['implied_pre_money_valuation']:,.0f}, post-money {v['implied_post_money_valuation']:,.0f}")
+    if "round_math" in res:
+        r = res["round_math"]
+        print(f"Round math: pre-money {r['pre_money']:,.0f}  +{r['investment']:,.0f}  = post-money {r['post_money']:,.0f}  "
+              f"(new investor {r['new_investor_ownership_pct']:.2%}, existing holders retain {r['existing_holders_retained_pct']:.2%})")
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
+
+
+def cmd_safe_notes(a):
+    from . import safe_notes as SN
+    res = SN.from_dict(_load_json(a.inputs))
+    c = res["conversion"]
+    print(f"Pre-SAFE fully diluted shares {c['pre_safe_fully_diluted_shares']:,.0f}  "
+          f"-> post-conversion {c['post_conversion_fully_diluted_shares']:,.0f}  (+{c['total_shares_issued']:,.0f})")
+    for s in c["safes"]:
+        print(f"  {s['name']:16} {s['investor_name']:24} regime {s['regime']:8} price/sh {s['conversion_price']:>10.4f}  "
+              f"shares {s['shares']:>14,.0f}  ownership {s['ownership_pct_of_post_conversion_cap_table']:.2%}")
+    if "cap_table" in res:
+        print("Final ownership (post-SAFE-conversion, post-priced-round):")
+        for name, pct in sorted(res["cap_table"]["ownership"].items(), key=lambda kv: -kv[1]):
+            print(f"  {name:24} {pct:.2%}")
+    if "exit_waterfall" in res:
+        w = res["exit_waterfall"]
+        print(f"Exit waterfall on ${w['exit_proceeds']:,.0f}:")
+        for name, amount in sorted(w["payouts"].items(), key=lambda kv: -kv[1]):
+            print(f"  {name:24} {amount:>14,.0f}")
     if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1))
 
 
@@ -1428,7 +1453,8 @@ def main(argv=None):
     so = sp.add_parser("sotp", help="sum-of-the-parts valuation across segments"); so.add_argument("inputs"); so.add_argument("--json-out"); so.set_defaults(fn=cmd_sotp)
     from . import startup_model as _SM
     su = sp.add_parser("startup", help="new-business 3-statement projection + DCF valuation, benchmarked against real sector peer data"); su.add_argument("inputs"); su.add_argument("--benchmark-sector", choices=list(_SM.SECTOR_PEER_TICKERS)); su.add_argument("--json-out"); su.set_defaults(fn=cmd_startup)
-    ct = sp.add_parser("cap-table", help="priced-round dilution (with the option-pool shuffle) and an exit liquidation-preference waterfall"); ct.add_argument("inputs"); ct.add_argument("--json-out"); ct.set_defaults(fn=cmd_cap_table)
+    ct = sp.add_parser("cap-table", help="priced-round dilution (with the option-pool shuffle), pre-/post-money round math, VC Method valuation, and an exit liquidation-preference waterfall"); ct.add_argument("inputs"); ct.add_argument("--json-out"); ct.set_defaults(fn=cmd_cap_table)
+    safn = sp.add_parser("safe-notes", help="SAFE / convertible-note pre-money vs. post-money conversion mechanics (cap-vs-discount, stacked-note dilution) into a priced round"); safn.add_argument("inputs"); safn.add_argument("--json-out"); safn.set_defaults(fn=cmd_safe_notes)
     vf = sp.add_parser("vc-fund", help="VC/PE fund LP metrics (DPI/RVPI/TVPI/IRR), deal-level MOIC/IRR, and European or American (deal-by-deal, with clawback) carry waterfalls"); vf.add_argument("inputs"); vf.add_argument("--json-out"); vf.set_defaults(fn=cmd_vc_fund)
     cf = sp.add_parser("cash-flow-forecast", help="13-week rolling direct-method cash flow forecast, covenant-breach flagging, forecast-vs-actual variance"); cf.add_argument("inputs"); cf.add_argument("--json-out"); cf.set_defaults(fn=cmd_cash_flow_forecast)
     ic = sp.add_parser("impact", help="2X Criteria gender-lens screen, Impact Management Project ABC classification, GHG intensity"); ic.add_argument("inputs"); ic.add_argument("--json-out"); ic.set_defaults(fn=cmd_impact)
