@@ -286,6 +286,124 @@ def write_dcf(path: str | Path, inp: DCFInputs) -> Path:
     return path
 
 
+# --------------------------------------------------------------------------- TRL valuation
+def write_trl_valuation(path: str | Path, inputs, uplift_from_trl: int = 5, uplift_to_trl: int = 7) -> Path:
+    """Live-formula TRL (Technology Readiness Level) valuation workbook: every probability/discount-rate/
+    capital/required-IRR assumption is a blue input cell, and the cumulative-probability, PV, risk-adjusted-
+    value, uplift and VC-Method cross-check figures are all formulas computed FROM those cells -- so changing
+    an assumption in Excel (e.g. "what if TRL 6's probability of advancing were 0.5 instead of 0.7?") recomputes
+    the whole TRL-5-vs-TRL-7 valuation gap live, the same way `finmodel.trl_valuation` computes it in Python.
+    `inputs` is a `finmodel.trl_valuation.TRLValuationInputs`."""
+    from .trl_valuation import TRL_DEFINITIONS
+    stages = sorted(inputs.stages, key=lambda s: s.trl)
+    if uplift_from_trl not in [s.trl for s in stages] or uplift_to_trl not in [s.trl for s in stages]:
+        raise ValueError(f"uplift_from_trl={uplift_from_trl} and uplift_to_trl={uplift_to_trl} must both be "
+                         f"modeled stages ({[s.trl for s in stages]})")
+    wb = Workbook(); ws = wb.active; ws.title = "TRL Valuation"
+    ws.column_dimensions["A"].width = 6; ws.column_dimensions["B"].width = 58
+    for col in "CDEFGHIJ":
+        ws.column_dimensions[col].width = 16
+    _title(ws, "A1", "Technology Readiness Level (TRL) Valuation")
+
+    _section(ws, 3, "Assumptions", 1, 4)
+    ws["A4"] = "Commercial Value (TRL 9, today's $)"; ws["C4"] = inputs.commercial_value; ws["C4"].font = BLUE; ws["C4"].number_format = NUM
+    ws["A5"] = "Discount Rate"; ws["C5"] = inputs.discount_rate; ws["C5"].font = BLUE; ws["C5"].number_format = PCT
+
+    header_row = 7
+    headers = ["TRL", "Definition", "Probability of Advancing", "Years to Next Stage", "Capital Required",
+              "Required IRR (VC-Method)", "Cumulative P(Success) to TRL 9", "Years to Commercial",
+              "PV of Commercial Value", "Risk-Adjusted Value"]
+    for col, h in enumerate(headers, start=1):
+        c = ws.cell(row=header_row, column=col, value=h); c.font = HEAD; c.fill = HEAD_FILL
+        c.alignment = Alignment(wrap_text=True, vertical="top")
+    first_row = header_row + 1
+    rows_by_trl = {}
+    for i, s in enumerate(stages):
+        row = first_row + i
+        rows_by_trl[s.trl] = row
+        ws.cell(row=row, column=1, value=s.trl)
+        ws.cell(row=row, column=2, value=TRL_DEFINITIONS[s.trl])
+        if s.probability_of_advancing is not None:
+            c = ws.cell(row=row, column=3, value=s.probability_of_advancing); c.font = BLUE; c.number_format = PCT
+        if s.trl != 9:
+            c = ws.cell(row=row, column=4, value=s.years_to_next_stage); c.font = BLUE; c.number_format = NUM2
+            c = ws.cell(row=row, column=5, value=s.capital_required); c.font = BLUE; c.number_format = NUM
+        if s.required_irr is not None:
+            c = ws.cell(row=row, column=6, value=s.required_irr); c.font = BLUE; c.number_format = PCT
+    last_row = first_row + len(stages) - 1
+    # bottom-up formulas: TRL 9 (last row) is the base case; every row above references the row below (its next TRL)
+    for i in range(len(stages) - 1, -1, -1):
+        row = first_row + i
+        trl = stages[i].trl
+        if trl == 9:
+            ws.cell(row=row, column=7, value=1); ws.cell(row=row, column=8, value=0)
+        else:
+            ws.cell(row=row, column=7, value=f"=C{row}*G{row+1}")
+            ws.cell(row=row, column=8, value=f"=D{row}+H{row+1}")
+        ws.cell(row=row, column=7).number_format = PCT
+        ws.cell(row=row, column=8).number_format = NUM2
+        ws.cell(row=row, column=9, value=f"=$C$4/(1+$C$5)^H{row}"); ws.cell(row=row, column=9).number_format = NUM
+        ws.cell(row=row, column=10, value=f"=I{row}*G{row}"); ws.cell(row=row, column=10).number_format = NUM
+
+    r = last_row + 2
+    _section(ws, r, f"TRL {uplift_from_trl} -> TRL {uplift_to_trl} Uplift Analysis", 1, 4); r += 1
+    from_row, to_row = rows_by_trl[uplift_from_trl], rows_by_trl[uplift_to_trl]
+    uplift_rows = [
+        (f"Risk-Adjusted Value at TRL {uplift_from_trl}", f"=J{from_row}", NUM),
+        (f"Risk-Adjusted Value at TRL {uplift_to_trl}", f"=J{to_row}", NUM),
+        ("Value Uplift ($)", None, NUM),
+        ("Value Uplift (x)", None, "0.00x"),
+        ("Capital Required to Advance", f"=SUM(E{from_row}:E{to_row - 1})", NUM),
+        ("Implied Pre-Money (at starting TRL)", None, NUM),
+        ("Implied Post-Money (at ending TRL basis)", None, NUM),
+        ("New Investor Ownership %", None, PCT),
+        ("Existing Holders Retained %", None, PCT),
+    ]
+    val_from, val_to, capital = f"C{r}", f"C{r+1}", f"C{r+4}"
+    for i, (label, formula, fmt) in enumerate(uplift_rows):
+        row = r + i
+        ws.cell(row=row, column=1, value=label)
+        cell = ws.cell(row=row, column=3)
+        cell.number_format = fmt
+        if formula is not None:
+            cell.value = formula
+    ws[f"C{r+2}"] = f"={val_to}-{val_from}"                  # Value Uplift ($)
+    ws[f"C{r+3}"] = f"={val_to}/{val_from}"                  # Value Uplift (x)
+    ws[f"C{r+5}"] = f"={val_from}"                           # Implied Pre-Money = risk-adjusted value at the starting TRL
+    ws[f"C{r+6}"] = f"=C{r+5}+{capital}"                     # Implied Post-Money = pre-money + capital raised
+    ws[f"C{r+7}"] = f"={capital}/C{r+6}"                     # New investor ownership %
+    ws[f"C{r+8}"] = f"=C{r+5}/C{r+6}"                        # Existing holders retained %
+    r += len(uplift_rows) + 1
+
+    from_stage = next(s for s in stages if s.trl == uplift_from_trl)
+    if from_stage.required_irr is not None:
+        _section(ws, r, f"VC-Method Cross-Check (TRL {uplift_from_trl})", 1, 4); r += 1
+        vc_from_row = rows_by_trl[uplift_from_trl]
+        vc_rows = [
+            ("Required IRR", f"=F{vc_from_row}", PCT),
+            ("Capital Required to Commercial (TRL 9)", f"=SUM(E{vc_from_row}:E{last_row})", NUM),
+            ("Years to Commercial", f"=H{vc_from_row}", NUM2),
+            ("Required Multiple", None, "0.00x"),
+            ("Ownership Required at Exit", None, PCT),
+            ("Implied Post-Money Valuation", None, NUM),
+            ("Implied Pre-Money Valuation", None, NUM),
+        ]
+        for i, (label, formula, fmt) in enumerate(vc_rows):
+            row = r + i
+            ws.cell(row=row, column=1, value=label)
+            cell = ws.cell(row=row, column=3); cell.number_format = fmt
+            if formula is not None:
+                cell.value = formula
+        irr_c, capital_c, years_c = f"C{r}", f"C{r+1}", f"C{r+2}"
+        ws[f"C{r+3}"] = f"=(1+{irr_c})^{years_c}"                     # Required Multiple
+        ws[f"C{r+4}"] = f"={capital_c}*C{r+3}/$C$4"                   # Ownership Required at Exit
+        ws[f"C{r+5}"] = f"={capital_c}/C{r+4}"                        # Implied Post-Money
+        ws[f"C{r+6}"] = f"=C{r+5}-{capital_c}"                        # Implied Pre-Money
+
+    _legend(wb)
+    path = Path(path); wb.save(path); return path
+
+
 # --------------------------------------------------------------------------- generic value writers
 def write_rows(ws, years: Sequence[Any], rows: Dict[str, Sequence[float]], start_row: int = 1, title: str | None = None,
                fmt: str = NUM) -> int:
