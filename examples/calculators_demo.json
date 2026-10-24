@@ -1,0 +1,70 @@
+{
+ "_comment": "Illustrative inputs for `finmodel calc`; the CUMIPMT case is Microsoft's documented example.",
+ "effective_annual_rate": {
+  "nominal_rate": 0.0525,
+  "periods_per_year": 4
+ },
+ "future_value": {
+  "present_value": 500,
+  "rate": 0.005,
+  "periods": 10,
+  "payment": 200,
+  "payment_at_start": true
+ },
+ "cumulative_interest_and_principal": {
+  "rate": 0.0075,
+  "nper": 360,
+  "pv": 125000,
+  "start_period": 13,
+  "end_period": 24
+ },
+ "pvgo": {
+  "share_price": 50,
+  "next_year_eps": 3,
+  "cost_of_equity": 0.1
+ },
+ "perpetuity": {
+  "cash_flow_next_period": 100,
+  "discount_rate": 0.09,
+  "growth_rate": 0.03
+ },
+ "heloc": {
+  "home_value": 500000,
+  "max_combined_ltv": 0.85,
+  "mortgage_balance": 300000,
+  "draw_amount": 100000,
+  "annual_rate": 0.08
+ },
+ "cmgr": {
+  "start_value": 120000,
+  "end_value": 210000,
+  "months": 9
+ },
+ "markup": {
+  "cost": 60,
+  "price": 90
+ },
+ "sales_tax_decalculator": {
+  "total_including_tax": 108.25,
+  "tax_rate": 0.0825
+ },
+ "year_to_date": {
+  "monthly_current": [
+   110,
+   120,
+   130,
+   125
+  ],
+  "monthly_prior": [
+   100,
+   105,
+   115,
+   120
+  ]
+ },
+ "ltm": {
+  "last_fiscal_year": 4800,
+  "current_ytd": 2600,
+  "prior_ytd": 2300
+ }
+}

@@ -11,6 +11,10 @@ and third-party strategy-framework references, not invented here):
     Harvest/Divest).
   - TAM/SAM/SOM market sizing (top-down and bottom-up): the standard total/serviceable/obtainable market-size
     decomposition every strategy-consulting market-sizing exercise (and every real startup pitch deck) uses.
+  - Porter's Five Forces (Porter, "How Competitive Forces Shape Strategy", HBR 1979): each force rated for
+    intensity; the higher the average intensity, the less attractive the industry for incumbents' profits.
+  - Weighted decision matrix / multi-criteria analysis (weighted-sum model): options scored on weighted
+    criteria, with a check of how much each criterion's weight would have to move before the winner changes.
 """
 from __future__ import annotations
 
@@ -141,6 +145,81 @@ def ge_mckinsey_matrix(business_units: Sequence[Dict[str, Any]]) -> Dict[str, An
     return {"units": rows}
 
 
+
+# ---------------------------------------------------------------------------------------------------------
+# Porter's Five Forces
+# ---------------------------------------------------------------------------------------------------------
+FIVE_FORCES = ("rivalry", "threat_of_new_entrants", "supplier_power", "buyer_power", "threat_of_substitutes")
+
+
+def five_forces(ratings: Dict[str, Any], scale_max: float = 5.0) -> Dict[str, Any]:
+    """``ratings``: force -> intensity on 1..``scale_max`` (higher = stronger force = worse for incumbents), or
+    force -> {sub-factor: rating} (averaged). All five forces are required. Attractiveness is the share of the
+    scale left over, 1 - (mean intensity - 1) / (scale_max - 1); the labels (>= 0.6 attractive, <= 0.4
+    unattractive) are a convention for reading the score, not part of Porter's framework."""
+    missing = [f for f in FIVE_FORCES if f not in ratings]
+    if missing:
+        raise ValueError(f"missing forces: {missing}")
+    scores: Dict[str, float] = {}
+    for f in FIVE_FORCES:
+        r = ratings[f]
+        scores[f] = sum(r.values()) / len(r) if isinstance(r, dict) else float(r)
+        if not 1 <= scores[f] <= scale_max:
+            raise ValueError(f"{f}: rating {scores[f]} outside 1..{scale_max}")
+    mean = sum(scores.values()) / 5
+    attract = 1 - (mean - 1) / (scale_max - 1)
+    label = "attractive" if attract >= 0.6 else ("unattractive" if attract <= 0.4 else "moderately attractive")
+    return {"force_intensity": scores, "mean_intensity": mean, "strongest_force": max(scores, key=scores.get),
+            "attractiveness_index": attract, "assessment": label}
+
+
+# ---------------------------------------------------------------------------------------------------------
+# Weighted decision matrix (multi-criteria analysis)
+# ---------------------------------------------------------------------------------------------------------
+def weighted_decision_matrix(weights: Dict[str, float], scores: Dict[str, Dict[str, float]],
+                             lower_is_better: Sequence[str] = ()) -> Dict[str, Any]:
+    """``weights``: criterion -> weight (normalised to sum to 1); ``scores``: option -> {criterion: raw value}.
+    Raw values are min-max scaled to 0..1 per criterion (inverted for ``lower_is_better`` criteria, e.g. cost).
+    ``weight_tipping_points`` gives, per criterion, the smallest absolute change in its weight (others rescaled
+    proportionally) that makes a different option win; None if no change within 0..1 does."""
+    crit = list(weights)
+    wsum = sum(weights.values())
+    w = {c: weights[c] / wsum for c in crit}
+    norm: Dict[str, Dict[str, float]] = {o: {} for o in scores}
+    for c in crit:
+        vals = [scores[o][c] for o in scores]
+        lo, hi = min(vals), max(vals)
+        for o in scores:
+            x = 0.5 if hi == lo else (scores[o][c] - lo) / (hi - lo)
+            norm[o][c] = 1 - x if c in lower_is_better else x
+
+    def totals(wt: Dict[str, float]) -> Dict[str, float]:
+        return {o: sum(wt[c] * norm[o][c] for c in crit) for o in scores}
+
+    base = totals(w)
+    ranking = sorted(base, key=base.get, reverse=True)
+    winner = ranking[0]
+    tipping: Dict[str, Optional[float]] = {}
+    for c in crit:
+        best = None
+        for step in range(1, 1001):
+            for sign in (1, -1):
+                new_c = w[c] + sign * step / 1000
+                if not 0 <= new_c <= 1:
+                    continue
+                rest = 1 - w[c]
+                wt = {k: (new_c if k == c else (w[k] * (1 - new_c) / rest if rest else (1 - new_c) / (len(crit) - 1))) for k in crit}
+                t = totals(wt)
+                if max(t, key=t.get) != winner:
+                    best = sign * step / 1000
+                    break
+            if best is not None:
+                break
+        tipping[c] = best
+    return {"weights": w, "normalized_scores": norm, "weighted_totals": base, "ranking": ranking, "winner": winner,
+            "weight_tipping_points": tipping}
+
+
 def from_dict(d: Dict[str, Any]) -> Dict[str, Any]:
     out: Dict[str, Any] = {}
     if "market_sizing_top_down" in d:
@@ -152,4 +231,8 @@ def from_dict(d: Dict[str, Any]) -> Dict[str, Any]:
         out["bcg_matrix"] = bcg_matrix(**d["bcg_matrix"])
     if "ge_mckinsey_matrix" in d:
         out["ge_mckinsey_matrix"] = ge_mckinsey_matrix(d["ge_mckinsey_matrix"]["business_units"])
+    if "five_forces" in d:
+        out["five_forces"] = five_forces(**d["five_forces"])
+    if "weighted_decision_matrix" in d:
+        out["weighted_decision_matrix"] = weighted_decision_matrix(**d["weighted_decision_matrix"])
     return out
