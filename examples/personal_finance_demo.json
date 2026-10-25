@@ -1,0 +1,29 @@
+{
+ "_comment": "Inputs mirror CFI's SME Lending template deductions; stated net worth is illustrative.",
+ "owner_net_worth_adjustment": {
+  "stated_net_worth": 5000000,
+  "marketable_securities_stated": 1500000,
+  "marketable_securities_realisable": 468000,
+  "joint_savings_and_securities": 475000,
+  "retirement_accounts": 260000,
+  "retirement_tax_rate": 0.45,
+  "residence_value": 1150000,
+  "residence_mortgage": 708000
+ },
+ "personal_financial_statement": {
+  "assets": {
+   "checking_a": 5000,
+   "savings_a": 15000,
+   "taxable_investment_a": 40000,
+   "401k": 120000,
+   "property_a": 400000
+  },
+  "liabilities": {
+   "credit_card_a": 3000,
+   "student_loan": 20000,
+   "mortgage": 250000
+  },
+  "annual_income": 120000,
+  "annual_debt_payments": 30000
+ }
+}

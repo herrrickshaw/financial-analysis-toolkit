@@ -1,0 +1,81 @@
+{
+ "_comment": "Illustrative two-product plant for ABC; other inputs are textbook-style.",
+ "activity_based_costing": {
+  "traditional_basis": "machine_hours",
+  "activities": [
+   {
+    "name": "setups",
+    "cost_pool": 60000,
+    "driver_total": 300
+   },
+   {
+    "name": "machining",
+    "cost_pool": 140000,
+    "driver_total": 7000
+   }
+  ],
+  "products": [
+   {
+    "name": "standard",
+    "units": 10000,
+    "direct_costs": 300000,
+    "machine_hours": 5000,
+    "drivers": {
+     "setups": 60,
+     "machining": 5000
+    }
+   },
+   {
+    "name": "custom",
+    "units": 1000,
+    "direct_costs": 50000,
+    "machine_hours": 2000,
+    "drivers": {
+     "setups": 240,
+     "machining": 2000
+    }
+   }
+  ]
+ },
+ "cost_behavior": {
+  "activity": [
+   800,
+   1200,
+   950,
+   1500,
+   1100
+  ],
+  "total_cost": [
+   9600,
+   12400,
+   10700,
+   14300,
+   11900
+  ]
+ },
+ "cost_of_goods_manufactured": {
+  "direct_materials_begin": 20000,
+  "direct_materials_purchases": 100000,
+  "direct_materials_end": 15000,
+  "direct_labor": 80000,
+  "manufacturing_overhead": 60000,
+  "wip_begin": 10000,
+  "wip_end": 12000,
+  "finished_goods_begin": 30000,
+  "finished_goods_end": 25000,
+  "units_completed": 5000
+ },
+ "target_costing": {
+  "target_price": 100,
+  "target_margin": 0.25,
+  "current_unit_cost": 82
+ },
+ "economic_order_quantity": {
+  "annual_demand": 12000,
+  "order_cost": 50,
+  "unit_cost": 20,
+  "holding_cost_rate": 0.25,
+  "lead_time_days": 10,
+  "safety_stock": 100
+ }
+}

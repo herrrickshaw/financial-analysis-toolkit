@@ -1,0 +1,48 @@
+{
+ "_comment": "Illustrative inputs for `finmodel capital`.",
+ "enterprise_value_bridge": {
+  "equity_value": 12000,
+  "debt": 3000,
+  "cash": 800,
+  "preferred_stock": 200,
+  "minority_interest": 150
+ },
+ "net_debt": {
+  "total_debt": 3000,
+  "cash_and_equivalents": 800,
+  "marketable_securities": 100
+ },
+ "market_value_of_debt_estimate": {
+  "total_book_debt": 3000,
+  "annual_interest_expense": 150,
+  "pretax_cost_of_debt": 0.07,
+  "weighted_avg_maturity_years": 6
+ },
+ "tax_shield": {
+  "interest_expense": [
+   150,
+   140,
+   130
+  ],
+  "tax_rate": 0.25,
+  "cost_of_debt": 0.07
+ },
+ "weighted_average_shares": {
+  "beginning_shares": 1000000,
+  "events": [
+   {
+    "month": 4,
+    "shares": 200000
+   },
+   {
+    "month": 10,
+    "shares": -50000
+   }
+  ]
+ },
+ "additional_paid_in_capital": {
+  "offering_price": 18,
+  "par_value": 0.01,
+  "shares_issued": 500000
+ }
+}

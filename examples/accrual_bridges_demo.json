@@ -1,0 +1,37 @@
+{
+ "_comment": "Illustrative small business converting cash-basis books to accrual.",
+ "cash_to_accrual_statement": {
+  "revenue": {
+   "cash_received": 480000,
+   "receivables_begin": 30000,
+   "receivables_end": 42000,
+   "unearned_revenue_begin": 5000,
+   "unearned_revenue_end": 8000
+  },
+  "expenses": {
+   "wages": {
+    "cash_paid": 210000,
+    "payables_begin": 4000,
+    "payables_end": 6500
+   },
+   "rent": {
+    "cash_paid": 36000,
+    "prepaid_begin": 3000,
+    "prepaid_end": 6000
+   }
+  }
+ },
+ "working_capital_cycle": {
+  "revenue": 3650,
+  "cogs": 1825,
+  "receivables": [
+   90,
+   110
+  ],
+  "inventory": 100,
+  "payables": [
+   40,
+   60
+  ]
+ }
+}
