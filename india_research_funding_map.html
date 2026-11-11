@@ -1,0 +1,327 @@
+<title>India Research Funding Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (72ch) with full-width data tables; a sticky section nav on top. */
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --fg:#1d1f22; --muted:#5d6168; --rule:#dcd8cf;
+  --accent:#0f5e6b; --accent-soft:#dfeef0; --mark:#b8581a; --mark-soft:#f6e6d8;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15181b; --surface:#1d2125; --fg:#e8e6e1; --muted:#a3a7ad; --rule:#343a40;
+  --accent:#5fb7c4; --accent-soft:#17323a; --mark:#e3914f; --mark-soft:#3a2716; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15181b; --surface:#1d2125; --fg:#e8e6e1; --muted:#a3a7ad; --rule:#343a40;
+  --accent:#5fb7c4; --accent-soft:#17323a; --mark:#e3914f; --mark-soft:#3a2716; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto}
+header.hero{padding-block:48px 24px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(32px,5vw,52px);line-height:1.05;margin:8px 0 14px;text-wrap:balance;letter-spacing:-.01em}
+.lede{font-size:18px;max-width:72ch;color:var(--fg);margin:0 0 20px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--rule);z-index:5;
+  margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px))) calc(-1*max(16px,env(safe-area-inset-right,0px)));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+nav.toc ul{list-style:none;margin:0 auto;padding:0;max-width:1040px;display:flex;gap:4px 18px;overflow-x:auto;white-space:nowrap;font-size:14px}
+nav.toc li{padding-block:10px}
+nav.toc a{color:var(--muted);text-decoration:none}
+nav.toc a:hover{color:var(--accent)}
+section{padding-block:40px 8px}
+h2{font-family:var(--display);font-weight:600;font-size:clamp(24px,3.2vw,32px);line-height:1.15;margin:0 0 6px;text-wrap:balance}
+h3{font-family:var(--body);font-weight:600;font-size:17px;margin:28px 0 8px}
+.sub{color:var(--muted);max-width:72ch;margin:0 0 20px}
+p{max-width:72ch}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:20px 0 8px}
+.tile{background:var(--surface);border:1px solid var(--rule);padding:14px 16px;min-width:0}
+.tile .n{font-family:var(--display);font-size:28px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.tile .l{font-size:13px;color:var(--muted);margin-top:6px;line-height:1.35}
+.tile .s{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:4px}
+.tablewrap{overflow-x:auto;margin:14px 0 6px;border:1px solid var(--rule);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:720px}
+th{text-align:left;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+  padding:10px 12px;border-bottom:1px solid var(--rule);background:var(--surface);position:sticky;top:0}
+td{padding:10px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.k{font-weight:600;white-space:nowrap}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 7px;border:1px solid var(--rule);border-radius:3px;color:var(--muted);margin-right:4px;white-space:nowrap}
+.tag.m{border-color:var(--mark);color:var(--mark);background:var(--mark-soft)}
+.tag.a{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.amt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+ul.plain{padding-left:20px;max-width:76ch}
+ul.plain li{margin-bottom:6px}
+.note{border-left:3px solid var(--mark);background:var(--mark-soft);padding:12px 16px;max-width:76ch;margin:18px 0;font-size:15px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px 28px}
+.two>div{min-width:0}
+.src{font-size:13.5px;columns:2;column-gap:28px;padding-left:18px}
+.src li{break-inside:avoid;margin-bottom:5px}
+@media (max-width:640px){.src{columns:1}}
+footer{border-top:1px solid var(--rule);margin-top:40px;padding-top:16px;font-size:13px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">IITs · NITs · IISc · IIITs · IISERs — funded research, incubators, industry tie-ups</div>
+  <h1>Where India's new research money is going, and who is running it</h1>
+  <p class="lede">A landscape map of the research themes that have drawn fresh mission-mode funding since 2024, the professors leading them (with faculty links), the campus incubators that commercialise the work, and the companies now co-funding it. Built from PIB releases, parliamentary answers, ANRF and DST documents, and institute pages.</p>
+  <div class="meta"><span>Compiled 2 Nov 2026</span><span>Amounts in ₹ crore unless marked</span><span>Figures are as self-reported by the institutes or the ministries</span></div>
+</header>
+
+<nav class="toc"><ul>
+  <li><a href="#money">1 · The money</a></li>
+  <li><a href="#topics">2 · Funded topics &amp; professors</a></li>
+  <li><a href="#programs">3 · Programs to apply to</a></li>
+  <li><a href="#nits">4 · NITs &amp; IIITs</a></li>
+  <li><a href="#incubators">5 · Incubators</a></li>
+  <li><a href="#industry">6 · Industry partnerships</a></li>
+  <li><a href="#sources">Sources</a></li>
+</ul></nav>
+
+<section id="money">
+  <h2>1 · Six missions now set the research agenda</h2>
+  <p class="sub">Most of the "new" topics at IITs and NITs since 2024 trace back to a handful of central missions. Each one routes money through a few host institutes, so knowing the mission tells you which campus, and often which professor, holds the grant.</p>
+  <div class="tiles">
+    <div class="tile"><div class="n">6,004</div><div class="l">National Quantum Mission, 8-year outlay. Four hubs at IISc, IIT Madras, IIT Bombay, IIT Delhi; ₹720 cr more for fab facilities due by 2028.</div><div class="s">DST · PIB Feb 2026</div></div>
+    <div class="tile"><div class="n">1,00,000</div><div class="l">RDI Scheme for private-sector-led deep-tech R&amp;D, approved July 2025; ANRF administers it alongside its own ₹2,000 cr FY27 budget.</div><div class="s">Cabinet · ANRF</div></div>
+    <div class="tile"><div class="n">1,27,500</div><div class="l">Semicon India 2.0 (July 2026): chip design, equipment, fabs, packaging, R&amp;D, talent. Academic side runs through C2S and the IISc/IIT Bombay nanofabs.</div><div class="s">MeitY · PIB Aug 2026</div></div>
+    <div class="tile"><div class="n">10,372</div><div class="l">IndiaAI Mission: 45,000+ GPUs, 58 AI Centres of Excellence approved, 190 projects of which 27 with academia.</div><div class="s">MeitY · PIB Mar/Aug 2026</div></div>
+    <div class="tile"><div class="n">3,660</div><div class="l">NM-ICPS: 25 Technology Innovation Hubs as Section-8 companies on IIT/IISc/IIIT campuses; four upgraded to Translation Research Parks.</div><div class="s">DST · nmicps.gov.in</div></div>
+    <div class="tile"><div class="n">21</div><div class="l">BioE3 bio-enablers (biofoundries, biomanufacturing hubs) recommended for funding; Bio-AI hub call drew 250+ proposals.</div><div class="s">DBT-BIRAC · Dec 2025</div></div>
+  </div>
+  <div class="note"><strong>Read the ANRF numbers carefully.</strong> ANRF's 2025-26 allocation was ₹1,506 cr but only ₹603 cr was used (a parliamentary panel put utilisation at 61%). The 2026-27 allocation jumps to ₹2,000 cr. Expect a surge of calls (ACE, IRG, MAHA Drones, MAHA Water, AI for Science) closing through late 2026, which is good timing for anyone preparing proposals.</div>
+</section>
+
+<section id="topics">
+  <h2>2 · Topics drawing fresh funding, and the professors to contact</h2>
+  <p class="sub">Each row is a theme with a named grant or hub behind it in 2024-26. The professor is the project director or lead PI on record; links go to their faculty page or to the hub page that names them. Amounts are the grant where it is public.</p>
+
+  <h3>Quantum technologies (National Quantum Mission)</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Hub / project</th><th>Host</th><th>Lead</th><th>Focus</th><th>Funding</th></tr>
+    <tr><td class="k">Qmet Tech Foundation</td><td>IIT Bombay</td><td><a href="https://qmettech.com/about-us">Prof. Kasturi Saha</a> (PQuest lab, EE)</td><td>NV-diamond magnetometers, quantum diamond microscope, Rb atomic clocks for NavIC; 16 institutes, 40+ researchers; rolling startup call up to ₹25 cr</td><td class="amt">Sensing hub; fab facility shared in ₹720 cr</td></tr>
+    <tr><td class="k">IITM C-DOT Samgnya</td><td>IIT Madras Research Park</td><td><a href="https://www.ee.iitm.ac.in/people/anil-prabhakar">Prof. Anil Prabhakar</a> (EE); TG leads <a href="https://www.samgnya.in/aboutus">Bhaskar Kanseri (IIT Delhi), Urbasi Sinha (RRI)</a></td><td>QKD networks, PQC, quantum repeaters, satellite QKD; 150 km fibre QKD demo May 2026</td><td class="amt">₹614 cr approved, ₹146 cr released</td></tr>
+    <tr><td class="k">QMD Foundation</td><td>IIT Delhi</td><td><a href="https://qmdhub.co.in/about">Prof. Rajendra Singh</a> (Physics)</td><td>Quantum dots, spintronic and topological materials, photonic devices, sub-kelvin packaging; National Materials Innovation Network planned</td><td class="amt">₹348 cr approved, ₹129 cr released</td></tr>
+    <tr><td class="k">Foundation for QC Innovation</td><td>IISc Bengaluru (with C-DAC)</td><td>Hub team not named in public filings; IISc <a href="https://www.cense.iisc.ac.in/">CeNSE</a> hosts the superconducting/photonic qubit fab</td><td>20-50 qubit machines in 3 yrs, 50-1000 in 8; Samsung-funded Quantum Research Lab opened Oct 2026</td><td class="amt">Computing hub</td></tr>
+    <tr><td class="k">ANRF ARG: quantum error correction; classical control of untrusted quantum devices</td><td>IIIT Hyderabad; IIT Delhi</td><td><a href="https://blogs.iiit.ac.in/anrf-arg-awards/">IIIT-H ARG awardees</a>; Dr Atul Singh Arora, Uttam Singh, Venkata Koppula (IIT Delhi)</td><td>Investigator-driven grants feeding NQM hardware</td><td class="amt">ARG scale (₹1-3 cr typical)</td></tr>
+  </table></div>
+
+  <h3>AI, language models and responsible AI</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Project</th><th>Host</th><th>Lead</th><th>Focus</th><th>Funding</th></tr>
+    <tr><td class="k">BharatGen</td><td>IIT Bombay TIH (IoT/IoE)</td><td><a href="https://www.cse.iitb.ac.in/~ganesh/">Prof. Ganesh Ramakrishnan</a> (CSE), founding director; TIH PD <a href="https://www.indiascienceandtechnology.gov.in/organisations/technology-innovation-hub">Prof. Leena Vachhani</a></td><td>Sovereign multimodal LLMs: Param2 (22 languages), Shrutam, Sooktam, Patram; domain models for agri, finance, law, Ayurveda</td><td class="amt">₹235.17 cr (DST NM-ICPS)</td></tr>
+    <tr><td class="k">AI4Bharat / Nilekani Centre</td><td>IIT Madras (Wadhwani School of DS&amp;AI)</td><td><a href="https://cse.iitm.ac.in/~miteshk/">Prof. Mitesh Khapra</a></td><td>Indic language datasets, MT, ASR, TTS; open-source models used by Bhashini</td><td class="amt">Philanthropic + govt</td></tr>
+    <tr><td class="k">Centre for Responsible AI (CeRAI)</td><td>IIT Madras</td><td><a href="https://cerai.iitm.ac.in/people/kamakoti-v">Prof. V. Kamakoti</a> (chair)</td><td>AI safety, governance; 13 Responsible AI projects approved nationally under IndiaAI Safe &amp; Trusted pillar</td><td class="amt">IndiaAI + Google</td></tr>
+    <tr><td class="k">AI for Indian Sign Language</td><td>IIT Kanpur</td><td><a href="https://blogs.iiit.ac.in/anrf-arg-awards/">Prof. Ashutosh Modi</a> (CSE)</td><td>Million-sample ISL corpus with ISLRTC and the deaf community</td><td class="amt">ANRF ARG 2025</td></tr>
+    <tr><td class="k">AI/ML + physics drug discovery (EphA2, RTK inhibitors)</td><td>IIIT Hyderabad</td><td><a href="https://blogs.iiit.ac.in/anrf-arg-awards/">Prof. U. Deva Priyakumar</a>, Dr Vinod PK</td><td>One of 10 ANRF ARGs won by IIIT-H from 15,700 proposals nationally</td><td class="amt">ANRF ARG 2025</td></tr>
+    <tr><td class="k">Satellite + ground + AI hourly rainfall</td><td>IIT Hyderabad</td><td>Dr Shruti Upadhyaya (Civil)</td><td>GPM/INSAT fusion for India-wide precipitation nowcasting</td><td class="amt">ANRF ARG 2025</td></tr>
+  </table></div>
+
+  <h3>Semiconductors and chip design</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Project</th><th>Host</th><th>Lead</th><th>Focus</th><th>Funding</th></tr>
+    <tr><td class="k">SHAKTI RISC-V processors (IRIS chip with ISRO, Feb 2025)</td><td>IIT Madras, PSCDISHA centre</td><td><a href="https://cerai.iitm.ac.in/people/kamakoti-v">Prof. V. Kamakoti</a></td><td>Indigenous RISC-V cores; spun out Mindgrove (Secure IoT MCU, $10.3M raised, MeitY DLI grant)</td><td class="amt">MeitY Digital India RISC-V</td></tr>
+    <tr><td class="k">SemiX centre; TRANG nanoelectronics; INUP-i2i</td><td>IIT Bombay</td><td><a href="https://www.ee.iitb.ac.in/wiki/faculty/sganguly">Prof. Swaroop Ganguly</a> (EE), PIC SemiX 2026-29</td><td>Device R&amp;D, national user programme for nanofab access</td><td class="amt">MeitY (multi-year)</td></tr>
+    <tr><td class="k">CeNSE: GaN power, 2D FETs, sensors, molecular memristors</td><td>IISc Bengaluru</td><td><a href="https://www.cense.iisc.ac.in/navakanta-bhat/">Prof. Navakanta Bhat</a>; Prof. Digbijoy Nath, Prof. S. Raghavan, Dr Sreetosh Goswami</td><td>National Nano Fabrication Centre; AGNIT GaN test lab (₹3 cr, Jun 2026); INFIfab prototyping facility planned</td><td class="amt">MeitY + industry</td></tr>
+    <tr><td class="k">Chips-to-Startup (C2S)</td><td>278 institutions, incl. most NITs</td><td>Institute VLSI groups (e.g. <a href="https://www.nitt.edu/home/academics/departments/ece/projects/research/">NIT Trichy SoC Centre, Prof. G. Lakshminarayanan</a>)</td><td>EDA tools, tape-outs: 20 chips from 17 institutions fabricated so far</td><td class="amt">MeitY</td></tr>
+  </table></div>
+
+  <h3>Electric mobility, energy and hydrogen</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Project</th><th>Host</th><th>Lead</th><th>Focus</th><th>Funding</th></tr>
+    <tr><td class="k">E-RIDES e-Node (ANRF MAHA-EV)</td><td>IIT Bombay + IIT Bhubaneswar, Gandhinagar, Delhi, Kanpur, SVNIT Surat</td><td>Lead PI Prof. Kishore Chatterjee; <a href="https://www.ee.iitb.ac.in/~sa/">Prof. Sandeep Anand</a> (EE)</td><td>Power electronics, machines, drives; wide-bandgap devices with CSIR-CEERI</td><td class="amt">MAHA-EV</td></tr>
+    <tr><td class="k">Other MAHA-EV e-Nodes</td><td>IIT BHU (lead, with IIT KGP, ICT Mumbai); ARCI Hyderabad (with IIT Tirupati, IIT Guwahati); IIT Kanpur (GREET, ₹20.56 cr); IIT Kharagpur (₹8.97 cr); NITK Surathkal (charging infra); CSIR-CEERI</td><td>Lead PIs per e-Node; see <a href="https://www.pkc.org.in/wp-content/uploads/2026/07/ANRFCompendium2026.pdf">MAHA-EV compendium 2026</a></td><td>Tropical Li-ion and Zn-air cells, second-life batteries, BAT-FLEX facility, charging standards</td><td class="amt">7 e-Nodes, mandatory industry partners</td></tr>
+    <tr><td class="k">ECOGEN Centre of Excellence on Green Hydrogen</td><td>IIT Kanpur (Sustainable Energy Engg)</td><td><a href="https://www.iitk.ac.in/establish-centre-of-excellence-on-green-hydrogen">Prof. Prabodh Bajpai</a></td><td>Generation, storage, use and integration; sanctioned by UPNEDA under UP Green Hydrogen Policy 2024 (Jul 2026)</td><td class="amt">State-funded CoE</td></tr>
+    <tr><td class="k">Green hydrogen roadmap / PEM electrolysers</td><td>IIT Madras Energy Consortium</td><td><a href="https://www.iitm.ac.in/happenings/press-releases-and-coverages/iit-madras-researchers-provide-roadmap-sustainable-green">Prof. Satyanarayanan Seshadri</a></td><td>LCA of electrolyser configurations for the 5 MMT/yr NGHM target</td><td class="amt">Consortium + CSTEP</td></tr>
+    <tr><td class="k">PAIR hub: Green Energy &amp; Sustainability</td><td>IIT Bombay + 7 spokes (COEP, IIIT Nagpur, IIIT Pune, NIT Goa, Mumbai Univ, MSU Baroda, SKUAST Jammu)</td><td><a href="https://gesh.iitb.ac.in/">GESH hub</a>; PI Prof. Rajdip Bandyopadhyaya (ChE) on water-monitoring patent</td><td>Energy transition, fast EV charging, water monitoring</td><td class="amt">₹100 cr / 5 yr</td></tr>
+  </table></div>
+
+  <h3>Communications, autonomy, cyber-physical systems</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Project</th><th>Host</th><th>Lead</th><th>Focus</th><th>Funding</th></tr>
+    <tr><td class="k">6G terahertz testbed</td><td>SAMEER Kolkata + IIT Madras, IIT Guwahati, IIT Patna</td><td>Consortium; IITM wireless groups (Prof. Deepa Venkitesh holds a 2026 J.C. Bose grant in photonics/EE)</td><td>THz line-of-sight link demoed at IMC 2025; Bharat 6G Alliance now 90 members, 10% global 6G patent target</td><td class="amt">TTDF, 3-year</td></tr>
+    <tr><td class="k">ISAC transceiver for 6G upper mid-band</td><td>IIIT Delhi</td><td><a href="https://faculty.iiitd.ac.in/~sumit/research_grants.php">Prof. Sumit Darak</a></td><td>Two ANRF ARG awards Dec 2025; prior Qualcomm fellowships</td><td class="amt">ANRF ARG 2026-29</td></tr>
+    <tr><td class="k">TiHAN (autonomous navigation TIH)</td><td>IIT Hyderabad</td><td><a href="https://tihan.iith.ac.in/team.html">Prof. P. Rajalakshmi</a> (EE)</td><td>UAV/UGV testbed, C-V2X, drone telemetry; funds spoke projects at NITs and IIITs</td><td class="amt">NM-ICPS</td></tr>
+    <tr><td class="k">IHFC (cobotics TIH)</td><td>IIT Delhi</td><td><a href="https://www.ihfc.co.in/">Prof. Subir Kumar Saha</a></td><td>40+ startups, 46 R&amp;D projects, 10 co-innovation centres, Drone Technology Park at Sonipat</td><td class="amt">NM-ICPS</td></tr>
+    <tr><td class="k">C3iHub / NTIHAC (cybersecurity TTRP)</td><td>IIT Kanpur</td><td><a href="https://c3ihub.org/">C3iHub</a></td><td>Critical-infrastructure security, hardware trojan testing; upgraded to Translation Research Park</td><td class="amt">NM-ICPS</td></tr>
+    <tr><td class="k">AI4ICPS; I-DAPT; Divyasampark; AWaDH</td><td>IIT Kharagpur; IIT BHU; IIT Roorkee; IIT Ropar</td><td><a href="https://www.indiascienceandtechnology.gov.in/organisations/technology-innovation-hub">Prof. Niloy Ganguly; Prof. Vikash Kumar Dubey</a>; others listed on ISTI portal</td><td>AI/ML; data analytics; device materials; agriculture and water tech (AWaDH, ₹110 cr)</td><td class="amt">NM-ICPS</td></tr>
+  </table></div>
+
+  <h3>Health, water, biomanufacturing and convergence research</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Project</th><th>Host</th><th>Lead</th><th>Focus</th><th>Funding</th></tr>
+    <tr><td class="k">Rehabilitation devices (NeoFly, Kadam knee, standing wheelchair)</td><td>IIT Madras TTK R2D2</td><td><a href="https://www.iitm.ac.in/happenings/press-releases-and-coverages/six-iit-madras-professors-offered-prestigious-anrf-jc-bose">Prof. Sujatha Srinivasan</a></td><td>Assistive tech; 2026 J.C. Bose grant</td><td class="amt">₹25 lakh/yr × 5</td></tr>
+    <tr><td class="k">Clean water, nanomaterials, ice chemistry</td><td>IIT Madras, International Centre for Clean Water</td><td><a href="https://www.iitm.ac.in/happenings/press-releases-and-coverages/six-iit-madras-professors-offered-prestigious-anrf-jc-bose">Prof. Thalappil Pradeep</a></td><td>Third consecutive J.C. Bose term; ICCW at the Research Park</td><td class="amt">₹25 lakh/yr × 5</td></tr>
+    <tr><td class="k">Biodesign fellows (WIPO-DBT)</td><td>IIT Delhi, IIT Bombay, AIIMS</td><td>School of International Biodesign</td><td>MedTech prototypes; two commercialised (InoHeal, oral-cancer device)</td><td class="amt">DBT</td></tr>
+    <tr><td class="k">PAIR SAKSHAM</td><td>IIT Indore + Vikram Univ Ujjain</td><td><a href="https://anrfonline.in/ANRF/PAIR">Prof. Shailesh Kundalwal</a></td><td>Advanced materials, energy/environment, health tech</td><td class="amt">PAIR</td></tr>
+    <tr><td class="k">Convergence Research CoEs (May 2026)</td><td>IIT Madras, IIT Kanpur, NIT Agartala, IIM Jammu + 6 more</td><td>Institute PDs; 945 proposals, 10 selected, 20 collaborating institutes</td><td>AI, rural development, archaeology, social issues: science + humanities</td><td class="amt">ANRF CoE</td></tr>
+    <tr><td class="k">Bioink for intraoperative bone regeneration; antifreeze proteins + ML</td><td>NIT Rourkela</td><td><a href="https://nitrkl.ac.in/Research/SponsoredProjects">Dept. pages</a>: Dr R.K.R. Addula (ChE), BM faculty</td><td>Examples of 2026 ANRF CRG/ARG grants at an NIT</td><td class="amt">ANRF 2026-29</td></tr>
+  </table></div>
+</section>
+
+<section id="programs">
+  <h2>3 · Programs that fund these topics</h2>
+  <p class="sub">Grouped by who can apply. Calls open on <a href="https://anrfonline.in">anrfonline.in</a>, <a href="https://onlinedst.gov.in">DST e-PMS</a>, <a href="https://birac.nic.in">BIRAC</a> and MeitY portals; institute R&amp;D offices (e.g. <a href="https://rc.nitt.edu/">NIT Trichy</a>) mirror the deadlines.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Program</th><th>Agency</th><th>Who</th><th>Size</th><th>Notes (2026)</th></tr>
+    <tr><td class="k">Prime Minister Early Career Research Grant</td><td>ANRF</td><td>PhD holders within 2 yrs of first faculty post, under 42</td><td class="amt">₹60 lakh / 3 yr</td><td>Replaces SERB Start-up grant; 22 awarded in Bihar alone</td></tr>
+    <tr><td class="k">Advanced Research Grant (ARG) and CRG</td><td>ANRF</td><td>Any faculty</td><td class="amt">₹1-3 cr typical</td><td>15,700 proposals in 2025 round</td></tr>
+    <tr><td class="k">J.C. Bose Grant</td><td>ANRF</td><td>Senior scientists 45-65</td><td class="amt">₹25 lakh/yr × 5</td><td>Six IIT Madras awardees Aug 2026</td></tr>
+    <tr><td class="k">PAIR (Partnerships for Accelerated Innovation and Research)</td><td>ANRF</td><td>Hub = NIRF top-25 or INI top-50; spokes = state/central univs, NITs, IIITs</td><td class="amt">up to ₹100 cr / 5 yr, 30:70 hub:spoke</td><td>7 full networks (IISc, IIT Bombay, IIT Ropar, IIT Indore, UoH, JNU, NIT Rourkela); 11 more hubs on ₹2 cr bridge grants</td></tr>
+    <tr><td class="k">MAHA missions: EV, Drones, Water, Leapfrog Demonstrators</td><td>ANRF (+ ICMR, MoES, NDMA, Gates Foundation)</td><td>Consortia of 3-4 institutes with mandatory industry</td><td class="amt">Node-level, ₹9-21 cr seen</td><td>EV first annual review done; Drones and Water calls closed 2026</td></tr>
+    <tr><td class="k">Convergence CoEs; Impact Centres of Excellence (ACE)</td><td>ANRF</td><td>Institutions with 1-3 spokes; matching funds required for ACE</td><td class="amt">Institutional</td><td>ACE call closed 30 Oct 2026; IRG (SC/ST faculty, ₹60 lakh) closes 3 Nov 2026</td></tr>
+    <tr><td class="k">AI for Science &amp; Engineering; 2D Innovation Hub; MedTech Mission; Critical Minerals Research</td><td>ANRF</td><td>Faculty teams</td><td class="amt">Program-specific</td><td>New 2025-26 thematic lines announced to Lok Sabha Mar 2026</td></tr>
+    <tr><td class="k">RDI Scheme</td><td>ANRF / DST (fund-of-funds)</td><td>Industry-led, academia as partners</td><td class="amt">₹1 lakh cr corpus</td><td>Sectors: semiconductors, photonics, biomanufacturing, quantum, space, energy</td></tr>
+    <tr><td class="k">NQM secondary T-Hub projects; startup support</td><td>DST</td><td>Faculty; quantum startups via hubs</td><td class="amt">Qmet: up to ₹25 cr per startup</td><td>Secondary R&amp;D call June 2026; VNIT Nagpur got a quantum teaching lab</td></tr>
+    <tr><td class="k">NM-ICPS TIH calls (CPS grants, fellowships, chair professorships)</td><td>DST via 25 hubs</td><td>Faculty anywhere in India</td><td class="amt">₹30 lakh - ₹1.7 cr per project seen</td><td>e.g. IIT Mandi projects funded by IHFC, C3iHub, IIT Bombay TIH</td></tr>
+    <tr><td class="k">IndiaAI: compute at ₹100/GPU-hr, Safe &amp; Trusted AI, AI CoEs</td><td>MeitY</td><td>Startups and academia</td><td class="amt">₹500 cr for AI-in-Education CoE</td><td>27 academic projects approved so far</td></tr>
+    <tr><td class="k">C2S; DLI; Semicon 2.0 R&amp;D pillar</td><td>MeitY</td><td>Institutes, fabless startups</td><td class="amt">EDA tools + tape-outs</td><td>103 fabless firms supported, 7 chips fabricated</td></tr>
+    <tr><td class="k">BioE3 biofoundries, Bio-AI hubs, BioNEST, E-YUVA</td><td>DBT / BIRAC</td><td>Academia (DBT) or academia-industry (BIRAC)</td><td class="amt">2-year hubs</td><td>E-YUVA 2026 closed 31 Oct</td></tr>
+    <tr><td class="k">TTDF (Digital Bharat Nidhi)</td><td>DoT</td><td>Telecom R&amp;D consortia</td><td class="amt">Testbed scale</td><td>Funded 6G THz testbed</td></tr>
+  </table></div>
+</section>
+
+<section id="nits">
+  <h2>4 · NITs and IIITs: where they sit in the funding map</h2>
+  <p class="sub">NITs mostly enter national missions as spokes or consortium members, with a few now leading. IIIT Hyderabad behaves like an IIT in grant terms.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Institute</th><th>Leading roles</th><th>Research scale</th><th>Incubator</th></tr>
+    <tr><td class="k">NIT Rourkela</td><td>PAIR hub (₹100 cr): "Consortium of Technologies for Sustainable Agriculture, Health, Energy and Environment", PD Prof. S.K. Pratihar; spokes VSSUT, Sambalpur, OUTR and others; green-hydrogen workshop Aug 2026. EV/microgrid lab (<a href="https://www.nitrkl.ac.in/EE/~pattnaikm/">Dr Monalisa Pattnaik</a>) funded by TiHAN-style hubs</td><td>Steady ANRF CRG/ARG flow in 2026 across ChE, EE, ME, BM</td><td>Intellectual Property Innovation Centre</td></tr>
+    <tr><td class="k">NIT Karnataka, Surathkal</td><td>Lead institute of a MAHA-EV e-Node on charging infrastructure (with IIT Delhi, IIT KGP, IIT Madras, TERI, Warangal); C2S participant</td><td>EV, power systems</td><td>STEP / NITK incubator</td></tr>
+    <tr><td class="k">NIT Warangal</td><td>7 internal CoEs (₹70 lakh), ₹23.86 cr software-security project with C-DAC and NIT Rourkela; MoUs with Hitachi Energy, POWERGRID, Grid India, Bajaj Auto, CPRI, DRDO</td><td>65 projects, ₹34.2 cr sanctioned in a year; 9 SPARC projects</td><td>NITW Innovation &amp; Entrepreneurship Foundation (Sec-8), 15 startups; MeitY GENESIS ₹1.37 cr</td></tr>
+    <tr><td class="k">NIT Tiruchirappalli</td><td>ISRO Space Technology Incubation Centre; 6G/mmWave and nanophotonics SERB grants; Centre for SoC Design (alumni-funded ₹1.9 cr); MoU with IIT Delhi Jun 2026</td><td>608 sponsored projects completed, ₹40 cr+ per year</td><td><a href="https://cedi.nitt.edu/">CEDI</a> (Sec-8, since 2012): MeitY GENESIS EiR cohorts, ₹25 lakh seed cheques, Sonata Software funding</td></tr>
+    <tr><td class="k">NIT Agartala</td><td>One of 10 ANRF Convergence Research CoEs (May 2026)</td><td>Growing</td><td>TBI</td></tr>
+    <tr><td class="k">VNIT Nagpur</td><td>NQM Quantum Teaching Laboratory</td><td></td><td></td></tr>
+    <tr><td class="k">IIIT Hyderabad</td><td>10 ANRF ARGs in one round; Data I-Hub (NM-ICPS TIH) funds spokes at NITs; TCS and Qualcomm fellowships</td><td>IIT-tier CS/AI output</td><td><a href="https://cie.iiit.ac.in/research-led-model/">CIE</a>: 400+ startups, ₹200 cr+ raised, fee discounts for research engagement</td></tr>
+    <tr><td class="k">IIIT Bangalore</td><td>COMET Foundation TIH (₹107.89 cr)</td><td>Networking, IoT</td><td>Innovation Centre</td></tr>
+    <tr><td class="k">IIIT Delhi</td><td>Two ANRF ARGs on 6G ISAC and wireless ML (Prof. Sumit Darak); own TIH</td><td>Wireless, AI</td><td>IIITD Innovation &amp; Incubation Centre</td></tr>
+    <tr><td class="k">IISERs, TIFR, RRI, HRI, IACS</td><td>Technical-group leads inside NQM hubs (RRI's Urbasi Sinha, IISER Pune/Bhopal, TIFR); IISER Pune a PAIR bridge hub</td><td>Basic science partners</td><td>IISER Pune Venture Centre</td></tr>
+  </table></div>
+</section>
+
+<section id="incubators">
+  <h2>5 · Campus incubators and their 2025-26 numbers</h2>
+  <p class="sub">All are Section-8 companies recognised by DST and DPIIT and draw on NIDHI, Atal Innovation Mission, BioNEST, TIDE 2.0, GENESIS, Startup India Seed Fund and iDEX money. The gap between IIT Madras and everyone else is the main story.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Incubator</th><th>Institute</th><th>Portfolio</th><th>Capital</th><th>Distinctive</th></tr>
+    <tr><td class="k">IITM Incubation Cell</td><td>IIT Madras Research Park</td><td>567 startups (112 added FY26); portfolio value ₹74,100 cr; 2 unicorns; Ather Energy IPO; 431 patents filed FY26</td><td class="amt">₹12,000 cr+ raised by portfolio</td><td>Sector arms: Bioincubator, RTBI, HTIC MedTech, <strong>Pravartak</strong> (TIH); 117 companies with faculty as founders</td></tr>
+    <tr><td class="k">SINE</td><td>IIT Bombay</td><td>500+ startups, 12,000 jobs, 100+ tech transfers</td><td class="amt">$1.13 B investor funding; Y-Point VC ₹250 cr (Dec 2025)</td><td>First incubator-managed deep-tech VC; ₹15 cr max ticket, 25-30 startups</td></tr>
+    <tr><td class="k">FSID / STEM Cell</td><td>IISc</td><td>~150 deep-science startups, target 300 by 2030; 5 exits</td><td class="amt">₹25 lakh base per startup; iDEX 14 startups / 25 projects ~₹215 cr</td><td>Patient capital stance; C-DOT quantum-ready CoE partner</td></tr>
+    <tr><td class="k">SIIC</td><td>IIT Kanpur</td><td>Large medtech cohort (e.g. Medantrik)</td><td class="amt">Seed funds + CSR</td><td>NMTronics SMT training centre; accredited EMI/EMC test facility open to industry</td></tr>
+    <tr><td class="k">FITT + IHFC + TBIU</td><td>IIT Delhi</td><td>IHFC alone: 40+ startups, 46 R&amp;D projects</td><td class="amt">Endowment Nurture Fund ₹50 lakh grants</td><td>Spin-outs like Cyran (neuromorphic, Prof. Manan Suri)</td></tr>
+    <tr><td class="k">TIDES</td><td>IIT Roorkee</td><td>320+ startups, 3,000 jobs</td><td class="amt">₹1,200 cr+ raised</td><td>BioNEST wing; Greater Noida campus</td></tr>
+    <tr><td class="k">i-TIC</td><td>IIT Hyderabad</td><td>125+ startups</td><td class="amt">TiHAN-linked</td><td>Autonomous systems focus</td></tr>
+    <tr><td class="k">CIE</td><td>IIIT Hyderabad</td><td>400+ startups, 2,000 jobs</td><td class="amt">₹200 cr+ external; ₹15 cr invested</td><td>Research-led incubation: lower fees for lab engagement</td></tr>
+    <tr><td class="k">CEDI</td><td>NIT Trichy</td><td>10 in last 3 yrs; new 2025-26 cohort</td><td class="amt">GENESIS, Siemens grants</td><td>Space tech via ISRO STIC</td></tr>
+    <tr><td class="k">NITW I&amp;E Foundation</td><td>NIT Warangal</td><td>15 startups</td><td class="amt">GENESIS ₹1.37 cr</td><td>New (2024)</td></tr>
+  </table></div>
+</section>
+
+<section id="industry">
+  <h2>6 · Industry partnerships by institute</h2>
+  <p class="sub">Three mechanisms dominate: master research agreements with one large company, company-funded Centres of Excellence on campus, and industry seats inside mission consortia (MAHA-EV requires them). CSR money is now a major channel at IIT Bombay and IIT Madras.</p>
+
+  <div class="two">
+    <div>
+      <h3>IIT Madras</h3>
+      <ul class="plain">
+        <li>Industry-funded projects rose from 501 (2015-16) to 982 (2025-26); industry funding ₹966 cr in 2025-26.</li>
+        <li>Named partners: Walmart, FedEx, Hyundai, multiple PSUs; Technology Summit for CEOs in Delhi, May 2026.</li>
+        <li>Research Park CoEs: Advanced Automotive Research, Battery Engineering &amp; EVs, Wireless Technology, Railway Research, Kotak Save Energy Mission, Road Safety, Lab-Grown Diamond, International Centre for Clean Water.</li>
+        <li>C-DOT co-hosts the quantum communication hub on campus.</li>
+      </ul>
+      <h3>IIT Bombay</h3>
+      <ul class="plain">
+        <li>IRCC secured $73.4 M research funding and filed 305 IP applications in FY26.</li>
+        <li>Tata Power Master Research Agreement (Aug 2026): smart grids, storage, e-mobility, AI for power systems, carbon capture.</li>
+        <li>ASPIRE Research Park: 35 resident and 25 associate companies, 40+ active collaborations; 260+ long-term CSR partnerships funding 300+ projects.</li>
+        <li>MAHA-EV industry partners include Tata Motors, TVS, Jio-bp, John Deere, Mitsubishi Electric, Permanent Magnets.</li>
+      </ul>
+      <h3>IIT Delhi</h3>
+      <ul class="plain">
+        <li>Industry Membership Program launched May 2026 through the Corporate Relations Office.</li>
+        <li>Hyundai Motor Group (battery and electrification), Jindal Steel (structural steel CoE), Mercedes-Benz R&amp;D India, Samco Japan (semiconductor and silicon solar), R Systems (applied AI CoE), Bharat Electronics via FITT, Wadhwani Foundation (precision healthcare CoE).</li>
+        <li>DRDO Industry-Academia CoE transferred the ABHED bulletproof jacket to three firms.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>IISc Bengaluru</h3>
+      <ul class="plain">
+        <li>Samsung Semiconductor India Research funded a Quantum Research Lab (opened Oct 2026).</li>
+        <li>C-DOT and FSID quantum-ready telecom CoE (C-DOT's fifth, after IIT Kanpur, Gandhinagar, Roorkee, Hyderabad).</li>
+        <li>Schaeffler India Master Research Agreement; AGNIT Semiconductors GaN test lab; Boeing Build accelerator with IIC/FSID; Yaqumo (Japan) quantum LoI May 2026.</li>
+        <li>Annual Industry-Institute Conclave (Sept 2026) run by IPTeL, BeST, FSID.</li>
+      </ul>
+      <h3>IIT Kanpur, Hyderabad, Gandhinagar</h3>
+      <ul class="plain">
+        <li>IIT Kanpur: NMTronics SMT training centre, CRISIL, Hindustan Copper MoUs; accredited test labs offered to industry; UPNEDA-funded hydrogen CoE.</li>
+        <li>IIT Hyderabad: C-DOT telecom CoE; recruiters and sponsors include Honeywell, Bosch, Maruti Suzuki, Tata Motors, Mercedes-Benz, ISRO, DRDO.</li>
+        <li>IIT Gandhinagar: Suzuki R&amp;D Center India three-year MoU (Sept 2026) on nanocarbon materials, sensing, micro-mobility, using the IITGN Research Park.</li>
+      </ul>
+      <h3>NITs and IIITs</h3>
+      <ul class="plain">
+        <li>NIT Warangal EEE: Hitachi Energy, POWERGRID, Grid India, Bajaj Auto, CPRI, DRDO.</li>
+        <li>NIT Trichy: Sonata Software (CEDI funding), Armored Vehicles Nigam, Kauvery Hospital (healthcare tech), Boeing university relations, Datanetiix.</li>
+        <li>NITK Surathkal e-Node: industry partners embedded in the MAHA-EV charging consortium.</li>
+        <li>IIIT Hyderabad: TCS Research Scholar fellowships, Qualcomm Innovation Fellowships; IIIT Trichy is a PPP with TCS among its industry partners.</li>
+        <li>MAHA-EV battery e-Node (ARCI lead): Amara Raja Advanced Cell Technologies, Altmin, Himadri Speciality Chemicals, Tata Motors.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note"><strong>How to use this for outreach.</strong> For a research tie-up, go through the hub's Section-8 company (Qmet, Samgnya, QMD, TiHAN, IHFC, BharatGen): they have CEOs and open calls, and they can contract faster than the institute. For a sponsored project, the institute R&amp;D office is the gate: IRCC at IIT Bombay, ICSR/CSR at IIT Madras, FITT/CRO at IIT Delhi, DORA at IIT Kanpur, Dean R&amp;C at the NITs. For a startup, the incubator (IITMIC, SINE, FSID) is a better first door than a department.</div>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <p class="sub">Primary documents read for this page. Institute-reported metrics have not been independently audited.</p>
+  <ol class="src">
+    <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2223187&lang=1&reg=3">PIB, NQM hubs and fund table, 4 Feb 2026</a></li>
+    <li><a href="https://www.sansad.in/getFile/annex/270/AU1562_hYoqU6.pdf?source=pqars">Rajya Sabha Q1562 on NQM progress, 11 Feb 2026</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2205358&lang=1&reg=6">PIB, quantum fab facilities ₹720 cr, Dec 2025</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2298218&reg=48&lang=2">PIB, NQM 2025-26 progress, Aug 2026</a></li>
+    <li><a href="https://dst.gov.in/journey-nqms-quantum-sensing-and-metrology-hub-lab-grown-technologies-iit-bombay">DST on Qmet / Prof. Kasturi Saha</a></li>
+    <li><a href="https://www.thehindubusinessline.com/info-tech/iit-madras-launches-national-hub-for-quantum-communication/article70379815.ece">BusinessLine, Samgnya launch, Dec 2025</a></li>
+    <li><a href="https://qmdhub.co.in/about">QMD Foundation, team</a></li>
+    <li><a href="https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU1837_gKPzJK.pdf?source=lsapps">Lok Sabha Q1837, ANRF budgets, Jul 2026</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2122728">PIB, PAIR seven hubs, Apr 2025</a></li>
+    <li><a href="https://news.careers360.com/anrf-pair-project-grants-rs-100-crore-7-university-2-cr-iisc-bangalore-iit-bombay-guwahati-delhi-uoh-jnu-nit-rourkela-du-research">Careers360 on PAIR allocations, May 2026</a></li>
+    <li><a href="https://news.careers360.com/anrf-selects-10-institutions-to-establish-convergence-research-centres-of-excellence-iits-nits-iims-nep-viksit-bharat-coes">Careers360, Convergence CoEs, May 2026</a></li>
+    <li><a href="https://news.careers360.com/anrf-irg-ace-impact-centres-of-excellence-60-lakh-sc-st-researchers">Careers360, ACE and IRG, Oct 2026</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2126962&reg=48&lang=2">PIB, MAHA-EV seven e-Nodes, May 2025</a> and <a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc202555550501.pdf">Annexure with industry partners</a></li>
+    <li><a href="https://www.pkc.org.in/wp-content/uploads/2026/07/ANRFCompendium2026.pdf">ANRF MAHA-EV Compendium 2026</a></li>
+    <li><a href="https://anrf.gov.in/assets/pdf/Final_Compendiun_04-02-26.pdf">ANRF Programs Compendium, Feb 2026</a></li>
+    <li><a href="https://rdifund.anrf.gov.in/sites/default/files/2026-02/Revised_RDI_Scheme-Sectors_Sub-sectors_and_Types_of_Projects.pdf">RDI Scheme sectors document</a></li>
+    <li><a href="https://www.iitm.ac.in/happenings/press-releases-and-coverages/six-iit-madras-professors-offered-prestigious-anrf-jc-bose">IIT Madras, J.C. Bose awardees, Aug 2026</a></li>
+    <li><a href="https://blogs.iiit.ac.in/anrf-arg-awards/">IIIT-H blog, 10 ARG awards, Mar 2026</a></li>
+    <li><a href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc2026813953901.pdf">PIB backgrounder, Semiconductor and AI, Aug 2026</a></li>
+    <li><a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2245069">PIB, IndiaAI and Semicon India, Mar 2026</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2150126">PIB, BharatGen ₹235 cr and TIH list, Jul 2025</a></li>
+    <li><a href="https://bharatgen.com/about/">BharatGen timeline</a></li>
+    <li><a href="https://dst.gov.in/national-mission-interdisciplinary-cyber-physical-systems-nm-icps">DST NM-ICPS hub list</a>; <a href="https://nmicps.gov.in/">nmicps.gov.in</a>; <a href="https://www.indiascienceandtechnology.gov.in/organisations/technology-innovation-hub">ISTI portal with project directors</a></li>
+    <li><a href="https://home.iitd.ac.in/show.php?id=358&in_sections=Press">IIT Delhi, IHFC fifth anniversary, Sept 2025</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287851&lang=1&reg=48">PIB, Bharat 6G Alliance and THz testbed, Jul 2026</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2204756&reg=48&lang=2">PIB, DBT year-end review (BioE3), Dec 2025</a></li>
+    <li><a href="https://www.iitk.ac.in/establish-centre-of-excellence-on-green-hydrogen">IIT Kanpur, ECOGEN CoE, Jul 2026</a></li>
+    <li><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2255946&lang=2&reg=3">PIB, IIT Madras 112 startups / 431 patents FY26, Apr 2026</a></li>
+    <li><a href="https://www.iitm.ac.in/happenings/press-releases-and-coverages/iit-madras-incubation-cell-crosses-500-startup-milestone">IITMIC 500-startup milestone, Dec 2025</a>; <a href="https://respark.iitm.ac.in/documents/IITMRP%20Annual%20Report.pdf">IITMRP Annual Report 2024-25</a></li>
+    <li><a href="https://www.iitb.ac.in/sites/default/files/2025-12/9%20December%202025%20Launches%20India%E2%80%99s%20First%20Incubator-Linked%20Deep%20Tech%20VC_Final1%20%281%29.pdf">SINE Y-Point VC fund release, Dec 2025</a>; <a href="https://rnd.iitb.ac.in/partner_with_us">IIT Bombay IRCC partner page</a></li>
+    <li><a href="https://www.thehindubusinessline.com/news/iiscs-fsid-targets-300-deep-tech-start-ups-by-2030-bets-on-patient-capital-to-build-companies/article71438468.ece">BusinessLine on FSID, Sept 2026</a>; <a href="https://www.fsid-iisc.in/wp-content/uploads/2026/03/2025-STEM-Annual-Newsletter.pdf">FSID STEM newsletter 2025</a></li>
+    <li><a href="https://tides.iitr.ac.in/">TIDES IIT Roorkee</a>; <a href="https://cie.iiit.ac.in/research-led-model/">CIE IIIT-H</a>; <a href="https://cedi.nitt.edu/">CEDI NIT Trichy</a></li>
+    <li><a href="https://www.iitm.ac.in/happenings/press-releases-and-coverages/iit-madras-organize-technology-summit-delhi-accelerate">IIT Madras Technology Summit release (₹966 cr industry funding), Apr 2026</a></li>
+    <li><a href="https://www.tatapower.com/news-and-media/media-releases/tata-power-and-iit-bombay-collaborate-to-accelerate-innovation-in-clean-energy-and-advanced-power-technologies">Tata Power–IIT Bombay MRA, Aug 2026</a></li>
+    <li><a href="https://home.iitd.ac.in/show.php?id=869&in_sections=News">IIT Delhi Industry Membership Program, May 2026</a></li>
+    <li><a href="https://www.thehindu.com/news/cities/bangalore/new-quantum-research-lab-inaugurated-at-iisc-in-bengaluru/article71586760.ece">The Hindu, IISc–Samsung quantum lab, Oct 2026</a>; <a href="https://analyticsindiamag.com/ai-news/bengalurus-agnit-semiconductors-opens-gan-testing-lab-at-iisc-with-3-cr-investment">AIM on AGNIT lab</a></li>
+    <li><a href="https://www.globalsuzuki.com/globalnews/2026/0930.html">Suzuki–IIT Gandhinagar MoU, Sept 2026</a></li>
+    <li><a href="https://iitk.ac.in/dora/new_assets/data/corporat_newsletter/samanvay-newsletter-volume-3-2026.pdf">IIT Kanpur Samanvay newsletter, Jul 2026</a></li>
+    <li><a href="https://nitw.ac.in/api/static/files/Annual_Report_English_Jan_21_2025-2-17-13-1-50.pdf">NIT Warangal Annual Report 2024-25</a>; <a href="https://rc.nitt.edu/">NIT Trichy R&amp;C portal</a>; <a href="https://nitrkl.ac.in/Research/SponsoredProjects">NIT Rourkela sponsored projects</a></li>
+  </ol>
+</section>
+
+<footer>Compiled from public documents on 2 Nov 2026. Where a hub's lead professor is not named in any public filing (the IISc quantum computing hub), the row says so rather than guessing. Figures reported by institutes (startup counts, valuations, funding totals) are theirs, not audited.</footer>
+</div>
