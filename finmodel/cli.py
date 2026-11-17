@@ -1402,6 +1402,20 @@ def cmd_demo(a):
     print(f"\nworkbooks and chart reports written to {out}/")
 
 
+# one handler for the dict-in / dict-out calculator engines (inputs: function name -> kwargs)
+_TOOL_MODULES = {"calc": "calculators", "earnings": "earnings_bridges", "capital": "capital_bridges",
+                 "accruals": "accrual_bridges", "personal": "personal_finance", "mgmt-costing": "managerial_costing",
+                 "market": "market_tools"}
+
+
+def cmd_tool(a):
+    import importlib
+    mod = importlib.import_module(f".{_TOOL_MODULES[a.cmd]}", __package__)
+    res = mod.from_dict(_load_json(a.inputs))
+    print(json.dumps(res, indent=1, default=str))
+    if a.json_out: Path(a.json_out).write_text(json.dumps(res, indent=1, default=str))
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="finmodel", description="Financial modelling toolkit distilled from CFI templates")
     p.add_argument("--version", action="version", version=__version__)
@@ -1449,6 +1463,14 @@ def main(argv=None):
     va = sp.add_parser("variance-analysis", help="budget-vs-actual volume/price/mix variance, horizontal and vertical (common-size) analysis"); va.add_argument("inputs"); va.add_argument("--json-out"); va.set_defaults(fn=cmd_variance_analysis)
     fpap = sp.add_parser("fpa-planning", help="headcount/workforce cost schedule, driver-based rolling forecast"); fpap.add_argument("inputs"); fpap.add_argument("--json-out"); fpap.set_defaults(fn=cmd_fpa_planning)
     bke = sp.add_parser("breakeven", help="break-even point, margin of safety, degree of operating leverage (CVP analysis)"); bke.add_argument("inputs"); bke.add_argument("--json-out"); bke.set_defaults(fn=cmd_breakeven)
+    for _name, _help in (("calc", "single-purpose calculators: EAR, FV, perpetuity, PVGO, CMGR, CUMIPMT, HELOC, markup, YoY/YTD/LTM ..."),
+                         ("earnings", "EBT/EBIT/EBITDA bridges, adjusted EBITDA, normalised earnings, NOPAT, FCFF/FCFE, cash EPS, FFO/AFFO"),
+                         ("capital", "market cap, net debt, EV<->equity bridge, market value of debt, tax shield, P/B, APIC, weighted shares"),
+                         ("accruals", "cash-to-accrual conversion, indirect cash-flow reconciliation, working-capital cycle"),
+                         ("personal", "personal financial statement, lender's owner net-worth adjustment"),
+                         ("mgmt-costing", "ABC, cost behaviour (high-low/regression), COGM/COGS, product costs, target costing, EOQ"),
+                         ("market", "Jensen's alpha, expected return, moving averages, MA-crossover backtest, VaR/ES, option strategy payoffs")):
+        _t = sp.add_parser(_name, help=_help); _t.add_argument("inputs"); _t.add_argument("--json-out"); _t.set_defaults(fn=cmd_tool)
     lr = sp.add_parser("loss-reserving", help="chain-ladder loss development triangle (age-to-age factors, projected ultimates, IBNR) and Bornhuetter-Ferguson"); lr.add_argument("inputs"); lr.add_argument("--json-out"); lr.set_defaults(fn=cmd_loss_reserving)
     eov = sp.add_parser("earnout-valuation", help="M&A contingent-consideration fair value: scenario-weighted expected payout, or a binary metric-threshold digital option"); eov.add_argument("inputs"); eov.add_argument("--json-out"); eov.set_defaults(fn=cmd_earnout_valuation)
     poc = sp.add_parser("percentage-of-completion", help="cost-to-cost revenue recognition for long-term contracts: percent complete, revenue/gross profit to date, over/under-billing"); poc.add_argument("inputs"); poc.add_argument("--json-out"); poc.set_defaults(fn=cmd_percentage_of_completion)

@@ -1,0 +1,65 @@
+{
+ "_comment": "Illustrative returns/prices; option premiums are made up for the payoff shape.",
+ "jensens_alpha": {
+  "portfolio_return": 0.15,
+  "risk_free_rate": 0.03,
+  "beta": 1.2,
+  "market_return": 0.1
+ },
+ "expected_return_scenarios": {
+  "probabilities": [
+   0.25,
+   0.5,
+   0.25
+  ],
+  "returns": [
+   -0.1,
+   0.05,
+   0.2
+  ]
+ },
+ "value_at_risk": {
+  "returns": [
+   -0.031,
+   -0.012,
+   0.004,
+   0.009,
+   -0.006,
+   0.015,
+   -0.022,
+   0.003,
+   0.011,
+   -0.004,
+   0.007,
+   -0.018,
+   0.002,
+   0.013,
+   -0.009,
+   0.006,
+   -0.001,
+   0.008,
+   -0.014,
+   0.01
+  ],
+  "confidence": 0.95,
+  "portfolio_value": 1000000
+ },
+ "strategy": {
+  "name": "iron_condor",
+  "kp1": 80,
+  "kp2": 90,
+  "kc1": 110,
+  "kc2": 120,
+  "p1": 1,
+  "p2": 3,
+  "c1": 3,
+  "c2": 1,
+  "prices": [
+   75,
+   90,
+   100,
+   110,
+   125
+  ]
+ }
+}

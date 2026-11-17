@@ -1,0 +1,54 @@
+{
+ "_comment": "Illustrative company; numbers chosen so top-down and bottom-up subtotals reconcile.",
+ "income_statement_subtotals": {
+  "revenue": 3000,
+  "cogs": 1200,
+  "operating_expenses": 300,
+  "depreciation_amortization": 500,
+  "interest_expense": 50,
+  "taxes": 190,
+  "net_income": 760
+ },
+ "adjusted_ebitda": {
+  "ebitda": 1500,
+  "addbacks": {
+   "restructuring": 60,
+   "stock_based_compensation": 45,
+   "gain_on_asset_sale": -20
+  },
+  "revenue": 3000
+ },
+ "normalize_net_income": {
+  "reported_net_income": 760,
+  "tax_rate": 0.2,
+  "diluted_shares": 400,
+  "adjustments": [
+   {
+    "item": "litigation settlement",
+    "pretax": 80
+   },
+   {
+    "item": "gain on asset sale",
+    "pretax": -20
+   }
+  ]
+ },
+ "free_cash_flow": {
+  "ebit": 1000,
+  "tax_rate": 0.2,
+  "depreciation_amortization": 500,
+  "capex": 600,
+  "change_in_nwc": 50,
+  "interest_expense": 50,
+  "net_borrowing": -200,
+  "cash_from_operations": 1290
+ },
+ "ffo": {
+  "net_income": 120,
+  "real_estate_depreciation_amortization": 90,
+  "gains_on_property_sales": 15,
+  "shares": 50,
+  "recurring_capex": 20,
+  "straight_line_rent_adjustment": 6
+ }
+}

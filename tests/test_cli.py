@@ -819,3 +819,16 @@ def test_cli_dscr_matrix_ireda_demo_clears_its_own_disclosed_covenant(tmp_path, 
     assert len(saved) == 2
     assert all(r["compliant"] for r in saved)
     assert all(r["min_dscr_required"] == pytest.approx(1.25) for r in saved)
+
+
+def test_cli_template_coverage_engines(tmp_path, capsys):
+    """Each new dict-in/dict-out engine runs from its example through the CLI."""
+    from finmodel.cli import main
+    for cmd, ex in (("calc", "calculators_demo"), ("earnings", "earnings_bridges_demo"), ("capital", "capital_bridges_demo"),
+                    ("accruals", "accrual_bridges_demo"), ("personal", "personal_finance_demo"),
+                    ("mgmt-costing", "managerial_costing_demo"), ("market", "market_tools_demo")):
+        main([cmd, str(EX / f"{ex}.json"), "--json-out", str(tmp_path / f"{cmd}.json")])
+        out = json.loads((tmp_path / f"{cmd}.json").read_text())
+        assert out and not capsys.readouterr().err
+    calc = json.loads((tmp_path / "calc.json").read_text())
+    assert round(calc["cumulative_interest_and_principal"]["cumulative_interest"], 2) == 11135.23

@@ -99,3 +99,33 @@ def test_from_dict_end_to_end():
     assert out["market_sizing_top_down"]["som"] == pytest.approx(15_000_000)
     assert out["bcg_matrix"]["units"][0]["classification"] == "Star"
     assert out["ge_mckinsey_matrix"]["units"][0]["zone"] == "Invest/Grow"
+
+
+def test_five_forces_attractiveness_and_validation():
+    from finmodel.strategy_frameworks import five_forces
+    out = five_forces({"rivalry": 5, "threat_of_new_entrants": 4, "supplier_power": {"concentration": 2, "switching_costs": 4},
+                       "buyer_power": 4, "threat_of_substitutes": 3})
+    assert out["force_intensity"]["supplier_power"] == 3
+    assert out["mean_intensity"] == pytest.approx(3.8)
+    assert out["attractiveness_index"] == pytest.approx(1 - 2.8 / 4)
+    assert out["assessment"] == "unattractive" and out["strongest_force"] == "rivalry"
+    with pytest.raises(ValueError):
+        five_forces({"rivalry": 3})
+    with pytest.raises(ValueError):
+        five_forces({f: 6 for f in ("rivalry", "threat_of_new_entrants", "supplier_power", "buyer_power", "threat_of_substitutes")})
+
+
+def test_weighted_decision_matrix_ranks_and_finds_tipping_points():
+    from finmodel.strategy_frameworks import weighted_decision_matrix
+    out = weighted_decision_matrix(weights={"cost": 2, "quality": 1, "speed": 1},
+                                   scores={"A": {"cost": 100, "quality": 6, "speed": 5},
+                                           "B": {"cost": 140, "quality": 9, "speed": 8},
+                                           "C": {"cost": 120, "quality": 7, "speed": 9}},
+                                   lower_is_better=["cost"])
+    assert out["weights"] == pytest.approx({"cost": 0.5, "quality": 0.25, "speed": 0.25})
+    assert out["normalized_scores"]["A"]["cost"] == 1 and out["normalized_scores"]["B"]["cost"] == 0
+    assert out["weighted_totals"]["A"] == pytest.approx(0.5)
+    assert out["weighted_totals"]["C"] == pytest.approx(0.5 * 0.5 + 0.25 * (1 / 3) + 0.25 * 1)
+    assert out["winner"] == "C" and out["ranking"][0] == "C"
+    tp = out["weight_tipping_points"]["cost"]
+    assert tp is not None and tp > 0                      # more weight on cost eventually favours A

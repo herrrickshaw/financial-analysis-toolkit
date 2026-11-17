@@ -70,6 +70,13 @@ finmodel dcf-diagnostics examples/dcf_diagnostics_demo.json               # flag
 finmodel variance-analysis examples/variance_analysis_demo.json          # budget-vs-actual + sales mix/quantity variance, horizontal/vertical analysis
 finmodel fpa-planning examples/fpa_planning_demo.json                     # headcount cost schedule, driver-based rolling forecast
 finmodel breakeven examples/breakeven_demo.json                          # break-even units/revenue, margin of safety, degree of operating leverage
+finmodel calc examples/calculators_demo.json                             # EAR, FV, perpetuity, PVGO, CMGR, CUMIPMT/CUMPRINC, HELOC, markup, YTD/LTM
+finmodel earnings examples/earnings_bridges_demo.json                    # EBT/EBIT/EBITDA bridges, adjusted EBITDA, normalised earnings, FCFF/FCFE, FFO
+finmodel capital examples/capital_bridges_demo.json                      # EV<->equity bridge, net debt, market value of debt, tax shield, weighted shares
+finmodel accruals examples/accrual_bridges_demo.json                     # cash-to-accrual, indirect cash-flow reconciliation, cash conversion cycle
+finmodel personal examples/personal_finance_demo.json                    # personal financial statement, lender's owner net-worth adjustment
+finmodel mgmt-costing examples/managerial_costing_demo.json              # ABC, high-low/regression cost behaviour, COGM/COGS, target costing, EOQ
+finmodel market examples/market_tools_demo.json                          # Jensen's alpha, expected return, MA-crossover backtest, VaR/ES, option strategies
 finmodel cap-table examples/vc_method_demo.json                          # VC Method: required multiple/ownership -> implied pre-/post-money valuation
 finmodel loss-reserving examples/loss_reserving_demo.json                # chain-ladder loss development triangle: age-to-age factors, ultimates, IBNR
 finmodel tax-provision examples/tax_provision_demo.json                  # deferred tax, valuation allowance, NOL carryforward (pre-2018/post-2017 baskets)
@@ -640,7 +647,11 @@ sector peers from `docs/FOOTBALL_FIELD_CSCO.md`.
 `catalog/catalog.md` lists 636 entries: 323 CFI dashboard items (196 free-tier downloads, 127 paid) and 313
 verified public files from Damodaran (NYU Stern, 59), Breaking Into Wall Street (225), exinfm.com (15),
 A Simple Model (8) and Macabacus (6), each with size and HTTP status. `catalog/alternatives.md` maps every CFI
-title to the closest public equivalents (87 of the 127 paid-only titles have at least one).
+title to the closest public equivalents: all 323 titles and all 127 paid-only titles now have at least one.
+The 149 titles that model-type tags could not match (accounting one-pagers, calculators, Excel-function demos,
+documents) have hand-verified sources in `catalog/curated_alternatives.json`, graded same/close/partial with the
+`finmodel` function that reproduces each; `docs/TEMPLATE_COVERAGE.md` is the readable version
+(`python3 scripts/template_coverage_doc.py` regenerates it).
 `docs/LEARNING_GUIDE.md` summarises each modelling tool with its formulas and the books and open university
 courses that teach it.
 
@@ -660,7 +671,7 @@ educational templates.
 ## Layout
 
 ```
-finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, startup_model, cap_table, vc_fund_metrics, cash_flow_forecast, impact_scoring, strategy_frameworks, rd_capitalization, project_finance, variance_analysis, fpa_planning, breakeven, loss_reserving, tax_provision, real_estate_development, working_capital_financing, retail_loans, retail_deposits, carry_trade, revolving_credit, npa_classification, pipeline, credit_risk, interest_rate_risk, fixed_income_risk, earnout_valuation, percentage_of_completion, credit_card_abs, sales_capacity_planning, lease_accounting, fx_hedging, stock_based_compensation, bond_amortization, foreign_currency_translation, inventory_costing, pension_accounting, nwc_peg, eps_calculation, investment_securities, consolidation, debt_covenants, asset_retirement_obligations, warranty_and_receivables_allowance, investment_incentives, sector_investment_model, project_bankability, india_incentive_workbook, india_corporate_tax_regimes, audit, sectors, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
+finmodel/          engines + tools (fin, three_statement, dcf, projection, ratios, lbo, merger, comps, scores, costing, edgar, wacc, residual_income, sotp, startup_model, cap_table, vc_fund_metrics, cash_flow_forecast, impact_scoring, strategy_frameworks, calculators, earnings_bridges, capital_bridges, accrual_bridges, personal_finance, managerial_costing, market_tools, rd_capitalization, project_finance, variance_analysis, fpa_planning, breakeven, loss_reserving, tax_provision, real_estate_development, working_capital_financing, retail_loans, retail_deposits, carry_trade, revolving_credit, npa_classification, pipeline, credit_risk, interest_rate_risk, fixed_income_risk, earnout_valuation, percentage_of_completion, credit_card_abs, sales_capacity_planning, lease_accounting, fx_hedging, stock_based_compensation, bond_amortization, foreign_currency_translation, inventory_costing, pension_accounting, nwc_peg, eps_calculation, investment_securities, consolidation, debt_covenants, asset_retirement_obligations, warranty_and_receivables_allowance, investment_incentives, sector_investment_model, project_bankability, india_incentive_workbook, india_corporate_tax_regimes, audit, sectors, xlcalc, charts, excel, extract, catalog, paid_templates, cli)
 examples/          JSON inputs (CFI 3-statement, CFI DCF, projection demo, ratios demo, ASM LBO, BIWS merger, STLD comps, STLD scores, university costing, STLD WACC, STLD residual income, conglomerate SOTP, SaaS startup model)
 data/              glossary.json, edgar/ (compact SEC company-facts extracts for the case studies)
 scripts/           comps_validation.py, football_field_stld.py, football_field_cvx.py, football_field_csco.py, football_field_usb.py, football_field_o.py, football_field_alk.py, football_field_trv.py, football_field_txn.py, ma_case_study.py (regenerate the real-data docs)

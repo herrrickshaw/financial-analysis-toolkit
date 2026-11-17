@@ -1,7 +1,7 @@
 # Public alternatives for CFI template titles
 
-87/127 paid-only CFI titles and 174/323 titles overall have at least one public match.
-Matching is by model-type tag; treat it as a shortlist.
+127/127 paid-only CFI titles and 323/323 titles overall have at least one public match (174 by model-type tag, 149 with hand-verified sources); 99 titles name the finmodel function that reproduces them.
+Tag matches are a shortlist; curated sources were checked one by one (match quality and URL check shown).
 
 ## Paid-only CFI titles (Unlock)
 
@@ -20,9 +20,16 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-After.xlsx) (m&a)
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-Before.xlsx) (m&a)
   - biws: [ cash-flow-available-for-debt-service-cfads :: PF-05-Simple-Solar-Acquisition-Example](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-05/PF-05-Simple-Solar-Acquisition-Example.xlsm) (m&a)
-- **Accounting for Diluted Shares & Earnings per Share** `-` — no public match
-- **Accounting for Inventory** `-` — no public match
-- **Accounting for Leases** `-` — no public match
+- **Accounting for Diluted Shares & Earnings per Share** `-` — engine: `finmodel.eps_calculation.diluted_eps`
+  - Wall Street Prep: [Treasury Stock Method (TSM)](https://www.wallstreetprep.com/knowledge/treasury-stock-method/) — same match, web, free-with-signup; diluted shares = basic + ITM options - shares repurchased with proceeds; TSM calculator (article free; Excel template behind email form)
+  - OpenStax: [14.5 Earnings per Share](https://openstax.org/books/principles-financial-accounting/pages/14-5-discuss-the-applicability-of-earnings-per-share-as-a-method-to-measure-performance) — close match, web, free-view; basic EPS = (NI - preferred dividends) / weighted avg shares, worked examples
+  - Damodaran: [Employee options valuation (employeeoption.xls)](https://pages.stern.nyu.edu/~adamodar/pc/employeeoption.xls) — partial match, xls, free-download; values options and nets them out of equity value instead of TSM share count
+- **Accounting for Inventory** `-` — engine: `finmodel.inventory_costing.compare_costing_methods`
+  - OpenStax: [10.1 Inventory valuation methods (FIFO/LIFO/WAC/specific ID)](https://openstax.org/books/principles-financial-accounting/pages/10-1-describe-and-demonstrate-the-basic-inventory-valuation-methods-and-their-cost-flow-assumptions) — same match, web, free-view; same cost-flow calculations with worked tables
+  - OpenStax: [10.3 COGS and ending inventory, perpetual method](https://openstax.org/books/principles-financial-accounting/pages/10-3-calculate-the-cost-of-goods-sold-and-ending-inventory-using-the-perpetual-method) — same match, web, free-view; perpetual FIFO/LIFO/AVG layers
+  - AccountingCoach: [Inventory and Cost of Goods Sold](https://www.accountingcoach.com/inventory-and-cost-of-goods-sold/explanation) — close match, web, free-view; explains and works FIFO/LIFO/average examples
+- **Accounting for Leases** `-` — engine: `finmodel.lease_accounting.initial_measurement`
+  - Damodaran: [Converting operating leases into debt (oplease.xls)](https://pages.stern.nyu.edu/~adamodar/pc/oplease.xls) — close match, xls, free-download; PV of lease commitments at pre-tax cost of debt = lease debt; same PV mechanics, no ROU journal entries
 - **Accounts Payable Turnover Ratio Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -33,7 +40,10 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Active Listening Diagnostic** `-` — no public match
+- **Active Listening Diagnostic** `-`
+  - University of Puget Sound: [Listening Skills Self-Evaluation](https://www.pugetsound.edu/sites/default/files/2022-11/listen-skills-eval.pdf) — same match, pdf, free-download; A frequency-rated listening-habits self-evaluation with score bands
+  - Florida Gateway College: [Listening Skills self-assessment](https://www.fgc.edu/life-at-fgc/residence-life/documents/Listening%20Skills.pdf) — close match, pdf, free-download; A 17-item 1-5 agree/disagree listening survey with a total score
+  - Manitoba Education: [Listening Skills: Self-Assessment (BLM G-6)](https://www.edu.gov.mb.ca/k12/cur/socstud/frame_found_sr2/g_blms/g-6.pdf) — partial match, pdf, free-download; A yes/improve checklist from a school curriculum. Unscored
 - **Advanced All in One Financial Model Template** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
@@ -44,7 +54,9 @@ Matching is by model-type tag; treat it as a shortlist.
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Errors](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Errors.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Fixes](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Fixes.xlsx) (3-statement)
-- **Appraisal Checklist** `-` — no public match
+- **Appraisal Checklist** `-`
+  - OCC Comptroller's Handbook: [Commercial Real Estate Lending, Appendix E: Appraisal Review Worksheet (plus Internal Control Questionnaire)](https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/files/commercial-real-estate-lending/pub-ch-commercial-real-estate.pdf) — same match, pdf, free-download; A US regulator's worksheet for reviewing CRE appraisals and evaluations
+  - Federal Reserve: [Interagency Appraisal and Evaluation Guidelines (2010)](https://www.federalreserve.gov/frrs/guidance/interagency-appraisal-and-evaluation-guidelines.htm) — close match, web, free-view; The source rules that checklists implement: appraisal content and review depth/documentation. Guidance, not a form
 - **Asset Turnover Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -105,17 +117,31 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ how-to-calculate-discontinued-operations :: 83-07-Dispositions-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/83-07-Dispositions-After.xls) (real-estate)
   - biws: [ how-to-calculate-discontinued-operations :: 83-07-Dispositions-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/83-07-Dispositions-Before.xls) (real-estate)
   - biws: [ reit-nav-model :: RE-07-07-NAV-Model-Part-1-Assets-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-07-07-NAV-Model-Part-1-Assets-After.xlsx) (real-estate)
-- **CFI Advanced Excel Formulas & Functions** `-` — no public match
-- **CFI Excel eBook** `-` — no public match
+- **CFI Advanced Excel Formulas & Functions** `-`
+  - Exceljet: [Excel Functions (500+ function guide)](https://exceljet.net/functions) — close match, web, free-view; Free per-function explanations with worked example workbooks; covers lookup, logical, math, stats, text, date functions
+  - Microsoft Support: [Excel functions (by category)](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb) — close match, web, free-view; Official categorised index of all Excel functions with linked reference pages
+  - Microsoft Support: [Financial functions (reference)](https://support.microsoft.com/en-us/office/financial-functions-reference-5658d81e-6035-4f24-89c1-fbf124c2b1d8) — close match, web, free-view; Official list of every Excel financial function (PMT, NPV, IRR, XNPV, RATE...) with syntax and examples
+- **CFI Excel eBook** `-`
+  - Exceljet: [Excel Functions (500+ function guide)](https://exceljet.net/functions) — close match, web, free-view; Free per-function explanations with worked example workbooks; covers lookup, logical, math, stats, text, date functions
+  - GCFGlobal / LearnFree: [Excel tutorials (Excel Foundations)](https://edu.gcfglobal.org/en/excel/) — partial match, web, free-view; Free beginner-to-intermediate Excel course (formulas, functions, charts); not finance-specific
+  - Microsoft Support: [Excel video training](https://support.microsoft.com/en-us/office/excel-video-training-9bc05390-e94c-46af-a5b3-d7c22f6990bb) — partial match, web, free-view; Official Microsoft Excel training hub (videos + articles); general rather than finance-oriented
 - **CFI Investment Banking Pitch Book** `bank startup`
   - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
   - biws: [ allowance-for-loan-losses-for-banks-fig :: Allowance-for-Loan-Losses](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/Allowance-for-Loan-Losses.xlsx) (bank)
   - biws: [ annual-recurring-revenue-arr :: Annual-Recurring-Revenue-ARR](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Annual-Recurring-Revenue-ARR.xlsx) (startup)
   - biws: [ bank-balance-sheet :: Banks-01-06-BS-to-IS-and-CFS-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-01-06-BS-to-IS-and-CFS-After.xlsx) (bank)
-- **Coaching for Workplace Performance Assessment** `-` — no public match
-- **Cohort Analysis** `-` — no public match
-- **Collateralized Mortgage Obligations (CMO) Models** `-` — no public match
-- **Communication Styles Diagnostic** `-` — no public match
+- **Coaching for Workplace Performance Assessment** `-`
+  - Directory of Social Change: [Coaching Skills for Managers Workbook](https://www.dsc.org.uk/wp-content/uploads/2024/03/Coaching-Skills-for-Managers-Workbook.pdf) — close match, pdf, free-download; A workbook with scored coaching self-assessment exercises and GROW practice
+  - UAB Human Resources: [GROW Model Questions](https://uab.edu/humanresources/home/images/PerfMgmt/GROW_Model_Questions.pdf) — partial match, pdf, free-download; A university HR question bank for each GROW stage. Not scored
+  - FHI 360: [Supervisory Style Self-Assessment Checklist](https://www.fhi360.org/sites/default/files/media/documents/FPHIV_Toolkit/ManagersPolicymakersTools/SupervisorySelfAssessment_EH_2007.pdf) — partial match, pdf, free-download; A supervisor self-assessment that overlaps on coaching/support items
+- **Cohort Analysis** `-` — engine: `finmodel.cohort_analysis.cohort_retention_curve`
+  - Visible.vc: [Customer Retention Cohort Analysis Template for SaaS](https://pages.visible.vc/customer-retention-cohort-analysis-template-for-saas-companies) — close match, google-sheet, free-with-signup; Monthly/quarterly cohort retention template (email gate likely)
+  - Rows: [Cohort analysis template](https://www.rows.com/templates/cohort-analysis) — close match, web, free-with-signup; Builds cohort retention table from a sales list; copy into a free Rows account
+- **Collateralized Mortgage Obligations (CMO) Models** `-` — engine: `finmodel.cmo.cmo_deal`
+  - MathWorks: [cmoseqcf - sequential CMO cash flows (Financial Instruments Toolbox)](https://www.mathworks.com/help/fininst/cmoseqcf.html) — close match, web, free-view; Documents sequential-pay tranche allocation with worked example; running it needs MATLAB
+  - MathWorks: [cmoschedcf - PAC/TAC scheduled CMO cash flows](https://www.mathworks.com/help/fininst/cmoschedcf.html) — close match, web, free-view; PAC/support tranche allocation with example; needs MATLAB
+- **Communication Styles Diagnostic** `-`
+  - Centre for Clinical Interventions (WA Health): [Assert Yourself module 1: What is Assertiveness](https://www.cci.health.wa.gov.au/-/media/CCI/Consumer-Modules/Assert-Yourself/Assert-Yourself---01---What-is-Assertiveness.pdf) — close match, pdf, free-download; A government health workbook on the same four styles, with self-reflection. Not a scored quiz. Series page: https://www.cci.health.wa.gov.au/Resources/Looking-After-Yourself/Assertiveness
 - **Compact Comps (Complete)** `comps`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (comps)
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
@@ -131,20 +157,30 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table.xlsx) (comps)
   - biws: [ equity-value-vs-enterprise-value-and-valuation-multiples :: KO-Equity-Value-Enterprise-Value](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/KO-Equity-Value-Enterprise-Value.xlsx) (comps)
-- **Confidential Information Memorandum Template** `-` — no public match
-- **Conflict Styles Questionnaire** `-` — no public match
+- **Confidential Information Memorandum Template** `-`
+  - Mergers & Inquisitions (BIWS): [CIM sample template (PDF)](https://biws-support.s3.amazonaws.com/CIM/CIM-07-Sample-Template.pdf) — same match, pdf, free-download; A CIM section template. The parent page https://mergersandinquisitions.com/confidential-information-memorandum/ also links 6 real CIMs and a checklist (CIM-08)
+  - Mergers & Inquisitions (BIWS): [Real sell-side CIM: Consolidated Utility Services](https://biws-support.s3.amazonaws.com/CIM/CIM-01-Consolidated-Utility-Services.pdf) — same match, pdf, free-download; A complete real CIM to use as a layout reference
+  - SEC EDGAR: [National Energy Group Confidential Information Memorandum (EX-99.1, 8-K, Nov 2005)](https://www.sec.gov/Archives/edgar/data/870756/000095013405021178/d30280exv99w1.htm) — partial match, web, free-view; A real CIM, but the filing has only excerpts (reserves/financial sections)
+- **Conflict Styles Questionnaire** `-`
+  - City of San Diego: [Basics of Conflict Management (TKI-style 30-item instrument with scoring grid)](https://www.sandiego.gov/sites/default/files/2025-07/basics-of-conflict-management.pdf) — same match, pdf, free-download; A five-mode forced-choice instrument scored 0-12 per mode. An adaptation of the paid TKI
+  - University of Kentucky: [Conflict Management Styles Assessment](https://studentsuccess.uky.edu/sites/default/files/2023-09/Conflict%20Styles%20Assessment.pdf) — same match, pdf, free-download; A 15-item Likert assessment scoring the same five styles
+  - University of North Florida: [Conflict Management Styles Assessment (online)](https://unf.edu/deanofstudents/resolution/conflict-management-styles-assessment.html) — same match, web, free-view; A 15 questions, 3 per style, online version
 - **Consolidation model** `m&a`
   - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-After.xlsx) (m&a)
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-Before.xlsx) (m&a)
   - biws: [ cash-flow-available-for-debt-service-cfads :: PF-05-Simple-Solar-Acquisition-Example](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-05/PF-05-Simple-Solar-Acquisition-Example.xlsm) (m&a)
-- **Corporate Finance Fundamentals: Capital Financing** `-` — no public match
+- **Corporate Finance Fundamentals: Capital Financing** `-`
+  - OpenStax: [Principles of Finance Ch.17 How Firms Raise Capital / capital structure](https://openstax.org/books/principles-finance/pages/17-1-the-concept-of-capital-structure) — close match, web, free-view; Chapter 17 covers capital structure, costs of debt & equity, WACC (17.3), optimal structure (17.5)
+  - Damodaran: [capstru.xlsx (optimal capital structure)](https://pages.stern.nyu.edu/~adamodar/pc/capstru.xlsx) — close match, xlsx, free-download; Cost of capital at each debt ratio -> optimal financing mix
 - **Corporate Finance Fundamentals: Capital Investment** `capital-budgeting`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (capital-budgeting)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (capital-budgeting)
   - biws: [ payback-period :: PF-06-Payback-Period](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-06/PF-06-Payback-Period.xlsm) (capital-budgeting)
   - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
-- **Corporate Finance Fundamentals: Capital Return** `-` — no public match
+- **Corporate Finance Fundamentals: Capital Return** `-`
+  - Damodaran: [dividends.xls (dividend policy / FCFE payout)](https://pages.stern.nyu.edu/~adamodar/pc/dividends.xls) — close match, xls, free-download; Compares dividends paid with FCFE to judge payout capacity
+  - Damodaran: [buybacks.xls](https://pages.stern.nyu.edu/~adamodar/pc/buybacks.xls) — close match, xls, free-download; Effect of stock buybacks on value/EPS (in catalog list, re-used)
 - **Current Ratio Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -214,32 +250,48 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-Before.xlsx) (capital-structure, lbo)
   - biws: [ cash-flow-sweep :: 109-26-CF-Sweep-Simple-LBO-Model](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/109-26-CF-Sweep-Simple-LBO-Model.xlsx) (capital-structure, lbo)
   - biws: [ cash-free-debt-free-basis :: 109-21-Cash-Free-Debt-Free-Deals-LBO-3-Statements](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-21-Cash-Free-Debt-Free-Deals-LBO-3-Statements.xlsx) (capital-structure, lbo)
-- **Directional Trading Strategies** `-` — no public match
+- **Directional Trading Strategies** `-` — engine: `finmodel.market_tools.strategy_payoff`
+  - Options Industry Council (OIC): [Bull Call Spread (Debit Call Spread)](https://www.optionseducation.org/strategies/all-strategies/bull-call-spread-debit-call-spread) — close match, web, free-view; Payoff, max profit/loss and breakeven for a directional spread
+  - Options Industry Council (OIC): [Long Call](https://www.optionseducation.org/strategies/all-strategies/long-call) — close match, web, free-view; Basic bullish directional strategy profile
+  - GitHub: [opstrat (option payoff diagrams) (169 stars, last push 2024-01)](https://github.com/hashABCD/opstrat) — close match, py, free-download; Python payoff diagrams for single/multi-leg strategies
 - **Dividend Discount Model** `ddm`
   - biws: [ dividend-discount-model-example-banks :: Banks-03-12-DDM-Part-2-Phases-2-3-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-03-12-DDM-Part-2-Phases-2-3-After.xlsx) (ddm)
   - biws: [ dividend-discount-model-example-banks :: Banks-03-12-DDM-Part-2-Phases-2-3-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-03-12-DDM-Part-2-Phases-2-3-Before.xlsx) (ddm)
   - damodaran: [ddm2st](https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls) (ddm)
   - damodaran: [ddm3st](https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls) (ddm)
-- **EBT Example** `-` — no public match
+- **EBT Example** `-` — engine: `finmodel.earnings_bridges.income_statement_subtotals`
+  - OpenStax: [5.1 The Income Statement](https://openstax.org/books/principles-finance/pages/5-1-the-income-statement) — close match, web, free-view; income statement layout with operating income (EBIT), EBT and net income
+  - AccountingCoach: [Income Statement](https://www.accountingcoach.com/income-statement/explanation) — partial match, web, free-view; multi-step income statement explanation
 - **eCommerce Model** `startup`
   - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
   - biws: [ annual-recurring-revenue-arr :: Annual-Recurring-Revenue-ARR](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Annual-Recurring-Revenue-ARR.xlsx) (startup)
   - biws: [ capitalization-table :: Example-Cap-Table](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Capitalization-Table/Example-Cap-Table.xlsx) (startup)
   - biws: [ carr-vs-arr :: AI-Revenue-CARR-vs-ARR](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Startups-VC/CARR-vs-ARR/AI-Revenue-CARR-vs-ARR.xlsx) (startup)
-- **Efficient Frontier and CAL Template** `-` — no public match
+- **Efficient Frontier and CAL Template** `-` — engine: `finmodel.portfolio_optimization.efficient_frontier`
+  - Portfolio Visualizer: [Efficient Frontier](https://www.portfoliovisualizer.com/efficient-frontier) — close match, web, free-view; Free web tool plotting efficient frontier and capital market line
+  - GitHub: [PyPortfolioOpt (6.1k stars, pushed 2026-07)](https://github.com/PyPortfolio/PyPortfolioOpt) — close match, py, free-download; EfficientFrontier + plotting.plot_efficient_frontier with tangency/CAL
+  - OpenStax: [Principles of Finance 15.2 Risk and Return to Multiple Assets](https://openstax.org/books/principles-finance/pages/15-2-risk-and-return-to-multiple-assets) — partial match, web, free-view; Portfolio variance/diversification theory underlying the frontier
 - **Energy Industry Comps Template** `comps energy-mining`
   - biws: [ cash-flow-available-for-debt-service-cfads :: PF-05-Simple-Solar-Acquisition-Example](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-05/PF-05-Simple-Solar-Acquisition-Example.xlsm) (energy-mining)
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (comps)
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table.xlsx) (comps)
-- **ETF Allocator Model** `-` — no public match
-- **Excel for Finance Functions** `-` — no public match
+- **ETF Allocator Model** `-` — engine: `finmodel.portfolio_optimization.tangency_portfolio`
+  - GitHub: [PyPortfolioOpt (6.1k stars, pushed 2026-07)](https://github.com/PyPortfolio/PyPortfolioOpt) — same match, py, free-download; max_sharpe / efficient_risk on ETF price history; discrete allocation to share counts
+  - Portfolio Visualizer: [Portfolio Optimization](https://www.portfoliovisualizer.com/optimize-portfolio) — close match, web, free-view; Free web optimiser over ETFs/tickers: max Sharpe, min variance, efficient frontier
+- **Excel for Finance Functions** `-`
+  - Microsoft Support: [Financial functions (reference)](https://support.microsoft.com/en-us/office/financial-functions-reference-5658d81e-6035-4f24-89c1-fbf124c2b1d8) — close match, web, free-view; Official list of every Excel financial function (PMT, NPV, IRR, XNPV, RATE...) with syntax and examples
+  - OpenStax: [Principles of Finance 15.5 Using Excel to Make Investment Decisions](https://openstax.org/books/principles-finance/pages/15-5-using-excel-to-make-investment-decisions) — partial match, web, free-view; Applies Excel functions to investment problems
+  - OpenStax: [Principles of Finance 16.6 Using Excel to Make Company Investment Decisions](https://openstax.org/books/principles-finance/pages/16-6-using-excel-to-make-company-investment-decisions) — partial match, web, free-view; NPV/IRR/payback with Excel functions
 - **FCFF vs FCFE Reconciliation Template** `dcf`
   - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
   - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (dcf)
   - biws: [ interest-tax-shield :: 107-28-Levered-Free-Cash-Flow-Simple-DCF](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx) (dcf)
-- **Financial Analysis Fundamentals Template** `-` — no public match
+- **Financial Analysis Fundamentals Template** `-` — engine: `finmodel.ratios.compute`
+  - OpenStax: [Chapter 6: Measures of financial health (ratios)](https://openstax.org/books/principles-finance/pages/6-1-ratios-condensing-information-into-smaller-pieces) — close match, web, free-view; liquidity, efficiency, solvency, market and DuPont ratios
+  - AccountingCoach: [Financial Ratios](https://www.accountingcoach.com/financial-ratios/explanation) — close match, web, free-view; ratio definitions and worked examples
+  - exinfm: [Ratio_Tree.xls](https://exinfm.com/excel%20files/Ratio_Tree.xls) — close match, xls, free-download; ratio tree workbook (already in catalog)
 - **Financial Institution Dividend Discount Model** `ddm bank`
   - biws: [ dividend-discount-model-example-banks :: Banks-03-12-DDM-Part-2-Phases-2-3-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-03-12-DDM-Part-2-Phases-2-3-After.xlsx) (bank, ddm)
   - biws: [ dividend-discount-model-example-banks :: Banks-03-12-DDM-Part-2-Phases-2-3-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-03-12-DDM-Part-2-Phases-2-3-Before.xlsx) (bank, ddm)
@@ -265,14 +317,24 @@ Matching is by model-type tag; treat it as a shortlist.
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Errors](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Errors.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Fixes](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Fixes.xlsx) (3-statement)
-- **FP&A Monthly Rollforward Template** `working-capital` — no public match
-- **Giving Feedback** `-` — no public match
+- **FP&A Monthly Rollforward Template** `working-capital` — engine: `finmodel.fpa_planning.rolling_forecast`
+  - SCORE: [12-Month Profit and Loss Projection](https://www.score.org/templates/12-month-profit-and-loss-projection/) — partial match, xlsx, free-download; monthly P&L projection, no balance roll-forward
+  - OpenStax: [7.3 Prepare financial budgets](https://openstax.org/books/principles-managerial-accounting/pages/7-3-prepare-financial-budgets) — partial match, web, free-view; cash budget and budgeted balance sheet roll-forward logic
+- **Giving Feedback** `-`
+  - US OPM: [Performance Management & Accountability Playbook: Monitoring and Developing](https://www.opm.gov/policy-data-oversight/performance-management/performance-management-and-accountability-playbook/monitoring-and-developing/) — partial match, web, free-view; Federal guidance on timely, specific feedback (Start/Stop/Continue). Not a scored self-assessment
+  - FHI 360: [Supervisory Style Self-Assessment Checklist](https://www.fhi360.org/sites/default/files/media/documents/FPHIV_Toolkit/ManagersPolicymakersTools/SupervisorySelfAssessment_EH_2007.pdf) — partial match, pdf, free-download; A yes/no supervisor checklist that includes feedback items, scored by column
 - **Goal Seek and Solver** `sensitivity`
   - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (sensitivity)
   - biws: [ sensitivity-analysis-excel :: XL-03-27-Sensitivity-Tables-After](https://samples-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/XL-4/XL-03-27-Sensitivity-Tables-After.xlsx) (sensitivity)
   - biws: [ sensitivity-analysis-excel :: XL-03-27-Sensitivity-Tables-Before](https://samples-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/XL-4/XL-03-27-Sensitivity-Tables-Before.xlsx) (sensitivity)
-- **Hybrid Team Self-Reflection** `-` — no public match
-- **Individual Equity Allocation Model** `-` — no public match
+- **Hybrid Team Self-Reflection** `-`
+  - Tampere University Digital Toolkit: [Support for remote and hybrid work (team question set and checklist)](https://sites.tuni.fi/digitaltoolkit/teamwork-and-collaboration/support-for-remote-and-hybrid-work/) — close match, web, free-view; Team questions on reachability, information sharing and community that build a checklist. PDF and fillable form linked from the page
+  - UT Austin: [Reflection Questions (flexible work arrangements)](https://cloud.wikis.utexas.edu/wiki/spaces/returntocampus/pages/80838718) — close match, web, free-view; Reflection prompts for employees and supervisors on hybrid work
+  - Boston University HR: [Successful Hybrid Team Manager](https://www.bu.edu/hr/documents/Successful_Hybrid_Team_Manager.pdf) — partial match, pdf, free-download; A manager tips sheet. Not a reflection instrument
+- **Individual Equity Allocation Model** `-` — engine: `finmodel.portfolio_optimization.portfolio_stats`
+  - GitHub: [PyPortfolioOpt (6.1k stars, pushed 2026-07)](https://github.com/PyPortfolio/PyPortfolioOpt) — close match, py, free-download; Mean-variance weights + portfolio_performance() for return/vol/Sharpe
+  - Portfolio Visualizer: [Portfolio Optimization](https://www.portfoliovisualizer.com/optimize-portfolio) — close match, web, free-view; Optimise weights across individual tickers
+  - GitHub: [Riskfolio-Lib (4.6k stars, pushed 2026-10)](https://github.com/dcajasn/Riskfolio-Lib) — close match, py, free-download; Alternative optimiser with many risk measures
 - **Insurance Company Financial Analysis: Allstate** `bank`
   - biws: [ allowance-for-loan-losses-for-banks-fig :: Allowance-for-Loan-Losses](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/Allowance-for-Loan-Losses.xlsx) (bank)
   - biws: [ bank-balance-sheet :: Banks-01-06-BS-to-IS-and-CFS-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-01-06-BS-to-IS-and-CFS-After.xlsx) (bank)
@@ -283,13 +345,16 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ bank-balance-sheet :: Banks-01-06-BS-to-IS-and-CFS-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-01-06-BS-to-IS-and-CFS-After.xlsx) (bank)
   - biws: [ bank-balance-sheet :: Banks-01-06-BS-to-IS-and-CFS-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-01-06-BS-to-IS-and-CFS-Before.xlsx) (bank)
   - biws: [ bank-regulatory-capital :: Bank-Regulatory-Capital](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Banks/Bank-Regulatory-Capital.xlsx) (bank)
-- **InsurTech Pricer Model** `-` — no public match
+- **InsurTech Pricer Model** `-` — engine: `finmodel.insurance_pricing.rate_making_premium`
+  - Casualty Actuarial Society: [Basic Ratemaking (Werner & Modlin, 5th ed.)](https://casact.org/library/studynotes/Werner_Modlin_Ratemaking.pdf) — close match, pdf, free-download; Standard free text on pure-premium and loss-ratio rate-making with worked exhibits; not a spreadsheet
+  - GitHub: [chainladder-python (284 stars, pushed 2026-10)](https://github.com/casact/chainladder-python) — partial match, py, free-download; CAS-maintained loss reserving (development triangles) - adjacent to pricing, not premium calc
 - **Interest Coverage Ratio Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Interest Rate Parity (IRP) Calculator** `-` — no public match
+- **Interest Rate Parity (IRP) Calculator** `-` — engine: `finmodel.carry_trade.covered_interest_rate_parity`
+  - Omni Calculator: [Interest Rate Parity Calculator](https://www.omnicalculator.com/finance/interest-rate-parity) — same match, web, free-view; Forward rate from spot rate and two interest rates
 - **Intro to 3-Statement Modeling Model** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
@@ -350,25 +415,46 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-After.xlsx) (m&a)
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-Before.xlsx) (m&a)
   - biws: [ cash-flow-available-for-debt-service-cfads :: PF-05-Simple-Solar-Acquisition-Example](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-05/PF-05-Simple-Solar-Acquisition-Example.xlsm) (m&a)
-- **Making Effective Business Decisions Template** `-` — no public match
-- **Managing Relationships at Work** `-` — no public match
-- **Market Risk Fundamentals** `-` — no public match
+- **Making Effective Business Decisions Template** `-` — engine: `finmodel.strategy_frameworks.weighted_decision_matrix`
+  - Spreadsheet Daddy: [Weighted Decision Matrix Template](https://spreadsheetdaddy.com/wp-content/uploads/2026/01/Weighted-Decision-Matrix-Template.xlsx) — close match, xlsx, free-download; Options x weighted criteria with weighted totals and ranking; also Google Sheets/PDF from https://spreadsheetdaddy.com/templates/weighted-decision-matrix
+  - GOV.UK: [Multi-criteria analysis: a manual (DCLG 2009)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/7612/1132618.pdf) — partial match, pdf, free-download; Authoritative method for performance matrix, weighting and scoring of options
+- **Managing Relationships at Work** `-`
+  - Lund University: [Your Employeeship Questionnaire: a survey of the relationships at your workplace (short v1.2)](https://www.lunduniversity.lu.se/lup/publication/4f507b32-f107-4e14-a8d5-ec5941a64b5d) — partial match, web, free-view; A research questionnaire on workplace relationships. Its PDF link returned HTML to curl, and it is unpublished/unvalidated
+  - UC Berkeley Greater Good Science Center: [Quizzes (e.g. empathy, gratitude at work)](https://greatergood.berkeley.edu/quizzes) — partial match, web, free-view; Free research-based self-quizzes on adjacent interpersonal traits. Not a workplace-relationship diagnostic
+- **Market Risk Fundamentals** `-` — engine: `finmodel.market_tools.value_at_risk`
+  - Damodaran: [Value at Risk (VaR) paper](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/VAR.pdf) — close match, pdf, free-download; Covers variance-covariance, historical simulation and Monte Carlo VaR
+  - GitHub: [QuantStats (7.7k stars, pushed 2026-09)](https://github.com/ranaroussi/quantstats) — close match, py, free-download; quantstats value_at_risk / conditional_value_at_risk, volatility, drawdowns on return series
+  - OpenStax: [Principles of Finance 20.1 The Importance of Risk Management](https://openstax.org/books/principles-finance/pages/20-1-the-importance-of-risk-management) — partial match, web, free-view; Market (price, FX, interest-rate) risk concepts
 - **Mining Model** `energy-mining`
   - biws: [ cash-flow-available-for-debt-service-cfads :: PF-05-Simple-Solar-Acquisition-Example](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-05/PF-05-Simple-Solar-Acquisition-Example.xlsm) (energy-mining)
   - biws: [ levelized-cost-of-energy :: PF-04-LCOE-Examples](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-04/PF-04-LCOE-Examples.xlsx) (energy-mining)
   - biws: [ midstream-oil-and-gas :: 107-30-Dividend-Discount-Model-DT-Midstream](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/107-30-Dividend-Discount-Model-DT-Midstream.xlsx) (energy-mining)
   - biws: [ midstream-oil-and-gas :: Midstream-Oil-Gas-Valuation-Simplified](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Oil-Gas/Midstream-Oil-and-Gas/Midstream-Oil-Gas-Valuation-Simplified.xlsx) (energy-mining)
-- **Monthly Cash Flow Model** `working-capital` — no public match
-- **NDA Confidentiality Agreement Sample** `-` — no public match
+- **Monthly Cash Flow Model** `working-capital` — engine: `finmodel.cash_flow_forecast.rolling_forecast`
+  - SCORE: [12 Month Cash Flow Statement](https://www.score.org/templates/12-month-cash-flow-statement/) — same match, xlsx, free-download; monthly receipts/payments with opening and closing cash
+  - Vertex42: [Cash Flow Statement (12-month cash flow projection)](https://www.vertex42.com/ExcelTemplates/cash-flow-statement.html) — close match, xlsx via download page, free-download; includes a 12-month cash flow projection worksheet
+- **NDA Confidentiality Agreement Sample** `-`
+  - SEC EDGAR: [CECO Environmental / Profire Energy Mutual Confidentiality Agreement (EX-99.(d)(2), SC TO, Aug 2024)](https://www.sec.gov/Archives/edgar/data/1289636/000110465924124892/tm2426882d6_ex99-d2.htm) — same match, web, free-view; A real M&A mutual NDA filed with a tender offer
+  - SEC EDGAR: [Albireo Pharma Mutual Confidentiality Agreement (EX-99.(d)(2)(B), 2023)](https://www.sec.gov/Archives/edgar/data/1322505/000119312523012662/d427101dex99d2b.htm) — same match, web, free-view; A second real M&A-context mutual NDA, filed by a public-company target
 - **Net Debt EBITDA Ratio Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Non-directional Trading Strategies** `-` — no public match
-- **NOPAT Template** `-` — no public match
-- **Normalizing Income Statements** `-` — no public match
-- **NVDA Moving Average Algorithmic Trading Model** `-` — no public match
+- **Non-directional Trading Strategies** `-` — engine: `finmodel.market_tools.strategy_payoff`
+  - Options Industry Council (OIC): [Long Straddle](https://www.optionseducation.org/strategies/all-strategies/long-straddle) — close match, web, free-view; Payoff profile, breakevens
+  - Options Industry Council (OIC): [Long Strangle (Long Combination)](https://www.optionseducation.org/strategies/all-strategies/long-strangle-long-combination) — close match, web, free-view; Payoff profile
+  - Options Industry Council (OIC): [Long Condor](https://www.optionseducation.org/strategies/all-strategies/long-iron-condor) — close match, web, free-view; Range-bound strategy payoff
+  - GitHub: [opstrat (option payoff diagrams) (169 stars, last push 2024-01)](https://github.com/hashABCD/opstrat) — close match, py, free-download; Python multi-leg payoff diagrams
+- **NOPAT Template** `-` — engine: `finmodel.earnings_bridges.nopat`
+  - OpenStax: [5.6 Operating cash flow and FCFF](https://openstax.org/books/principles-finance/pages/5-6-operating-cash-flow-and-free-cash-flow-to-the-firm-fcff) — close match, web, free-view; EBIT(1-t) as starting point of FCFF
+  - Damodaran: [Stable-growth FCFF model (fcffst.xls)](https://pages.stern.nyu.edu/~adamodar/pc/fcffst.xls) — partial match, xls, free-download; uses EBIT(1-t) within FCFF valuation
+- **Normalizing Income Statements** `-` — engine: `finmodel.earnings_bridges.normalize_net_income`
+  - Damodaran: [Normalized earnings (normearn.xls)](https://pages.stern.nyu.edu/~adamodar/pc/normearn.xls) — close match, xls, free-download; normalizes a troubled firm's earnings using historical or industry average margins
+- **NVDA Moving Average Algorithmic Trading Model** `-` — engine: `finmodel.market_tools.ma_crossover_backtest`
+  - backtesting.py docs: [Quick Start User Guide (SmaCross strategy)](https://kernc.github.io/backtesting.py/doc/examples/Quick%20Start%20User%20Guide.html) — same match, web, free-view; Backtests an SMA crossover strategy on a stock; swap in NVDA data
+  - Portfolio Visualizer: [Tactical Asset Allocation (moving average timing)](https://www.portfoliovisualizer.com/tactical-asset-allocation-model) — close match, web, free-view; Free web backtest of moving-average timing models on any ticker
+  - GitHub: [vectorbt (9.5k stars, pushed 2026-10)](https://github.com/polakowo/vectorbt) — close match, py, free-download; Vectorised MA-crossover backtests and parameter sweeps
 - **Operating Budget Template** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
@@ -433,7 +519,10 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ roic-return-on-invested-capital :: 101-04-NOPAT-ROIC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-NOPAT-ROIC.xlsx) (eva-returns)
   - biws: [ roic-return-on-invested-capital :: 101-04-ROIC-in-LBO-Model](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-ROIC-in-LBO-Model.xlsx) (eva-returns)
   - biws: [ roic-vs-roe-and-roe-vs-roa :: 105-14-Key-Financial-Metrics-Ratios](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/105-14-Key-Financial-Metrics-Ratios.xlsx) (eva-returns)
-- **Robo-Advisor Model** `-` — no public match
+- **Robo-Advisor Model** `-` — engine: `finmodel.three_statement.run`
+  - Vanguard: [Investor Questionnaire](https://investor.vanguard.com/tools-calculators/investor-questionnaire) — close match, web, free-view; Risk-tolerance questions -> suggested stock/bond/cash allocation, the core robo-advisor logic
+  - Portfolio Visualizer: [Backtest Asset Allocation](https://www.portfoliovisualizer.com/backtest-asset-class-allocation) — close match, web, free-view; Backtest the resulting model allocation with rebalancing
+  - Portfolio Visualizer: [Monte Carlo Simulation](https://www.portfoliovisualizer.com/monte-carlo-simulation) — partial match, web, free-view; Goal/withdrawal projection of a model portfolio
 - **SaaS Model** `startup`
   - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
   - biws: [ annual-recurring-revenue-arr :: Annual-Recurring-Revenue-ARR](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Annual-Recurring-Revenue-ARR.xlsx) (startup)
@@ -443,13 +532,17 @@ Matching is by model-type tag; treat it as a shortlist.
   - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (sensitivity)
   - biws: [ sensitivity-analysis-excel :: XL-03-27-Sensitivity-Tables-After](https://samples-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/XL-4/XL-03-27-Sensitivity-Tables-After.xlsx) (sensitivity)
   - biws: [ sensitivity-analysis-excel :: XL-03-27-Sensitivity-Tables-Before](https://samples-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/XL-4/XL-03-27-Sensitivity-Tables-Before.xlsx) (sensitivity)
-- **Simplified Robo-Advisor Model** `-` — no public match
+- **Simplified Robo-Advisor Model** `-` — engine: `finmodel.three_statement.run`
+  - Vanguard: [Investor Questionnaire](https://investor.vanguard.com/tools-calculators/investor-questionnaire) — close match, web, free-view; Risk-tolerance questions -> suggested stock/bond/cash allocation, the core robo-advisor logic
+  - Portfolio Visualizer: [Backtest Asset Allocation](https://www.portfoliovisualizer.com/backtest-asset-class-allocation) — close match, web, free-view; Backtest the resulting model allocation with rebalancing
 - **Startup Investor Pitch Deck Template** `startup`
   - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
   - biws: [ annual-recurring-revenue-arr :: Annual-Recurring-Revenue-ARR](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Annual-Recurring-Revenue-ARR.xlsx) (startup)
   - biws: [ capitalization-table :: Example-Cap-Table](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Capitalization-Table/Example-Cap-Table.xlsx) (startup)
   - biws: [ carr-vs-arr :: AI-Revenue-CARR-vs-ARR](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Startups-VC/CARR-vs-ARR/AI-Revenue-CARR-vs-ARR.xlsx) (startup)
-- **Team Development Diagnostic** `-` — no public match
+- **Team Development Diagnostic** `-`
+  - Donald Clark (Big Dog & Little Dog): [Team Development Questionnaire (Tuckman stages)](http://www.nwlink.com/~donclark/leader/teamsuv.html) — same match, web, free-view; A 32-item questionnaire totalled per stage. Mirror: https://www.knowledgejump.com/leader/teamsuv.html (200)
+  - Boston University HR: [Successful Hybrid Team Manager](https://www.bu.edu/hr/documents/Successful_Hybrid_Team_Manager.pdf) — partial match, pdf, free-download; Includes assessing the team's development stage. Guidance only
 - **TMT Financial Model Template** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
@@ -470,30 +563,48 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Working Capital Cycle** `working-capital` — no public match
+- **Working Capital Cycle** `working-capital` — engine: `finmodel.accrual_bridges.working_capital_cycle`
+  - Wall Street Prep: [Cash Conversion Cycle](https://www.wallstreetprep.com/knowledge/cash-conversion-cycle-ccc/) — same match, web, free-with-signup; DIO + DSO - DPO with calculator (article free; Excel template behind email form)
+  - OpenStax: [6.2 Operating efficiency ratios](https://openstax.org/books/principles-finance/pages/6-2-operating-efficiency-ratios) — close match, web, free-view; inventory, receivable and payable days
 
 ## Free-tier CFI titles (Download)
 
-- **Accounting Fact Sheet** `-` — no public match
-- **Accounts Receivable Aging Report Template** `-` — no public match
+- **Accounting Fact Sheet** `-`
+  - AccountingCoach: [Financial Statements (explanation)](https://www.accountingcoach.com/financial-statements/explanation) — close match, web, free-view; Free explanation of the 3 statements and how they link; not a one-page sheet
+  - OpenStax: [Principles of Accounting, Volume 1: Financial Accounting](https://openstax.org/details/books/principles-financial-accounting) — close match, pdf via download page, free-download; Free textbook (web + PDF) covering the three statements, accounting equation and standards; much longer than CFI's eBook
+  - AccountingCoach: [Cash Flow Statement (explanation)](https://www.accountingcoach.com/cash-flow-statement/explanation) — partial match, web, free-view; Covers the indirect-method bridge (NI + D&A - working-capital increases) shown on the fact sheet
+- **Accounts Receivable Aging Report Template** `-` — engine: `finmodel.warranty_and_receivables_allowance.receivables_allowance_aging_method`
+  - OpenStax: [9.2 Uncollectible accounts: balance-sheet aging method](https://openstax.org/books/principles-financial-accounting/pages/9-2-account-for-uncollectible-accounts-using-the-balance-sheet-and-income-statement-approaches) — close match, web, free-view; aging schedule with % uncollectible per bucket -> allowance; no invoice-level ledger
+  - AccountingCoach: [Accounts Receivable and Bad Debts Expense](https://www.accountingcoach.com/accounts-receivable-and-bad-debts-expense/explanation) — close match, web, free-view; aging of accounts receivable and allowance estimate explained with example
 - **Accumulated Depreciation Template** `depreciation`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
   - biws: [ capex-depreciation :: 105-38-CapEx-Depreciation](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/CapEx-Depreciation/105-38-CapEx-Depreciation.xlsx) (depreciation)
   - biws: [ capitalized-rd :: 101-15-Twitter-RD-Amortization-Tax-Example](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Financial-Statement-Analysis/Capitalized-RD/101-15-Twitter-RD-Amortization-Tax-Example.xlsx) (depreciation)
-- **Activity Based Costing Template** `-` — no public match
-- **Additional Paid-in Capital Template** `-` — no public match
-- **Adjusted EBITDA** `-` — no public match
+- **Activity Based Costing Template** `-` — engine: `finmodel.managerial_costing.activity_based_costing`
+  - OpenStax: [Principles of Accounting Vol 2, 6.3 Calculate Activity-Based Product Costs](https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs) — same match, web, free-view; Same pool-cost / driver-volume activity rates, then allocation to products; worked tables
+  - AccountingCoach: [Activity Based Costing: explanation](https://www.accountingcoach.com/activity-based-costing/explanation) — close match, web, free-view; Explains cost pools, drivers and activity rates with examples; no spreadsheet
+- **Additional Paid-in Capital Template** `-` — engine: `finmodel.capital_bridges.additional_paid_in_capital`
+  - OpenStax: [14.2 Issuance and repurchase of stock](https://openstax.org/books/principles-financial-accounting/pages/14-2-analyze-and-record-transactions-for-the-issuance-and-repurchase-of-stock) — same match, web, free-view; same par vs. excess-over-par split with journal entries
+  - AccountingCoach: [Stockholders' Equity](https://www.accountingcoach.com/stockholders-equity/explanation) — close match, web, free-view; explains paid-in capital in excess of par with examples
+- **Adjusted EBITDA** `-` — engine: `finmodel.earnings_bridges.adjusted_ebitda`
+  - SEC: [Non-GAAP Financial Measures (Corp Fin C&DIs)](https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures) — partial match, web, free-view; authoritative rules for EBITDA/Adjusted EBITDA reconciliation to net income; guidance, not a calculator
+  - SEC: [Final Rule 33-8176: Conditions for Use of Non-GAAP Financial Measures (Regulation G)](https://www.sec.gov/files/rules/final/33-8176.htm) — partial match, web, free-view; Reg G release defining EBITDA and required reconciliation
 - **Adjusted Present Value** `capital-structure`
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-After.xlsx) (capital-structure)
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-Before.xlsx) (capital-structure)
   - biws: [ cash-flow-sweep :: 109-26-CF-Sweep-Simple-LBO-Model](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/109-26-CF-Sweep-Simple-LBO-Model.xlsx) (capital-structure)
   - biws: [ cash-free-debt-free-basis :: 109-21-Cash-Free-Debt-Free-Deals-LBO-3-Statements](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-21-Cash-Free-Debt-Free-Deals-LBO-3-Statements.xlsx) (capital-structure)
-- **Alpha Calculator** `-` — no public match
+- **Alpha Calculator** `-` — engine: `finmodel.market_tools.jensens_alpha`
+  - OpenStax: [Principles of Finance 15.4 Applications in Performance Measurement](https://openstax.org/books/principles-finance/pages/15-4-applications-in-performance-measurement) — close match, web, free-view; Covers Jensen's alpha alongside Sharpe/Treynor
+  - Portfolio Visualizer: [Factor Regression Analysis](https://www.portfoliovisualizer.com/factor-analysis) — close match, web, free-view; Free web tool: regress fund returns on market/factors to get alpha and beta
+  - GitHub: [QuantStats (7.7k stars, pushed 2026-09)](https://github.com/ranaroussi/quantstats) — close match, py, free-download; quantstats.stats.greeks() returns alpha and beta of a return series vs benchmark
 - **Amortization Schedule Template** `depreciation`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
   - biws: [ capex-depreciation :: 105-38-CapEx-Depreciation](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/CapEx-Depreciation/105-38-CapEx-Depreciation.xlsx) (depreciation)
   - biws: [ capitalized-rd :: 101-15-Twitter-RD-Amortization-Tax-Example](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Financial-Statement-Analysis/Capitalized-RD/101-15-Twitter-RD-Amortization-Tax-Example.xlsx) (depreciation)
-- **Annual Income Calculator** `-` — no public match
+- **Annual Income Calculator** `-` — engine: `finmodel.calculators.annual_income`
+  - Calculator.net: [Salary Calculator](https://www.calculator.net/salary-calculator.html) — same match, web, free-view; Converts between hourly, daily, weekly, monthly and annual pay
+  - Omni Calculator: [Annual Income Calculator](https://www.omnicalculator.com/finance/annual-income) — same match, web, free-view; Annual income from hourly/daily/weekly/monthly rate and hours
 - **Audit a Financial Model with Macabacus** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
@@ -504,16 +615,27 @@ Matching is by model-type tag; treat it as a shortlist.
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Errors](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Errors.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Fixes](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Fixes.xlsx) (3-statement)
-- **AutoSum Example** `-` — no public match
-- **Balance-Sheet-Current-Assets-Template** `-` — no public match
-- **Balance-Sheet-Current-Liabilities-Template** `-` — no public match
-- **Balance-Sheet-Template** `-` — no public match
+- **AutoSum Example** `-`
+  - Exceljet: [AutoSum selected cells (shortcut)](https://exceljet.net/shortcuts/autosum-selected-cells) — same match, web, free-view; AutoSum shortcut (Alt+= Win, Cmd+Shift+T Mac) with explanation
+  - Microsoft Support: [SUM function](https://support.microsoft.com/en-us/excel/functions/sum-function) — close match, web, free-view; Official SUM reference incl. AutoSum usage
+  - Exceljet: [Excel SUM function](https://exceljet.net/functions/sum-function) — close match, web, free-view; SUM function with examples
+- **Balance-Sheet-Current-Assets-Template** `-` — engine: `finmodel.three_statement.run`
+  - Vertex42: [Balance Sheet Template](https://www.vertex42.com/ExcelTemplates/balance-sheet.html) — close match, xlsx via download page, free-download; includes full current-assets block within a full balance sheet
+  - OpenStax: [2.2 Current and noncurrent assets and liabilities](https://openstax.org/books/principles-financial-accounting/pages/2-2-define-explain-and-provide-examples-of-current-and-noncurrent-assets-current-and-noncurrent-liabilities-equity-revenues-and-expenses) — close match, web, free-view; definitions and classification examples
+- **Balance-Sheet-Current-Liabilities-Template** `-` — engine: `finmodel.three_statement.run`
+  - Vertex42: [Balance Sheet Template](https://www.vertex42.com/ExcelTemplates/balance-sheet.html) — close match, xlsx via download page, free-download; includes full current-liabilities block within a full balance sheet
+  - OpenStax: [12.2 Analyze, journalize and report current liabilities](https://openstax.org/books/principles-financial-accounting/pages/12-2-analyze-journalize-and-report-current-liabilities) — close match, web, free-view; current liability types and reporting
+- **Balance-Sheet-Template** `-` — engine: `finmodel.three_statement.run`
+  - Vertex42: [Balance Sheet Template](https://www.vertex42.com/ExcelTemplates/balance-sheet.html) — same match, xlsx via download page, free-download; classified balance sheet with current/non-current assets and liabilities
+  - Spreadsheet123: [Balance Sheet](https://www.spreadsheet123.com/ExcelTemplates/balance-sheet.html) — same match, xlsx via download page, free-download; classified balance sheet template
+  - Microsoft Create: [Accounting templates gallery (Balance sheet, Cash flow statement, P&L, Disbursement journal)](https://excel.cloud.microsoft/create/en/accounting-templates/) — close match, web, free-view; gallery with several Balance sheet templates; individual template URLs redirect to M365 sign-in so only the gallery is linkable
 - **Bank Reconciliation Statement** `bank`
   - biws: [ allowance-for-loan-losses-for-banks-fig :: Allowance-for-Loan-Losses](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/Allowance-for-Loan-Losses.xlsx) (bank)
   - biws: [ bank-balance-sheet :: Banks-01-06-BS-to-IS-and-CFS-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-01-06-BS-to-IS-and-CFS-After.xlsx) (bank)
   - biws: [ bank-balance-sheet :: Banks-01-06-BS-to-IS-and-CFS-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-01-06-BS-to-IS-and-CFS-Before.xlsx) (bank)
   - biws: [ bank-regulatory-capital :: Bank-Regulatory-Capital](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Banks/Bank-Regulatory-Capital.xlsx) (bank)
-- **Beneish M-Score Template** `-` — no public match
+- **Beneish M-Score Template** `-` — engine: `finmodel.scores.beneish_m`
+  - Indiana University Kelley School (Beneish): [M-Score calculator](https://apps.kelley.iu.edu/Beneish/MScore/MScoreInput) — same match, web, free-view; author-hosted online calculator; 12 inputs over two years
 - **Beta Calculator** `wacc`
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (wacc)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (wacc)
@@ -532,9 +654,17 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ annual-recurring-revenue-arr :: Annual-Recurring-Revenue-ARR](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Annual-Recurring-Revenue-ARR.xlsx) (startup)
   - biws: [ capitalization-table :: Example-Cap-Table](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Capitalization-Table/Example-Cap-Table.xlsx) (startup)
   - biws: [ carr-vs-arr :: AI-Revenue-CARR-vs-ARR](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Startups-VC/CARR-vs-ARR/AI-Revenue-CARR-vs-ARR.xlsx) (startup)
-- **Business Letter Format Template** `-` — no public match
-- **BV vs MV of Equity Template** `-` — no public match
-- **CAGR Calculator** `-` — no public match
+- **Business Letter Format Template** `-`
+  - Vertex42: [Business Letter Template](https://www.vertex42.com/WordTemplates/business-letter.html) — same match, docx via download page, free-download; A block-format business letter in Word (.docx/.doc/.odt/Google Docs)
+  - Purdue OWL: [Basic Business Letters: Block Format](https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/basic_business_letters/block_format.html) — same match, web, free-view; An annotated guide to each element of the layout
+  - Microsoft Create: [Business letter templates](https://create.microsoft.com/en-us/templates/business-letters) — close match, docx via download page, free-download; A gallery of Word business letter templates
+- **BV vs MV of Equity Template** `-` — engine: `finmodel.capital_bridges.book_vs_market_equity`
+  - OpenStax: [6.5 Market Value Ratios (market-to-book)](https://openstax.org/books/principles-finance/pages/6-5-market-value-ratios) — close match, web, free-view; book vs market equity and P/B ratio with worked example
+  - OpenStax: [14.4 Owners' equity vs retained earnings](https://openstax.org/books/principles-financial-accounting/pages/14-4-compare-and-contrast-owners-equity-versus-retained-earnings) — partial match, web, free-view; components of book equity (stock, APIC, treasury, RE, AOCI)
+- **CAGR Calculator** `-` — engine: `finmodel.fin.cagr`
+  - Vertex42: [CAGR Calculator](https://www.vertex42.com/Calculators/cagr-calculator.html) — same match, xlsx via download page, free-download; Excel CAGR calculator with formula explanation
+  - Omni Calculator: [CAGR Calculator](https://www.omnicalculator.com/finance/cagr) — same match, web, free-view; Web CAGR from start/end value and years
+  - Microsoft Support: [RRI function](https://support.microsoft.com/en-us/excel/functions/rri-function) — close match, web, free-view; Excel function returning the equivalent growth rate (CAGR) for PV, FV, n
 - **CapEx Formula** `depreciation`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
   - biws: [ capex-depreciation :: 105-38-CapEx-Depreciation](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/CapEx-Depreciation/105-38-CapEx-Depreciation.xlsx) (depreciation)
@@ -549,7 +679,9 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (wacc)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Enterprise-Value-WACC](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Enterprise-Value-WACC.xlsx) (wacc)
   - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
-- **Capital Gains Yield Calculator** `-` — no public match
+- **Capital Gains Yield Calculator** `-` — engine: `finmodel.calculators.capital_gains_yield`
+  - OpenStax: [Principles of Finance, 15.1 Risk and Return to an Individual Asset](https://openstax.org/books/principles-finance/pages/15-1-risk-and-return-to-an-individual-asset) — same match, web, free-view; Defines capital gain yield = price change / initial price with worked stock example
+  - Omni Calculator: [Capital Gains Yield Calculator](https://www.omnicalculator.com/finance/capital-gains-yield) — same match, web, free-view; Same formula from original and current price
 - **Capital Intensity Ratio Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -580,18 +712,34 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Cash EPS** `-` — no public match
-- **Cash Flow Reconciliation** `-` — no public match
-- **Cash Flow Statement** `-` — no public match
+- **Cash EPS** `-` — engine: `finmodel.earnings_bridges.cash_eps`
+  - OpenStax: [14.5 Earnings per Share](https://openstax.org/books/principles-financial-accounting/pages/14-5-discuss-the-applicability-of-earnings-per-share-as-a-method-to-measure-performance) — partial match, web, free-view; standard EPS only; add D&A to numerator for cash EPS
+- **Cash Flow Reconciliation** `-` — engine: `finmodel.accrual_bridges.cash_flow_reconciliation`
+  - OpenStax: [16.3 Statement of cash flows, indirect method](https://openstax.org/books/principles-financial-accounting/pages/16-3-prepare-the-statement-of-cash-flows-using-the-indirect-method) — same match, web, free-view; NI + non-cash items +/- working-capital changes = CFO
+  - OpenStax: [16.4 Completed statement of cash flows](https://openstax.org/books/principles-financial-accounting/pages/16-4-prepare-the-completed-statement-of-cash-flows-using-the-indirect-method) — same match, web, free-view; ties operating/investing/financing to change in cash
+- **Cash Flow Statement** `-` — engine: `finmodel.three_statement.run`
+  - Vertex42: [Cash Flow Statement Template](https://www.vertex42.com/ExcelTemplates/cash-flow-statement.html) — same match, xlsx via download page, free-download; annual statement of cash flows (indirect method) plus 12-month version
+  - Microsoft Create: [Accounting templates gallery (Balance sheet, Cash flow statement, P&L, Disbursement journal)](https://excel.cloud.microsoft/create/en/accounting-templates/) — close match, web, free-view; gallery includes a 'Cash flow statement' Excel template
+  - OpenStax: [16.4 Completed statement of cash flows](https://openstax.org/books/principles-financial-accounting/pages/16-4-prepare-the-completed-statement-of-cash-flows-using-the-indirect-method) — close match, web, free-view; worked statement of cash flows
 - **Cash Ratio Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Cash to Accrual (Complete)** `-` — no public match
-- **CFI Accounting eBook** `-` — no public match
-- **CFI Essential Guide to Breaking into FP&A** `-` — no public match
-- **CFI Financial Analysis Glossary** `-` — no public match
+- **Cash to Accrual (Complete)** `-` — engine: `finmodel.accrual_bridges.cash_to_accrual_statement`
+  - OpenStax: [4.1 Cash versus accrual accounting](https://openstax.org/books/principles-finance/pages/4-1-cash-versus-accrual-accounting) — close match, web, free-view; contrasts both bases with examples; no full conversion worksheet
+  - OpenStax: [4.5 Financial statements from adjusted trial balance](https://openstax.org/books/principles-financial-accounting/pages/4-5-prepare-financial-statements-using-the-adjusted-trial-balance) — partial match, web, free-view; accrual adjustments to statements
+- **CFI Accounting eBook** `-`
+  - OpenStax: [Principles of Accounting, Volume 1: Financial Accounting](https://openstax.org/details/books/principles-financial-accounting) — close match, pdf via download page, free-download; Free textbook (web + PDF) covering the three statements, accounting equation and standards; much longer than CFI's eBook
+  - AccountingCoach: [Balance Sheet (explanation)](https://www.accountingcoach.com/balance-sheet/explanation) — close match, web, free-view; Free multi-part explainer; pair with income-statement and cash-flow explainers
+  - AccountingCoach: [Income Statement (explanation)](https://www.accountingcoach.com/income-statement/explanation) — close match, web, free-view; Free explainer of income statement components
+- **CFI Essential Guide to Breaking into FP&A** `-`
+  - OpenStax: [Principles of Finance Ch.18 Financial Forecasting](https://openstax.org/books/principles-finance/pages/18-1-the-importance-of-forecasting) — partial match, web, free-view; Free textbook chapter on forecasting/pro-forma/long-term forecast in Excel: the technical core of FP&A, but no career advice
+  - OpenStax: [Principles of Finance 1.4 Careers in Finance](https://openstax.org/books/principles-finance/pages/1-4-careers-in-finance) — partial match, web, free-view; Covers finance career paths incl. corporate finance/FP&A roles; brief
+- **CFI Financial Analysis Glossary** `-`
+  - Duke University (Campbell R. Harvey): [Harvey's Hypertextual Finance Glossary](https://people.duke.edu/~charvey/Classes/wpg/glossary.htm) — close match, web, free-view; Thousands of finance/investment terms A-Z; broader than financial-statement analysis
+  - SEC Investor.gov: [Glossary](https://www.investor.gov/introduction-investing/investing-basics/glossary) — partial match, web, free-view; Official investor glossary; investment terms more than ratio/statement terms
+  - OpenStax: [Principles of Finance (key-terms sections per chapter)](https://openstax.org/details/books/principles-finance) — partial match, web, free-view; Each chapter has a Key Terms glossary incl. ratio-analysis chapter
 - **CFI Financial Modeling Guidelines** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
@@ -617,8 +765,13 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ real-estate-waterfall-model :: RE-01-05-Industrial-Development-Blank](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-01-05-Industrial-Development-Blank.xlsx) (charts)
   - biws: [ real-estate-waterfall-model :: RE-01-05-Industrial-Development-Complete](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-01-05-Industrial-Development-Complete.xlsx) (charts)
   - biws: [ real-estate-waterfall-model :: RE-01-07-Industrial-Development-Part-3-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-01-07-Industrial-Development-Part-3-After.xlsx) (charts)
-- **Clean Cover Letter Template** `-` — no public match
-- **Clean Resignation Letter Template** `-` — no public match
+- **Clean Cover Letter Template** `-`
+  - Microsoft Create: [Cover letter templates](https://create.microsoft.com/en-us/templates/cover-letters) — close match, docx via download page, free-download; Includes several minimal/clean Word designs. The CFI design itself is unknown
+  - Vertex42: [Resume Cover Letter Template](https://www.vertex42.com/WordTemplates/cover-letter-template.html) — close match, docx via download page, free-download; A plain, clean layout
+- **Clean Resignation Letter Template** `-`
+  - Vertex42: [Letter of Resignation Template](https://www.vertex42.com/WordTemplates/resignation-letter.html) — same match, docx via download page, free-download; A Word resignation letter with samples
+  - Carnegie Mellon University HR: [Resignation template (docx)](https://www.cmu.edu/hr/assets/offboarding/resignation-template.docx) — same match, docx, free-download; An employer-issued template: last day, notice, optional reason, transition
+  - Northeastern University HR: [Sample Employee Resignation Letter](https://assets.hrm.northeastern.edu/pdfs/resources/offboarding/Sample-Employee-Resignation-Letter.pdf) — same match, pdf, free-download; A short formal notice with the last day
 - **Common Size Analysis** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -629,33 +782,64 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table.xlsx) (comps)
   - biws: [ equity-value-vs-enterprise-value-and-valuation-multiples :: KO-Equity-Value-Enterprise-Value](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/KO-Equity-Value-Enterprise-Value.xlsx) (comps)
-- **Competitive Forces Model** `-` — no public match
-- **Compound Monthly Growth Rate (CMGR)** `-` — no public match
+- **Competitive Forces Model** `-` — engine: `finmodel.strategy_frameworks.five_forces`
+  - Cascade: [Porter's Five Forces Template](https://www.cascade.app/resources/porters-5-forces-template) — same match, xlsx via download page, free-with-signup; Fill-in five-forces template (PDF); vendor resource page
+  - OpenStax: [Principles of Management, 8.4 A Firm's Micro Environment: Porter's Five Forces](https://openstax.org/books/principles-management/pages/8-4-a-firms-micro-environment-porters-five-forces) — close match, web, free-view; Full five-forces framework with questions per force; text, no fill-in template
+  - MindTools: [Porter's Five Forces - The Framework Explained](https://www.mindtools.com/at7k8my/porters-five-forces/) — close match, web, free-view; Framework plus force-by-force assessment approach; downloadable worksheet may need membership
+- **Compound Monthly Growth Rate (CMGR)** `-` — engine: `finmodel.calculators.cmgr`
+  - Wall Street Prep: [Compound Monthly Growth Rate (CMGR)](https://www.wallstreetprep.com/knowledge/compound-monthly-growth-rate-cmgr/) — same match, web, free-view; CMGR formula and worked example; Excel usually behind email form
+  - Rows: [Revenue CMGR Calculator](https://rows.com/calculators/revenue-cmgr-calculator) — same match, web, free-view; Web CMGR calculator from start/end revenue and months
+  - Omni Calculator: [Month-Over-Month Calculator](https://www.omnicalculator.com/finance/month-over-month) — close match, web, free-view; Month-over-month and compounded monthly growth
 - **Contribution Margin Ratio** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Cost Behavior Analysis** `-` — no public match
+- **Cost Behavior Analysis** `-` — engine: `finmodel.managerial_costing.cost_behavior`
+  - OpenStax: [Principles of Accounting Vol 2, 2.3 Estimate a Variable and Fixed Cost Equation and Predict Future Costs](https://openstax.org/books/principles-managerial-accounting/pages/2-3-estimate-a-variable-and-fixed-cost-equation-and-predict-future-costs) — same match, web, free-view; Derives Y = a + bx via high-low/regression and predicts costs at activity levels
+  - Omni Calculator: [High-Low Method Calculator](https://www.omnicalculator.com/finance/high-low-method) — close match, web, free-view; Estimates fixed and variable cost components (a, b) from high/low activity points; web only
 - **Cost of Debt Template** `wacc`
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (wacc)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (wacc)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Enterprise-Value-WACC](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Enterprise-Value-WACC.xlsx) (wacc)
   - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
-- **Cost of Goods Manufactured** `-` — no public match
-- **Cost of Goods Sold** `-` — no public match
-- **Cost of Preferred Stock Calculator** `-` — no public match
-- **Cost Volume Profit Analysis Template** `-` — no public match
-- **COUNTIFS Template** `-` — no public match
-- **Coupon Rate** `-` — no public match
-- **COVARIANCE.P Template** `-` — no public match
-- **Creative Cover Letter** `-` — no public match
+- **Cost of Goods Manufactured** `-` — engine: `finmodel.managerial_costing.cost_of_goods_manufactured`
+  - OpenStax: [Principles of Accounting Vol 2, 2.1 Distinguish between Merchandising, Manufacturing, and Service Organizations](https://openstax.org/books/principles-managerial-accounting/pages/2-1-distinguish-between-merchandising-manufacturing-and-service-organizations) — same match, web, free-view; Presents the schedule of cost of goods manufactured and COGS with the same line items
+  - OpenStax: [Principles of Accounting Vol 2, 4.3 Trace the Flow of Product Costs through the Inventory Accounts](https://openstax.org/books/principles-managerial-accounting/pages/4-3-use-the-job-order-costing-method-to-trace-the-flow-of-product-costs-through-the-inventory-accounts) — close match, web, free-view; RM -> WIP -> FG -> COGS flow with a COGM schedule in a job-order context
+- **Cost of Goods Sold** `-` — engine: `finmodel.managerial_costing.cost_of_goods_sold`
+  - OpenStax: [Principles of Accounting Vol 1, 10.2 Calculate COGS and Ending Inventory Using the Periodic Method](https://openstax.org/books/principles-financial-accounting/pages/10-2-calculate-the-cost-of-goods-sold-and-ending-inventory-using-the-periodic-method) — same match, web, free-view; FIFO, LIFO, weighted-average COGS calculations with worked tables
+  - AccountingCoach: [Inventory and Cost of Goods Sold: explanation](https://www.accountingcoach.com/inventory-and-cost-of-goods-sold/explanation) — close match, web, free-view; FIFO/LIFO/average COGS worked examples; text only
+  - Omni Calculator: [Cost of Goods Sold Calculator](https://www.omnicalculator.com/finance/cogs) — partial match, web, free-view; COGS = beginning inventory + purchases - ending inventory; no FIFO layering
+- **Cost of Preferred Stock Calculator** `-` — engine: `finmodel.calculators.cost_of_preferred_stock`
+  - Wall Street Prep: [Cost of Preferred Stock](https://www.wallstreetprep.com/knowledge/cost-of-preferred-stock/) — same match, web, free-view; Rp = D/P plus growth-adjusted version and worked example
+  - AccountingTools: [Cost of preferred stock](https://www.accountingtools.com/articles/cost-of-preferred-stock) — close match, web, free-view; Rp = preferred dividend / price with example; no growth variant
+  - OpenStax: [Principles of Finance, 11.4 Preferred Stock](https://openstax.org/books/principles-finance/pages/11-4-preferred-stock) — close match, web, free-view; Preferred valuation P = D/r, i.e. required return r = D/P
+- **Cost Volume Profit Analysis Template** `-` — engine: `finmodel.breakeven.break_even_point`
+  - OpenStax: [Principles of Accounting Vol 2, 3.2 Calculate a Break-Even Point in Units and Dollars](https://openstax.org/books/principles-managerial-accounting/pages/3-2-calculate-a-break-even-point-in-units-and-dollars) — same match, web, free-view; Contribution margin, CM ratio, break-even, target profit and margin of safety; 3.3 covers operating leverage
+  - Vertex42: [Break Even Analysis Template](https://www.vertex42.com/ExcelTemplates/breakeven-analysis.html) — close match, xlsx via download page, free-download; Excel break-even (units and $) from price, variable and fixed costs with chart; no DOL row
+  - Omni Calculator: [Break-even Calculator](https://www.omnicalculator.com/finance/break-even) — partial match, web, free-view; Break-even units/revenue only
+- **COUNTIFS Template** `-`
+  - Microsoft Support: [COUNTIFS function](https://support.microsoft.com/en-us/excel/functions/countifs-function) — same match, web, free-view; Official reference, multi-criteria examples
+  - Exceljet: [Excel COUNTIFS function](https://exceljet.net/functions/countifs-function) — same match, web, free-view; Explanation plus downloadable example workbook
+  - Exceljet: [Count if two criteria match](https://exceljet.net/formulas/count-if-two-criteria-match) — close match, web, free-view; Worked COUNTIFS formula example
+- **Coupon Rate** `-` — engine: `finmodel.calculators.coupon_rate`
+  - Omni Calculator: [Coupon Rate Calculator](https://www.omnicalculator.com/finance/coupon-rate) — same match, web, free-view; Coupon rate from coupon payment, frequency and face value
+  - Microsoft Support: [PRICE function](https://support.microsoft.com/en-us/excel/functions/price-function) — close match, web, free-view; Excel PRICE function used for the bond-price line
+  - OpenStax: [Principles of Finance, 10.5 Using Spreadsheets to Solve Bond Problems](https://openstax.org/books/principles-finance/pages/10-5-using-spreadsheets-to-solve-bond-problems) — close match, web, free-view; Coupon, price and yield in Excel with worked examples
+- **COVARIANCE.P Template** `-`
+  - Microsoft Support: [COVARIANCE.P function](https://support.microsoft.com/en-us/excel/functions/covariance-p-function) — same match, web, free-view; Official reference with example
+  - Exceljet: [Excel COVARIANCE.P function](https://exceljet.net/functions/covariance.p-function) — same match, web, free-view; Explanation and example
+  - OpenStax: [Principles of Finance 15.2 Risk and Return to Multiple Assets](https://openstax.org/books/principles-finance/pages/15-2-risk-and-return-to-multiple-assets) — partial match, web, free-view; Explains covariance/correlation of asset returns in portfolio context
+- **Creative Cover Letter** `-`
+  - Microsoft Create: [Cover letter templates (creative designs)](https://create.microsoft.com/en-us/templates/cover-letters) — close match, docx via download page, free-download; Includes coloured/sidebar creative Word designs
 - **Crossover Rate** `capital-budgeting`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (capital-budgeting)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (capital-budgeting)
   - biws: [ payback-period :: PF-06-Payback-Period](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-06/PF-06-Payback-Period.xlsm) (capital-budgeting)
   - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
-- **CUMIPMT Template** `-` — no public match
+- **CUMIPMT Template** `-` — engine: `finmodel.calculators.cumulative_interest_and_principal`
+  - Microsoft Support: [CUMIPMT function](https://support.microsoft.com/en-us/excel/functions/cumipmt-function) — same match, web, free-view; Official syntax and worked example of cumulative interest between periods
+  - Exceljet: [Excel CUMIPMT function](https://exceljet.net/functions/cumipmt-function) — same match, web, free-view; Function guide with yearly-interest examples; sample workbook download
 - **Debt Asset Ratio** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -666,8 +850,12 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Diluted EPS Formula** `-` — no public match
-- **Dilution Example** `-` — no public match
+- **Diluted EPS Formula** `-` — engine: `finmodel.eps_calculation.diluted_eps`
+  - Wall Street Prep: [Treasury Stock Method (TSM)](https://www.wallstreetprep.com/knowledge/treasury-stock-method/) — close match, web, free-with-signup; diluted share count via TSM feeding diluted EPS (article free; Excel behind email form)
+  - OpenStax: [14.5 Earnings per Share](https://openstax.org/books/principles-financial-accounting/pages/14-5-discuss-the-applicability-of-earnings-per-share-as-a-method-to-measure-performance) — close match, web, free-view; basic EPS = (NI - preferred dividends) / weighted avg shares, worked examples
+- **Dilution Example** `-` — engine: `finmodel.eps_calculation.treasury_stock_method_incremental_shares`
+  - Wall Street Prep: [Treasury Stock Method (TSM)](https://www.wallstreetprep.com/knowledge/treasury-stock-method/) — same match, web, free-with-signup; diluted shares = basic + ITM options - shares repurchased with proceeds; TSM calculator (article free; Excel template behind email form)
+  - Damodaran: [Warrant valuation with dilution (warrant.xls)](https://pages.stern.nyu.edu/~adamodar/pc/warrant.xls) — partial match, xls, free-download; option-pricing approach to dilutive warrants rather than TSM
 - **Dividend Coverage and Payout** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -677,25 +865,44 @@ Matching is by model-type tag; treat it as a shortlist.
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
   - biws: [ capex-depreciation :: 105-38-CapEx-Depreciation](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/CapEx-Depreciation/105-38-CapEx-Depreciation.xlsx) (depreciation)
   - biws: [ capitalized-rd :: 101-15-Twitter-RD-Amortization-Tax-Example](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Financial-Statement-Analysis/Capitalized-RD/101-15-Twitter-RD-Amortization-Tax-Example.xlsx) (depreciation)
-- **Earnings Per Share** `-` — no public match
-- **EBIT Example** `-` — no public match
-- **EBIT vs EBITDA** `-` — no public match
+- **Earnings Per Share** `-` — engine: `finmodel.eps_calculation.basic_eps`
+  - OpenStax: [14.5 Earnings per Share](https://openstax.org/books/principles-financial-accounting/pages/14-5-discuss-the-applicability-of-earnings-per-share-as-a-method-to-measure-performance) — same match, web, free-view; basic EPS formula with weighted average shares, worked examples
+  - Wall Street Prep: [Weighted Average Shares Outstanding](https://www.wallstreetprep.com/knowledge/weighted-average-shares-outstanding/) — close match, web, free-with-signup; EPS denominator calculation (article free; Excel template behind email form)
+- **EBIT Example** `-` — engine: `finmodel.earnings_bridges.income_statement_subtotals`
+  - Damodaran: [Firm value multiples (firmmult.xls)](https://pages.stern.nyu.edu/~adamodar/pc/firmmult.xls) — close match, xls, free-download; computes EV/EBIT and EV/EBITDA, though from fundamentals rather than market inputs
+  - OpenStax: [5.1 The Income Statement](https://openstax.org/books/principles-finance/pages/5-1-the-income-statement) — partial match, web, free-view; derives EBIT/operating income from the income statement
+- **EBIT vs EBITDA** `-` — engine: `finmodel.earnings_bridges.income_statement_subtotals`
+  - OpenStax: [5.1 The Income Statement](https://openstax.org/books/principles-finance/pages/5-1-the-income-statement) — close match, web, free-view; income statement layout with operating income (EBIT), EBT and net income
+  - AccountingCoach: [Income Statement](https://www.accountingcoach.com/income-statement/explanation) — partial match, web, free-view; multi-step income statement explanation
 - **EBITDA Multiple** `comps`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (comps)
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table.xlsx) (comps)
   - biws: [ equity-value-vs-enterprise-value-and-valuation-multiples :: KO-Equity-Value-Enterprise-Value](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/KO-Equity-Value-Enterprise-Value.xlsx) (comps)
-- **EBITDA Template** `-` — no public match
-- **ECM Deals Committee Memo Template** `-` — no public match
-- **Economic Order Quantity** `-` — no public match
+- **EBITDA Template** `-` — engine: `finmodel.earnings_bridges.income_statement_subtotals`
+  - OpenStax: [5.1 The Income Statement](https://openstax.org/books/principles-finance/pages/5-1-the-income-statement) — close match, web, free-view; income statement layout with operating income (EBIT), EBT and net income
+  - SEC: [Non-GAAP Financial Measures (Corp Fin C&DIs)](https://www.sec.gov/rules-regulations/staff-guidance/corporation-finance-interpretations/non-gaap-financial-measures) — partial match, web, free-view; SEC definition of EBITDA (earnings before interest, taxes, D&A) and reconciliation rules
+- **ECM Deals Committee Memo Template** `-`
+  - Stanford (Lehman examiner documents, J. Bulow): [Lehman Brothers High Grade / Commitment / Equity Commitment Committee memorandum (2007, 31 pp)](https://web.stanford.edu/~jbulow/lehmandocs/docs/DEBTORS/LBEX-AM%20112872-112902.pdf) — close match, pdf, free-download; A real internal committee memo from ECM, Syndicate and Coverage, with the distribution list. Bank-internal format, not a blank template
+- **Economic Order Quantity** `-` — engine: `finmodel.managerial_costing.economic_order_quantity`
+  - Omni Calculator: [EOQ Calculator (Economic Order Quantity)](https://www.omnicalculator.com/finance/eoq) — same match, web, free-view; Same EOQ formula from demand, ordering cost and holding cost; web only
+  - OpenStax: [Principles of Finance, 19.5 Inventory Management](https://openstax.org/books/principles-finance/pages/19-5-inventory-management) — partial match, web, free-view; Introduces EOQ/JIT in inventory management context; no worked EOQ table
 - **Economic Value Added (EVA) Template** `eva-returns`
   - biws: [ nopat :: NOPAT-ROIC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Valuation/NOPAT/NOPAT-ROIC.xlsx) (eva-returns)
   - biws: [ roic-return-on-invested-capital :: 101-04-NOPAT-ROIC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-NOPAT-ROIC.xlsx) (eva-returns)
   - biws: [ roic-return-on-invested-capital :: 101-04-ROIC-in-LBO-Model](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-ROIC-in-LBO-Model.xlsx) (eva-returns)
   - biws: [ roic-vs-roe-and-roe-vs-roa :: 105-14-Key-Financial-Metrics-Ratios](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/105-14-Key-Financial-Metrics-Ratios.xlsx) (eva-returns)
-- **Effective Annual Interest Rate Calculator** `-` — no public match
-- **Enterprise Value to EBITDA** `-` — no public match
-- **Enterprise Value vs Equity Value Calculator** `-` — no public match
+- **Effective Annual Interest Rate Calculator** `-` — engine: `finmodel.calculators.effective_annual_rate`
+  - Microsoft Support: [EFFECT function](https://support.microsoft.com/en-us/excel/functions/effect-function) — same match, web, free-view; EFFECT(nominal, npery) returns the effective annual rate
+  - OpenStax: [Principles of Finance, 8.4 Stated versus Effective Rates](https://openstax.org/books/principles-finance/pages/8-4-stated-versus-effective-rates) — same match, web, free-view; Stated vs effective annual rate formula with examples
+  - Omni Calculator: [Effective Annual Rate (EAR) Calculator](https://www.omnicalculator.com/finance/ear) — same match, web, free-view; Web EAR from nominal rate and compounding frequency
+- **Enterprise Value to EBITDA** `-` — engine: `finmodel.comps.multiple`
+  - Wall Street Prep: [EV/EBITDA Multiple](https://www.wallstreetprep.com/knowledge/ev-ebitda-enterprise-value/) — same match, web, free-with-signup; EV = equity value + net debt; EV/EBITDA worked example (article free; Excel template behind email form)
+  - Damodaran: [Firm value multiples (firmmult.xls)](https://pages.stern.nyu.edu/~adamodar/pc/firmmult.xls) — close match, xls, free-download; EV/EBITDA computed from fundamentals
+  - Damodaran: [EV/EBITDA multiples by industry (US dataset)](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/vebitda.html) — partial match, web, free-view; industry EV/EBITDA benchmarks, not a calculator
+- **Enterprise Value vs Equity Value Calculator** `-` — engine: `finmodel.capital_bridges.enterprise_value_bridge`
+  - Damodaran: [Gross debt vs net debt approaches (GrossvsNet.xls)](https://pages.stern.nyu.edu/~adamodar/pc/GrossvsNet.xls) — close match, xls, free-download; reconciles EV/equity value with gross vs net debt treatment of cash
+  - Wall Street Prep: [EV/EBITDA Multiple (EV bridge)](https://www.wallstreetprep.com/knowledge/ev-ebitda-enterprise-value/) — partial match, web, free-with-signup; EV = equity value + net debt bridge (article free; Excel template behind email form)
 - **Equity Beta and Asset Beta Conversion** `wacc`
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (wacc)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (wacc)
@@ -706,20 +913,41 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Valuation-Metrics-Multiples-Comparison-Table.xlsx) (comps)
   - biws: [ equity-value-vs-enterprise-value-and-valuation-multiples :: KO-Equity-Value-Enterprise-Value](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/KO-Equity-Value-Enterprise-Value.xlsx) (comps)
-- **Excel Fundamentals - Formulas for Finance** `-` — no public match
-- **Excel Fundamentals - Formulas for Finance (Summary)** `-` — no public match
-- **Excel Fundamentals - Quick Start Guide (Summary)** `-` — no public match
-- **Excel Fundamentals - Quick Start Guide Analysis** `-` — no public match
-- **Excel shortcuts - Mac** `-` — no public match
-- **Excel shortcuts - PC** `-` — no public match
+- **Excel Fundamentals - Formulas for Finance** `-`
+  - Microsoft Support: [Financial functions (reference)](https://support.microsoft.com/en-us/office/financial-functions-reference-5658d81e-6035-4f24-89c1-fbf124c2b1d8) — close match, web, free-view; Official list of every Excel financial function (PMT, NPV, IRR, XNPV, RATE...) with syntax and examples
+  - Exceljet: [Excel Functions (500+ function guide)](https://exceljet.net/functions) — close match, web, free-view; Free per-function explanations with worked example workbooks; covers lookup, logical, math, stats, text, date functions
+  - Vertex42: [Loan Amortization Schedule](https://www.vertex42.com/ExcelTemplates/loan-amortization-schedule.html) — partial match, xlsx via download page, free-download; Free amortization template matching the two amortization sheets only
+- **Excel Fundamentals - Formulas for Finance (Summary)** `-`
+  - Microsoft Support: [Financial functions (reference)](https://support.microsoft.com/en-us/office/financial-functions-reference-5658d81e-6035-4f24-89c1-fbf124c2b1d8) — close match, web, free-view; Official list of every Excel financial function (PMT, NPV, IRR, XNPV, RATE...) with syntax and examples
+  - Exceljet: [Excel Functions (500+ function guide)](https://exceljet.net/functions) — close match, web, free-view; Free per-function explanations with worked example workbooks; covers lookup, logical, math, stats, text, date functions
+- **Excel Fundamentals - Quick Start Guide (Summary)** `-`
+  - OpenStax: [Principles of Finance 18.6 Using Excel to Create the Long-Term Forecast](https://openstax.org/books/principles-finance/pages/18-6-using-excel-to-create-the-long-term-forecast) — close match, web, free-view; Step-by-step Excel build of a percentage-of-sales forecast; same kind of driver-based projection
+  - GCFGlobal / LearnFree: [Excel tutorials (Excel Foundations)](https://edu.gcfglobal.org/en/excel/) — partial match, web, free-view; Free beginner-to-intermediate Excel course (formulas, functions, charts); not finance-specific
+- **Excel Fundamentals - Quick Start Guide Analysis** `-`
+  - OpenStax: [Principles of Finance 18.6 Using Excel to Create the Long-Term Forecast](https://openstax.org/books/principles-finance/pages/18-6-using-excel-to-create-the-long-term-forecast) — close match, web, free-view; Driver-based pro-forma forecast in Excel (sales growth, % of sales)
+  - OpenStax: [Principles of Finance 18.3 Pro Forma Financials](https://openstax.org/books/principles-finance/pages/18-3-pro-forma-financials) — partial match, web, free-view; Explains building pro-forma income statement from assumptions
+- **Excel shortcuts - Mac** `-`
+  - Microsoft Support: [Keyboard shortcuts in Excel](https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f) — same match, web, free-view; Official shortcut reference; page has Windows / macOS / Web tabs (redirects to /accessibility/excel/keyboard-shortcuts-in-excel)
+  - Exceljet: [Excel Shortcuts (Windows and Mac side by side)](https://exceljet.net/shortcuts) — same match, web, free-view; 200+ shortcuts listed with both Win and Mac keystrokes
+- **Excel shortcuts - PC** `-`
+  - Microsoft Support: [Keyboard shortcuts in Excel](https://support.microsoft.com/en-us/office/keyboard-shortcuts-in-excel-1798d9d5-842a-42b8-9c99-9b7213f0040f) — same match, web, free-view; Official shortcut reference; page has Windows / macOS / Web tabs (redirects to /accessibility/excel/keyboard-shortcuts-in-excel)
+  - Exceljet: [Excel Shortcuts (Windows and Mac side by side)](https://exceljet.net/shortcuts) — same match, web, free-view; 200+ shortcuts listed with both Win and Mac keystrokes
 - **Exchange Ratio Template** `m&a ratios`
   - biws: [ exchange-ratios-in-ma-deals-fixed-floating-and-collars :: 108-15-Exchange-Ratios](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/108-15-Exchange-Ratios.xlsx) (m&a, ratios)
   - macabacus: [merger-model](https://macabacus.com/assets/2023/02/merger-model.xlsx) (m&a)
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-After.xlsx) (m&a)
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-Before.xlsx) (m&a)
-- **Expected Return Example** `-` — no public match
-- **FFO Example** `-` — no public match
-- **Financial Analysis Glossary** `-` — no public match
+- **Expected Return Example** `-` — engine: `finmodel.market_tools.expected_return_scenarios`
+  - OpenStax: [Principles of Finance 15.1 Risk and Return to an Individual Asset](https://openstax.org/books/principles-finance/pages/15-1-risk-and-return-to-an-individual-asset) — same match, web, free-view; Expected return from probabilities and outcomes
+  - OpenStax: [Principles of Finance 15.2 Risk and Return to Multiple Assets](https://openstax.org/books/principles-finance/pages/15-2-risk-and-return-to-multiple-assets) — same match, web, free-view; Portfolio expected return as weighted average
+  - Exceljet: [Weighted average](https://exceljet.net/formulas/weighted-average) — close match, web, free-view; SUMPRODUCT/SUM weighted-average formula used for portfolio return
+- **FFO Example** `-` — engine: `finmodel.earnings_bridges.ffo`
+  - Nareit: [Nareit Funds From Operations White Paper (2018 restatement)](https://www.reit.com/sites/default/files/2018-FFO-white-paper-(11-27-18).pdf) — same match, pdf, free-download; the authoritative FFO definition and adjustment list
+  - Wall Street Prep: [Funds from Operations (FFO)](https://www.wallstreetprep.com/knowledge/ffo-funds-from-operations/) — same match, web, free-with-signup; Nareit-style FFO formula with worked example (article free; Excel template behind email form)
+- **Financial Analysis Glossary** `-`
+  - Duke University (Campbell R. Harvey): [Harvey's Hypertextual Finance Glossary](https://people.duke.edu/~charvey/Classes/wpg/glossary.htm) — close match, web, free-view; Thousands of finance/investment terms A-Z; broader than financial-statement analysis
+  - SEC Investor.gov: [Glossary](https://www.investor.gov/introduction-investing/investing-basics/glossary) — partial match, web, free-view; Official investor glossary; investment terms more than ratio/statement terms
+  - OpenStax: [Principles of Finance (key-terms sections per chapter)](https://openstax.org/details/books/principles-finance) — partial match, web, free-view; Each chapter has a Key Terms glossary incl. ratio-analysis chapter
 - **Financial Modeling Fundamentals Glossary** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
@@ -755,15 +983,26 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Free Cash Flow (FCF) Example** `-` — no public match
-- **Future Value Calculator** `-` — no public match
+- **Free Cash Flow (FCF) Example** `-` — engine: `finmodel.earnings_bridges.free_cash_flow`
+  - OpenStax: [5.6 Operating cash flow and FCFF](https://openstax.org/books/principles-finance/pages/5-6-operating-cash-flow-and-free-cash-flow-to-the-firm-fcff) — same match, web, free-view; OCF and FCF from statements with worked example
+  - Damodaran: [FCFF vs FCFE (fcffvsfcfe.xls)](https://pages.stern.nyu.edu/~adamodar/pc/fcffvsfcfe.xls) — close match, xls, free-download; computes FCFF and FCFE from inputs
+- **Future Value Calculator** `-` — engine: `finmodel.calculators.future_value`
+  - Microsoft Support: [FV function](https://support.microsoft.com/en-us/excel/functions/fv-function) — same match, web, free-view; Official FV syntax with examples
+  - Calculator.net: [Future Value Calculator](https://www.calculator.net/future-value-calculator.html) — same match, web, free-view; FV of lump sum (and periodic deposits) with yearly schedule
+  - OpenStax: [Principles of Finance, 7.2 Time Value of Money (TVM) Basics](https://openstax.org/books/principles-finance/pages/7-2-time-value-of-money-tvm-basics) — close match, web, free-view; FV of lump sum derivation and examples
 - **Gantt Chart Template** `charts`
   - biws: [ powerpoint-align-objects :: Company-Profile-PowerPoint-Graphs](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/Company-Profile-PowerPoint-Graphs.xlsx) (charts)
   - biws: [ real-estate-waterfall-model :: RE-01-05-Industrial-Development-Blank](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-01-05-Industrial-Development-Blank.xlsx) (charts)
   - biws: [ real-estate-waterfall-model :: RE-01-05-Industrial-Development-Complete](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-01-05-Industrial-Development-Complete.xlsx) (charts)
   - biws: [ real-estate-waterfall-model :: RE-01-07-Industrial-Development-Part-3-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-01-07-Industrial-Development-Part-3-After.xlsx) (charts)
-- **General Cover Letter Template** `-` — no public match
-- **Geometric Mean Example** `-` — no public match
+- **General Cover Letter Template** `-`
+  - Vertex42: [Resume Cover Letter Template](https://www.vertex42.com/WordTemplates/cover-letter-template.html) — same match, docx via download page, free-download; A standard Word cover letter with sample text
+  - UC Berkeley Career Engagement: [Cover Letters guide](https://career.berkeley.edu/prepare-for-success/cover-letters/) — close match, web, free-view; A university career-centre structure guide with examples
+  - Purdue OWL: [Cover Letters](https://owl.purdue.edu/owl/job_search_writing/job_search_letters/cover_letters_1_purdue_owl.html) — close match, web, free-view; A paragraph-by-paragraph guide
+- **Geometric Mean Example** `-` — engine: `finmodel.calculators.geometric_mean_return`
+  - OpenStax: [Principles of Finance, 15.1 Risk and Return to an Individual Asset](https://openstax.org/books/principles-finance/pages/15-1-risk-and-return-to-an-individual-asset) — same match, web, free-view; Geometric vs arithmetic average return with worked example
+  - Microsoft Support: [GEOMEAN function](https://support.microsoft.com/en-us/excel/functions/geomean-function) — close match, web, free-view; Excel GEOMEAN syntax used in the template
+  - Calculator.net: [Average Return Calculator](https://www.calculator.net/average-return-calculator.html) — close match, web, free-view; Arithmetic and geometric average return from period returns
 - **Gross Rent Multiplier Calculator** `real-estate`
   - biws: [ funds-from-operations-ffo :: Funds-from-Operations-FFO](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/REIT/FFO/Funds-from-Operations-FFO.xlsx) (real-estate)
   - biws: [ how-to-calculate-discontinued-operations :: 83-07-Dispositions-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/83-07-Dispositions-After.xls) (real-estate)
@@ -774,25 +1013,37 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ dividend-discount-model-example-banks :: Banks-03-12-DDM-Part-2-Phases-2-3-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Banks-03-12-DDM-Part-2-Phases-2-3-Before.xlsx) (ddm)
   - damodaran: [ddm2st](https://pages.stern.nyu.edu/~adamodar/pc/ddm2st.xls) (ddm)
   - damodaran: [ddm3st](https://pages.stern.nyu.edu/~adamodar/pc/ddm3st.xls) (ddm)
-- **HELOC Calculator** `-` — no public match
+- **HELOC Calculator** `-` — engine: `finmodel.calculators.heloc`
+  - Omni Calculator: [HELOC Calculator](https://www.omnicalculator.com/finance/heloc) — same match, web, free-view; Credit limit from home value, CLTV and mortgage balance
+  - Vertex42: [Home Equity Calculator](https://www.vertex42.com/Calculators/home-equity-loan-calculator.html) — close match, xlsx via download page, free-download; Excel: how much you can borrow from equity plus payment schedule; covers HELOC
+  - Calculator.net: [HELOC Calculator](https://www.calculator.net/heloc-calculator.html) — partial match, web, free-view; Focuses on draw/repayment-period payments rather than borrowing capacity
 - **Income Statement (P&L) and Profit Margins** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Interest Calculator** `-` — no public match
+- **Interest Calculator** `-` — engine: `finmodel.calculators.interest`
+  - Calculator.net: [Interest Calculator](https://www.calculator.net/interest-calculator.html) — same match, web, free-view; Interest on deposit with compounding choice and schedule
+  - Vertex42: [Simple Interest Calculator](https://www.vertex42.com/Calculators/simple-interest.html) — close match, xlsx via download page, free-download; Excel I=Prt simple-interest calculator
+  - Vertex42: [Compound Interest Calculator](https://www.vertex42.com/Calculators/compound-interest-calculator.html) — close match, xlsx via download page, free-download; Excel compound-interest growth by period
 - **Intrinsic Value Example** `dcf`
   - asimplemodel: [DCF_A Basic Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_A%20Basic%20Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
   - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (dcf)
   - biws: [ interest-tax-shield :: 107-28-Levered-Free-Cash-Flow-Simple-DCF](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/107-28-Levered-Free-Cash-Flow-Simple-DCF.xlsx) (dcf)
-- **Journal Entries Template** `-` — no public match
+- **Journal Entries Template** `-`
+  - OpenStax: [3.5 Journal entries and T-accounts](https://openstax.org/books/principles-financial-accounting/pages/3-5-use-journal-entries-to-record-transactions-and-post-to-t-accounts) — same match, web, free-view; general journal format with Dr/Cr examples
+  - AccountingCoach: [Debits and Credits](https://www.accountingcoach.com/debits-and-credits/explanation) — close match, web, free-view; journal entry mechanics with examples
+  - Microsoft Create: [Accounting templates gallery (Balance sheet, Cash flow statement, P&L, Disbursement journal)](https://excel.cloud.microsoft/create/en/accounting-templates/) — partial match, web, free-view; gallery's 'Disbursement journal' is a cash-payments journal, not a general journal
 - **Justified Price to Earnings Ratio** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Letter of Intent Template** `-` — no public match
+- **Letter of Intent Template** `-`
+  - SEC EDGAR: [Profusa, Inc. / Bio Insights LLC Non-Binding Letter of Intent (EX-99.1, 8-K, Apr 2026)](https://www.sec.gov/Archives/edgar/data/1859807/000121390026040111/ea028515101ex99-1.htm) — same match, web, free-view; A real executed non-binding acquisition LOI with the standard sections; some fields redacted
+  - SEC EDGAR: [Georgia-Pacific Corp. Letter of Intent (EX-99.1, 2004)](https://www.sec.gov/Archives/edgar/data/41077/000004107704000012/ex99_1.htm) — same match, web, free-view; A real corporate asset-sale LOI on company letterhead
+  - Vertex42: [Letter of Intent Template](https://www.vertex42.com/WordTemplates/letter-of-intent.html) — close match, docx via download page, free-download; A generic Word LOI (business, real estate, admissions) with sample letters. Simpler than an M&A LOI. Downloads go through an interstitial page
 - **Levelized Cost of Energy Template** `energy-mining`
   - biws: [ cash-flow-available-for-debt-service-cfads :: PF-05-Simple-Solar-Acquisition-Example](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-05/PF-05-Simple-Solar-Acquisition-Example.xlsm) (energy-mining)
   - biws: [ levelized-cost-of-energy :: PF-04-LCOE-Examples](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-04/PF-04-LCOE-Examples.xlsx) (energy-mining)
@@ -803,14 +1054,23 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ bolt-on-acquisitions :: 04-08-Acquisition-Projections-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/Mastery/04-08-Acquisition-Projections-Before.xlsx) (capital-structure)
   - biws: [ cash-flow-sweep :: 109-26-CF-Sweep-Simple-LBO-Model](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/109-26-CF-Sweep-Simple-LBO-Model.xlsx) (capital-structure)
   - biws: [ cash-free-debt-free-basis :: 109-21-Cash-Free-Debt-Free-Deals-LBO-3-Statements](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-21-Cash-Free-Debt-Free-Deals-LBO-3-Statements.xlsx) (capital-structure)
-- **Line Cover Letter Template** `-` — no public match
+- **Line Cover Letter Template** `-`
+  - Microsoft Create: [Cover letter templates](https://create.microsoft.com/en-us/templates/cover-letters) — close match, docx via download page, free-download; The gallery has several header-rule designs. The exact CFI design is unverified
 - **Liquidation Value Template** `restructuring`
   - biws: [ liquidation-preference :: Liquidation-Preference](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Liquidation-Preference/Liquidation-Preference.xlsx) (restructuring)
   - damodaran: [distress](https://pages.stern.nyu.edu/~adamodar/pc/distress.xls) (restructuring)
-- **Loan Payment Calculator** `-` — no public match
-- **LTM Revenue Example** `-` — no public match
-- **Macabacus Quick Start Guide** `-` — no public match
-- **Macabacus Quick Start Guide (2)** `-` — no public match
+- **Loan Payment Calculator** `-` — engine: `finmodel.retail_loans.amortization_schedule`
+  - Vertex42: [Loan Amortization Schedule and Calculator](https://www.vertex42.com/ExcelTemplates/loan-amortization-schedule.html) — same match, xlsx via download page, free-download; Excel payment + full amortization schedule
+  - OpenStax: [Principles of Finance, 8.3 Loan Amortization](https://openstax.org/books/principles-finance/pages/8-3-loan-amortization) — same match, web, free-view; Builds an amortization schedule step by step
+  - Microsoft Support: [PMT function](https://support.microsoft.com/en-us/excel/functions/pmt-function) — close match, web, free-view; Official PMT syntax for the payment cross-check
+- **LTM Revenue Example** `-` — engine: `finmodel.calculators.ltm`
+  - Wall Street Prep: [Last Twelve Months (LTM)](https://www.wallstreetprep.com/knowledge/last-twelve-months-ltm/) — same match, web, free-with-signup; both LTM methods incl. stub-period adjustment, Apple example (article free; Excel template behind email form)
+- **Macabacus Quick Start Guide** `-`
+  - LSEG (Macabacus guide, client-branded copy): [Macabacus Quick Start Guide (PDF, 12 pp.)](https://lseg.com/content/dam/marketing/en_us/documents/learning-centre/macabacus-start-guide.pdf) — same match, pdf, free-download; Vendor quick-start covering install, keyboard shortcuts & cycles, precedents/dependents, linking; marked 'Prepared for Barclays' but publicly hosted
+  - Macabacus: [Keyboard shortcuts (Excel docs)](https://www.macabacus.com/docs/excel/keyboard) — close match, web, free-with-signup; Official shortcut-manager docs; redirects to account.macabacus.com login page
+- **Macabacus Quick Start Guide (2)** `-`
+  - LSEG (Macabacus guide, client-branded copy): [Macabacus Quick Start Guide (PDF, 12 pp.)](https://lseg.com/content/dam/marketing/en_us/documents/learning-centre/macabacus-start-guide.pdf) — same match, pdf, free-download; Vendor quick-start covering install, keyboard shortcuts & cycles, precedents/dependents, linking; marked 'Prepared for Barclays' but publicly hosted
+  - Macabacus: [Keyboard shortcuts (Excel docs)](https://www.macabacus.com/docs/excel/keyboard) — close match, web, free-with-signup; Official shortcut-manager docs; redirects to account.macabacus.com login page
 - **Margin of Safety Example** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -821,7 +1081,9 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Market Capitalization Template** `-` — no public match
+- **Market Capitalization Template** `-` — engine: `finmodel.capital_bridges.market_cap`
+  - Wall Street Prep: [Treasury Stock Method (TSM)](https://www.wallstreetprep.com/knowledge/treasury-stock-method/) — close match, web, free-with-signup; fully diluted share count feeding diluted market cap
+  - OpenStax: [6.5 Market Value Ratios](https://openstax.org/books/principles-finance/pages/6-5-market-value-ratios) — partial match, web, free-view; market capitalization and market ratios
 - **Market Risk Premium Template** `wacc`
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (wacc)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (wacc)
@@ -832,17 +1094,44 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Market Value of Debt Template** `-` — no public match
-- **Markup Calculator** `-` — no public match
-- **MAX Template** `-` — no public match
-- **Moving Averages Template** `-` — no public match
-- **Multi-Criteria Analysis Balance Scorecard** `-` — no public match
-- **Net Debt Calulator** `-` — no public match
-- **Net Identifiable Assets Template** `-` — no public match
-- **Net Present Value Template** `-` — no public match
-- **Net Working Capital Template** `working-capital` — no public match
-- **Net Working Capital Template (2)** `working-capital` — no public match
-- **NORMDIST Template** `-` — no public match
+- **Market Value of Debt Template** `-` — engine: `finmodel.capital_bridges.market_value_of_debt_estimate`
+  - Damodaran: [Cost of capital worksheet (wacccalc.xls)](https://pages.stern.nyu.edu/~adamodar/pc/wacccalc.xls) — same match, xls, free-download; has 'Estimating Market Value of Straight Debt' block: book debt + interest + avg maturity at pre-tax Kd
+  - OpenStax: [10.2 Bond Valuation](https://openstax.org/books/principles-finance/pages/10-2-bond-valuation) — close match, web, free-view; PV of coupons and face at market yield
+- **Markup Calculator** `-` — engine: `finmodel.calculators.markup`
+  - Omni Calculator: [Markup Calculator](https://www.omnicalculator.com/finance/markup) — same match, web, free-view; Markup % and $ from cost and price
+  - Calculator.net: [Margin Calculator](https://www.calculator.net/margin-calculator.html) — close match, web, free-view; Margin and markup from cost/revenue
+  - AccountingTools: [Markup definition](https://www.accountingtools.com/articles/markup) — close match, web, free-view; Markup formula and example; text
+- **MAX Template** `-`
+  - Microsoft Support: [MAX function](https://support.microsoft.com/en-us/excel/functions/max-function) — same match, web, free-view; Official reference
+  - Exceljet: [Excel MAX function](https://exceljet.net/functions/max-function) — same match, web, free-view; Explanation and examples
+- **Moving Averages Template** `-` — engine: `finmodel.market_tools.moving_average`
+  - Exceljet: [Moving average formula](https://exceljet.net/formulas/moving-average-formula) — same match, web, free-view; Rolling AVERAGE formula in Excel; weighted variant via SUMPRODUCT
+  - GitHub: [backtesting.py (9.1k stars, pushed 2026-08)](https://github.com/kernc/backtesting.py) — partial match, py, free-download; SMA crossover example strategy
+- **Multi-Criteria Analysis Balance Scorecard** `-` — engine: `finmodel.strategy_frameworks.weighted_decision_matrix`
+  - GOV.UK: [Multi-criteria analysis: a manual (DCLG 2009)](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/7612/1132618.pdf) — close match, pdf, free-download; Weighted scoring / MCDA performance-matrix method, with worked case studies
+  - Spreadsheet Daddy: [Weighted Decision Matrix Template](https://spreadsheetdaddy.com/wp-content/uploads/2026/01/Weighted-Decision-Matrix-Template.xlsx) — close match, xlsx, free-download; Ready weighted-criteria scoring sheet; criteria can be set to the four scorecard perspectives
+  - OpenStax: [Principles of Accounting Vol 2, 12.4 Describe the Balanced Scorecard](https://openstax.org/books/principles-managerial-accounting/pages/12-4-describe-the-balanced-scorecard-and-explain-how-it-is-used) — partial match, web, free-view; Balanced scorecard perspectives and measures; no weighted scoring
+- **Net Debt Calulator** `-` — engine: `finmodel.capital_bridges.net_debt`
+  - Wall Street Prep: [Net Debt](https://www.wallstreetprep.com/knowledge/net-debt/) — same match, web, free-with-signup; gross debt - cash; net debt calculator (article free; Excel template behind email form)
+  - Damodaran: [Gross vs net debt (GrossvsNet.xls)](https://pages.stern.nyu.edu/~adamodar/pc/GrossvsNet.xls) — partial match, xls, free-download; valuation impact of gross vs net debt
+- **Net Identifiable Assets Template** `-` — engine: `finmodel.ppa_valuation.allocate`
+  - Macabacus: [Merger model (merger-model.xlsx)](https://macabacus.com/assets/2023/02/merger-model.xlsx) — partial match, xlsx, free-download; includes purchase price allocation and goodwill within full merger model (already in catalog)
+- **Net Present Value Template** `-` — engine: `finmodel.fin.npv`
+  - Vertex42: [NPV Calculator - IRR and Net Present Value](https://www.vertex42.com/Calculators/npv-irr-calculator.html) — same match, xlsx via download page, free-download; Excel NPV/IRR with cash-flow table and discount factors
+  - OpenStax: [Principles of Finance, 16.2 Net Present Value (NPV) Method](https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method) — same match, web, free-view; NPV calculation with Excel examples
+  - Microsoft Support: [NPV function](https://support.microsoft.com/en-us/excel/functions/npv-function) — close match, web, free-view; Official NPV syntax
+- **Net Working Capital Template** `working-capital` — engine: `finmodel.nwc_peg.trailing_average_peg`
+  - OpenStax: [5.3 Current ratio and working capital](https://openstax.org/books/principles-financial-accounting/pages/5-3-apply-the-results-from-the-adjusted-trial-balance-to-compute-current-ratio-and-working-capital-balance-and-explain-how-these-measures-represent-liquidity) — close match, web, free-view; working capital = current assets - current liabilities
+  - Wall Street Prep: [Working Capital](https://www.wallstreetprep.com/knowledge/working-capital/) — close match, web, free-with-signup; NWC calculation and Excel example (article free; Excel template behind email form)
+  - OpenStax: [19.1 What is working capital?](https://openstax.org/books/principles-finance/pages/19-1-what-is-working-capital) — partial match, web, free-view; working capital concepts
+- **Net Working Capital Template (2)** `working-capital` — engine: `finmodel.nwc_peg.trailing_average_peg`
+  - OpenStax: [5.3 Current ratio and working capital](https://openstax.org/books/principles-financial-accounting/pages/5-3-apply-the-results-from-the-adjusted-trial-balance-to-compute-current-ratio-and-working-capital-balance-and-explain-how-these-measures-represent-liquidity) — close match, web, free-view; working capital = current assets - current liabilities
+  - Wall Street Prep: [Working Capital](https://www.wallstreetprep.com/knowledge/working-capital/) — close match, web, free-with-signup; NWC calculation and Excel example (article free; Excel template behind email form)
+  - OpenStax: [19.1 What is working capital?](https://openstax.org/books/principles-finance/pages/19-1-what-is-working-capital) — partial match, web, free-view; working capital concepts
+- **NORMDIST Template** `-`
+  - Microsoft Support: [NORMDIST function](https://support.microsoft.com/en-us/excel/functions/normdist-function) — same match, web, free-view; Official reference for legacy NORMDIST
+  - Microsoft Support: [NORM.DIST function](https://support.microsoft.com/en-us/excel/functions/norm-dist-function) — close match, web, free-view; Official reference for the current replacement
+  - Exceljet: [Excel NORM.DIST function](https://exceljet.net/functions/norm.dist-function) — close match, web, free-view; Explanation and examples (Exceljet has no legacy NORMDIST page)
 - **NPV-XNPV Example** `dcf capital-budgeting`
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (capital-budgeting, dcf)
   - exinfm: [npv_irr](https://exinfm.com/excel%20files/npv_irr.xls) (capital-budgeting, dcf)
@@ -858,15 +1147,25 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **OR Template** `-` — no public match
+- **OR Template** `-`
+  - Microsoft Support: [OR function](https://support.microsoft.com/en-us/excel/functions/or-function) — same match, web, free-view; Official reference
+  - Exceljet: [Excel OR function](https://exceljet.net/functions/or-function) — same match, web, free-view; Explanation and examples
 - **Payback Period Template** `capital-budgeting`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (capital-budgeting)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (capital-budgeting)
   - biws: [ payback-period :: PF-06-Payback-Period](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-06/PF-06-Payback-Period.xlsm) (capital-budgeting)
   - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
-- **Percentage Change Calculator** `-` — no public match
-- **Perpetuity Calculator** `-` — no public match
-- **Personal Financial Statement** `-` — no public match
+- **Percentage Change Calculator** `-` — engine: `finmodel.calculators.percentage_change`
+  - Exceljet: [Get percent change](https://exceljet.net/formulas/get-percent-change) — same match, web, free-view; new/old-1 and (new-old)/old formulas in Excel
+  - Omni Calculator: [Percentage Change Calculator](https://www.omnicalculator.com/math/percentage-change) — close match, web, free-view; Web % change only, no CAGR
+  - Exceljet: [Excel RRI function](https://exceljet.net/functions/rri-function) — partial match, web, free-view; Covers the CAGR rows
+- **Perpetuity Calculator** `-` — engine: `finmodel.calculators.perpetuity`
+  - OpenStax: [Principles of Finance, 8.1 Perpetuities](https://openstax.org/books/principles-finance/pages/8-1-perpetuities) — same match, web, free-view; Level and growing perpetuity formulas with examples
+  - Omni Calculator: [Perpetuity Calculator](https://www.omnicalculator.com/finance/perpetuity) — same match, web, free-view; PV of perpetuity with optional growth
+- **Personal Financial Statement** `-` — engine: `finmodel.personal_finance.personal_financial_statement`
+  - U.S. SBA: [SBA Form 413 Personal Financial Statement](https://legacy.sba.gov/sites/default/files/2025-02/SBAForm413.pdf) — same match, pdf, free-download; official personal financial statement: assets, liabilities, net worth, income sources
+  - Vertex42: [Personal Financial Statement](https://www.vertex42.com/ExcelTemplates/personal-financial-statement.html) — same match, xlsx via download page, free-download; personal balance sheet and net worth
+  - Spreadsheet123: [Net Worth Statement](https://www.spreadsheet123.com/ExcelTemplates/net-worth-statement.html) — close match, xlsx via download page, free-download; assets - liabilities = net worth
 - **Pharmaceuticals Industry Comps Template** `comps`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (comps)
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
@@ -881,7 +1180,8 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ annual-recurring-revenue-arr :: Annual-Recurring-Revenue-ARR](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Annual-Recurring-Revenue-ARR.xlsx) (startup)
   - biws: [ capitalization-table :: Example-Cap-Table](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Capitalization-Table/Example-Cap-Table.xlsx) (startup)
   - biws: [ carr-vs-arr :: AI-Revenue-CARR-vs-ARR](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Startups-VC/CARR-vs-ARR/AI-Revenue-CARR-vs-ARR.xlsx) (startup)
-- **Present Value of Growth Opportunities (PVGO) Template** `-` — no public match
+- **Present Value of Growth Opportunities (PVGO) Template** `-` — engine: `finmodel.calculators.pvgo`
+  - Omni Calculator: [PVGO Calculator](https://www.omnicalculator.com/finance/pvgo) — same match, web, free-view; PVGO = share price - EPS / cost of equity
 - **Price Earnings (P/E) Ratio Template** `ratios`
   - biws: [ cash-flow-from-operations :: 105-40-Cash-Flow-from-Operations](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/Cash-Flow-from-Operations/105-40-Cash-Flow-from-Operations.xlsx) (ratios)
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
@@ -897,20 +1197,28 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ how-to-calculate-discontinued-operations :: 83-07-Dispositions-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/83-07-Dispositions-After.xls) (real-estate)
   - biws: [ how-to-calculate-discontinued-operations :: 83-07-Dispositions-Before](https://samples-breakingintowallstreet-com.s3.amazonaws.com/83-07-Dispositions-Before.xls) (real-estate)
   - biws: [ reit-nav-model :: RE-07-07-NAV-Model-Part-1-Assets-After](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-07-07-NAV-Model-Part-1-Assets-After.xlsx) (real-estate)
-- **Product Costs Template** `-` — no public match
-- **Profit and Loss Statement** `-` — no public match
+- **Product Costs Template** `-` — engine: `finmodel.managerial_costing.product_costs`
+  - OpenStax: [Principles of Accounting Vol 2, 4.2 The Three Major Components of Product Costs under Job Order Costing](https://openstax.org/books/principles-managerial-accounting/pages/4-2-describe-and-identify-the-three-major-components-of-product-costs-under-job-order-costing) — same match, web, free-view; DM + DL + MOH product cost build-up with examples
+  - AccountingCoach: [Manufacturing Overhead: explanation](https://www.accountingcoach.com/manufacturing-overhead/explanation) — partial match, web, free-view; Covers the overhead / indirect labour component of product cost
+- **Profit and Loss Statement** `-` — engine: `finmodel.three_statement.run`
+  - Vertex42: [Profit and Loss Statement](https://www.vertex42.com/ExcelTemplates/profit-and-loss.html) — same match, xlsx via download page, free-download; monthly/annual P&L template
+  - Spreadsheet123: [Profit and Loss Statement](https://www.spreadsheet123.com/ExcelTemplates/profit-and-loss-statement.html) — same match, xlsx via download page, free-download; P&L template
+  - SCORE: [12-Month Profit and Loss Projection](https://www.score.org/templates/12-month-profit-and-loss-projection/) — close match, xlsx, free-download; projected monthly P&L
 - **Profitability Index** `capital-budgeting`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (capital-budgeting)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (capital-budgeting)
   - biws: [ payback-period :: PF-06-Payback-Period](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-06/PF-06-Payback-Period.xlsm) (capital-budgeting)
   - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
-- **Proforma Earnings Per Share Template** `-` — no public match
+- **Proforma Earnings Per Share Template** `-` — engine: `finmodel.merger.from_dict`
+  - Macabacus: [Merger model (merger-model.xlsx)](https://macabacus.com/assets/2023/02/merger-model.xlsx) — close match, xlsx, free-download; full accretion/dilution analysis incl. pro forma EPS (already in catalog)
+  - Damodaran: [Buyback effect on EPS (buybacks.xls)](https://pages.stern.nyu.edu/~adamodar/pc/buybacks.xls) — partial match, xls, free-download; pro forma EPS after buyback rather than M&A
 - **Project Budget Template** `3-statement`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (3-statement)
   - asimplemodel: [IFS_Simple Three Statement Model](https://portal.asimplemodel.com/assets/files/IFS_Simple%20Three%20Statement%20Model.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Errors](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Errors.xlsx) (3-statement)
   - biws: [ balance-sheet-not-balancing :: 101-12-Balance-Sheet-Not-Balancing-Fixes](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/101-12-Balance-Sheet-Not-Balancing-Fixes.xlsx) (3-statement)
-- **Research and Development Capitalization** `-` — no public match
+- **Research and Development Capitalization** `-` — engine: `finmodel.rd_capitalization.capitalize_rd`
+  - Damodaran: [R&D converter (R&DConv.xls)](https://pages.stern.nyu.edu/~adamodar/pc/R%26DConv.xls) — same match, xls, free-download; capitalizes R&D and computes unamortized asset and adjusted EBIT
 - **Retail Industry Comps Template** `comps`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (comps)
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
@@ -926,21 +1234,32 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ roic-return-on-invested-capital :: 101-04-NOPAT-ROIC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-NOPAT-ROIC.xlsx) (eva-returns)
   - biws: [ roic-return-on-invested-capital :: 101-04-ROIC-in-LBO-Model](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-ROIC-in-LBO-Model.xlsx) (eva-returns)
   - biws: [ roic-vs-roe-and-roe-vs-roa :: 105-14-Key-Financial-Metrics-Ratios](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/105-14-Key-Financial-Metrics-Ratios.xlsx) (eva-returns)
-- **Revenue Run Rate** `-` — no public match
-- **Revenue Variance Analysis** `-` — no public match
+- **Revenue Run Rate** `-` — engine: `finmodel.calculators.revenue_run_rate`
+  - UserJot: [Revenue Run Rate Calculator](https://userjot.com/tools/revenue-run-rate-calculator) — close match, web, free-view; Web run-rate from period revenue (MRR x 12 style)
+  - Baremetrics: [What Is Annualized Run Rate? Formula, Examples](https://baremetrics.com/blog/annualized-run-rate) — close match, web, free-view; Monthly/quarterly/day-based annualisation formulas with examples
+- **Revenue Variance Analysis** `-` — engine: `finmodel.variance_analysis.sales_mix_and_volume_variance`
+  - OpenStax: [8.2 Materials price and quantity variances](https://openstax.org/books/principles-managerial-accounting/pages/8-2-compute-and-evaluate-materials-variances) — partial match, web, free-view; same price/quantity decomposition logic applied to costs, not revenue
+  - OpenStax: [8.5 How companies use variance analysis](https://openstax.org/books/principles-managerial-accounting/pages/8-5-describe-how-companies-use-variance-analysis) — partial match, web, free-view; variance interpretation
 - **ROIC Template** `eva-returns`
   - biws: [ nopat :: NOPAT-ROIC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Valuation/NOPAT/NOPAT-ROIC.xlsx) (eva-returns)
   - biws: [ roic-return-on-invested-capital :: 101-04-NOPAT-ROIC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-NOPAT-ROIC.xlsx) (eva-returns)
   - biws: [ roic-return-on-invested-capital :: 101-04-ROIC-in-LBO-Model](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ROIC/101-04-ROIC-in-LBO-Model.xlsx) (eva-returns)
   - biws: [ roic-vs-roe-and-roe-vs-roa :: 105-14-Key-Financial-Metrics-Ratios](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/105-14-Key-Financial-Metrics-Ratios.xlsx) (eva-returns)
-- **ROUNDUP Template** `-` — no public match
+- **ROUNDUP Template** `-`
+  - Microsoft Support: [ROUNDUP function](https://support.microsoft.com/en-us/excel/functions/roundup-function) — same match, web, free-view; Official reference
+  - Exceljet: [Excel ROUNDUP function](https://exceljet.net/functions/roundup-function) — same match, web, free-view; Explanation incl. negative digits
 - **Rule of 40 Calculator** `startup`
   - macabacus: [vc-returns](https://macabacus.com/assets/2023/02/vc-returns.xlsx) (startup)
   - biws: [ annual-recurring-revenue-arr :: Annual-Recurring-Revenue-ARR](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Annual-Recurring-Revenue-ARR.xlsx) (startup)
   - biws: [ capitalization-table :: Example-Cap-Table](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Startups-VC/Capitalization-Table/Example-Cap-Table.xlsx) (startup)
   - biws: [ carr-vs-arr :: AI-Revenue-CARR-vs-ARR](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Startups-VC/CARR-vs-ARR/AI-Revenue-CARR-vs-ARR.xlsx) (startup)
-- **Sales Tax Decalculator** `-` — no public match
-- **SEARCH Template** `-` — no public match
+- **Sales Tax Decalculator** `-` — engine: `finmodel.calculators.sales_tax_decalculator`
+  - Calculator.net: [Sales Tax Calculator](https://www.calculator.net/sales-tax-calculator.html) — same match, web, free-view; Enter after-tax price and rate to get before-tax price and tax
+  - Omni Calculator: [Sales Tax Calculator](https://www.omnicalculator.com/finance/sales-tax) — close match, web, free-view; Solves for any of net price, tax, gross price
+  - Exceljet: [Get original price from percentage discount](https://exceljet.net/formulas/get-original-price-from-percentage-discount) — partial match, web, free-view; Same divide-by-(1+/-rate) Excel pattern for reversing a percentage
+- **SEARCH Template** `-`
+  - Microsoft Support: [SEARCH, SEARCHB functions](https://support.microsoft.com/en-us/excel/functions/search-function) — same match, web, free-view; Official reference
+  - Exceljet: [Excel SEARCH function](https://exceljet.net/functions/search-function) — same match, web, free-view; Explanation and examples
 - **Sensitivity Analysis Table** `sensitivity`
   - asimplemodel: [LBO_Simple LBO Scenarios and Data Tables](https://portal.asimplemodel.com/assets/files/LBO_Simple%20LBO%20Scenarios%20and%20Data%20Tables.xlsx) (sensitivity)
   - biws: [ sensitivity-analysis-excel :: XL-03-27-Sensitivity-Tables-After](https://samples-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/XL-4/XL-03-27-Sensitivity-Tables-After.xlsx) (sensitivity)
@@ -950,8 +1269,11 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ cash-ratio :: ITW-Liquidity-Ratios](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/ITW-Liquidity-Ratios.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-BLDR-Analysis](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-BLDR-Analysis.xlsx) (ratios)
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (ratios)
-- **Sheet Name Formula Template** `-` — no public match
-- **SME Lending - Owner's Net Worth Adjustment Template** `-` — no public match
+- **Sheet Name Formula Template** `-`
+  - Exceljet: [Get sheet name only](https://exceljet.net/formulas/get-sheet-name-only) — same match, web, free-view; Same CELL/MID/FIND formula, explained
+  - Microsoft Support: [CELL function](https://support.microsoft.com/en-us/excel/functions/cell-function) — close match, web, free-view; Official CELL reference incl. "filename" info_type
+- **SME Lending - Owner's Net Worth Adjustment Template** `-` — engine: `finmodel.personal_finance.owner_net_worth_adjustment`
+  - U.S. SBA: [SBA Form 413 Personal Financial Statement](https://legacy.sba.gov/sites/default/files/2025-02/SBAForm413.pdf) — partial match, pdf, free-download; the source personal financial statement lenders adjust; no adjustment worksheet
 - **Straight Line Depreciation** `depreciation`
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
   - biws: [ capex-depreciation :: 105-38-CapEx-Depreciation](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/CapEx-Depreciation/105-38-CapEx-Depreciation.xlsx) (depreciation)
@@ -960,11 +1282,22 @@ Matching is by model-type tag; treat it as a shortlist.
   - asimplemodel: [IFS_PPE Schedule](https://portal.asimplemodel.com/assets/files/IFS_PPE%20Schedule.xlsx) (depreciation)
   - biws: [ capex-depreciation :: 105-38-CapEx-Depreciation](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Accounting/CapEx-Depreciation/105-38-CapEx-Depreciation.xlsx) (depreciation)
   - biws: [ capitalized-rd :: 101-15-Twitter-RD-Amortization-Tax-Example](https://youtube-breakingintowallstreet-com.s3.dualstack.us-east-1.amazonaws.com/Financial-Statement-Analysis/Capitalized-RD/101-15-Twitter-RD-Amortization-Tax-Example.xlsx) (depreciation)
-- **SUBTOTAL Template** `-` — no public match
-- **Target Costing Example** `-` — no public match
-- **Tax-Shield Template** `-` — no public match
-- **Term Sheet Template** `-` — no public match
-- **Treasury Stock Method Calculator** `-` — no public match
+- **SUBTOTAL Template** `-`
+  - Microsoft Support: [SUBTOTAL function](https://support.microsoft.com/en-us/excel/functions/subtotal-function) — same match, web, free-view; Official reference with function_num table
+  - Exceljet: [Excel SUBTOTAL function](https://exceljet.net/functions/subtotal-function) — same match, web, free-view; Explanation and examples
+  - Exceljet: [Sum visible rows in a filtered list](https://exceljet.net/formulas/sum-visible-rows-in-a-filtered-list) — close match, web, free-view; SUBTOTAL 109 worked example
+- **Target Costing Example** `-` — engine: `finmodel.managerial_costing.target_costing`
+  - Wall Street Prep: [Target Costing](https://www.wallstreetprep.com/knowledge/target-costing/) — same match, web, free-view; Target cost = target price x (1 - margin) worked example; Excel usually behind email form
+  - AccountingTools: [Target costing definition](https://www.accountingtools.com/articles/target-costing) — close match, web, free-view; Explains target cost = market price - required margin and the target costing process; text only
+- **Tax-Shield Template** `-` — engine: `finmodel.capital_bridges.tax_shield`
+  - OpenStax: [17.2 Costs of debt and equity capital](https://openstax.org/books/principles-finance/pages/17-2-the-costs-of-debt-and-equity-capital) — close match, web, free-view; after-tax cost of debt via interest deductibility (tax shield)
+  - Damodaran: [Adjusted present value (apv.xls)](https://pages.stern.nyu.edu/~adamodar/pc/apv.xls) — partial match, xls, free-download; values interest tax savings in APV framework
+- **Term Sheet Template** `-`
+  - Y Combinator: [Standard Series A Term Sheet (docx)](https://bookface-static.ycombinator.com/assets/ycdc/Standard_Series_A_TS-da51af523a01165d6514a085678c50c8514fce6acd5ab83553c3f47ce0dffacb.docx) — same match, docx, free-download; A clean, founder-friendly Series A preferred term sheet. The page https://www.ycombinator.com/series_a_term_sheet explains each term
+  - NVCA: [Model Legal Documents: Term Sheet (with the Certificate of Incorporation, SPA, IRA, Voting and ROFR agreements)](https://nvca.org/resources/model-legal-documents/) — same match, docx, free-download; The industry-standard VC term sheet, with footnoted alternatives
+  - Y Combinator: [Post-money SAFE documents](https://www.ycombinator.com/documents) — partial match, docx via download page, free-download; SAFE instruments plus a user guide. A seed alternative to a priced-round term sheet, not a term sheet itself
+- **Treasury Stock Method Calculator** `-` — engine: `finmodel.eps_calculation.treasury_stock_method_incremental_shares`
+  - Wall Street Prep: [Treasury Stock Method (TSM)](https://www.wallstreetprep.com/knowledge/treasury-stock-method/) — same match, web, free-with-signup; diluted shares = basic + ITM options - shares repurchased with proceeds; TSM calculator (article free; Excel template behind email form)
 - **Unlevered Cost of Capital Template** `wacc`
   - biws: [ debt-to-equity-ratio :: 101-08-Enterprise-Value-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Financial-Statement-Analysis/Debt-to-Equity/101-08-Enterprise-Value-WACC.xlsx) (wacc)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (wacc)
@@ -980,8 +1313,12 @@ Matching is by model-type tag; treat it as a shortlist.
   - asimplemodel: [DCF_Discounted Cash Flow Model](https://portal.asimplemodel.com/assets/files/DCF_Discounted%20Cash%20Flow%20Model.xlsx) (dcf)
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (comps)
   - biws: [ comparable-company-analysis-cca :: 107-21-Comparable-Company-Analysis](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/107-21-Comparable-Company-Analysis.xlsx) (comps)
-- **Variance Analysis** `-` — no public match
-- **Variance Formula** `-` — no public match
+- **Variance Analysis** `-` — engine: `finmodel.variance_analysis.budget_vs_actual_variance`
+  - Microsoft Create: [Business budget planner (gallery)](https://excel.cloud.microsoft/create/en/business-budgeting/) — close match, web, free-view; planned vs actual columns with variance
+  - OpenStax: [7.4 Prepare flexible budgets](https://openstax.org/books/principles-managerial-accounting/pages/7-4-prepare-flexible-budgets) — close match, web, free-view; budget vs actual and flexible-budget variances
+- **Variance Formula** `-`
+  - Exceljet: [Get percent change](https://exceljet.net/formulas/get-percent-change) — same match, web, free-view; Same new/old-1 percent-change formula
+  - Microsoft Support: [Calculate percentages](https://support.microsoft.com/en-us/excel/calculate-percentages) — close match, web, free-view; Official page incl. percentage change between two values
 - **Variance Waterfall Chart** `charts`
   - biws: [ powerpoint-align-objects :: Company-Profile-PowerPoint-Graphs](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/Company-Profile-PowerPoint-Graphs.xlsx) (charts)
   - biws: [ real-estate-waterfall-model :: RE-01-05-Industrial-Development-Blank](https://samples-breakingintowallstreet-com.s3.amazonaws.com/RE-01-05-Industrial-Development-Blank.xlsx) (charts)
@@ -997,12 +1334,21 @@ Matching is by model-type tag; treat it as a shortlist.
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (wacc)
   - biws: [ enterprise-value-vs-equity-value :: IBIG-04-04-Enterprise-Value-WACC](https://samples-breakingintowallstreet-com.s3.amazonaws.com/IBIG-04-04-Enterprise-Value-WACC.xlsx) (wacc)
   - damodaran: [betas](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls) (wacc)
-- **Weighted Average Shares Outstanding Template** `-` — no public match
-- **Working Capital Cycle Template** `working-capital` — no public match
+- **Weighted Average Shares Outstanding Template** `-` — engine: `finmodel.capital_bridges.weighted_average_shares`
+  - Wall Street Prep: [Weighted Average Shares Outstanding](https://www.wallstreetprep.com/knowledge/weighted-average-shares-outstanding/) — same match, web, free-with-signup; sum of share counts x period weights (article free; Excel template behind email form)
+  - OpenStax: [14.5 Earnings per Share](https://openstax.org/books/principles-financial-accounting/pages/14-5-discuss-the-applicability-of-earnings-per-share-as-a-method-to-measure-performance) — close match, web, free-view; weighted average shares computation within EPS section
+- **Working Capital Cycle Template** `working-capital` — engine: `finmodel.accrual_bridges.working_capital_cycle`
+  - Wall Street Prep: [Cash Conversion Cycle](https://www.wallstreetprep.com/knowledge/cash-conversion-cycle-ccc/) — same match, web, free-with-signup; DIO + DSO - DPO with calculator (article free; Excel template behind email form)
+  - OpenStax: [6.2 Operating efficiency ratios](https://openstax.org/books/principles-finance/pages/6-2-operating-efficiency-ratios) — close match, web, free-view; inventory, receivable and payable days
 - **XIRR vs IRR Template** `capital-budgeting`
   - biws: [ cash-on-cash-return-vs-irr :: 109-05-IRR-vs-Cash-on-Cash-Multiples](https://youtube-breakingintowallstreet-com.s3.amazonaws.com/109-05-IRR-vs-Cash-on-Cash-Multiples.xlsx) (capital-budgeting)
   - biws: [ discount-rate :: PV-NPV-IRR-WACC](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/Finance/PV-NPV-IRR-WACC.xlsx) (capital-budgeting)
   - biws: [ payback-period :: PF-06-Payback-Period](https://youtube-breakingintowallstreet-com.s3.us-east-1.amazonaws.com/PF/PF-06/PF-06-Payback-Period.xlsm) (capital-budgeting)
   - damodaran: [capbudg](https://pages.stern.nyu.edu/~adamodar/pc/capbudg.xls) (capital-budgeting)
-- **Year over Year (YoY) Analysis** `-` — no public match
-- **Year to Date YTD Template** `-` — no public match
+- **Year over Year (YoY) Analysis** `-` — engine: `finmodel.calculators.year_over_year`
+  - Omni Calculator: [Year-over-Year Growth Calculator](https://www.omnicalculator.com/finance/year-over-year-growth) — same match, web, free-view; YoY % growth between periods
+  - Exceljet: [Get percent change](https://exceljet.net/formulas/get-percent-change) — close match, web, free-view; Excel formula applied to same-period comparisons
+- **Year to Date YTD Template** `-` — engine: `finmodel.calculators.year_to_date`
+  - YTDReturn.com: [YTD Return Calculator](https://www.ytdreturn.com/calculator/) — close match, web, free-view; YTD return from start/current price incl. dividends
+  - YTDReturn.com: [YTD Return Formula](https://www.ytdreturn.com/formula/) — close match, web, free-view; Formula explanation
+  - Exceljet: [Sum by month](https://exceljet.net/formulas/sum-by-month) — partial match, web, free-view; Excel pattern for month-to-date/YTD aggregation
