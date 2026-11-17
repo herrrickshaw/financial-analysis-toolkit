@@ -1,7 +1,21 @@
 """Write formula workbooks and prove (via LibreOffice recalculation) that they reproduce the engines."""
 import pytest
 from finmodel import three_statement as ts, dcf, projection
+from finmodel import trl_valuation as trl
 from finmodel import excel
+
+
+def _trl_inputs_dict():
+    return {
+        "commercial_value": 500_000_000, "discount_rate": 0.12,
+        "stages": [
+            {"trl": 5, "probability_of_advancing": 0.6, "years_to_next_stage": 1.0, "capital_required": 2_000_000, "required_irr": 0.60},
+            {"trl": 6, "probability_of_advancing": 0.7, "years_to_next_stage": 1.0, "capital_required": 3_000_000, "required_irr": 0.50},
+            {"trl": 7, "probability_of_advancing": 0.8, "years_to_next_stage": 1.0, "capital_required": 5_000_000, "required_irr": 0.40},
+            {"trl": 8, "probability_of_advancing": 0.9, "years_to_next_stage": 1.0, "capital_required": 8_000_000, "required_irr": 0.30},
+            {"trl": 9},
+        ],
+    }
 
 
 def test_write_three_statement_and_dcf_have_formulas(tmp_path, three_statement_inputs, dcf_inputs):
@@ -88,3 +102,38 @@ def test_write_record_tables_sets_workbook_title_document_property(tmp_path):
     from openpyxl import load_workbook
     wb = load_workbook(p)
     assert wb.properties.title == "Investment Promotion Agency (IPA) Support"
+
+
+def test_write_trl_valuation_has_live_formulas_wired_bottom_up(tmp_path):
+    inputs = trl.inputs_from_dict(_trl_inputs_dict())
+    p = excel.write_trl_valuation(tmp_path / "trl_formulas.xlsx", inputs, uplift_from_trl=5, uplift_to_trl=7)
+    from openpyxl import load_workbook
+    ws = load_workbook(p)["TRL Valuation"]
+    # TRL 9 (row 12, the last/terminal stage row) is the base case: no risk, no discounting
+    assert ws["G12"].value == 1 and ws["H12"].value == 0
+    # every row above chains off the row below (its next TRL) -- TRL 5 (row 8) references TRL 6 (row 9)
+    assert ws["G8"].value == "=C8*G9" and ws["H8"].value == "=D8+H9"
+    assert ws["I8"].value == "=$C$4/(1+$C$5)^H8" and ws["J8"].value == "=I8*G8"
+    # the uplift block references the TRL 5 and TRL 7 rows' Risk-Adjusted Value cells (J8, J10) directly
+    assert ws["C15"].value == "=J8" and ws["C16"].value == "=J10"
+    assert ws["C19"].value == "=SUM(E8:E9)"  # capital required TRL5->TRL6 only, not through TRL8
+    # the VC-Method cross-check block reads TRL 5's own Required IRR input cell (F8)
+    assert ws["C26"].value == "=F8"
+
+
+@pytest.mark.skipif(excel.soffice_path() is None, reason="LibreOffice not installed")
+def test_write_trl_valuation_libreoffice_recalc_matches_engine(tmp_path):
+    d = _trl_inputs_dict()
+    inputs = trl.inputs_from_dict(d)
+    p = excel.write_trl_valuation(tmp_path / "trl.xlsx", inputs, uplift_from_trl=5, uplift_to_trl=7)
+    rp = excel.recalc_with_libreoffice(p)
+    if rp is None:
+        pytest.skip("LibreOffice headless conversion did not produce an output file in this environment")
+    v = excel.read_values(rp, "TRL Valuation")
+    uplift = trl.trl_uplift(inputs, 5, 7)
+    assert v["J8"] == pytest.approx(uplift["from"]["risk_adjusted_value"], rel=1e-6)
+    assert v["J10"] == pytest.approx(uplift["to"]["risk_adjusted_value"], rel=1e-6)
+    assert v["C17"] == pytest.approx(uplift["value_uplift"], rel=1e-6)
+    assert v["C18"] == pytest.approx(uplift["value_uplift_multiple"], rel=1e-6)
+    vc = trl.vc_method_cross_check(inputs, 5)
+    assert v["C32"] == pytest.approx(vc["implied_pre_money_valuation"], rel=1e-6)

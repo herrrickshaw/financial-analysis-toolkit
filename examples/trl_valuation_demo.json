@@ -1,0 +1,15 @@
+{
+  "_comment": "ILLUSTRATIVE technology-readiness-level valuation -- a deep-tech hardware startup with a component/subsystem validated in a relevant environment (TRL 5) climbing to a system prototype demonstrated in an operational environment (TRL 7), and on to full commercial deployment (TRL 9). commercial_value is the DCF/NPV value of the business assumed fully commercial (e.g. from finmodel.dcf or finmodel.startup_model); every probability_of_advancing, capital_required, and required_irr is this company's OWN assumption (gate-review track record / investor-stated required return) -- this module refuses to fabricate a universal TRL-to-probability table (see finmodel/trl_valuation.py's module docstring for why, and the real, cited evidence -- GAO's 2005 review of 54 DoD programs -- for why the TRL 5-to-7 gap specifically is where a lot of technical risk gets priced out).",
+  "commercial_value": 500000000,
+  "discount_rate": 0.12,
+  "stages": [
+    {"trl": 5, "probability_of_advancing": 0.6, "years_to_next_stage": 1.0, "capital_required": 2000000, "required_irr": 0.60},
+    {"trl": 6, "probability_of_advancing": 0.7, "years_to_next_stage": 1.0, "capital_required": 3000000, "required_irr": 0.50},
+    {"trl": 7, "probability_of_advancing": 0.8, "years_to_next_stage": 1.0, "capital_required": 5000000, "required_irr": 0.40},
+    {"trl": 8, "probability_of_advancing": 0.9, "years_to_next_stage": 1.0, "capital_required": 8000000, "required_irr": 0.30},
+    {"trl": 9}
+  ],
+  "value_at_trl": 5,
+  "uplift": {"from_trl": 5, "to_trl": 7},
+  "vc_method_cross_check_trl": 5
+}

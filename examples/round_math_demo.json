@@ -1,0 +1,7 @@
+{
+  "_comment": "ILLUSTRATIVE pre-money/post-money round-math calculator -- give any two of {pre_money, post_money, investment} and get the third plus the ownership split it implies. No share count needed at this level.",
+  "round_math": {
+    "pre_money": 8000000,
+    "investment": 2000000
+  }
+}

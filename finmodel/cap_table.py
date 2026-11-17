@@ -157,6 +157,35 @@ def exit_waterfall(cap_table: CapTableResult, exit_proceeds: float) -> Dict[str,
             "participating_tiers": sorted({h.seniority for h in participating_remainder})}
 
 
+def round_math(pre_money: Optional[float] = None, post_money: Optional[float] = None,
+               investment: Optional[float] = None) -> Dict[str, Any]:
+    """The basic pre-money/post-money identity (post_money = pre_money + investment) solved for whichever one
+    of the three figures is missing, plus the ownership percentages it implies. Give exactly two; the third is
+    computed. This is the entry point for "what's the post-money on a $2M raise at an $8M pre?" or "what pre-
+    money is implied by handing a new investor 20% for $2M?" without needing a share count at all -- ownership
+    at this level is purely a ratio of dollars, since price-per-share only matters once real share counts (and
+    therefore rounding, option-pool shuffles, etc.) enter the picture; see `simulate_rounds()` for that."""
+    given = [x is not None for x in (pre_money, post_money, investment)]
+    if sum(given) != 2:
+        raise ValueError("round_math needs exactly two of {pre_money, post_money, investment}; got "
+                          f"{sum(given)}")
+    if pre_money is None:
+        pre_money = post_money - investment
+    elif post_money is None:
+        post_money = pre_money + investment
+    else:
+        investment = post_money - pre_money
+    if pre_money < 0:
+        raise ValueError(f"implied pre_money is negative ({pre_money:,.2f}) -- investment exceeds post_money")
+    if investment < 0:
+        raise ValueError(f"implied investment is negative ({investment:,.2f}) -- post_money is below pre_money")
+    if post_money <= 0:
+        raise ValueError(f"post_money must be positive, got {post_money:,.2f}")
+    return {"pre_money": pre_money, "investment": investment, "post_money": post_money,
+            "new_investor_ownership_pct": safe_div(investment, post_money),
+            "existing_holders_retained_pct": safe_div(pre_money, post_money)}
+
+
 def vc_method_valuation(investment_amount: float, target_exit_value: float, years_to_exit: float,
                         target_irr: Optional[float] = None, target_multiple: Optional[float] = None,
                         expected_future_dilution_pct: float = 0.0) -> Dict[str, Any]:
@@ -181,6 +210,8 @@ def vc_method_valuation(investment_amount: float, target_exit_value: float, year
 
 def from_dict(d: Dict[str, Any]) -> Dict[str, Any]:
     out: Dict[str, Any] = {}
+    if "round_math" in d:
+        out["round_math"] = round_math(**d["round_math"])
     if "initial_holders" in d and "rounds" in d:
         initial = [Holder(**h) for h in d["initial_holders"]]
         rounds = [Round(**r) for r in d["rounds"]]

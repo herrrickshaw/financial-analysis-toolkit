@@ -1,0 +1,21 @@
+{
+  "_comment": "ILLUSTRATIVE SAFE-conversion example -- a seed-stage company that raised two post-money SAFEs (a $1M note at a $5M cap, a $500K note at a $10M cap with no discount, and a $250K note with only a 20% discount and no cap) which all convert together into a subsequent priced Series A. Demonstrates the defining post-money SAFE property (each capped note keeps exactly its own promised ownership % regardless of how many other notes stack alongside it) plus the cap-vs-discount 'whichever price is lower wins' rule, then feeds the converted SAFE holders straight into finmodel.cap_table.simulate_rounds() for the Series A itself (with its own option-pool top-up) and an exit waterfall.",
+  "safes": [
+    {"name": "Angel note", "investment": 1000000, "valuation_cap": 5000000, "investor_name": "Angel investor"},
+    {"name": "Seed fund note", "investment": 500000, "valuation_cap": 10000000, "investor_name": "Seed Fund I"},
+    {"name": "Bridge note", "investment": 250000, "discount_rate": 0.20, "investor_name": "Bridge investor"}
+  ],
+  "pre_safe_fully_diluted_shares": 8000000,
+  "round_price_per_share": 1.25,
+  "cap_table_round": {
+    "other_initial_holders": [
+      {"name": "Founders", "shares": 8000000}
+    ],
+    "safe_holder_terms": {"liquidation_preference_multiple": 1.0, "participating": false, "seniority": 0},
+    "rounds": [
+      {"name": "Series A", "pre_money": 12000000, "investment": 4000000, "target_option_pool_pct": 0.10,
+       "investor_name": "Series A investor", "liquidation_preference_multiple": 1.0, "participating": false, "seniority": 1}
+    ],
+    "exit_proceeds": 40000000
+  }
+}
